@@ -1,13 +1,13 @@
 """Build an SRT from aligned words (words.json): cues break at sentence ends or ~60 chars; 2 lines max.
 
-Usage: python3 srt_from_words.py words.json OUT.srt
+Usage: python3 srt_from_words.py words.json OUT.srt [fix.json]
 """
 import json
 import re
 import sys
 
-NUM = {"fifty": "50", "four": "4", "thirty-five": "35", "three": "3"}
-KEEP_CAPS = {"AI"}
+NUM = {"fifty": "50", "four": "4", "thirty-five": "35", "three": "3", "thirty-eight": "38"}
+KEEP_CAPS = {"AI", "NVIDIA"}
 
 
 def ts(t):
@@ -30,18 +30,23 @@ def clean(w):
 
 
 words = json.load(open(sys.argv[1]))
-FIX = {"But": (13.58, 13.86)}  # aligner put "But" inside the chuckle
-for w in words:
-    if w["text"] in FIX and abs(w["start"] - 12.87) < 0.3:
-        w["start"], w["end"] = FIX[w["text"]]
+# Optional fix.json, same format as make_captions.py: {"WORD@approx_start": [start, end]}
+# (Short #1: shorts/01-hospital/fix.json moves "But" out of the chuckle.)
+FIX = json.load(open(sys.argv[3])) if len(sys.argv) > 3 else {}
+for key, (s, e) in FIX.items():
+    name, at = key.split("@")
+    for w in words:
+        if w["text"].strip(".,?!") == name and abs(w["start"] - float(at)) < 0.3:
+            w["start"], w["end"] = s, e
 cues, cur = [], []
 for i, w in enumerate(words):
     cur.append(w)
     text = " ".join(clean(x["text"]) for x in cur)
     nxt = words[i + 1] if i + 1 < len(words) else None
     gap = (nxt["start"] - w["end"]) if nxt else 9
-    end_sent = re.search(r"[.?!]$|\.\.\.$", w["text"]) is not None
-    soft = re.search(r"[,;:]$", w["text"]) is not None
+    bare = w["text"].rstrip("\"'”’)")  # card." still ends a sentence
+    end_sent = re.search(r"[.?!]$|\.\.\.$", bare) is not None
+    soft = re.search(r"[,;:]$", bare) is not None
     if end_sent or (gap > 0.6 and len(text) > 24) or len(text) > 60 or (soft and len(text) > 34) or nxt is None:
         cues.append(cur)
         cur = []

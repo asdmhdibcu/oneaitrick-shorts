@@ -1,6 +1,6 @@
 # One AI Trick: Shorts production kit
 
-This is everything used to make Short #1, "The hospital inside your AI" (86 s, 1080×1920, 30 fps). Reuse it so every short keeps the same look, sound and quality.
+This is everything used to make the Shorts, starting with Short #1, "The hospital inside your AI" (86 s, 1080×1920, 30 fps), and Short #2, "Read, don't obey" (83 s). Reuse it so every short keeps the same look, sound and quality.
 
 ## What's inside
 
@@ -9,7 +9,7 @@ This is everything used to make Short #1, "The hospital inside your AI" (86 s, 1
 | `tools/` | Python helpers: align voice to script, captions, SRT, 3D art fetch + 4× upscale, music, SFX, final mix |
 | `template/` | The Short #1 HyperFrames project: `index.html` (14 scenes, global captions/UI), `base.css`, `fx.js`, GSAP, fonts, grain, `music.json`, `sfx.json`, example `captions.js` and `script.txt` |
 | `brand/` | Logo, profile image, the Short #1 cover and `cover05.html` (cover template) |
-| `library/3d/` | 71 upscaled 1024 px 3D illustrations ready to reuse; `library/README.md` lists them |
+| `library/3d/` | 85 upscaled 1024 px 3D illustrations ready to reuse; `library/README.md` lists them |
 | `shorts/NN-slug/` | Source for each published short (script, word timings, captions, composition, SFX/music config, SRT, cover) |
 
 Videos, WAVs and model weights stay out of git (see `.gitignore`). Deliver them as files instead.
@@ -39,15 +39,15 @@ Network: the shell can reach PyPI, npm and GitHub (raw files and release downloa
 2. **Voice in.** Re-encode the upload, which fixes odd WAV headers:
    `ffmpeg -i raw.wav -ar 48000 -ac 1 voice_clean.wav` and `ffmpeg -i raw.wav -ar 16000 -ac 1 voice16k.wav`.
 3. **Align.** Run `python3 tools/align.py voice16k.wav script.txt words.json`.
-   - Edit `SUBS` in `align.py` for spellings the dictionary lacks (e.g. centres→centers, thirty-five→thirty five).
-   - Then check words near laughs and breaths. In #1, "But" landed inside the chuckle and had to be moved.
+   - Edit `SUBS` (substring fixes, e.g. centres→centers) or `WORDMAP` (whole words, e.g. ai's→"a eyes") in `align.py` for words the dictionary lacks or says wrong.
+   - Then check words near laughs, breaths and long pauses against the waveform's silences. In #1 and #2, "But" landed inside the chuckle and had to be moved. Fix timings in `words.json` itself, or in a `fix.json` that both caption tools read.
 4. **Captions.**
-   - On-screen captions: `python3 tools/make_captions.py words.json captions.js "EMPH,WORDS" [fix.json]`.
-   - Upload captions: `python3 tools/srt_from_words.py words.json shortNN-captions.srt`. Its `FIX` dict is from #1, so edit it.
+   - On-screen captions: `python3 tools/make_captions.py words.json captions.js "EMPH,WORDS,READ@51.4" [fix.json]`. `WORD@seconds` emphasises only that occurrence.
+   - Upload captions: `python3 tools/srt_from_words.py words.json shortNN-captions.srt [fix.json]`.
 5. **3D art.** This is Microsoft Fluent Emoji 3D, MIT licence, so credit it in the description.
    - **Reuse `library/3d/` first.** Copy the images you need into the short's `assets/3d/`.
-   - Only for new art: edit `ITEMS` in `fetch_fluent.py`. Folder names match `github.com/microsoft/fluentui-emoji/assets`.
-   - Run `python3 tools/fetch_fluent.py raw3d`.
+   - Only for new art: add entries to `ITEMS` in `fetch_fluent.py`. Folder names match `github.com/microsoft/fluentui-emoji/assets`.
+   - Run `python3 tools/fetch_fluent.py raw3d name1,name2` to fetch just the new ones.
    - Then run `python3 tools/upscale.py models/RealESRGAN_x4plus.pth 23 raw3d template/assets/3d` in the background. It takes about 23 s per image on 2 CPUs.
    - **Check every PNG opens before rendering.** A half-written file renders as a blank image.
    - Commit the new 1024 px images to `library/3d/` and add them to `library/README.md`.
@@ -84,10 +84,14 @@ Network: the shell can reach PyPI, npm and GitHub (raw files and release downloa
 - End card: lime "1_" mark, "One AI Trick" with "AI" in lime, @oneaitrick, and a "+ Follow for AI, explained" pill.
 - The first frame should already show the subject (hook), not an empty set.
 
-## Gotchas from #1
+## Gotchas from #1 and #2
 
 - Fluent "Person walking" faces left, and the runners face right. Doctor/health-worker images are head-and-shoulders only.
 - Grayscale + brightness filters make good "inactive" states. Lime drop-shadows make good "active" ones.
+- The Fluent robot has blue eyes on a dark visor. #2's `robot()` helper overlays pink (hijacked) or lime (protected) eyes and keeps body motion separate from the entrance.
+- Lime text is unreadable on cream paper. Put lime ink on a dark label instead.
+- Round line caps leave a dot before a stroke draws on. `draw()` now hides the path until it starts.
+- Keep scratch files (snapshots, contact sheets, WAVs) in the short's `work/` folder, which git ignores.
 - AI labels:
   - YouTube doesn't need one for a generic AI narrator.
   - On TikTok, turn on "AI-generated content".

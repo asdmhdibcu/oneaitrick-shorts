@@ -1,7 +1,8 @@
 """Fetch Microsoft Fluent Emoji 3D PNGs (MIT licence) from GitHub.
 
-Usage: python3 fetch_fluent.py OUTDIR
+Usage: python3 fetch_fluent.py OUTDIR [name1,name2,...]
 Each entry: (local_name, folder, tone_or_None)
+The optional second argument fetches only those local names (e.g. the new art for one short).
 """
 import subprocess
 import sys
@@ -84,6 +85,21 @@ ITEMS = [
     ("chip", "Electric plug", None),
     ("rocket", "Rocket", None),
     ("disk", "Computer disk", None),
+    # Short #2 (Read, don't obey)
+    ("envelope", "Envelope", None),
+    ("envelope_in", "Incoming envelope", None),
+    ("email", "E-mail", None),
+    ("mailbox", "Open mailbox with raised flag", None),
+    ("card", "Credit card", None),
+    ("money_wings", "Money with wings", None),
+    ("stranger", "Bust in silhouette", None),
+    ("globe", "Globe with meridians", None),
+    ("syringe", "Syringe", None),
+    ("shield", "Shield", None),
+    ("unlocked", "Unlocked", None),
+    ("wastebasket", "Wastebasket", None),
+    ("wink", "Winking face", None),
+    ("question", "Red question mark", None),
 ]
 
 
@@ -91,8 +107,12 @@ def slug(folder):
     return folder.lower().replace(" ", "_")
 
 
+ONLY = set(sys.argv[2].split(",")) if len(sys.argv) > 2 else None
+
 ok, missing = [], []
 for local, folder, tone in ITEMS:
+    if ONLY and local not in ONLY:
+        continue
     s = slug(folder)
     if tone:
         rel = f"{folder}/{tone}/3D/{s}_3d_{tone.lower()}.png"

@@ -75,3 +75,17 @@ Microsoft Fluent Emoji 3D (MIT licence), upscaled 4× to 1024×1024 with Real-ES
 | `chip.png` | Electric plug | — |
 | `rocket.png` | Rocket | — |
 | `disk.png` | Computer disk | — |
+| `envelope.png` | Envelope | — |
+| `envelope_in.png` | Incoming envelope | — |
+| `email.png` | E-mail | — |
+| `mailbox.png` | Open mailbox with raised flag | — |
+| `card.png` | Credit card | — |
+| `money_wings.png` | Money with wings | — |
+| `stranger.png` | Bust in silhouette | — |
+| `globe.png` | Globe with meridians | — |
+| `syringe.png` | Syringe | — |
+| `shield.png` | Shield | — |
+| `unlocked.png` | Unlocked | — |
+| `wastebasket.png` | Wastebasket | — |
+| `wink.png` | Winking face | — |
+| `question.png` | Red question mark | — |

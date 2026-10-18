@@ -12,7 +12,10 @@ from pocketsphinx import Decoder
 wav_path, script_path, out_path = sys.argv[1:4]
 raw = open(script_path).read()
 raw = re.sub(r"<[^>]+>", " ", raw)
-SUBS = {"centres": "centers", "thirty-five": "thirty five"}
+SUBS = {"centres": "centers", "thirty-five": "thirty five"}  # substring fixes
+# Whole-word fixes, applied after cleaning: spoken forms the dictionary lacks or says wrong
+# ("ai" is in the dictionary as one syllable, "eye"; the voice says "A-I").
+WORDMAP = {"ai": "a i", "ai's": "a eyes"}
 display_words = raw.split()
 align_words = []
 for w in display_words:
@@ -20,6 +23,7 @@ for w in display_words:
     for a, b in SUBS.items():
         t = t.replace(a, b)
     t = re.sub(r"[^a-z' \-]", "", t).replace("-", " ").strip("'")
+    t = " ".join(WORDMAP.get(x, x) for x in t.split())
     align_words.append(t)
 
 text = " ".join(x for x in align_words if x)

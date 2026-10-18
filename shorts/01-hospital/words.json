@@ -1,0 +1,1022 @@
+[
+ {
+  "text": "Imagine",
+  "start": 0.26,
+  "end": 0.9
+ },
+ {
+  "text": "you",
+  "start": 0.9,
+  "end": 1.03
+ },
+ {
+  "text": "walk",
+  "start": 1.03,
+  "end": 1.28
+ },
+ {
+  "text": "into",
+  "start": 1.28,
+  "end": 1.49
+ },
+ {
+  "text": "a",
+  "start": 1.49,
+  "end": 1.54
+ },
+ {
+  "text": "hospital",
+  "start": 1.54,
+  "end": 2.19
+ },
+ {
+  "text": "with",
+  "start": 2.19,
+  "end": 2.34
+ },
+ {
+  "text": "a",
+  "start": 2.34,
+  "end": 2.37
+ },
+ {
+  "text": "sprained",
+  "start": 2.37,
+  "end": 2.87
+ },
+ {
+  "text": "ankle...",
+  "start": 2.87,
+  "end": 3.33
+ },
+ {
+  "text": "and",
+  "start": 3.33,
+  "end": 3.89
+ },
+ {
+  "text": "ALL",
+  "start": 4.12,
+  "end": 4.55
+ },
+ {
+  "text": "fifty",
+  "start": 4.62,
+  "end": 5.21
+ },
+ {
+  "text": "doctors",
+  "start": 5.21,
+  "end": 5.63
+ },
+ {
+  "text": "come",
+  "start": 5.63,
+  "end": 5.83
+ },
+ {
+  "text": "running.",
+  "start": 5.83,
+  "end": 6.15
+ },
+ {
+  "text": "The",
+  "start": 6.64,
+  "end": 6.72
+ },
+ {
+  "text": "heart",
+  "start": 6.72,
+  "end": 6.99
+ },
+ {
+  "text": "surgeon.",
+  "start": 6.99,
+  "end": 7.59
+ },
+ {
+  "text": "The",
+  "start": 7.69,
+  "end": 7.77
+ },
+ {
+  "text": "dentist.",
+  "start": 7.77,
+  "end": 8.5
+ },
+ {
+  "text": "The",
+  "start": 8.5,
+  "end": 8.73
+ },
+ {
+  "text": "eye",
+  "start": 8.73,
+  "end": 8.9
+ },
+ {
+  "text": "doctor.",
+  "start": 8.9,
+  "end": 9.35
+ },
+ {
+  "text": "All",
+  "start": 9.95,
+  "end": 10.09
+ },
+ {
+  "text": "for",
+  "start": 10.09,
+  "end": 10.23
+ },
+ {
+  "text": "one",
+  "start": 10.23,
+  "end": 10.69
+ },
+ {
+  "text": "ankle.",
+  "start": 10.69,
+  "end": 11.19
+ },
+ {
+  "text": "Ridiculous,",
+  "start": 11.88,
+  "end": 12.54
+ },
+ {
+  "text": "right?",
+  "start": 12.54,
+  "end": 12.87
+ },
+ {
+  "text": "But",
+  "start": 12.87,
+  "end": 13.18
+ },
+ {
+  "text": "that's",
+  "start": 13.91,
+  "end": 14.16
+ },
+ {
+  "text": "how",
+  "start": 14.16,
+  "end": 14.25
+ },
+ {
+  "text": "a",
+  "start": 14.25,
+  "end": 14.28
+ },
+ {
+  "text": "lot",
+  "start": 14.28,
+  "end": 14.82
+ },
+ {
+  "text": "of",
+  "start": 14.82,
+  "end": 14.91
+ },
+ {
+  "text": "AI",
+  "start": 14.91,
+  "end": 15.21
+ },
+ {
+  "text": "models",
+  "start": 15.21,
+  "end": 15.57
+ },
+ {
+  "text": "work.",
+  "start": 15.57,
+  "end": 15.9
+ },
+ {
+  "text": "Every",
+  "start": 16.35,
+  "end": 16.71
+ },
+ {
+  "text": "word",
+  "start": 16.71,
+  "end": 16.97
+ },
+ {
+  "text": "you",
+  "start": 16.97,
+  "end": 17.07
+ },
+ {
+  "text": "type",
+  "start": 17.07,
+  "end": 17.5
+ },
+ {
+  "text": "goes",
+  "start": 17.5,
+  "end": 17.74
+ },
+ {
+  "text": "through",
+  "start": 17.74,
+  "end": 17.88
+ },
+ {
+  "text": "the",
+  "start": 17.88,
+  "end": 17.99
+ },
+ {
+  "text": "WHOLE",
+  "start": 17.99,
+  "end": 18.49
+ },
+ {
+  "text": "model.",
+  "start": 18.49,
+  "end": 18.95
+ },
+ {
+  "text": "So",
+  "start": 19.65,
+  "end": 19.88
+ },
+ {
+  "text": "engineers",
+  "start": 20.04,
+  "end": 20.66
+ },
+ {
+  "text": "built",
+  "start": 20.66,
+  "end": 20.99
+ },
+ {
+  "text": "a",
+  "start": 20.99,
+  "end": 21.04
+ },
+ {
+  "text": "smarter",
+  "start": 21.04,
+  "end": 21.59
+ },
+ {
+  "text": "hospital.",
+  "start": 21.59,
+  "end": 22.09
+ },
+ {
+  "text": "They",
+  "start": 22.7,
+  "end": 22.8
+ },
+ {
+  "text": "hired",
+  "start": 22.8,
+  "end": 23.14
+ },
+ {
+  "text": "a",
+  "start": 23.14,
+  "end": 23.18
+ },
+ {
+  "text": "receptionist,",
+  "start": 23.18,
+  "end": 24.0
+ },
+ {
+  "text": "who",
+  "start": 24.14,
+  "end": 24.24
+ },
+ {
+  "text": "takes",
+  "start": 24.24,
+  "end": 24.46
+ },
+ {
+  "text": "one",
+  "start": 24.46,
+  "end": 24.75
+ },
+ {
+  "text": "look",
+  "start": 24.75,
+  "end": 24.98
+ },
+ {
+  "text": "at",
+  "start": 24.98,
+  "end": 25.05
+ },
+ {
+  "text": "you...",
+  "start": 25.05,
+  "end": 25.29
+ },
+ {
+  "text": "and",
+  "start": 25.61,
+  "end": 25.78
+ },
+ {
+  "text": "sends",
+  "start": 25.78,
+  "end": 26.05
+ },
+ {
+  "text": "you",
+  "start": 26.05,
+  "end": 26.14
+ },
+ {
+  "text": "to",
+  "start": 26.14,
+  "end": 26.24
+ },
+ {
+  "text": "just",
+  "start": 26.24,
+  "end": 26.77
+ },
+ {
+  "text": "four",
+  "start": 26.77,
+  "end": 27.21
+ },
+ {
+  "text": "doctors.",
+  "start": 27.21,
+  "end": 27.76
+ },
+ {
+  "text": "Everyone",
+  "start": 28.27,
+  "end": 28.6
+ },
+ {
+  "text": "else?",
+  "start": 28.6,
+  "end": 28.97
+ },
+ {
+  "text": "Back",
+  "start": 29.42,
+  "end": 29.59
+ },
+ {
+  "text": "to",
+  "start": 29.59,
+  "end": 29.68
+ },
+ {
+  "text": "work.",
+  "start": 29.68,
+  "end": 30.05
+ },
+ {
+  "text": "In",
+  "start": 30.83,
+  "end": 30.91
+ },
+ {
+  "text": "AI,",
+  "start": 31.03,
+  "end": 31.36
+ },
+ {
+  "text": "the",
+  "start": 31.53,
+  "end": 31.65
+ },
+ {
+  "text": "doctors",
+  "start": 31.65,
+  "end": 32.2
+ },
+ {
+  "text": "are",
+  "start": 32.2,
+  "end": 32.29
+ },
+ {
+  "text": "called",
+  "start": 32.29,
+  "end": 32.53
+ },
+ {
+  "text": "experts,",
+  "start": 32.72,
+  "end": 33.25
+ },
+ {
+  "text": "the",
+  "start": 33.6,
+  "end": 33.7
+ },
+ {
+  "text": "receptionist",
+  "start": 33.7,
+  "end": 34.36
+ },
+ {
+  "text": "is",
+  "start": 34.36,
+  "end": 34.53
+ },
+ {
+  "text": "the",
+  "start": 34.53,
+  "end": 34.6
+ },
+ {
+  "text": "router,",
+  "start": 34.6,
+  "end": 35.05
+ },
+ {
+  "text": "and",
+  "start": 35.05,
+  "end": 35.51
+ },
+ {
+  "text": "the",
+  "start": 35.51,
+  "end": 35.57
+ },
+ {
+  "text": "trick",
+  "start": 35.57,
+  "end": 35.94
+ },
+ {
+  "text": "is",
+  "start": 35.94,
+  "end": 36.11
+ },
+ {
+  "text": "called",
+  "start": 36.11,
+  "end": 36.59
+ },
+ {
+  "text": "Mixture",
+  "start": 36.59,
+  "end": 37.07
+ },
+ {
+  "text": "of",
+  "start": 37.07,
+  "end": 37.15
+ },
+ {
+  "text": "Experts.",
+  "start": 37.15,
+  "end": 37.69
+ },
+ {
+  "text": "Real",
+  "start": 38.5,
+  "end": 38.72
+ },
+ {
+  "text": "AI",
+  "start": 38.72,
+  "end": 38.96
+ },
+ {
+  "text": "experts",
+  "start": 38.96,
+  "end": 39.32
+ },
+ {
+  "text": "aren't",
+  "start": 39.32,
+  "end": 39.55
+ },
+ {
+  "text": "that",
+  "start": 39.55,
+  "end": 39.98
+ },
+ {
+  "text": "tidy...",
+  "start": 39.98,
+  "end": 40.43
+ },
+ {
+  "text": "but",
+  "start": 40.65,
+  "end": 40.92
+ },
+ {
+  "text": "this",
+  "start": 40.92,
+  "end": 41.13
+ },
+ {
+  "text": "is",
+  "start": 41.13,
+  "end": 41.25
+ },
+ {
+  "text": "why",
+  "start": 41.25,
+  "end": 41.39
+ },
+ {
+  "text": "some",
+  "start": 41.39,
+  "end": 41.63
+ },
+ {
+  "text": "giant",
+  "start": 41.63,
+  "end": 42.08
+ },
+ {
+  "text": "models",
+  "start": 42.19,
+  "end": 42.56
+ },
+ {
+  "text": "are",
+  "start": 42.56,
+  "end": 42.73
+ },
+ {
+  "text": "surprisingly",
+  "start": 42.73,
+  "end": 43.59
+ },
+ {
+  "text": "fast.",
+  "start": 43.59,
+  "end": 44.12
+ },
+ {
+  "text": "But",
+  "start": 44.83,
+  "end": 45.04
+ },
+ {
+  "text": "there's",
+  "start": 45.04,
+  "end": 45.45
+ },
+ {
+  "text": "a",
+  "start": 45.45,
+  "end": 45.48
+ },
+ {
+  "text": "catch.",
+  "start": 45.48,
+  "end": 45.86
+ },
+ {
+  "text": "All",
+  "start": 46.56,
+  "end": 46.72
+ },
+ {
+  "text": "fifty",
+  "start": 46.72,
+  "end": 47.02
+ },
+ {
+  "text": "doctors",
+  "start": 47.02,
+  "end": 47.42
+ },
+ {
+  "text": "still",
+  "start": 47.42,
+  "end": 47.74
+ },
+ {
+  "text": "need",
+  "start": 47.74,
+  "end": 48.04
+ },
+ {
+  "text": "an",
+  "start": 48.04,
+  "end": 48.13
+ },
+ {
+  "text": "office...",
+  "start": 48.13,
+  "end": 48.64
+ },
+ {
+  "text": "and",
+  "start": 49.02,
+  "end": 49.21
+ },
+ {
+  "text": "in",
+  "start": 49.21,
+  "end": 49.33
+ },
+ {
+  "text": "a",
+  "start": 49.33,
+  "end": 49.37
+ },
+ {
+  "text": "computer,",
+  "start": 49.37,
+  "end": 50.02
+ },
+ {
+  "text": "offices",
+  "start": 50.14,
+  "end": 50.68
+ },
+ {
+  "text": "are",
+  "start": 50.68,
+  "end": 50.81
+ },
+ {
+  "text": "memory.",
+  "start": 50.81,
+  "end": 51.25
+ },
+ {
+  "text": "So",
+  "start": 51.82,
+  "end": 51.95
+ },
+ {
+  "text": "giant",
+  "start": 51.95,
+  "end": 52.46
+ },
+ {
+  "text": "hospitals",
+  "start": 52.46,
+  "end": 52.98
+ },
+ {
+  "text": "only",
+  "start": 52.98,
+  "end": 53.48
+ },
+ {
+  "text": "fit",
+  "start": 53.48,
+  "end": 53.72
+ },
+ {
+  "text": "in",
+  "start": 53.72,
+  "end": 53.93
+ },
+ {
+  "text": "giant",
+  "start": 53.93,
+  "end": 54.39
+ },
+ {
+  "text": "data",
+  "start": 54.39,
+  "end": 54.63
+ },
+ {
+  "text": "centres.",
+  "start": 54.63,
+  "end": 55.12
+ },
+ {
+  "text": "Last",
+  "start": 55.98,
+  "end": 56.31
+ },
+ {
+  "text": "month,",
+  "start": 56.31,
+  "end": 56.53
+ },
+ {
+  "text": "researchers",
+  "start": 56.74,
+  "end": 57.26
+ },
+ {
+  "text": "found",
+  "start": 57.26,
+  "end": 57.45
+ },
+ {
+  "text": "a",
+  "start": 57.53,
+  "end": 57.56
+ },
+ {
+  "text": "clever",
+  "start": 57.56,
+  "end": 58.12
+ },
+ {
+  "text": "way",
+  "start": 58.12,
+  "end": 58.32
+ },
+ {
+  "text": "around",
+  "start": 58.32,
+  "end": 58.61
+ },
+ {
+  "text": "it.",
+  "start": 58.61,
+  "end": 58.79
+ },
+ {
+  "text": "Keep",
+  "start": 59.48,
+  "end": 59.74
+ },
+ {
+  "text": "most",
+  "start": 59.74,
+  "end": 60.04
+ },
+ {
+  "text": "doctors",
+  "start": 60.04,
+  "end": 60.43
+ },
+ {
+  "text": "at",
+  "start": 60.43,
+  "end": 60.53
+ },
+ {
+  "text": "home,",
+  "start": 60.53,
+  "end": 60.75
+ },
+ {
+  "text": "on",
+  "start": 61.08,
+  "end": 61.22
+ },
+ {
+  "text": "call.",
+  "start": 61.22,
+  "end": 61.52
+ },
+ {
+  "text": "While",
+  "start": 62.14,
+  "end": 62.31
+ },
+ {
+  "text": "one",
+  "start": 62.31,
+  "end": 62.68
+ },
+ {
+  "text": "doctor",
+  "start": 62.68,
+  "end": 63.0
+ },
+ {
+  "text": "works,",
+  "start": 63.0,
+  "end": 63.41
+ },
+ {
+  "text": "the",
+  "start": 63.41,
+  "end": 63.74
+ },
+ {
+  "text": "receptionist",
+  "start": 63.74,
+  "end": 64.45
+ },
+ {
+  "text": "PREDICTS",
+  "start": 64.45,
+  "end": 65.16
+ },
+ {
+  "text": "who's",
+  "start": 65.16,
+  "end": 65.38
+ },
+ {
+  "text": "needed",
+  "start": 65.38,
+  "end": 65.67
+ },
+ {
+  "text": "next...",
+  "start": 65.67,
+  "end": 66.08
+ },
+ {
+  "text": "and",
+  "start": 66.28,
+  "end": 66.53
+ },
+ {
+  "text": "calls",
+  "start": 66.53,
+  "end": 66.86
+ },
+ {
+  "text": "them",
+  "start": 66.86,
+  "end": 66.99
+ },
+ {
+  "text": "in",
+  "start": 66.99,
+  "end": 67.07
+ },
+ {
+  "text": "early.",
+  "start": 67.07,
+  "end": 67.45
+ },
+ {
+  "text": "The",
+  "start": 68.24,
+  "end": 68.32
+ },
+ {
+  "text": "result?",
+  "start": 68.32,
+  "end": 68.76
+ },
+ {
+  "text": "An",
+  "start": 69.54,
+  "end": 69.74
+ },
+ {
+  "text": "AI",
+  "start": 69.74,
+  "end": 69.9
+ },
+ {
+  "text": "with",
+  "start": 70.04,
+  "end": 70.22
+ },
+ {
+  "text": "thirty-five",
+  "start": 70.22,
+  "end": 71.01
+ },
+ {
+  "text": "billion",
+  "start": 71.01,
+  "end": 71.8
+ },
+ {
+  "text": "parameters...",
+  "start": 71.8,
+  "end": 72.42
+ },
+ {
+  "text": "running",
+  "start": 72.88,
+  "end": 73.13
+ },
+ {
+  "text": "on",
+  "start": 73.13,
+  "end": 73.43
+ },
+ {
+  "text": "one",
+  "start": 73.66,
+  "end": 73.92
+ },
+ {
+  "text": "desktop",
+  "start": 73.92,
+  "end": 74.38
+ },
+ {
+  "text": "computer,",
+  "start": 74.38,
+  "end": 74.87
+ },
+ {
+  "text": "in",
+  "start": 75.29,
+  "end": 75.35
+ },
+ {
+  "text": "about",
+  "start": 75.35,
+  "end": 75.55
+ },
+ {
+  "text": "three",
+  "start": 75.87,
+  "end": 76.08
+ },
+ {
+  "text": "gigabytes",
+  "start": 76.08,
+  "end": 76.53
+ },
+ {
+  "text": "of",
+  "start": 76.53,
+  "end": 76.59
+ },
+ {
+  "text": "memory.",
+  "start": 76.59,
+  "end": 77.01
+ },
+ {
+  "text": "Same",
+  "start": 77.84,
+  "end": 78.12
+ },
+ {
+  "text": "hospital.",
+  "start": 78.12,
+  "end": 78.61
+ },
+ {
+  "text": "Same",
+  "start": 78.93,
+  "end": 79.2
+ },
+ {
+  "text": "doctors.",
+  "start": 79.2,
+  "end": 79.68
+ },
+ {
+  "text": "Just",
+  "start": 80.17,
+  "end": 80.42
+ },
+ {
+  "text": "a",
+  "start": 80.42,
+  "end": 80.45
+ },
+ {
+  "text": "smarter",
+  "start": 80.45,
+  "end": 80.92
+ },
+ {
+  "text": "receptionist.",
+  "start": 80.92,
+  "end": 81.61
+ },
+ {
+  "text": "Follow",
+  "start": 82.57,
+  "end": 82.81
+ },
+ {
+  "text": "for",
+  "start": 82.81,
+  "end": 82.95
+ },
+ {
+  "text": "more",
+  "start": 82.95,
+  "end": 83.19
+ },
+ {
+  "text": "AI,",
+  "start": 83.19,
+  "end": 83.56
+ },
+ {
+  "text": "explained",
+  "start": 83.7,
+  "end": 84.04
+ },
+ {
+  "text": "like",
+  "start": 84.04,
+  "end": 84.19
+ },
+ {
+  "text": "this.",
+  "start": 84.19,
+  "end": 84.51
+ }
+]

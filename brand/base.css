@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "InterV";
+  src: url("fonts/inter.woff2") format("woff2");
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Mono";
+  src: url("fonts/mono-500.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Mono";
+  src: url("fonts/mono-700.woff2") format("woff2");
+  font-weight: 700;
+}
+:root {
+  --bg: #0b0c10;
+  --card: #14161d;
+  --line: #262a35;
+  --ink: #f5f5f2;
+  --muted: #9a9ca6;
+  --accent: #c8ff4d;
+  --c-context: #7cc4ff;
+  --c-goal: #c8ff4d;
+  --c-limits: #ffb547;
+  --c-example: #ff7ac6;
+  --bad: #ff6b6b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "InterV", sans-serif;
+  overflow: hidden;
+}
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+.glow {
+  position: absolute;
+  border-radius: 50%;
+}
+.glow.lime {
+  background: radial-gradient(circle, rgba(200, 255, 77, 0.14) 0%, rgba(200, 255, 77, 0) 62%);
+}
+.glow.blue {
+  background: radial-gradient(circle, rgba(124, 196, 255, 0.11) 0%, rgba(124, 196, 255, 0) 62%);
+}
+.mono {
+  font-family: "Mono", monospace;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: rgba(20, 22, 29, 0.85);
+  font-family: "Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.tag .dot {
+  border-radius: 50%;
+  background: var(--accent);
+}
+/* The logo mark: a bold "1" with a typing cursor */
+.mark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mark .one {
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+.mark .cur {
+  display: block;
+}

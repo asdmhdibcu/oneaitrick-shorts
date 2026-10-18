@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="captions.js"></script>
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      :root { --accent: var(--lime); }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .cam { position: absolute; inset: 0; transform-origin: 50% 45%; }
+      .w { position: absolute; transform-origin: 50% 100%; }
+      .w > img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform-origin: 50% 100%; }
+      .shadow { position: absolute; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,0.6), rgba(0,0,0,0)); }
+      .chipx { position: absolute; transform: translate(-50%, -50%); white-space: nowrap; font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.1em; padding: 12px 22px; border-radius: 14px; background: rgba(11,12,16,0.82);
+        border: 2px solid currentColor; }
+      .glowdot { position: absolute; border-radius: 50%; }
+      /* Lobby */
+      .wall { position: absolute; left: 0; top: 0; width: 1080px; height: 1100px;
+        background: linear-gradient(180deg, #0b131b 0%, #10212c 45%, #163240 78%, #0f1d27 100%); }
+      .winp { position: absolute; top: 380px; width: 230px; height: 560px; border-radius: 22px;
+        background: linear-gradient(180deg, rgba(160,215,255,0.28), rgba(124,196,255,0.06)); border: 3px solid rgba(160,215,255,0.18); }
+      .winp::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: rgba(160,215,255,0.16); }
+      .ceil { position: absolute; top: 255px; height: 12px; width: 300px; border-radius: 6px; background: #e9f6ff;
+        box-shadow: 0 0 40px 12px rgba(190,230,255,0.45), 0 0 120px 30px rgba(124,196,255,0.18); }
+      .cross { position: absolute; left: 490px; top: 300px; width: 100px; height: 100px; }
+      .cross::before, .cross::after { content: ""; position: absolute; background: var(--lime); border-radius: 8px;
+        box-shadow: 0 0 30px rgba(200,255,77,0.8), 0 0 80px rgba(200,255,77,0.35); }
+      .cross::before { left: 36px; top: 0; width: 28px; height: 100px; }
+      .cross::after { left: 0; top: 36px; width: 100px; height: 28px; }
+      .floor { position: absolute; left: 0; top: 1060px; width: 1080px; height: 860px;
+        background: linear-gradient(180deg, #1b3644 0%, #12222c 40%, #0b0c10 100%); }
+      .floorsheen { position: absolute; left: 140px; top: 1080px; width: 800px; height: 260px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(160,215,255,0.14), rgba(160,215,255,0)); }
+      /* Stage */
+      .stage { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 55% at 50% 45%, #1b2a3a 0%, #0f1720 55%, #0b0c10 100%); }
+      .spot { position: absolute; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,255,255,0.13), rgba(255,255,255,0)); }
+      .rays { position: absolute; left: 40px; top: 400px; width: 1000px; height: 1000px; border-radius: 50%;
+        background: repeating-conic-gradient(from 0deg, rgba(200,255,77,0.16) 0deg 9deg, rgba(200,255,77,0) 9deg 22deg);
+        -webkit-mask-image: radial-gradient(closest-side, #000 30%, transparent 100%); mask-image: radial-gradient(closest-side, #000 30%, transparent 100%); }
+      /* AI grid */
+      .node { position: absolute; width: 72px; height: 72px; }
+      .node img { width: 72px; height: 72px; filter: grayscale(1) brightness(0.55); }
+      .node .ring { position: absolute; left: -10px; top: -10px; width: 92px; height: 92px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(200,255,77,0.55), rgba(200,255,77,0)); opacity: 0; }
+      .bubble-txt { position: absolute; left: 0; top: 70px; width: 100%; text-align: center; font-family: "Mono", monospace; font-weight: 700;
+        font-size: 54px; color: #2a2f3d; }
+      /* Blueprint */
+      .bp { position: absolute; inset: 0; background-color: #0c2440;
+        background-image: linear-gradient(rgba(124,196,255,0.14) 2px, transparent 2px), linear-gradient(90deg, rgba(124,196,255,0.14) 2px, transparent 2px),
+          linear-gradient(rgba(124,196,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(124,196,255,0.06) 1px, transparent 1px);
+        background-size: 216px 216px, 216px 216px, 54px 54px, 54px 54px; }
+      /* Desk */
+      .desk { position: absolute; left: 150px; top: 960px; width: 780px; height: 230px; }
+      .desk .top { position: absolute; left: 0; top: 0; width: 100%; height: 46px; border-radius: 23px;
+        background: linear-gradient(180deg, #f4f7fb, #c9d4e2); }
+      .desk .front { position: absolute; left: 22px; top: 36px; right: 22px; bottom: 0; border-radius: 0 0 26px 26px;
+        background: linear-gradient(180deg, #2a3647, #1a2230); }
+      .desk .strip { position: absolute; left: 60px; right: 60px; top: 92px; height: 8px; border-radius: 4px; background: var(--lime);
+        box-shadow: 0 0 30px rgba(200,255,77,0.8); }
+      .doorglow { position: absolute; border-radius: 30px; background: radial-gradient(closest-side, rgba(200,255,77,0.75), rgba(200,255,77,0)); opacity: 0; }
+      .beam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; opacity: 0;
+        background: linear-gradient(200deg, rgba(200,255,77,0) 30%, rgba(200,255,77,0.22) 55%, rgba(200,255,77,0) 80%);
+        clip-path: polygon(560px 700px, 520px 700px, 0px 860px, 0px 1260px, 420px 1260px); }
+      .scanline { position: absolute; left: 20px; width: 360px; height: 6px; background: var(--lime); box-shadow: 0 0 24px var(--lime); opacity: 0; }
+      /* Building */
+      .bld { position: absolute; left: 90px; top: 320px; width: 900px; height: 730px; border-radius: 34px;
+        background: linear-gradient(180deg, #1d2a3b, #121a26); border: 3px solid #2f3d52; box-shadow: 0 40px 120px rgba(0,0,0,0.6); }
+      .roof { position: absolute; left: 0; top: 0; width: 100%; height: 86px; border-radius: 31px 31px 0 0; background: #263449; }
+      .room { position: absolute; width: 268px; height: 145px; border-radius: 18px; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 20%, #3a4a5e 0%, #222e3e 70%); border: 2px solid #34445a; }
+      .room.ours { border-color: var(--lime); box-shadow: 0 0 40px rgba(200,255,77,0.35) inset; }
+      .room .rimg { position: absolute; bottom: -6px; }
+      .etag { position: absolute; right: 8px; top: 8px; font-family: "Mono", monospace; font-weight: 700; font-size: 17px; letter-spacing: 0.08em;
+        padding: 5px 9px; border-radius: 8px; background: rgba(11,12,16,0.85); color: var(--blue); border: 2px solid var(--blue); opacity: 0; }
+      .mtitle { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; }
+      /* Speed */
+      .streak { position: absolute; height: 4px; border-radius: 2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.7)); }
+      .tile { position: absolute; width: 270px; height: 330px; border-radius: 26px; background: #171f2b; border: 3px solid #2c394c; }
+      .tile .tl { position: absolute; left: 0; bottom: 22px; width: 100%; text-align: center; font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.1em; color: var(--ink); }
+      /* RAM */
+      .ram { position: absolute; left: 110px; top: 700px; width: 860px; height: 230px; border-radius: 16px;
+        background: linear-gradient(180deg, #1f7a4d, #145a38); border: 3px solid #2a9a62; }
+      .ram .chipb { position: absolute; top: 40px; width: 80px; height: 120px; border-radius: 8px; background: linear-gradient(180deg, #1c1f26, #0d0f13); }
+      .ram .pins { position: absolute; left: 30px; right: 30px; bottom: -3px; height: 28px;
+        background: repeating-linear-gradient(90deg, #e2b84a 0 12px, transparent 12px 20px); }
+      .meter { position: absolute; left: 110px; width: 860px; height: 64px; border-radius: 32px; background: #161b24; border: 3px solid #2b3445; overflow: hidden; }
+      .meter .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; transform-origin: left center; }
+      .meter .ml { position: absolute; left: 26px; top: 12px; font-family: "Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.08em; color: #0b0c10; }
+      /* Data centre */
+      .rack { position: absolute; border-radius: 6px; background-color: #121925; border: 2px solid #26334a;
+        background-image: radial-gradient(circle, rgba(124,196,255,0.9) 0 2px, transparent 3px), linear-gradient(rgba(255,255,255,0.05) 2px, transparent 2px);
+        background-size: 26px 30px, 100% 30px; }
+      /* Lab */
+      .labwall { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 60% at 50% 35%, #2a2433 0%, #17141d 60%, #0b0c10 100%); }
+      .board { position: absolute; left: 150px; top: 430px; width: 780px; height: 520px; border-radius: 22px; background: linear-gradient(180deg, #fbfbf8, #e9ebe6);
+        border: 12px solid #c9ced6; box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+      .bulbglow { position: absolute; left: 340px; top: 180px; width: 400px; height: 400px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(255,226,120,0.6), rgba(255,226,120,0)); opacity: 0; }
+      /* Night */
+      .sky { position: absolute; inset: 0; background: linear-gradient(180deg, #050a18 0%, #0b1730 45%, #14294a 75%, #0b0c10 100%); }
+      .star { position: absolute; border-radius: 50%; background: #fff; }
+      .pagerglow { position: absolute; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(closest-side, rgba(200,255,77,0.7), rgba(200,255,77,0)); opacity: 0; }
+      .panel { position: absolute; left: 70px; top: 300px; width: 940px; height: 560px; border-radius: 34px;
+        background: linear-gradient(180deg, rgba(30,44,62,0.96), rgba(18,26,38,0.96)); border: 3px solid #3a4c66; box-shadow: 0 40px 120px rgba(0,0,0,0.6); overflow: hidden; }
+      .holo { filter: grayscale(1) brightness(1.7) drop-shadow(0 0 16px rgba(200,255,77,0.95)) drop-shadow(0 0 40px rgba(200,255,77,0.5)); }
+      /* Result */
+      .bignum { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; letter-spacing: -0.04em; color: var(--lime);
+        font-variant-numeric: tabular-nums; text-shadow: 0 0 60px rgba(200,255,77,0.35); }
+      .room2 { position: absolute; inset: 0; background: radial-gradient(ellipse 85% 55% at 50% 40%, #2b2433 0%, #15121b 60%, #0b0c10 100%); }
+      .tabletop { position: absolute; left: -40px; top: 1150px; width: 1160px; height: 90px; border-radius: 20px; background: linear-gradient(180deg, #8a5a3c, #5b3a27); }
+      .screenin { position: absolute; overflow: hidden; border-radius: 10px; background: radial-gradient(ellipse at 50% 60%, #1a3550, #0c1828); }
+      .stamp { position: absolute; padding: 14px 30px; border: 8px solid var(--lime); border-radius: 18px; color: var(--lime); font-weight: 900;
+        font-size: 96px; letter-spacing: -0.03em; background: rgba(11,12,16,0.85); transform: translate(-50%, -50%) rotate(-6deg); }
+      /* End */
+      .mark { position: absolute; left: 420px; top: 470px; width: 240px; height: 240px; border-radius: 56px; background: var(--lime);
+        display: flex; align-items: flex-end; justify-content: center; gap: 8px; padding-bottom: 54px; }
+      .mark .one { font-weight: 900; font-size: 168px; line-height: 0.73; color: #0b0c10; letter-spacing: -0.06em; }
+      .mark .cur { width: 46px; height: 17px; border-radius: 3px; background: #0b0c10; }
+      /* UI */
+      .cap { position: absolute; left: 40px; width: 1000px; top: 1255px; text-align: center; font-weight: 900; font-size: 84px; line-height: 1.02;
+        letter-spacing: -0.02em; color: #fff; -webkit-text-stroke: 14px #0b0c10; paint-order: stroke fill; opacity: 0; }
+      .cap .cw { display: inline-block; margin: 0 0.2em; transform-origin: 50% 70%; }
+      .cap .cw.emph { color: #fff; }
+      .grain { position: absolute; inset: 0; background-image: url("assets/grain.png"); opacity: 0.07; mix-blend-mode: overlay; }
+      .flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      .black { position: absolute; inset: 0; background: #000; opacity: 0; }
+      .redflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(255,60,60,0) 30%, rgba(255,40,40,0.55) 100%); opacity: 0; }
+      .tag2 { position: absolute; left: 60px; top: 150px; display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px 12px 18px;
+        border: 2px solid rgba(255,255,255,0.14); border-radius: 999px; background: rgba(11,12,16,0.7); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 26px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag2 .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--blue); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="86" data-width="1080" data-height="1920">
+      <div id="base" class="clip" data-start="0" data-duration="86" data-track-index="0" style="background: #0b0c10"></div>
+
+      <div id="s1" class="clip scene" data-start="0" data-duration="6.9" data-track-index="1"><div class="cam" id="c1"></div></div>
+      <div id="s2" class="clip scene" data-start="6.1" data-duration="5.9" data-track-index="2"><div class="cam" id="c2"></div></div>
+      <div id="s3" class="clip scene" data-start="11.2" data-duration="8.6" data-track-index="1"><div class="cam" id="c3"></div></div>
+      <div id="s4" class="clip scene" data-start="19.0" data-duration="3.9" data-track-index="2"><div class="cam" id="c4"></div></div>
+      <div id="s5" class="clip scene" data-start="22.1" data-duration="6.4" data-track-index="1"><div class="cam" id="c5"></div></div>
+      <div id="s6" class="clip scene" data-start="27.7" data-duration="10.9" data-track-index="2"><div class="cam" id="c6"></div></div>
+      <div id="s8" class="clip scene" data-start="37.8" data-duration="7.2" data-track-index="1"><div class="cam" id="c8"></div></div>
+      <div id="s9" class="clip scene" data-start="44.4" data-duration="11.7" data-track-index="2"><div class="cam" id="c9"></div></div>
+      <div id="s10" class="clip scene" data-start="55.3" data-duration="4.4" data-track-index="1"><div class="cam" id="c10"></div></div>
+      <div id="s11" class="clip scene" data-start="58.9" data-duration="9.5" data-track-index="2"><div class="cam" id="c11"></div></div>
+      <div id="s12" class="clip scene" data-start="67.6" data-duration="10.3" data-track-index="1"><div class="cam" id="c12"></div></div>
+      <div id="s13" class="clip scene" data-start="77.1" data-duration="5.6" data-track-index="2"><div class="cam" id="c13"></div></div>
+      <div id="s14" class="clip scene" data-start="81.9" data-duration="4.1" data-track-index="1"><div class="cam" id="c14"></div></div>
+
+      <div id="ui" class="clip" data-start="0" data-duration="86" data-track-index="3">
+        <div class="redflash" id="redflash"></div>
+        <div class="vignette"></div>
+        <div class="grain" id="grain"></div>
+        <div class="progress" id="prog"></div>
+        <div class="tag2" id="tag"><span class="dot"></span>AI CONCEPT · STORY</div>
+        <div class="brandmark" id="bm" style="right: 60px; top: 158px; padding-top: 10px">@ONEAITRICK</div>
+        <div id="caps"></div>
+        <div class="flash" id="flash"></div>
+        <div class="black" id="black"></div>
+      </div>
+
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="86" data-volume="1" data-track-index="4"></audio>
+    </div>
+
+    <script>
+      // ---------- helpers (deterministic) ----------
+      const A = "assets/3d/";
+      const $ = (s) => document.querySelector(s);
+      function rnd(seed) { let a = seed | 0; return () => { a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+      function div(parent, cls, css, html) { const d = document.createElement("div"); if (cls) d.className = cls; if (css) d.style.cssText = css; if (html) d.innerHTML = html; parent.appendChild(d); return d; }
+      // bottom-centre anchored character/object
+      function img(parent, name, x, yb, w, css) {
+        const d = div(parent, "w", `left:${x - w / 2}px;top:${yb - w}px;width:${w}px;height:${w}px;${css || ""}`);
+        const i = document.createElement("img"); i.src = A + name + ".png"; d.appendChild(i); d.i = i; return d;
+      }
+      function shadow(parent, x, yb, w, op) { return div(parent, "shadow", `left:${x - w * 0.36}px;top:${yb - w * 0.06}px;width:${w * 0.72}px;height:${w * 0.12}px;opacity:${op || 1}`); }
+      function chip(parent, text, x, y, color, css) { return div(parent, "chipx", `left:${x}px;top:${y}px;color:${color || "var(--lime)"};${css || ""}`, text); }
+      function lobby(parent) {
+        div(parent, "wall");
+        [70, 425, 780].forEach((x) => div(parent, "winp", `left:${x}px`));
+        [90, 390, 690].forEach((x) => div(parent, "ceil", `left:${x}px`));
+        div(parent, "cross");
+        div(parent, "floor");
+        const s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        s.setAttribute("width", "1080"); s.setAttribute("height", "860"); s.style.cssText = "position:absolute;left:0;top:1060px";
+        let p = "";
+        for (let k = -8; k <= 14; k++) { const xb = 540 + (k - 3) * 230; p += `M ${xb} 860 L ${540 + (xb - 540) * 0.18} 0 `; }
+        for (let k = 1; k <= 7; k++) { const y = 860 * Math.pow(k / 7, 2.1); p += `M 0 ${y} L 1080 ${y} `; }
+        s.innerHTML = `<path d="${p}" stroke="rgba(160,215,255,0.10)" stroke-width="2" fill="none"/>`;
+        parent.appendChild(s);
+        div(parent, "floorsheen");
+      }
+      function svg(parent, w, h, inner, css) { const s = document.createElementNS("http://www.w3.org/2000/svg", "svg"); s.setAttribute("width", w); s.setAttribute("height", h); s.setAttribute("viewBox", `0 0 ${w} ${h}`); s.style.cssText = "position:absolute;" + (css || ""); s.innerHTML = inner; parent.appendChild(s); return s; }
+
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out";
+      function popIn(t, els, st) { tl.fromTo(els, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)", stagger: st || 0 }, t); }
+      function slideIn(t, els, from, st) { tl.fromTo(els, Object.assign({ opacity: 0 }, from), { opacity: 1, x: 0, y: 0, rotation: 0, duration: 0.55, ease: E, stagger: st || 0 }, t); }
+      function bob(el, t0, t1, amp, per) { const n = Math.max(1, Math.floor((t1 - t0) / per) * 2 - 1); tl.fromTo(el, { y: 0 }, { y: -amp, duration: per / 2, ease: "sine.inOut", yoyo: true, repeat: n }, t0); }
+      function shake(el, t, dur, amp) { const k = []; for (let i = 0; i < 8; i++) k.push(((i % 2) ? -1 : 1) * amp * (1 - i / 8)); k.push(0); tl.to(el, { keyframes: { x: k }, duration: dur, ease: "none" }, t); }
+      function draw(t, sel, dur, ease) { document.querySelectorAll(sel).forEach((p) => { const L = p.getTotalLength(); p.style.strokeDasharray = L; tl.fromTo(p, { strokeDashoffset: L }, { strokeDashoffset: 0, duration: dur, ease: ease || "power2.inOut" }, t); }); }
+
+      const DOCS = ["doc_default", "doc_light", "doc_mlight", "doc_medium", "doc_mdark", "doc_dark", "mdoc_light", "mdoc_medium", "mdoc_dark", "wdoc_mlight", "wdoc_mdark", "wdoc_light"];
+
+      // ================= S1 · HOOK (0 – 6.4) =================
+      const c1 = $("#c1"); lobby(c1);
+      const crowd = div(c1, "", "position:absolute;inset:0");
+      const R1 = rnd(7);
+      const crowdEls = [];
+      [[930, 150, 9], [1010, 200, 7], [1110, 270, 6]].forEach(([yb, w, n], row) => {
+        for (let i = 0; i < n; i++) {
+          const x = 60 + i * (w * 0.62) + row * 30 + R1() * 30;
+          const d = img(crowd, DOCS[(i * 5 + row * 3) % DOCS.length], x, yb + R1() * 20, w);
+          d.style.zIndex = 10 + row; crowdEls.push([d, row, i]);
+        }
+      });
+      const pat = div(c1, "", "position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:30");
+      const patSh = shadow(pat, 760, 1232, 430);
+      const crutch = img(pat, "crutch", 640, 1230, 300, "transform:rotate(-12deg)");
+      const walker = img(pat, "walker", 760, 1235, 470);
+      const bandage = img(pat, "bandage", 712, 1210, 120);
+      const ring1 = div(pat, "", "position:absolute;left:640px;top:1100px;width:150px;height:150px;border-radius:50%;border:6px solid #ff6b6b;opacity:0");
+      const flushed = img(pat, "flushed", 820, 760, 200);
+      const x50 = chip(c1, "× 50 DOCTORS", 330, 690, "var(--lime)", "font-size:44px;z-index:40");
+      // entrance: patient limps in from right
+      tl.fromTo(pat, { x: 330 }, { x: 0, duration: 2.2, ease: "power1.out" }, 0);
+      for (let k = 0; k < 6; k++) { tl.to(walker.i, { y: 16, rotation: -3, duration: 0.18, ease: "sine.in" }, 0.1 + k * 0.38); tl.to(walker.i, { y: 0, rotation: 1, duration: 0.2, ease: "sine.out" }, 0.28 + k * 0.38); }
+      tl.fromTo(c1, { scale: 1.0 }, { scale: 1.08, duration: 6.4, ease: "none" }, 0);
+      // "sprained ankle"
+      popIn(2.6, bandage);
+      tl.fromTo(ring1, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1.2, duration: 0.4, ease: E }, 2.85);
+      tl.to(ring1, { opacity: 0, scale: 1.6, duration: 0.5 }, 3.25);
+      tl.to(c1, { scale: 1.22, x: -120, y: -170, duration: 0.45, ease: "power2.out" }, 2.85);
+      tl.to(c1, { scale: 1.08, x: 0, y: 0, duration: 0.5, ease: "power2.inOut" }, 3.5);
+      // crowd rush from left
+      crowdEls.forEach(([d, row, i]) => {
+        const t = 3.45 + row * 0.12 + i * 0.05;
+        tl.fromTo(d, { x: -1000 - row * 120, opacity: 1 }, { x: 0, duration: 1.5 + row * 0.15, ease: "power2.out" }, t);
+        tl.fromTo(d.i, { y: 0 }, { y: -26 + row * 4, duration: 0.14, yoyo: true, repeat: 15, ease: "sine.inOut" }, t);
+      });
+      tl.set(crowd, { opacity: 1 }, 0);
+      shake(c1, 4.12, 0.45, 18);
+      popIn(4.3, flushed);
+      tl.to(walker.i, { rotation: 8, duration: 0.3, ease: "back.out(2)" }, 4.4);
+      popIn(4.62, x50);
+      tl.to(flushed.i, { scale: 1.15, duration: 0.25, yoyo: true, repeat: 3 }, 5.2);
+      // exit: whip left
+      tl.to(c1, { x: -900, filter: "blur(18px)", duration: 0.32, ease: "power3.in" }, 6.25);
+
+      // ================= S2 · SPECIALISTS (6.4 – 11.5) =================
+      const c2 = $("#c2"); div(c2, "stage");
+      const specs = [
+        { doc: "mdoc_light", prop: "heart", x: 210, label: "HEART SURGEON", t: 6.5, col: "var(--pink)" },
+        { doc: "wdoc_mdark", prop: "tooth", x: 540, label: "DENTIST", t: 7.69, col: "var(--blue)" },
+        { doc: "doc_dark", prop: "eye", x: 870, label: "EYE DOCTOR", t: 8.5, col: "var(--amber)" },
+      ];
+      const specEls = specs.map((s, k) => {
+        const g = div(c2, "w", `left:${s.x - 170}px;top:330px;width:340px;height:560px`);
+        div(g, "spot", "left:-80px;top:120px;width:500px;height:500px");
+        const d = img(g, s.doc, 170, 520, 330);
+        const p = img(g, s.prop, 250, 250, 190);
+        const c = chip(g, s.label, 170, 560, s.col, "font-size:24px");
+        return { g, d, p, c, s, k };
+      });
+      const foot = img(c2, "foot", 540, 1195, 290);
+      const fBand = img(c2, "bandage", 525, 1160, 110, "transform:rotate(18deg)");
+      const fRing = div(c2, "", "position:absolute;left:385px;top:900px;width:310px;height:310px;border-radius:50%;border:5px dashed var(--lime);opacity:0");
+      tl.fromTo(c2, { x: 900, filter: "blur(18px)" }, { x: 0, filter: "blur(0px)", duration: 0.35, ease: "power3.out" }, 6.3);
+      specEls.forEach(({ g, d, p, c, s }) => {
+        tl.fromTo(g, { opacity: 0, y: -260, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, s.t - 0.05);
+        popIn(s.t + 0.2, p);
+        tl.fromTo(c, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, s.t + 0.25);
+        bob(p, s.t + 0.6, 11.4, 14, 1.2);
+      });
+      popIn(9.95, [foot, fBand], 0.12);
+      tl.fromTo(fRing, { opacity: 0, scale: 0.5, rotation: 0 }, { opacity: 1, scale: 1, rotation: 90, duration: 0.6, ease: E }, 10.2);
+      tl.to(specEls.map((o) => o.c), { opacity: 0, y: -10, duration: 0.25 }, 9.95);
+      specEls.forEach(({ g, k }) => tl.to(g, { rotation: [12, 0, -12][k], y: 40, x: [50, 0, -50][k], duration: 0.6, ease: "power2.inOut" }, 10.0));
+      tl.to(c2, { scale: 1.08, y: -30, duration: 1.4, ease: "power1.inOut" }, 10.1);
+      tl.to(c2, { scale: 1.6, opacity: 0, filter: "blur(12px)", duration: 0.32, ease: "power3.in" }, 11.3);
+
+      // ================= S3 · RIDICULOUS → AI MODEL (11.5 – 19.3) =================
+      const c3 = $("#c3"); div(c3, "stage");
+      const rays = div(c3, "rays");
+      const rofl = img(c3, "rofl", 540, 1130, 460);
+      const aiwrap = div(c3, "", "position:absolute;inset:0;opacity:0");
+      div(aiwrap, "", "position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 45%, #10233a 0%, #0b0c10 75%)");
+      const aiChip = chip(aiwrap, "AN AI MODEL", 540, 330, "var(--blue)", "font-size:32px");
+      const brain = img(aiwrap, "brain", 540, 590, 230);
+      const grid = div(aiwrap, "", "position:absolute;left:0;top:0;width:1080px;height:1920px");
+      const nodes = [];
+      for (let r = 0; r < 5; r++) for (let c = 0; c < 10; c++) {
+        const n = div(grid, "node", `left:${75 + c * 95}px;top:${650 + r * 92}px`);
+        div(n, "ring");
+        const im = document.createElement("img"); im.src = A + DOCS[(r * 10 + c) % DOCS.length] + ".png"; n.appendChild(im);
+        nodes.push({ n, r, c });
+      }
+      const bubble = img(aiwrap, "speech", 540, 1215, 260);
+      const btxt = div(bubble, "bubble-txt", "", "");
+      const allChip = chip(aiwrap, "ALL 50 AT WORK", 540, 1150, "var(--red)", "font-size:34px;opacity:0");
+      tl.fromTo(c3, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: E }, 11.45);
+      tl.fromTo(rays, { rotation: 0 }, { rotation: 40, duration: 2.2, ease: "none" }, 11.5);
+      tl.fromTo(rofl, { scale: 0.2, rotation: -40, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.55, ease: "back.out(2)" }, 11.85);
+      tl.to(rofl.i, { keyframes: { rotation: [0, -14, 12, -10, 8, 0] }, duration: 1.2, ease: "none" }, 12.4);
+      tl.to([rofl, rays], { opacity: 0, scale: 0.6, duration: 0.3, ease: "power2.in" }, 13.4);
+      tl.to(aiwrap, { opacity: 1, duration: 0.3 }, 13.55);
+      tl.fromTo(aiChip, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.35 }, 13.7);
+      popIn(14.9, brain);
+      tl.fromTo(nodes.map((o) => o.n), { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)", stagger: { each: 0.018, from: "center" } }, 13.9);
+      popIn(16.35, bubble);
+      const word = "ankle";
+      for (let i = 1; i <= word.length; i++) tl.set(btxt, { textContent: word.slice(0, i) }, 16.55 + i * 0.09);
+      tl.to(bubble, { y: -470, scale: 0.25, opacity: 0, duration: 0.55, ease: "power2.in" }, 17.45);
+      nodes.forEach(({ n, r, c }) => {
+        const d = Math.hypot(c - 4.5, (r - 2) * 1.6) * 0.03;
+        tl.to(n.querySelector("img"), { filter: "grayscale(0) brightness(1.1)", duration: 0.18 }, 17.99 + d);
+        tl.to(n.querySelector(".ring"), { opacity: 1, duration: 0.18 }, 17.99 + d);
+        tl.fromTo(n, { scale: 1 }, { scale: 1.25, duration: 0.14, yoyo: true, repeat: 1, ease: "sine.out" }, 17.99 + d);
+      });
+      shake(c3, 17.99, 0.45, 14);
+      popIn(18.15, allChip);
+      tl.to(c3, { scale: 2.8, opacity: 0, filter: "blur(16px)", duration: 0.4, ease: "power3.in" }, 19.05);
+
+      // ================= S4 · BLUEPRINT (19.3 – 22.4) =================
+      const c4 = $("#c4"); div(c4, "bp");
+      const plan = svg(c4, 860, 640,
+        `<g fill="none" stroke="#a8dcff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+           <path class="pl" d="M30 30 H830 V610 H30 Z"/>
+           <path class="pl" d="M30 200 H330 M530 200 H830 M330 30 V200 M530 30 V200 M180 30 V200 M680 30 V200"/>
+           <path class="pl" d="M30 420 H300 M560 420 H830 M300 420 V610 M560 420 V610 M30 310 H120 M740 310 H830"/>
+           <path class="pl" d="M380 610 V560 M480 610 V560"/>
+         </g>
+         <circle id="rec" cx="430" cy="470" r="60" fill="none" stroke="#a8dcff" stroke-width="5"/>
+         <circle id="recglow" cx="430" cy="470" r="60" fill="rgba(200,255,77,0.0)" stroke="#c8ff4d" stroke-width="8" opacity="0"/>`,
+        "left:110px;top:400px");
+      const engineer = img(c4, "engineer", 230, 1230, 320);
+      const ruler = img(c4, "ruler", 880, 1210, 200);
+      const spark4 = img(c4, "sparkles", 650, 980, 190);
+      const recChip = chip(c4, "RECEPTION", 540, 1015, "var(--lime)", "font-size:26px;opacity:0");
+      tl.fromTo(c4, { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 0.45, ease: E }, 19.2);
+      draw(19.5, "#c4 .pl", 1.6);
+      tl.set("#rec", { strokeDasharray: 400, strokeDashoffset: 400 }, 0);
+      tl.to("#rec", { strokeDashoffset: 0, duration: 0.6 }, 20.6);
+      slideIn(19.6, engineer, { x: -300 });
+      tl.fromTo(ruler, { opacity: 0, rotation: 90, scale: 0.4 }, { opacity: 1, rotation: 0, scale: 1, duration: 0.6, ease: "back.out(1.6)" }, 19.8);
+      tl.to("#recglow", { opacity: 1, duration: 0.25 }, 21.04);
+      tl.fromTo("#recglow", { attr: { r: 60 } }, { attr: { r: 76 }, duration: 0.5, yoyo: true, repeat: 1 }, 21.04);
+      popIn(21.05, spark4);
+      tl.fromTo(recChip, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3 }, 21.2);
+      tl.to(c4, { scale: 1.08, duration: 3, ease: "none" }, 19.5);
+
+      // ================= S5 · RECEPTIONIST (22.4 – 28.0) =================
+      const c5 = $("#c5"); lobby(c5);
+      const doors = [];
+      for (let i = 0; i < 8; i++) {
+        const x = 108 + i * 123;
+        const gl = div(c5, "doorglow", `left:${x - 80}px;top:330px;width:160px;height:240px`);
+        const d = img(c5, "door", x, 560, 150);
+        doors.push({ d, gl, i });
+      }
+      const doorPaths = svg(c5, 1080, 1920,
+        [1, 2, 5, 6].map((i) => `<path class="dp" d="M 540 700 C 540 640, ${108 + i * 123} 660, ${108 + i * 123} 575" stroke="#c8ff4d" stroke-width="6" stroke-dasharray="4 16" stroke-linecap="round" fill="none" opacity="0"/>`).join(""), "left:0;top:0");
+      const robot = img(c5, "robot", 540, 1000, 470);
+      const desk = div(c5, "desk", "", '<div class="top"></div><div class="front"></div><div class="strip"></div>');
+      const bell = img(c5, "bellhop", 770, 985, 150);
+      const pat5 = img(c5, "walker", 200, 1240, 400, "z-index:5");
+      shadow(c5, 200, 1240, 400, 0.8);
+      const beam = div(c5, "beam");
+      const scanl = div(c5, "scanline", "top:860px");
+      const only4 = chip(c5, "ONLY 4 NEEDED", 540, 300, "var(--lime)", "font-size:30px;opacity:0");
+      tl.fromTo(c5, { clipPath: "inset(0 0 0 100%)" }, { clipPath: "inset(0 0 0 0%)", duration: 0.45, ease: "power3.inOut" }, 22.15);
+      tl.fromTo(robot, { y: 380 }, { y: 0, duration: 0.6, ease: "back.out(1.4)" }, 22.75);
+      tl.fromTo(bell, { opacity: 0, y: -200 }, { opacity: 1, y: 0, duration: 0.35, ease: "bounce.out" }, 22.95);
+      tl.to(bell.i, { scaleY: 0.85, duration: 0.08, yoyo: true, repeat: 1 }, 23.2);
+      slideIn(23.4, pat5, { x: -260 });
+      bob(robot.i, 23.4, 27.9, 10, 1.6);
+      tl.to(beam, { opacity: 1, duration: 0.2 }, 24.2);
+      tl.fromTo(scanl, { opacity: 1, y: 0 }, { y: 360, duration: 0.9, ease: "sine.inOut" }, 24.3);
+      tl.to([beam, scanl], { opacity: 0, duration: 0.25 }, 25.25);
+      tl.to(c5, { scale: 1.04, duration: 5.5, ease: "none" }, 22.5);
+      [[1, 26.24], [2, 26.5], [5, 26.77], [6, 27.0]].forEach(([i, t]) => {
+        tl.to(doors[i].gl, { opacity: 1, duration: 0.2 }, t);
+        tl.fromTo(doors[i].d, { scale: 1 }, { scale: 1.12, duration: 0.15, yoyo: true, repeat: 1 }, t);
+      });
+      tl.to(doors.filter((o) => ![1, 2, 5, 6].includes(o.i)).map((o) => o.d), { opacity: 0.3, filter: "grayscale(1)", duration: 0.4 }, 25.9);
+      tl.to("#c5 .dp", { opacity: 1, duration: 0.2, stagger: 0.26 }, 26.2);
+      draw(26.2, "#c5 .dp", 0.5);
+      tl.fromTo(only4, { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 27.1);
+      tl.to(c5, { y: 900, filter: "blur(16px)", duration: 0.32, ease: "power3.in" }, 27.85);
+
+      // ================= S6/7 · BUILDING → EXPERTS → TITLE (28.0 – 38.1) =================
+      const c6 = $("#c6"); div(c6, "stage");
+      const bldWrap = div(c6, "", "position:absolute;inset:0");
+      const bld = div(bldWrap, "bld");
+      const roof = div(bld, "roof", "", "");
+      const roofCross = div(roof, "cross", "left:410px;top:13px;width:60px;height:60px;transform:scale(0.6)");
+      const rooms = [];
+      const OURS = [4, 5, 7, 8];
+      const ACT = ["paper", "coffee", "stethoscope", "keyboard", "pager", "magnify", "paper", "coffee", "stethoscope", "keyboard", "pager", "magnify"];
+      for (let r = 0; r < 4; r++) for (let c = 0; c < 3; c++) {
+        const idx = r * 3 + c;
+        const rm = div(bld, "room" + (OURS.includes(idx) ? " ours" : ""), `left:${22 + c * 288}px;top:${100 + r * 155}px`);
+        const dk = img(rm, DOCS[(idx * 7) % DOCS.length], 88, 152, 136);
+        let extra;
+        if (OURS.includes(idx)) extra = img(rm, "walker", 200, 150, 110);
+        else extra = img(rm, ACT[idx], 200, 125, 84);
+        const et = div(rm, "etag", "", "EXPERT");
+        rooms.push({ rm, dk, extra, et, idx });
+      }
+      const router = img(bldWrap, "robot", 540, 1238, 175);
+      const routerChip = chip(bldWrap, "ROUTER", 730, 1165, "var(--lime)", "font-size:28px;opacity:0");
+      const rLines = svg(bldWrap, 1080, 1920,
+        OURS.map((idx) => { const r = Math.floor(idx / 3), c = idx % 3; const x = 90 + 22 + c * 288 + 134, y = 320 + 100 + r * 155 + 72; return `<path class="rl" d="M 540 1085 C 540 ${y + 110}, ${x} ${y + 120}, ${x} ${y + 30}" stroke="#c8ff4d" stroke-width="6" fill="none" stroke-linecap="round" opacity="0"/>`; }).join(""), "left:0;top:0");
+      const aiTint = div(bldWrap, "", "position:absolute;left:90px;top:320px;width:900px;height:730px;border-radius:34px;background:linear-gradient(180deg, rgba(124,196,255,0.22), rgba(124,196,255,0.08));border:3px solid var(--blue);opacity:0");
+      const aiModelChip = chip(bldWrap, "AI MODEL", 540, 363, "var(--blue)", "font-size:30px;opacity:0");
+      const titleWrap = div(c6, "", "position:absolute;inset:0;opacity:1");
+      const tw1 = div(titleWrap, "mtitle", "top:560px;font-size:170px;opacity:0", "MIXTURE");
+      const tw2 = div(titleWrap, "mtitle", "top:730px;font-size:110px;opacity:0;color:var(--muted)", "OF");
+      const tw3 = div(titleWrap, "mtitle", "top:850px;font-size:170px;opacity:0;color:var(--lime);text-shadow:0 0 60px rgba(200,255,77,0.4)", "EXPERTS");
+      tl.fromTo(c6, { y: -900, filter: "blur(16px)" }, { y: 0, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 27.95);
+      tl.fromTo(rooms.map((o) => o.rm), { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)", stagger: 0.03 }, 28.15);
+      tl.fromTo(c6, { scale: 1.25, x: 0 }, { scale: 1.0, x: 0, duration: 1.6, ease: "power2.inOut" }, 28.1);
+      rooms.filter((o) => !OURS.includes(o.idx)).forEach((o, k) => {
+        tl.fromTo(o.extra, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.4)" }, 29.42 + k * 0.04);
+        tl.fromTo(o.dk.i, { y: 0 }, { y: -10, duration: 0.18, yoyo: true, repeat: 5 }, 29.42 + k * 0.04);
+      });
+      tl.set(rooms.filter((o) => OURS.includes(o.idx)).map((o) => o.extra), { opacity: 1 }, 0);
+      tl.to(aiTint, { opacity: 1, duration: 0.5 }, 30.83);
+      tl.fromTo(aiModelChip, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 31.0);
+      tl.to(rooms.map((o) => o.et), { opacity: 1, duration: 0.2, stagger: 0.05 }, 32.7);
+      popIn(33.65, router);
+      tl.fromTo(routerChip, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 34.5);
+      tl.to("#c6 .rl", { opacity: 1, duration: 0.1 }, 34.6);
+      draw(34.6, "#c6 .rl", 0.5);
+      tl.to(bldWrap, { opacity: 0.18, scale: 0.92, filter: "blur(6px)", duration: 0.6, ease: "power2.inOut" }, 35.6);
+      tl.fromTo(tw1, { opacity: 0, y: -120, scale: 1.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power4.out" }, 36.55);
+      tl.fromTo(tw2, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 37.0);
+      tl.fromTo(tw3, { opacity: 0, y: 120, scale: 1.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power4.out" }, 37.12);
+      shake(titleWrap, 37.15, 0.35, 12);
+
+      // ================= S8 · NOT TIDY → FAST (38.1 – 44.5) =================
+      const c8 = $("#c8"); div(c8, "stage");
+      const tidy = div(c8, "", "position:absolute;inset:0");
+      const tiles = [["heart", "HEART"], ["tooth", "TEETH"], ["eye", "EYES"]].map(([n, l], k) => {
+        const t = div(tidy, "tile", `left:${45 + k * 335}px;top:520px`);
+        const im = img(t, n, 135, 250, 200);
+        const lab = div(t, "tl", "", l);
+        return { t, im, lab, k };
+      });
+      const thinking = img(tidy, "thinking", 540, 1180, 280);
+      const speed = div(c8, "", "position:absolute;inset:0;opacity:0");
+      div(speed, "", "position:absolute;inset:0;background:radial-gradient(ellipse 70% 40% at 50% 55%, #1c2c40 0%, #0b0c10 80%)");
+      svg(speed, 1080, 1920, (() => { let p = ""; for (let k = 0; k < 16; k++) { const a = (k / 16) * Math.PI * 2; p += `M ${540 + Math.cos(a) * 60} ${900 + Math.sin(a) * 60} L ${540 + Math.cos(a) * 1400} ${900 + Math.sin(a) * 1400} `; } return `<path d="${p}" stroke="rgba(124,196,255,0.10)" stroke-width="3"/>`; })(), "left:0;top:0");
+      const streaks = [];
+      const R8 = rnd(21);
+      for (let k = 0; k < 26; k++) streaks.push(div(speed, "streak", `left:${R8() * 1080}px;top:${380 + R8() * 820}px;width:${120 + R8() * 260}px;opacity:${0.25 + R8() * 0.5}`));
+      const wheel = div(speed, "", "position:absolute;left:0;top:0;width:1080px;height:1920px");
+      const dash = img(wheel, "dash", 830, 1060, 260, "transform:scaleX(-1)");
+      const wc = img(wheel, "wheelchair", 520, 1160, 480);
+      const cool = img(wheel, "sunglasses", 600, 830, 190);
+      const zap = img(speed, "zap", 860, 700, 240);
+      tl.fromTo(c8, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.05 }, 38.1);
+      tl.fromTo(c8, { filter: "hue-rotate(90deg) saturate(3)" }, { filter: "hue-rotate(0deg) saturate(1)", duration: 0.25, ease: "steps(4)" }, 38.1);
+      tl.fromTo(tiles.map((o) => o.t), { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.45, ease: E, stagger: 0.12 }, 38.3);
+      const glyphs = ["◇∿⊕", "⌁⟁⋄", "⊗≈⧉"];
+      tiles.forEach((o, k) => {
+        for (let f = 0; f < 6; f++) tl.set(o.lab, { textContent: f % 2 ? glyphs[(k + f) % 3] : ["HEART", "TEETH", "EYES"][(k + f) % 3] }, 39.95 + f * 0.07);
+        tl.to(o.im, { x: [335, -335, 0][k], y: [0, 0, 0][k], rotation: [20, -20, 10][k], duration: 0.35, ease: "power2.inOut" }, 40.0);
+        tl.to(o.t, { borderColor: "#ff7ac6", duration: 0.2 }, 39.98);
+        tl.set(o.lab, { textContent: glyphs[k] }, 40.4);
+      });
+      tl.to(tiles.map((o) => o.im.i), { filter: "blur(3px) saturate(0.6)", duration: 0.3 }, 40.0);
+      popIn(39.6, thinking);
+      tl.to(tidy, { opacity: 0, x: -300, filter: "blur(12px)", duration: 0.3, ease: "power2.in" }, 40.5);
+      tl.to(speed, { opacity: 1, duration: 0.2 }, 40.55);
+      streaks.forEach((s, k) => tl.fromTo(s, { x: 0 }, { x: -1400, duration: 0.35 + (k % 5) * 0.06, ease: "none", repeat: 9 }, 40.6));
+      tl.fromTo(wheel, { x: -900 }, { x: 0, duration: 0.6, ease: "power3.out" }, 40.7);
+      tl.fromTo(wc.i, { y: 0 }, { y: -8, duration: 0.09, yoyo: true, repeat: 30 }, 40.7);
+      tl.to(wheel, { x: 40, duration: 2.6, ease: "none" }, 41.3);
+      popIn(43.55, zap);
+      tl.to(wheel, { x: 1400, duration: 0.45, ease: "power3.in" }, 43.75);
+      tl.to(c8, { scale: 1.06, duration: 0.3, yoyo: true, repeat: 1 }, 43.55);
+
+      // ================= S9 · THE CATCH (44.5 – 55.6) =================
+      const c9 = $("#c9"); div(c9, "stage");
+      const catchW = div(c9, "", "position:absolute;inset:0");
+      const warn = img(catchW, "warning", 540, 1120, 460);
+      const catchChip = chip(catchW, "THE CATCH", 540, 420, "var(--red)", "font-size:36px");
+      const offices = div(c9, "", "position:absolute;inset:0;opacity:0");
+      const offChip = chip(offices, "50 DOCTORS · 50 OFFICES", 540, 360, "var(--amber)", "font-size:30px");
+      const offDoors = [];
+      for (let r = 0; r < 5; r++) for (let c = 0; c < 10; c++) offDoors.push(img(offices, "door", 90 + c * 100, 520 + r * 140, 110));
+      const ramW = div(c9, "", "position:absolute;inset:0;opacity:0");
+      const ramChip = chip(ramW, "IN A COMPUTER, OFFICES = MEMORY", 540, 560, "var(--blue)", "font-size:28px");
+      const ram = div(ramW, "ram", "", [0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<div class="chipb" style="left:${40 + i * 100}px"></div>`).join("") + '<div class="pins"></div>');
+      const meter9 = div(ramW, "meter", "top:1000px", '<div class="fill" id="m9f" style="background:linear-gradient(90deg,#ffb547,#ff6b6b)"></div><div class="ml" id="m9l">MEMORY</div>');
+      const dc = div(c9, "", "position:absolute;inset:0;opacity:0");
+      div(dc, "", "position:absolute;inset:0;background:linear-gradient(180deg,#070b12 0%,#0d1626 60%,#0b0c10 100%)");
+      const racks = div(dc, "", "position:absolute;inset:0");
+      for (let d = 6; d >= 0; d--) {
+        const s = 1 / (1 + d * 0.42);
+        const h = 1300 * s, w = 210 * s, cy = 880;
+        [-1, 1].forEach((side) => {
+          const x = 540 + side * (560 * s) - (side < 0 ? w : 0);
+          div(racks, "rack", `left:${x}px;top:${cy - h * 0.55}px;width:${w}px;height:${h}px;opacity:${0.5 + 0.5 * s};background-size:${26 * s}px ${30 * s}px, 100% ${30 * s}px`);
+        });
+      }
+      const bigHosp = img(dc, "hospital", 540, 1230, 620);
+      const tech = img(dc, "technologist", 230, 1235, 130);
+      const dcChip = chip(dc, "GIANT DATA CENTRE", 540, 330, "var(--blue)", "font-size:30px");
+      tl.set(c9, { opacity: 1 }, 44.4);
+      tl.fromTo("#redflash", { opacity: 0 }, { opacity: 1, duration: 0.08 }, 44.85);
+      tl.to("#redflash", { opacity: 0, duration: 0.7 }, 45.0);
+      tl.fromTo(warn, { scale: 2.4, opacity: 0, rotation: -12 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.3, ease: "power4.out" }, 44.82);
+      shake(c9, 44.9, 0.5, 22);
+      tl.fromTo(catchChip, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.3 }, 45.1);
+      bob(warn.i, 45.3, 46.4, 10, 0.6);
+      tl.to(catchW, { opacity: 0, scale: 0.8, duration: 0.3, ease: "power2.in" }, 46.35);
+      tl.to(offices, { opacity: 1, duration: 0.2 }, 46.5);
+      tl.fromTo(offDoors, { opacity: 0, scale: 0.2, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.3, ease: "back.out(2)", stagger: 0.032 }, 46.55);
+      tl.fromTo(offChip, { opacity: 0 }, { opacity: 1, duration: 0.3 }, 47.0);
+      tl.to(offDoors, { scale: 1.08, duration: 0.15, yoyo: true, repeat: 1, stagger: { each: 0.004, from: "random" } }, 48.13);
+      tl.to(offDoors, { x: (i) => 540 - (90 + (i % 10) * 100), y: (i) => 820 - (520 + Math.floor(i / 10) * 140) + 60, scale: 0.1, opacity: 0, duration: 0.55, ease: "power3.in", stagger: { each: 0.004, from: "random" } }, 48.9);
+      tl.to(offChip, { opacity: 0, duration: 0.2 }, 48.9);
+      tl.to(ramW, { opacity: 1, duration: 0.2 }, 49.3);
+      tl.fromTo(ram, { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.6)" }, 49.35);
+      tl.fromTo(ramChip, { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.3 }, 49.6);
+      tl.fromTo("#m9f", { scaleX: 0 }, { scaleX: 1, duration: 1.1, ease: "power2.in" }, 49.7);
+      tl.set("#m9l", { textContent: "MEMORY · FULL" }, 50.8);
+      tl.to(meter9, { borderColor: "#ff6b6b", duration: 0.2 }, 50.8);
+      shake(meter9, 50.85, 0.35, 10);
+      tl.to(ramW, { opacity: 0, y: -60, duration: 0.3 }, 51.6);
+      tl.to(dc, { opacity: 1, duration: 0.35 }, 51.7);
+      tl.fromTo(racks, { scale: 1.4 }, { scale: 1, duration: 3.6, ease: "power2.out" }, 51.7);
+      tl.fromTo(bigHosp, { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.0, ease: "back.out(1.4)" }, 52.4);
+      popIn(53.4, tech);
+      tl.fromTo(dcChip, { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.3 }, 54.3);
+      tl.to(c9, { scale: 0.94, duration: 2, ease: "power1.inOut" }, 53.4);
+      tl.to(c9, { opacity: 0, duration: 0.3 }, 55.5);
+
+      // ================= S10 · RESEARCHERS (55.6 – 59.2) =================
+      const c10 = $("#c10"); div(c10, "labwall");
+      const glow10 = div(c10, "bulbglow");
+      const board = div(c10, "board");
+      svg(board, 756, 496,
+        `<g fill="none" stroke="#2b3a55" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+           <path class="sk" d="M70 300 L170 210 L270 300 V420 H70 Z M140 420 V350 H200 V420"/>
+           <path class="sk" d="M500 420 V200 H690 V420 Z M570 270 H620 M595 245 V295"/>
+           <path class="sk" d="M290 360 C 360 300, 420 300, 480 340" stroke="#65a30d" stroke-dasharray="2 18"/>
+           <path class="sk" d="M460 320 L485 342 L455 355" stroke="#65a30d"/>
+         </g>`, "left:0;top:0");
+      const sciA = img(c10, "scientist", 175, 1230, 360);
+      const sciB = img(c10, "scientist2", 905, 1230, 360);
+      const bulb = img(c10, "bulb", 540, 420, 200);
+      const paperChip = chip(c10, "NEW PAPER · SEPT 2026", 540, 330, "var(--pink)", "font-size:28px");
+      tl.fromTo(c10, { opacity: 0, filter: "brightness(3)" }, { opacity: 1, filter: "brightness(1)", duration: 0.45, ease: E }, 55.5);
+      tl.fromTo(paperChip, { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.3 }, 56.0);
+      slideIn(56.0, sciA, { x: -260 });
+      slideIn(56.15, sciB, { x: 260 });
+      draw(56.4, "#c10 .sk", 1.8);
+      tl.to(paperChip, { opacity: 0, duration: 0.2 }, 57.3);
+      popIn(57.5, bulb);
+      tl.to(glow10, { opacity: 1, duration: 0.3 }, 57.56);
+      tl.to(glow10, { scale: 1.15, duration: 0.4, yoyo: true, repeat: 2 }, 57.8);
+      tl.to([sciA.i, sciB.i], { y: -24, duration: 0.18, yoyo: true, repeat: 3 }, 57.6);
+      tl.to(c10, { scale: 1.06, duration: 3.5, ease: "none" }, 55.6);
+
+      // ================= S11 · ON CALL → PREDICTS (59.2 – 67.9) =================
+      const c11 = $("#c11"); div(c11, "sky");
+      const R11 = rnd(11);
+      const stars = [];
+      for (let k = 0; k < 70; k++) { const s = 2 + R11() * 4; stars.push(div(c11, "star", `left:${R11() * 1080}px;top:${R11() * 900}px;width:${s}px;height:${s}px;opacity:${0.3 + R11() * 0.7}`)); }
+      img(c11, "moon", 880, 520, 200);
+      svg(c11, 1080, 1920, `<path d="M0 1080 C 220 980, 420 1010, 600 1060 S 900 980, 1080 1020 V1920 H0 Z" fill="#0f1d33"/><path d="M0 1180 C 260 1110, 520 1150, 760 1200 S 1000 1150, 1080 1170 V1920 H0 Z" fill="#0c1628"/>`, "left:0;top:0");
+      const night = div(c11, "", "position:absolute;inset:0");
+      const homes = [[150, 1130, "house"], [420, 1165, "housegarden"], [690, 1175, "house"]];
+      const homeEls = homes.map(([x, y, n], k) => {
+        const h = img(night, n, x, y, 230);
+        const pg = div(night, "pagerglow", `left:${x - 75}px;top:${y - 360}px`);
+        const p = img(night, "pager", x, y - 230, 100);
+        return { h, pg, p, x, y };
+      });
+      const sleepy = img(night, "sleeping", 290, 1215, 110);
+      const zz = img(night, "zzz", 345, 1130, 90);
+      const hospFar = img(night, "hospital", 930, 1060, 230);
+      const panel = div(c11, "panel", "opacity:0");
+      div(panel, "", "position:absolute;inset:0;background:radial-gradient(ellipse at 30% 70%, rgba(124,196,255,0.12), rgba(0,0,0,0))");
+      const pDoc = img(panel, "doc_default", 170, 540, 240);
+      const pPat = img(panel, "walker", 330, 540, 230);
+      const pRob = img(panel, "robot", 690, 500, 260);
+      const crystal = img(panel, "crystal", 800, 540, 170);
+      const holo = img(panel, "doc_mdark", 860, 330, 170);
+      holo.i.classList.add("holo");
+      const pChip = chip(panel, "PREDICTING THE NEXT EXPERT", 470, 50, "var(--lime)", "font-size:24px;opacity:0");
+      const sig = svg(c11, 1080, 1920, `<path id="sigp" d="M 860 840 C 820 960, 400 860, 400 1000" stroke="#c8ff4d" stroke-width="7" stroke-dasharray="3 18" stroke-linecap="round" fill="none" opacity="0"/>`, "left:0;top:0");
+      const phone = img(c11, "phone", 470, 1010, 120);
+      const runner = img(c11, "runner_w", 400, 1235, 230);
+      const dash11 = img(c11, "dash", 300, 1215, 160);
+      tl.fromTo(c11, { opacity: 0 }, { opacity: 1, duration: 0.6 }, 59.0);
+      tl.fromTo(night, { x: 60 }, { x: -20, duration: 8, ease: "none" }, 59.2);
+      stars.forEach((s, k) => { if (k % 3 === 0) tl.to(s, { opacity: 0.15, duration: 0.6, yoyo: true, repeat: 6, ease: "sine.inOut" }, 59.2 + (k % 7) * 0.2); });
+      bob(zz.i, 59.4, 62.2, 12, 1.2);
+      homeEls.forEach((o, k) => {
+        tl.fromTo(o.p, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 60.6 + k * 0.12);
+        tl.to(o.pg, { opacity: 1, duration: 0.25, yoyo: true, repeat: 3 }, 61.1 + k * 0.1);
+      });
+      tl.to(night, { opacity: 0.55, duration: 0.4 }, 62.0);
+      tl.fromTo(panel, { opacity: 0, y: -80, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: E }, 62.05);
+      tl.set(holo, { opacity: 0 }, 0);
+      tl.to(pDoc.i, { rotation: -6, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 62.7);
+      popIn(63.6, crystal);
+      tl.fromTo(pChip, { opacity: 0 }, { opacity: 1, duration: 0.3 }, 64.3);
+      tl.to(crystal, { scale: 1.25, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 64.45);
+      tl.to(crystal.i, { filter: "drop-shadow(0 0 40px rgba(200,255,77,0.9))", duration: 0.3 }, 64.45);
+      tl.fromTo(holo, { opacity: 0, y: 40 }, { opacity: 0.7, y: 0, duration: 0.5, ease: E }, 65.15);
+      bob(holo.i, 65.6, 67.6, 10, 0.8);
+      tl.to("#sigp", { opacity: 1, duration: 0.1 }, 66.2);
+      draw(66.2, "#sigp", 0.5);
+      tl.to(night, { opacity: 1, duration: 0.3 }, 66.2);
+      popIn(66.4, phone);
+      tl.to(phone.i, { keyframes: { rotation: [0, -14, 14, -14, 14, -10, 10, 0] }, duration: 0.9, ease: "none" }, 66.5);
+      tl.fromTo(runner, { opacity: 0, x: 0 }, { opacity: 1, x: 0, duration: 0.15 }, 66.95);
+      tl.to(runner, { x: 520, duration: 0.85, ease: "power2.in" }, 67.05);
+      tl.fromTo(dash11, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3 }, 67.1);
+      tl.set([runner, dash11], { opacity: 0 }, 0);
+      tl.to(c11, { opacity: 0, duration: 0.3 }, 67.8);
+
+      // ================= S12 · THE RESULT (67.9 – 77.4) =================
+      const c12 = $("#c12"); div(c12, "", "position:absolute;inset:0;background:#06070a");
+      const spotR = div(c12, "spot", "left:140px;top:500px;width:800px;height:800px;opacity:0");
+      const qring = div(c12, "", "position:absolute;left:390px;top:750px;width:300px;height:300px;border-radius:50%;border:8px solid var(--lime);opacity:0");
+      const numW = div(c12, "", "position:absolute;inset:0;opacity:0");
+      const brain12 = img(numW, "brain", 540, 700, 240);
+      const big = div(numW, "bignum", "top:760px;font-size:118px", "0");
+      const parLab = div(numW, "mtitle", "top:900px;font-family:Mono, monospace;font-weight:700;font-size:40px;letter-spacing:0.14em;color:var(--muted)", "PARAMETERS");
+      const deskW = div(c12, "", "position:absolute;inset:0;opacity:0");
+      div(deskW, "room2");
+      div(deskW, "tabletop");
+      const pc = img(deskW, "desktop", 540, 1180, 720);
+      const scr = div(deskW, "screenin", "left:262px;top:540px;width:556px;height:300px");
+      const miniH = img(scr, "hospital", 278, 285, 210);
+      const miniR = img(scr, "robot", 120, 290, 110);
+      const miniD1 = img(scr, "doc_light", 430, 290, 90);
+      const miniD2 = img(scr, "wdoc_mdark", 500, 290, 80);
+      div(scr, "", "position:absolute;inset:0;box-shadow:inset 0 0 60px rgba(124,196,255,0.45)");
+      const mug = img(deskW, "coffee", 930, 1170, 170);
+      const meter12 = div(deskW, "meter", "top:420px", '<div class="fill" id="m12f" style="background:linear-gradient(90deg,#c8ff4d,#9be22d)"></div><div class="ml" id="m12l" style="color:#f5f5f2;left:auto;right:26px">OF A 24 GB COMPUTER</div>');
+      const stamp = div(deskW, "stamp", "left:540px;top:690px;opacity:0;font-size:120px", "~3 GB");
+      tl.to("#black", { opacity: 1, duration: 0.25 }, 67.7);
+      tl.set(c12, { opacity: 1 }, 67.6);
+      tl.to("#black", { opacity: 0, duration: 0.3 }, 68.0);
+      tl.to(spotR, { opacity: 1, duration: 0.4 }, 68.2);
+      tl.fromTo(qring, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.5, ease: E }, 68.3);
+      tl.to(qring, { scale: 1.12, duration: 0.3, yoyo: true, repeat: 2 }, 68.8);
+      tl.to([qring, spotR], { opacity: 0, duration: 0.25 }, 69.4);
+      tl.to(numW, { opacity: 1, duration: 0.2 }, 69.45);
+      popIn(69.5, brain12);
+      const proxy = { v: 0 };
+      tl.fromTo(proxy, { v: 0 }, { v: 35e9, duration: 1.6, ease: "power2.out", onUpdate() { big.textContent = Math.round(proxy.v).toLocaleString("en-GB"); } }, 69.6);
+      tl.fromTo(big, { scale: 0.7 }, { scale: 1, duration: 1.6, ease: "power2.out" }, 69.6);
+      tl.set(big, { textContent: "35 BILLION" }, 71.6);
+      tl.fromTo(big, { scale: 1.25 }, { scale: 1, duration: 0.35, ease: "back.out(2)" }, 71.6);
+      tl.fromTo(parLab, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3 }, 70.0);
+      tl.to(numW, { opacity: 0, y: -200, duration: 0.35, ease: "power2.in" }, 72.7);
+      tl.to(deskW, { opacity: 1, duration: 0.3 }, 72.8);
+      tl.fromTo(pc, { y: 500, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 72.85);
+      tl.fromTo(scr, { opacity: 0 }, { opacity: 1, duration: 0.3 }, 73.4);
+      popIn(73.5, [miniH, miniR, miniD1, miniD2], 0.08);
+      slideIn(73.7, mug, { x: 200 });
+      tl.fromTo(deskW, { scale: 1.0 }, { scale: 1.05, duration: 4.4, ease: "none" }, 72.9);
+      tl.fromTo(meter12, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.3 }, 75.25);
+      tl.fromTo("#m12f", { scaleX: 0 }, { scaleX: 0.125, duration: 0.6, ease: "power2.out" }, 75.4);
+      tl.fromTo(stamp, { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power4.out" }, 75.85);
+      shake(deskW, 75.9, 0.3, 10);
+      tl.to(c12, { opacity: 0, duration: 0.2 }, 77.3);
+
+      // ================= S13 · CALLBACK (77.4 – 82.2) =================
+      const c13 = $("#c13"); lobby(c13);
+      const h13 = img(c13, "hospital", 540, 860, 400);
+      const row13 = [0, 1, 2, 3, 4].map((k) => img(c13, DOCS[(k * 5 + 2) % DOCS.length], 140 + k * 200, 1120, 200));
+      const rob13 = img(c13, "robot", 540, 1230, 460);
+      shadow(c13, 540, 1230, 460);
+      const thumbs = img(c13, "thumbsup", 820, 1020, 220);
+      const party = img(c13, "party", 250, 980, 210);
+      const sp13 = img(c13, "sparkles", 760, 760, 200);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.9, duration: 0.1 }, 77.35);
+      tl.to("#flash", { opacity: 0, duration: 0.45 }, 77.45);
+      tl.fromTo(c13, { opacity: 0 }, { opacity: 1, duration: 0.1 }, 77.35);
+      tl.set([rob13, thumbs, party, sp13], { opacity: 0 }, 0);
+      popIn(77.85, h13);
+      tl.fromTo(row13, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.8)", stagger: 0.07 }, 78.95);
+      tl.to([h13, ...row13], { opacity: 0.35, filter: "blur(4px)", duration: 0.4 }, 80.1);
+      tl.fromTo(rob13, { opacity: 0, y: 420 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.5)" }, 80.15);
+      popIn(80.9, [thumbs, sp13, party], 0.08);
+      tl.to(rob13.i, { scaleY: 0.9, scaleX: 1.06, duration: 0.12, yoyo: true, repeat: 1 }, 80.95);
+      bob(rob13.i, 81.3, 82.2, 10, 0.6);
+      tl.to(c13, { scale: 1.06, duration: 4.8, ease: "none" }, 77.4);
+      tl.to(c13, { scale: 0.7, opacity: 0, filter: "blur(10px)", duration: 0.35, ease: "power3.in" }, 82.05);
+
+      // ================= S14 · END CARD (82.2 – 86) =================
+      const c14 = $("#c14"); div(c14, "stage");
+      const mark = div(c14, "mark", "", '<span class="one">1</span><span class="cur"></span>');
+      const name = div(c14, "mtitle", "top:760px;font-size:110px", 'One <span style="color:var(--lime)">AI</span> Trick');
+      const handle = div(c14, "mtitle", "top:900px;font-family:Mono, monospace;font-weight:500;font-size:40px;letter-spacing:0.04em;color:var(--muted)", "@oneaitrick");
+      const fol = div(c14, "cta", "left:220px;top:1000px", "+ Follow for AI, explained");
+      const rob14 = img(c14, "robot", 850, 700, 200);
+      tl.fromTo(c14, { scale: 1.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: E }, 82.15);
+      tl.fromTo(mark, { scale: 0.3, rotation: -20, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.55, ease: "back.out(2)" }, 82.3);
+      tl.fromTo([name, handle], { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: E, stagger: 0.12 }, 82.55);
+      popIn(83.0, fol);
+      tl.to(fol, { scale: 1.06, duration: 0.45, yoyo: true, repeat: 3, ease: "sine.inOut" }, 83.5);
+      popIn(82.9, rob14);
+      tl.to(rob14.i, { rotation: 12, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, 83.3);
+      tl.to(c14, { opacity: 0, duration: 0.5 }, 85.5);
+
+      // ================= GLOBAL UI =================
+      tl.fromTo("#prog", { scaleX: 0 }, { scaleX: 1, duration: 86, ease: "none" }, 0);
+      tl.fromTo(["#tag", "#bm"], { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.4 }, 0.1);
+      tl.to(["#tag", "#bm"], { opacity: 0, duration: 0.4 }, 81.9);
+      const gp = { f: 0 };
+      const grainEl = $("#grain");
+      tl.fromTo(gp, { f: 0 }, { f: 86 * 24, duration: 86, ease: "none", onUpdate() { const f = Math.floor(gp.f); grainEl.style.backgroundPosition = `${(f * 137) % 512}px ${(f * 271) % 512}px`; } }, 0);
+      // captions
+      const capsRoot = $("#caps");
+      (window.CAPS || []).forEach((ch) => {
+        const c = div(capsRoot, "cap");
+        const spans = ch.w.map((w) => { const s = document.createElement("span"); s.className = "cw" + (w.emph ? " emph" : ""); s.textContent = w.d; c.appendChild(s); return { s, w }; });
+        tl.fromTo(c, { opacity: 0, scale: 0.86, y: 10 }, { opacity: 1, scale: 1, y: 0, duration: 0.12, ease: "back.out(2)" }, ch.t0);
+        tl.set(c, { opacity: 0 }, ch.t1);
+        spans.forEach(({ s, w }, k) => {
+          const end = k + 1 < spans.length ? spans[k + 1].w.s : ch.t1;
+          tl.set(s, { color: "#c8ff4d", scale: w.emph ? 1.08 : 1.04 }, w.s);
+          tl.set(s, { color: w.emph ? "#c8ff4d" : "#ffffff", scale: 1 }, end);
+        });
+      });
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

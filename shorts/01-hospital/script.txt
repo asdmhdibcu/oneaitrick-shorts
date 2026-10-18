@@ -1,0 +1,27 @@
+Imagine you walk into a hospital with a sprained ankle... and ALL fifty doctors come running.
+
+The heart surgeon. The dentist. The eye doctor. All for one ankle.
+
+Ridiculous, right? <chuckle> But that's how a lot of AI models work. Every word you type goes through the WHOLE model.
+
+So engineers built a smarter hospital.
+
+They hired a receptionist, who takes one look at you... and sends you to just four doctors.
+
+Everyone else? Back to work.
+
+In AI, the doctors are called experts, the receptionist is the router, and the trick is called Mixture of Experts.
+
+Real AI experts aren't that tidy... but this is why some giant models are surprisingly fast.
+
+But there's a catch. <short pause> All fifty doctors still need an office... and in a computer, offices are memory. So giant hospitals only fit in giant data centres.
+
+Last month, researchers found a clever way around it.
+
+Keep most doctors at home, on call. While one doctor works, the receptionist PREDICTS who's needed next... and calls them in early.
+
+The result? An AI with thirty-five billion parameters... running on one desktop computer, in about three gigabytes of memory.
+
+Same hospital. Same doctors. Just a smarter receptionist.
+
+Follow for more AI, explained like this.

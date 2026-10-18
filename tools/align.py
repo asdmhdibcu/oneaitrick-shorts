@@ -1,0 +1,58 @@
+"""Force-align a known script to a voice WAV with pocketsphinx; writes words.json.
+
+Usage: python3 align.py VOICE16K.wav SCRIPT.txt OUT.json
+"""
+import json
+import re
+import sys
+import wave
+
+from pocketsphinx import Decoder
+
+wav_path, script_path, out_path = sys.argv[1:4]
+raw = open(script_path).read()
+raw = re.sub(r"<[^>]+>", " ", raw)
+SUBS = {"centres": "centers", "thirty-five": "thirty five"}
+display_words = raw.split()
+align_words = []
+for w in display_words:
+    t = w.lower()
+    for a, b in SUBS.items():
+        t = t.replace(a, b)
+    t = re.sub(r"[^a-z' \-]", "", t).replace("-", " ").strip("'")
+    align_words.append(t)
+
+text = " ".join(x for x in align_words if x)
+with wave.open(wav_path, "rb") as wf:
+    assert wf.getframerate() == 16000 and wf.getnchannels() == 1
+    audio = wf.readframes(wf.getnframes())
+
+d = Decoder(samprate=16000, bestpath=False)
+d.set_align_text(text)
+d.start_utt()
+d.process_raw(audio, full_utt=True)
+d.end_utt()
+d.set_alignment()
+d.start_utt()
+d.process_raw(audio, full_utt=True)
+d.end_utt()
+
+words = []
+for seg in d.get_alignment():
+    name = seg.name
+    if name in ("<s>", "</s>", "<sil>") or name.startswith("+"):
+        continue
+    words.append({"w": name, "start": seg.start / 100.0, "end": (seg.start + seg.duration) / 100.0})
+
+# Map aligned tokens back onto display words (a display word can expand to 2 tokens).
+out = []
+k = 0
+for disp, al in zip(display_words, align_words):
+    toks = [t for t in al.split() if t]
+    if not toks:
+        continue
+    seg = words[k:k + len(toks)]
+    k += len(toks)
+    out.append({"text": disp, "start": round(seg[0]["start"], 3), "end": round(seg[-1]["end"], 3)})
+json.dump(out, open(out_path, "w"), indent=1)
+print("aligned", len(out), "words; tokens used", k, "of", len(words))

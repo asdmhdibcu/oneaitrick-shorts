@@ -1,0 +1,140 @@
+1
+00:00:00,210 --> 00:00:03,280
+Imagine you walk into a hospital
+with a sprained ankle...
+
+2
+00:00:03,280 --> 00:00:06,500
+and all 50 doctors come running.
+
+3
+00:00:06,590 --> 00:00:07,640
+The heart surgeon.
+
+4
+00:00:07,640 --> 00:00:08,450
+The dentist.
+
+5
+00:00:08,450 --> 00:00:09,700
+The eye doctor.
+
+6
+00:00:09,900 --> 00:00:11,540
+All for one ankle.
+
+7
+00:00:11,830 --> 00:00:13,220
+Ridiculous, right?
+
+8
+00:00:13,530 --> 00:00:16,250
+But that's how a lot of AI models work.
+
+9
+00:00:16,300 --> 00:00:19,300
+Every word you type goes
+through the whole model.
+
+10
+00:00:19,600 --> 00:00:22,440
+So engineers built a smarter hospital.
+
+11
+00:00:22,650 --> 00:00:25,560
+They hired a receptionist,
+who takes one look at you...
+
+12
+00:00:25,560 --> 00:00:28,110
+and sends you to just 4 doctors.
+
+13
+00:00:28,220 --> 00:00:29,320
+Everyone else?
+
+14
+00:00:29,370 --> 00:00:30,400
+Back to work.
+
+15
+00:00:30,780 --> 00:00:33,550
+In AI, the doctors are called experts,
+
+16
+00:00:33,550 --> 00:00:38,040
+the receptionist is the router, and the
+trick is called Mixture of Experts.
+
+17
+00:00:38,450 --> 00:00:40,600
+Real AI experts aren't that tidy...
+
+18
+00:00:40,600 --> 00:00:44,470
+but this is why some giant
+models are surprisingly fast.
+
+19
+00:00:44,780 --> 00:00:46,210
+But there's a catch.
+
+20
+00:00:46,510 --> 00:00:48,970
+All 50 doctors still need an office...
+
+21
+00:00:48,970 --> 00:00:51,600
+and in a computer, offices are memory.
+
+22
+00:00:51,770 --> 00:00:55,470
+So giant hospitals only
+fit in giant data centres.
+
+23
+00:00:55,930 --> 00:00:59,140
+Last month, researchers found
+a clever way around it.
+
+24
+00:00:59,430 --> 00:01:01,870
+Keep most doctors at home, on call.
+
+25
+00:01:02,090 --> 00:01:06,230
+While one doctor works, the receptionist
+predicts who's needed next...
+
+26
+00:01:06,230 --> 00:01:07,800
+and calls them in early.
+
+27
+00:01:08,190 --> 00:01:09,110
+The result?
+
+28
+00:01:09,490 --> 00:01:12,770
+An AI with 35 billion parameters...
+
+29
+00:01:12,830 --> 00:01:17,360
+running on one desktop computer,
+in about 3 gigabytes of memory.
+
+30
+00:01:17,790 --> 00:01:18,880
+Same hospital.
+
+31
+00:01:18,880 --> 00:01:20,030
+Same doctors.
+
+32
+00:01:20,120 --> 00:01:21,960
+Just a smarter receptionist.
+
+33
+00:01:22,520 --> 00:01:24,860
+Follow for more AI, explained like this.

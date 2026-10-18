@@ -1,0 +1,9 @@
+node_modules/
+.hyperframes/
+models/
+raw3d/
+*.mp4
+*.mov
+*.wav
+*.pth
+renders/

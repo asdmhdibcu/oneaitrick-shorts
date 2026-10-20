@@ -72,6 +72,10 @@ function buildChapter(E, DUR){
   const rob5=E.img(g5,"robot",1180,520,180,"opacity:0");
   tl.fromTo(mark,{opacity:0,scale:0.3,rotation:-20},{opacity:1,scale:1,rotation:0,duration:0.6,ease:"back.out(2)"},62.4);
   tl.fromTo([name,handle],{opacity:0,y:30},{opacity:1,y:0,duration:0.5,ease:"power3.out",stagger:0.12},62.8);
-  E.popIn(63.4,foll); tl.to(foll,{scale:1.05,duration:0.5,yoyo:true,repeat:3,ease:"sine.inOut"},64.0);
-  E.popIn(63.2,rob5); tl.to(rob5.i,{rotation:12,duration:0.3,yoyo:true,repeat:5,ease:"sine.inOut"},63.6);
+  E.popIn(63.4,foll); tl.to(foll,{scale:1.05,duration:0.9,yoyo:true,repeat:11,ease:"sine.inOut"},64.0); // keeps breathing to the end
+  E.popIn(63.2,rob5);
+  tl.to(rob5.i,{rotation:12,duration:0.3,yoyo:true,repeat:5,ease:"sine.inOut"},63.6);
+  E.bob(rob5.i,65.2,73.8,8,1.5); // gentle float through the outro
+  // the lime mark keeps a soft glow pulse so the end card never freezes
+  tl.to(mark,{boxShadow:"0 0 50px rgba(200,255,77,0.6)",duration:1.3,yoyo:true,repeat:7,ease:"sine.inOut"},64.6);
 }

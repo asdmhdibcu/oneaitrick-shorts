@@ -72,14 +72,23 @@ function buildChapter(E, DUR){
   tl.fromTo("#tline",{opacity:0.3},{opacity:1,duration:0.4},70.0);
   tl.to(term,{opacity:0,duration:0.5},72.6);
 
-  // ---- reflection: field of fallen dots + a few embers ----
+  // ---- reflection: a field of dim lights, embers rising all the way out ----
   const g3=E.div(R,"lay","opacity:0");
   tl.to(g2,{opacity:0,duration:0.4},72.6); tl.to(g3,{opacity:1,duration:0.6},72.8);
   const field=E.div(g3,"lay"); const Rn=OAT.rnd(53); const fd=[];
-  for(let i=0;i<70;i++){const x=200+Rn()*1520,y=300+Rn()*440; const d=E.div(field,"pcell",`left:${x}px;top:${y}px;width:10px;height:10px;background:#3a4150;box-shadow:none;opacity:0`); fd.push(d);}
-  tl.fromTo(fd,{opacity:0},{opacity:0.7,duration:0.8,stagger:{each:0.006}},73.0);
-  // a few embers rise
-  const embers=fd.filter((_,i)=>i%11===0);
-  embers.forEach((d,i)=>{tl.to(d,{backgroundColor:"#c8ff4d",boxShadow:"0 0 16px #c8ff4d",duration:0.4},78.0+i*0.2);tl.to(d,{y:-60,opacity:0,duration:2.0,ease:"power1.out"},78.4+i*0.2);});
+  for(let i=0;i<70;i++){const x=200+Rn()*1520,y=300+Rn()*460; const d=E.div(field,"pcell",`left:${x}px;top:${y}px;width:12px;height:12px;background:#5b6b86;box-shadow:0 0 10px rgba(124,196,255,0.5);opacity:0`); fd.push(d);}
+  tl.fromTo(fd,{opacity:0,scale:0.4},{opacity:0.75,scale:1,duration:0.8,ease:"power2.out",stagger:{each:0.006,from:"random"}},73.0);
+  // gentle continuous twinkle so the field is never static
+  fd.forEach((d,i)=>{tl.to(d,{opacity:0.3+0.5*((i%5)/5),duration:1.1+(i%7)*0.12,yoyo:true,repeat:14,ease:"sine.inOut"},74.0+(i%13)*0.1);});
+  // embers rise continuously from 77s to the end — one light lifting away, then another
+  const embers=fd.filter((_,i)=>i%6===0);
+  embers.forEach((d,i)=>{const t=77.0+i*1.0;
+    tl.to(d,{backgroundColor:"#c8ff4d",boxShadow:"0 0 20px #c8ff4d",scale:1.5,duration:0.5,ease:"power2.out"},t);
+    tl.to(d,{y:"-=180",opacity:0,duration:3.2,ease:"power1.out"},t+0.4);});
+  // one brighter ember (53927) drifts up through the centre, lingering longest
+  const soul=E.div(g3,"pcell",`left:948px;top:720px;width:22px;height:22px;background:#c8ff4d;box-shadow:0 0 34px #c8ff4d;opacity:0`);
+  tl.fromTo(soul,{opacity:0,scale:0.3},{opacity:1,scale:1,duration:0.8,ease:"back.out(1.6)"},79.5);
+  tl.to(soul,{y:-340,duration:8.0,ease:"power1.out"},80.2);
+  tl.to(soul,{opacity:0,duration:2.0,ease:"power1.in"},86.0);
   tl.to(S,{alpha:0.7,duration:2},80.0);
 }

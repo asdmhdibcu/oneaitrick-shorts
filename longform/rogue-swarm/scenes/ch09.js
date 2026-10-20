@@ -19,7 +19,7 @@ function buildChapter(E, DUR){
   function sideQuote(parent,x,y,txt,col,t0,t1){const c=E.text(g1,"htext",x-380,y,`<span style="font-family:Mono,monospace;font-weight:700;font-size:40px;line-height:1.2;color:${col}">${txt}</span>`,`width:760px;text-align:center;opacity:0`);
     tl.fromTo(c,{opacity:0,y:14},{opacity:1,y:0,duration:0.4},t0); if(t1)tl.to(c,{opacity:0,duration:0.3},t1); return c;}
   sideQuote(g1,480,360,'“these are our\nwarning shots”',"#7cc4ff",11.2,16.0);
-  sideQuote(g1,480,360,'“we don't know how\nto build these safely… yet”',"#7cc4ff",19.0,29.6);
+  sideQuote(g1,480,360,'“we don’t know how\nto build these safely… yet”',"#7cc4ff",19.0,29.6);
   E.popIn(30.3,speed); E.slideIn(32.3,rob2,{y:120});
   sideQuote(g1,1440,360,'“completely in\nour control”',"#ffb547",36.4,44.2);
   sideQuote(g1,1440,360,'if we pause,\nChina won’t',"#ffb547",47.6,53.4);

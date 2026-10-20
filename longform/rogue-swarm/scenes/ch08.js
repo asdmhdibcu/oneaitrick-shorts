@@ -60,18 +60,20 @@ function buildChapter(E, DUR){
   // ---- real-world montage ----
   const g4=E.div(R,"lay","opacity:0");
   tl.to(g4,{opacity:1,duration:0.3},42.4);
-  function cardIcon(svg,label,col,t){const c=E.div(g4,"card",`left:660px;top:360px;width:600px;height:360px;opacity:0`,`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${svg}</div><div style="position:absolute;left:0;bottom:30px;width:100%;text-align:center;font:700 34px Mono;letter-spacing:0.08em;color:${col}">${label}</div>`);
-    tl.fromTo(c,{opacity:0,scale:0.85,y:20},{opacity:1,scale:1,y:0,duration:0.4,ease:"power3.out"},t);
-    tl.to(c,{opacity:0,scale:1.05,duration:0.3},t+2.0); return c;}
+  // cards appear on their voiced line and hold until the next appears — no gaps
+  function cardIcon(svg,label,col,t,tend){const c=E.div(g4,"card",`left:660px;top:360px;width:600px;height:360px;opacity:0`,`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">${svg}</div><div style="position:absolute;left:0;bottom:30px;width:100%;text-align:center;font:700 34px Mono;letter-spacing:0.08em;color:${col}">${label}</div>`);
+    tl.fromTo(c,{opacity:0,scale:0.9,y:20},{opacity:1,scale:1,y:0,duration:0.45,ease:"power3.out"},t);
+    tl.to(c,{scale:1.03,duration:(tend-t-0.3),ease:"sine.inOut"},t+0.3); // slow drift so it never sits dead
+    tl.to(c,{opacity:0,scale:1.08,duration:0.35,ease:"power2.in"},tend); return c;}
   const capitol='<svg width="200" height="150" viewBox="0 0 200 150"><rect x="20" y="120" width="160" height="16" fill="#7cc4ff"/><rect x="36" y="70" width="12" height="50" fill="#7cc4ff"/><rect x="72" y="70" width="12" height="50" fill="#7cc4ff"/><rect x="116" y="70" width="12" height="50" fill="#7cc4ff"/><rect x="152" y="70" width="12" height="50" fill="#7cc4ff"/><path d="M100 10 C70 40, 60 60, 60 70 H140 C140 60 130 40 100 10Z" fill="none" stroke="#7cc4ff" stroke-width="5"/></svg>';
-  cardIcon(capitol+'<div style="position:absolute;left:0;top:30px;width:100%;text-align:center;font:700 44px Mono;color:#ff6b6b">KILL SWITCH</div>',"AI BILL IN CONGRESS","#9a9ca6",44.3);
-  cardIcon('<div style="font:900 60px InterV;color:#ff6b6b">“ROGUE AI”</div>',"SENATE HEARING","#9a9ca6",48.4);
+  cardIcon(capitol+'<div style="position:absolute;left:0;top:30px;width:100%;text-align:center;font:700 44px Mono;color:#ff6b6b">KILL SWITCH</div>',"AI BILL IN CONGRESS","#9a9ca6",44.5,48.5);
+  cardIcon('<div style="font:900 60px InterV;color:#ff6b6b">“ROGUE AI”</div>',"SENATE HEARING","#9a9ca6",48.6,54.0);
   const chair='<svg width="160" height="160" viewBox="0 0 160 160"><rect x="40" y="70" width="80" height="14" rx="4" fill="#7cc4ff"/><rect x="46" y="84" width="12" height="60" fill="#7cc4ff"/><rect x="102" y="84" width="12" height="60" fill="#7cc4ff"/><rect x="46" y="30" width="12" height="54" fill="#7cc4ff"/></svg>';
-  cardIcon(chair,"CEO: DIDN'T SHOW","#9a9ca6",51.0);
+  cardIcon(chair+'<div style="position:absolute;left:0;top:26px;width:100%;text-align:center;font:900 40px InterV;color:#ff6b6b">EMPTY CHAIR</div>',"CEO: DIDN'T SHOW","#9a9ca6",54.0,58.3);
   const gavel='<svg width="170" height="150" viewBox="0 0 170 150"><rect x="20" y="120" width="130" height="14" rx="4" fill="#ffb547"/><g transform="rotate(-35 95 70)"><rect x="60" y="40" width="70" height="30" rx="8" fill="#ffb547"/><rect x="88" y="66" width="14" height="60" rx="5" fill="#ffb547"/></g></svg>';
-  cardIcon(gavel,"OPENAI SUED","#9a9ca6",58.0);
-  cardIcon('<div style="font:900 90px InterV;color:#ff6b6b">▶</div>',"A DOCUMENTARY","#9a9ca6",60.1);
-  tl.to(g4,{opacity:0,duration:0.4},64.0);
+  cardIcon(gavel,"OPENAI SUED","#9a9ca6",58.3,60.3);
+  cardIcon('<div style="font:900 90px InterV;color:#ff6b6b">▶</div>',"A NETFLIX DOC","#9a9ca6",60.3,64.3);
+  tl.to(g4,{opacity:0,duration:0.4},64.3);
 
   // ---- 19 incidents grid ----
   const g5=E.div(R,"lay","opacity:0");

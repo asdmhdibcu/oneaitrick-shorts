@@ -63,8 +63,18 @@ function buildChapter(E, DUR){
   tl.fromTo(gap,{opacity:0},{opacity:1,duration:0.4},50.8);
   const gapChip=E.chip(g3,"DAYS · NOBODY KNEW",200+0.65*1520,500,"var(--amber)","font-size:24px");
   E.popIn(51.4,gapChip);
-  // "last to realise" — emphasise
-  tl.to(mEls[2],{scale:1.1,duration:0.3,yoyo:true,repeat:1,transformOrigin:"center bottom"},54.8);
+  // gap keeps breathing so the "nobody knew" window never goes dead
+  tl.to(gap,{opacity:0.55,duration:1.0,yoyo:true,repeat:9,ease:"sine.inOut"},52.0);
+  tl.to(gapChip.querySelector?gapChip:gapChip,{scale:1.06,duration:0.9,yoyo:true,repeat:9,ease:"sine.inOut"},52.2);
+  // a scan dot sweeps the discovery gap, again and again
+  const scan=E.div(g3,"pcell",`left:${200+0.5*1520}px;top:560px;width:16px;height:16px;background:#ffb547;box-shadow:0 0 22px #ffb547`);
+  tl.set(scan,{opacity:0},0);
+  for(let k=0;k<4;k++){const t=53.0+k*2.6; tl.set(scan,{x:0,opacity:0},t);
+    tl.to(scan,{opacity:1,duration:0.2},t);
+    tl.to(scan,{x:0.3*1520,duration:2.0,ease:"power1.inOut"},t);
+    tl.to(scan,{opacity:0,duration:0.3},t+2.0);}
+  // "last to realise" — the company mark pulses late, overtaken
+  tl.to(mEls[2],{scale:1.14,duration:0.4,yoyo:true,repeat:5,transformOrigin:"center bottom",ease:"sine.inOut"},54.8);
   tl.to(g3,{opacity:0,duration:0.5},64.8);
 
   // ---- "one more thing... on the way out" — cut toward black ----

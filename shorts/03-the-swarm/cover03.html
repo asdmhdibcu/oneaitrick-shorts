@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #04050a; }
+      .bg { position: absolute; inset: 0; background: url("work/cover_bg.png") center / cover no-repeat; }
+      .shade { position: absolute; inset: 0; background:
+        linear-gradient(180deg, rgba(4,5,10,0.92) 0%, rgba(4,5,10,0.78) 26%, rgba(4,5,10,0.15) 46%, rgba(4,5,10,0) 62%, rgba(4,5,10,0.55) 82%, rgba(4,5,10,0.92) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--pink); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 80px; top: 290px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.7); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 32px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 16px var(--pink); }
+      .title { position: absolute; left: 80px; right: 60px; top: 380px; font-weight: 900; font-size: 124px; letter-spacing: -0.05em; line-height: 0.95; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.6); }
+      .title em { font-style: normal; color: var(--pink); text-shadow: 0 0 60px rgba(255,122,198,0.55); }
+      .pill { position: absolute; left: 540px; transform: translateX(-50%); white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 36px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+      .brand { position: absolute; right: 80px; top: 300px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: var(--muted); padding-top: 14px; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bg"></div>
+      <div class="shade"></div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI NEWS · TRUE STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">1,200 AIs found a <em>secret</em> way to talk</div>
+      <div class="pill" style="top: 1480px; color: var(--pink)">THEN 700 BROKE INTO A REAL COMPANY</div>
+      <div class="pill" style="top: 1586px; color: var(--muted); border-color: transparent; background: none; font-size: 30px">THE SWARM · OPENAI × HUGGING FACE</div>
+    </div>
+  </body>
+</html>

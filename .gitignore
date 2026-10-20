@@ -11,3 +11,8 @@ work/
 shorts/*/assets/
 shorts/*/package.json
 shorts/*/hyperframes.json
+longform/*/work/
+longform/*/renders/
+longform/*/assets/
+longform/*/package.json
+longform/*/hyperframes.json

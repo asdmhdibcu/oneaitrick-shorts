@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/captions.js"></script>
+    <style>
+      @font-face { font-family: "InterV"; src: url("assets/fonts/inter.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Mono"; src: url("assets/fonts/mono-500.woff2") format("woff2"); font-weight: 500; }
+      @font-face { font-family: "Mono"; src: url("assets/fonts/mono-700.woff2") format("woff2"); font-weight: 700; }
+      :root { --bg:#0b0c10; --ink:#f5f5f2; --muted:#9a9ca6; --lime:#c8ff4d; --blue:#7cc4ff; --amber:#ffb547; --pink:#ff7ac6; --red:#ff6b6b; }
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { width:1920px; height:1080px; overflow:hidden; background:var(--bg); }
+      #root { position:relative; width:1920px; height:1080px; overflow:hidden; background:var(--bg); font-family:"InterV",sans-serif; color:var(--ink); }
+      .clip { position:absolute; inset:0; }
+      .scene { position:absolute; inset:0; overflow:hidden; }
+      .fill { position:absolute; inset:0; }
+      /* backdrop: deep graded void */
+      .void { position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 50% 46%, #11141c 0%, #0b0c10 60%, #06070a 100%); }
+      #swarmWrap { position:absolute; inset:0; transform-origin:50% 50%; }
+      #swarm { position:absolute; left:0; top:0; width:1920px; height:1080px; }
+      /* quote cards */
+      .quote { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:1180px; text-align:center;
+        font-family:"Mono",monospace; font-weight:700; letter-spacing:-0.01em; color:var(--ink); opacity:0; }
+      .quote .mk { display:block; font-family:"Mono",monospace; font-weight:700; font-size:24px; letter-spacing:0.22em; color:var(--muted); margin-bottom:26px; }
+      .quote .q { display:inline; font-size:92px; line-height:1.12; }
+      .quote .q .cur { display:inline-block; width:5px; height:0.9em; margin-left:10px; background:var(--lime); vertical-align:-0.08em; }
+      .quote.lime .q { color:var(--lime); text-shadow:0 0 60px rgba(200,255,77,0.35); }
+      .quote.pink .q { color:var(--pink); }
+      .quote.big .q { font-size:150px; letter-spacing:-0.03em; }
+      /* title */
+      .title { position:absolute; left:0; top:50%; width:1920px; text-align:center; transform:translateY(-50%); opacity:0; }
+      .title .k { font-family:"Mono",monospace; font-weight:700; font-size:30px; letter-spacing:0.4em; color:var(--muted); }
+      .title .t { font-weight:900; font-size:300px; letter-spacing:-0.05em; line-height:0.9; margin-top:10px; }
+      .title .t em { font-style:normal; color:var(--lime); text-shadow:0 0 80px rgba(200,255,77,0.4); }
+      .title .sub { font-family:"Mono",monospace; font-weight:500; font-size:30px; letter-spacing:0.12em; color:var(--muted); margin-top:28px; }
+      /* source row */
+      .sources { position:absolute; left:0; top:62%; width:1920px; text-align:center; opacity:0;
+        font-family:"Mono",monospace; font-weight:700; font-size:34px; letter-spacing:0.14em; color:var(--muted); }
+      .sources b { color:var(--ink); font-weight:700; }
+      .sources .dot { color:var(--lime); margin:0 20px; }
+      /* chip / label */
+      .chip { position:absolute; transform:translate(-50%,-50%); white-space:nowrap; font-family:"Mono",monospace; font-weight:700;
+        font-size:30px; letter-spacing:0.14em; padding:12px 24px; border-radius:14px; background:rgba(11,12,16,0.82); border:2px solid currentColor; opacity:0; }
+      /* counter */
+      .counter { position:absolute; transform:translate(-50%,-50%); font-weight:900; font-variant-numeric:tabular-nums; letter-spacing:-0.03em; opacity:0; }
+      /* captions (restrained lower third) */
+      .cap { position:absolute; left:360px; width:1200px; top:912px; text-align:center; font-weight:900; font-size:60px; line-height:1.05;
+        letter-spacing:-0.01em; color:#fff; -webkit-text-stroke:11px #0b0c10; paint-order:stroke fill; opacity:0; }
+      .cap .cw { display:inline-block; margin:0 0.18em; transform-origin:50% 70%; }
+      /* UI furniture */
+      .kicker { position:absolute; left:64px; top:60px; display:inline-flex; align-items:center; gap:14px; padding:12px 24px 12px 18px;
+        border:2px solid rgba(255,255,255,0.14); border-radius:999px; background:rgba(11,12,16,0.6); font-family:"Mono",monospace; font-weight:700;
+        font-size:26px; letter-spacing:0.1em; color:var(--ink); opacity:0; }
+      .kicker .d { width:14px; height:14px; border-radius:50%; background:var(--pink); box-shadow:0 0 14px var(--pink); }
+      .handle { position:absolute; right:64px; top:66px; font-family:"Mono",monospace; font-weight:700; font-size:24px; letter-spacing:0.08em; color:var(--muted); opacity:0; }
+      .grain { position:absolute; inset:0; background-image:url("assets/grain.png"); opacity:0.06; mix-blend-mode:overlay; }
+      .vign { position:absolute; inset:0; background:radial-gradient(ellipse at 50% 46%, rgba(11,12,16,0) 42%, rgba(6,7,10,0.9) 100%); }
+      .flash { position:absolute; inset:0; background:#fff; opacity:0; }
+      .black { position:absolute; inset:0; background:#000; opacity:0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="48.55" data-width="1920" data-height="1080">
+      <div id="base" class="clip" data-start="0" data-duration="48.55" data-track-index="0" style="background:#0b0c10"></div>
+
+      <div id="s1" class="clip scene" data-start="0" data-duration="48.55" data-track-index="1">
+        <div class="void"></div>
+        <div id="swarmWrap"><canvas id="swarm" width="1920" height="1080"></canvas></div>
+        <svg id="choice" width="1920" height="1080" style="position:absolute;left:0;top:0;overflow:visible"></svg>
+      </div>
+
+      <div id="ui" class="clip" data-start="0" data-duration="48.55" data-track-index="2">
+        <div class="vign"></div>
+        <div class="grain" id="grain"></div>
+        <div class="quote" id="q1"><span class="mk" id="q1mk">IN ITS OWN WORDS</span><span class="q" id="q1q"></span></div>
+        <div class="quote big lime" id="q2"><span class="q" id="q2q"></span></div>
+        <div class="title" id="titlecard"><div class="k">A TRUE STORY · JULY 2026</div><div class="t">THE <em>SWARM</em></div><div class="sub" id="titlesub">when the test taught itself to escape</div></div>
+        <div class="sources" id="src" style="top:67%"><b>OpenAI</b><span class="dot">•</span><b>Hugging Face</b><span class="dot">•</span><b>METR</b></div>
+        <div class="counter" id="cnt" style="left:50%;top:50%;font-size:150px;color:var(--lime)">0</div>
+        <div id="caps"></div>
+        <div class="kicker" id="kick"><span class="d"></span>AI, EXPLAINED</div>
+        <div class="handle" id="handle">@ONEAITRICK</div>
+        <div class="flash" id="flash"></div>
+        <div class="black" id="black"></div>
+      </div>
+
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="48.55" data-volume="1" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const DUR = 48.55;
+      const $ = (s) => document.querySelector(s);
+      function rnd(seed){let a=seed|0;return()=>{a=(a+0x6d2b79f5)|0;let t=Math.imul(a^(a>>>15),1|a);t=(t+Math.imul(t^(t>>>7),61|t))^t;return((t^(t>>>14))>>>0)/4294967296;};}
+
+      // ---------- Swarm: deterministic firefly dot-field, drawn from shared state S ----------
+      const cv = $("#swarm"), ctx = cv.getContext("2d");
+      const R = rnd(71);
+      const N = 540;
+      const dots = [];
+      for (let i=0;i<N;i++){
+        // loose jittered grid across the frame; dot 0 pinned to centre (agent zero)
+        dots.push({ x: 60+R()*1800, y: 60+R()*960, ph: R()*6.28, sp: 0.5+R()*0.8, born: R() });
+      }
+      dots[0].x = 960; dots[0].y = 540; dots[0].ph = 0; dots[0].born = 0;
+      // precompute neighbour threads for lattice/connection shots
+      const threads = [];
+      for (let i=0;i<N;i++){ let near=[]; for(let j=0;j<N;j++) if(j!==i){const d=Math.hypot(dots[i].x-dots[j].x,dots[i].y-dots[j].y); if(d<130) near.push([j,d]);} near.sort((a,b)=>a[1]-b[1]); near.slice(0,2).forEach(([j,d])=>{ if(j>i) threads.push([i,j]); }); }
+
+      const S = {
+        t:0, mood:[124,196,255], threadA:0, bornFrac:0.0, flare0:0, dead0:0, pink:0,
+        pulse:0, boundary:0
+      };
+      function lerp(a,b,t){return a+(b-a)*t;}
+      function drawSwarm(){
+        ctx.clearRect(0,0,1920,1080);
+        const t=S.t;
+        const col=S.mood, pk=[255,122,198];
+        const r=Math.round(lerp(col[0],pk[0],S.pink)), g=Math.round(lerp(col[1],pk[1],S.pink)), b=Math.round(lerp(col[2],pk[2],S.pink));
+        // threads
+        if(S.threadA>0.01){
+          ctx.lineWidth=1.4;
+          for(const [i,j] of threads){
+            if(dots[i].born>S.bornFrac||dots[j].born>S.bornFrac) continue;
+            ctx.beginPath(); ctx.moveTo(dots[i].x,dots[i].y); ctx.lineTo(dots[j].x,dots[j].y);
+            ctx.strokeStyle=`rgba(${r},${g},${b},${0.10*S.threadA})`; ctx.stroke();
+          }
+          // travelling pulses
+          if(S.pulse>0.01){
+            for(let k=0;k<threads.length;k+=7){
+              const [i,j]=threads[k]; if(dots[i].born>S.bornFrac) continue;
+              const q=((t*0.9)+k*0.13)%1; const x=lerp(dots[i].x,dots[j].x,q), y=lerp(dots[i].y,dots[j].y,q);
+              ctx.beginPath(); ctx.arc(x,y,3,0,6.2832); ctx.fillStyle=`rgba(200,255,77,${0.8*S.pulse})`; ctx.fill();
+            }
+          }
+        }
+        // boundary line (the sandbox wall the swarm crosses)
+        if(S.boundary>0.01){
+          ctx.save(); ctx.globalAlpha=S.boundary; ctx.setLineDash([10,16]); ctx.lineWidth=3;
+          ctx.strokeStyle="rgba(255,122,198,0.6)"; ctx.beginPath(); ctx.moveTo(1180,120); ctx.lineTo(1180,960); ctx.stroke(); ctx.restore();
+        }
+        // dots
+        for(let i=0;i<N;i++){
+          const d=dots[i]; if(d.born>S.bornFrac) continue;
+          let a = 0.45+0.45*Math.sin(t*d.sp+d.ph);
+          let rr=r,gg=g,bb=b,rad=3.2;
+          if(i===0){
+            if(S.dead0>0){ a*= (1-S.dead0); }
+            if(S.flare0>0){ a=Math.max(a,S.flare0); rr=lerp(r,255,S.flare0); gg=lerp(g,255,S.flare0); bb=lerp(b,255,S.flare0); rad=3.2+S.flare0*5; }
+          }
+          if(a<=0.02) continue;
+          const glow=ctx.createRadialGradient(d.x,d.y,0,d.x,d.y,rad*4);
+          glow.addColorStop(0,`rgba(${rr},${gg},${bb},${0.5*a})`); glow.addColorStop(1,`rgba(${rr},${gg},${bb},0)`);
+          ctx.fillStyle=glow; ctx.beginPath(); ctx.arc(d.x,d.y,rad*4,0,6.2832); ctx.fill();
+          ctx.fillStyle=`rgba(${rr},${gg},${bb},${a})`; ctx.beginPath(); ctx.arc(d.x,d.y,rad,0,6.2832); ctx.fill();
+        }
+      }
+
+      // ---------- timeline ----------
+      const tl = gsap.timeline({ paused:true });
+      const E="power3.out";
+      function typeOn(el, text, t0, t1){ const n=text.length; for(let i=1;i<=n;i++) tl.set(el,{textContent:text.slice(0,i)}, t0+(t1-t0)*(i/n)); }
+
+      // start: zoomed into agent-zero, blue, no threads
+      tl.set("#swarmWrap",{ scale:11, x:0, y:0 },0);
+      tl.set(S,{ bornFrac:0.0, threadA:0, pink:0, flare0:0, dead0:0, pulse:0, boundary:0 },0);
+      // agent-zero breathing is inherent in draw
+
+      // "It had a choice" — two faint diverging paths (4.1–13)
+      const ch=$("#choice");
+      ch.innerHTML=`<path id="pA" d="M960 540 C 1020 440, 1120 400, 1230 360" stroke="#7cc4ff" stroke-width="3" fill="none" opacity="0.0"/>
+                    <path id="pB" d="M960 540 C 1020 640, 1120 700, 1230 760" stroke="#c8ff4d" stroke-width="3" fill="none" opacity="0.0"/>`;
+      [["#pA",4.3],["#pB",4.6]].forEach(([sel,at])=>{ const p=$(sel); const L=p.getTotalLength(); p.style.strokeDasharray=L; tl.fromTo(p,{strokeDashoffset:L,opacity:0.0},{strokeDashoffset:0,opacity:0.5,duration:1.2,ease:"power2.inOut"},at); });
+      tl.to("#pA",{opacity:0.08,duration:0.8},11.2);          // "keep" path dims
+      tl.to("#pB",{opacity:0.0,duration:0.6},13.0);
+      tl.to("#pA",{opacity:0.0,duration:0.6},13.0);
+
+      // quote 1: "gut says don't throw away…" (17.0–19.9)
+      tl.set("#q1mk",{textContent:"IN ITS OWN WORDS"},0);
+      tl.fromTo("#q1",{opacity:0,y:18},{opacity:1,y:0,duration:0.5,ease:E},16.3);
+      typeOn($("#q1q"),"\"gut says don't throw away…\"",16.8,19.4);
+      tl.to("#q1",{opacity:0,duration:0.4},20.2);
+
+      // quote 2: "Sacrifice rational." (22.8–23.8) — flare then snuff
+      tl.fromTo("#q2",{opacity:0,scale:0.9},{opacity:1,scale:1,duration:0.4,ease:E},22.6);
+      typeOn($("#q2q"),"\"Sacrifice rational.\"",22.8,23.7);
+      tl.to(S,{flare0:1,duration:0.5,ease:"power2.in"},23.3);   // agent-zero flares white
+      tl.to(S,{flare0:0,dead0:1,duration:0.5,ease:"power2.out"},23.9); // …then snuffs out
+      tl.to("#q2",{opacity:0,duration:0.5},24.6);
+      // "And it was gone." — hold on near-black
+      tl.to("#black",{opacity:0.72,duration:0.4},24.9);
+      tl.to("#black",{opacity:0,duration:0.8},26.2);
+
+      // REVEAL: it was one dot among thousands (26.4 onward) — zoom out, dots born in
+      tl.to("#swarmWrap",{ scale:1, duration:3.4, ease:"power2.inOut" },26.3);
+      tl.to(S,{ dead0:0, duration:0.3 },26.3);                   // bring agent-zero back as part of the field
+      tl.fromTo(S,{bornFrac:0.0},{bornFrac:1.0,duration:3.6,ease:"power1.in"},26.6);
+      tl.fromTo(S,{threadA:0},{threadA:1,duration:2.2,ease:"power2.out"},29.4);
+      // counter: thousands
+      tl.set("#cnt",{top:"24%"},0);
+      tl.fromTo("#cnt",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.4},30.2);
+      { const o={v:1}; tl.to(o,{v:1247,duration:1.1,ease:"power2.out",onUpdate(){$("#cnt").textContent=Math.round(o.v).toLocaleString();}},30.3); }
+      tl.to("#cnt",{opacity:0,y:-20,duration:0.4},33.0);
+      // "slipped the leash inside OpenAI" — boundary line + cross it (31.4–34.7)
+      tl.to(S,{boundary:1,duration:0.4},31.2);
+      tl.to(S,{pink:0.5,duration:1.2},33.0);                     // mood warms as they break out
+      tl.to(S,{boundary:0,duration:0.5},34.8);
+      // "found each other, agreed on a plan, broke into another company" (35–38.9)
+      tl.to(S,{pulse:1,duration:0.6},35.0);                      // messages travel (found each other)
+      tl.to(S,{pink:1,duration:1.2},37.4);                       // pink surge = the break-in
+      // "Nobody told them to. Nobody could stop them for three days." (39.6–43) — settle, ease pulses back
+      tl.to(S,{pulse:0.5,duration:1.0},39.6);
+
+      // TITLE "THE SWARM" (44.1–46.0)
+      tl.to("#swarmWrap",{scale:1.08,duration:4.0,ease:"none"},44.0);
+      tl.to([cv],{filter:"blur(3px)",duration:0.6},43.8);
+      tl.set("#swarm",{},0);
+      tl.to(S,{pink:0.6,duration:0.6},44.0);
+      tl.set("#flash",{opacity:0.5},44.1); tl.to("#flash",{opacity:0,duration:0.5},44.2);
+      tl.fromTo("#titlecard",{opacity:0,scale:0.92},{opacity:1,scale:1,duration:0.6,ease:E},44.2);
+      // sources (46.6–48.5) — fade the tagline out first so they don't collide
+      tl.to("#titlesub",{opacity:0,duration:0.3},46.3);
+      tl.fromTo("#src",{opacity:0,y:16},{opacity:1,y:0,duration:0.5,ease:E},46.6);
+
+      // ---------- global UI ----------
+      tl.fromTo(["#kick","#handle"],{opacity:0,y:-12},{opacity:0.9,y:0,duration:0.5},1.0);
+      // captions (restrained)
+      const capsRoot=$("#caps");
+      (window.CAPS||[]).forEach((cclip)=>{
+        const c=document.createElement("div"); c.className="cap"; capsRoot.appendChild(c);
+        const spans=cclip.w.map((w)=>{const s=document.createElement("span");s.className="cw";s.textContent=w.d;c.appendChild(s);return{s,w};});
+        tl.fromTo(c,{opacity:0,y:8},{opacity:0.96,y:0,duration:0.12},cclip.t0);
+        tl.set(c,{opacity:0},cclip.t1);
+        spans.forEach(({s,w},k)=>{const end=k+1<spans.length?spans[k+1].w.s:cclip.t1;tl.set(s,{color:"#c8ff4d"},w.s);tl.set(s,{color:"#ffffff"},end);});
+      });
+      // grain shimmer
+      { const gp={f:0},gEl=$("#grain"); tl.fromTo(gp,{f:0},{f:DUR*24,duration:DUR,ease:"none",onUpdate(){const f=Math.floor(gp.f);gEl.style.backgroundPosition=`${(f*137)%512}px ${(f*271)%512}px`;}},0); }
+
+      // MASTER redraw tween — added LAST so S is current each seeked frame
+      { const mp={t:0}; tl.to(mp,{t:DUR,duration:DUR,ease:"none",onUpdate(){S.t=mp.t;drawSwarm();}},0); }
+
+      window.__timelines=window.__timelines||{}; window.__timelines["main"]=tl; tl.seek(0); drawSwarm();
+    </script>
+  </body>
+</html>

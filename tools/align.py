@@ -15,7 +15,7 @@ raw = re.sub(r"<[^>]+>", " ", raw)
 SUBS = {"centres": "centers", "thirty-five": "thirty five"}  # substring fixes
 # Whole-word fixes, applied after cleaning: spoken forms the dictionary lacks or says wrong
 # ("ai" is in the dictionary as one syllable, "eye"; the voice says "A-I").
-WORDMAP = {"ai": "a i", "ai's": "a eyes"}
+WORDMAP = {"ai": "a i", "ai's": "a eyes", "ais": "a eyes", "openai": "open a i", "exploitgym": "exploit gym"}
 display_words = raw.split()
 align_words = []
 for w in display_words:

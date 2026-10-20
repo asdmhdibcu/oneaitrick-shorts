@@ -100,6 +100,8 @@ ITEMS = [
     ("wastebasket", "Wastebasket", None),
     ("wink", "Winking face", None),
     ("question", "Red question mark", None),
+    ("locked", "Locked", None),
+    ("hourglass", "Hourglass done", None),
 ]
 
 

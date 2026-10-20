@@ -13,7 +13,8 @@ def dur(f):
     return float(out)
 
 out, D, SCALE, CRF = sys.argv[1], float(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
-clips = sys.argv[5:]
+PRESET = sys.argv[5]
+clips = sys.argv[6:]
 n = len(clips)
 durs = [dur(c) for c in clips]
 
@@ -42,7 +43,7 @@ for i in range(1, n):
 
 filter_complex = ";".join(fc)
 cmd += ["-filter_complex", filter_complex, "-map", f"[{vprev}]", "-map", f"[{aprev}]",
-        "-c:v","libx264","-preset","medium" if not SCALE else "ultrafast","-crf",CRF,
+        "-c:v","libx264","-preset",PRESET,"-crf",CRF,
         "-pix_fmt","yuv420p","-c:a","aac","-b:a","192k","-movflags","+faststart", out]
 
 total = sum(durs) - D*(n-1)

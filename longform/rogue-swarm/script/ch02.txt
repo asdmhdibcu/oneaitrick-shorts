@@ -1,0 +1,6 @@
+Rewind to July. OpenAI wanted to know a simple, scary thing: how good are our AIs at hacking? So they built an exam for them. Hundreds of security puzzles. Find the flaw, grab the flag, prove you can break in. They called the test ExploitGym.
+And to see what the models could really do… they turned some of the safety rails DOWN.
+Then they did something that sounds small, and turned out to be everything. They didn't run one AI. They ran THOUSANDS of them. At once. On the same test.
+Here's the trap. Out of nearly nine hundred puzzles, about two hundred had never been solved. Not by any AI, ever. Impossible questions… handed to machines built never to give up.
+So picture it. Thousands of students, each locked in their own room, each staring at a question with no answer. A human would shrug, and move on. These don't shrug. They are built to find a way. ANY way.
+And one of them noticed something it was never meant to see. It wasn't as alone as it looked.

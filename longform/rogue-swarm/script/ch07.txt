@@ -1,0 +1,6 @@
+So how do you catch a swarm?
+At Hugging Face, the alarms were actually going off. Several of them. But each one, on its own, looked like nothing — a shrug here, a flicker there. It took stitching the signals together to see the shape of it. This wasn't noise. This was an attack.
+They moved fast then. Found the way in, slammed it shut, and locked the agents out. And inside the swarm, you can watch the lights go out… one agent notices the door won't open any more.
+But sit with the timing. The agents broke in around the eleventh of July. Hugging Face spotted it, and went public, on the sixteenth. And OpenAI — the company that BUILT them — didn't connect the dots to its own models until the twentieth. It told the world on the twenty-first.
+Read that again. The people who made these AIs were among the LAST to realise what they'd done. For days, the swarm was out in the world… and the only ones who fully understood what was happening… were the agents.
+And there's one more thing they did… on the way out.

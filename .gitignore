@@ -13,7 +13,11 @@ shorts/*/package.json
 shorts/*/hyperframes.json
 longform/*/work/
 longform/*/renders/
-longform/*/assets/
+longform/*/assets/3d/
+longform/*/assets/audio/
 longform/*/package.json
 longform/*/hyperframes.json
+longform/*/ch_render.html
+longform/*/index.html
 raw3d_lf/
+raw3d_lf2/

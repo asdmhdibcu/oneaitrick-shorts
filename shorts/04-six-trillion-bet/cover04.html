@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #04050a; }
+      .bg { position: absolute; inset: 0; background: url("work/cover_bg.png") center top / cover no-repeat; }
+      .shade { position: absolute; inset: 0; background:
+        linear-gradient(180deg, rgba(4,5,10,0.55) 0%, rgba(4,5,10,0) 16%, rgba(4,5,10,0) 46%, rgba(4,5,10,0.75) 58%, rgba(4,5,10,0.94) 70%, rgba(4,5,10,0.96) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+      .title { position: absolute; left: 70px; right: 60px; top: 1135px; font-weight: 900; font-size: 112px; letter-spacing: -0.05em; line-height: 0.95; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); }
+      .title em { font-style: normal; color: var(--lime); text-shadow: 0 0 60px rgba(200,255,77,0.45); }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 36px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bg"></div>
+      <div class="shade"></div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI TREND · TRUE STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">She bet her savings on <em>the AI of 1845</em></div>
+      <div class="pill" style="top: 1500px; color: var(--lime)">THE $6 TRILLION BET</div>
+      <div class="pill" style="top: 1600px; color: #b9bcc6; border-color: transparent; background: none; font-size: 30px; padding-left: 0">RAILWAY MANIA × TODAY'S AI</div>
+    </div>
+  </body>
+</html>

@@ -38,7 +38,7 @@ for key, (s, e) in fix.items():
 
 
 def display(t):
-    core = re.sub(r"[^\w'-]", "", t)
+    core = re.sub(r"[^\w'$£.,%-]", "", t).strip(".,")  # keeps $4.2, £120, 4,500; drops trailing punctuation
     low = core.lower()
     # keep "one" as a word when it isn't a count ("one look", "one doctor" reads fine either way)
     d = NUM.get(low, core) if low != "one" else core
@@ -55,7 +55,7 @@ for i, w in enumerate(words):
         chunks.append(cur)
         cur = []
     cur.append({"d": d, "s": round(w["start"], 3), "e": round(w["end"], 3), "emph": is_emph(d, w["start"])})
-    punct = re.search(r"[.,?!;:]$|\.\.\.$", w["text"].rstrip("\"'”’)")) is not None  # card." counts as an end
+    punct = re.search(r"[.,?!;:…]$|\.\.\.$", w["text"].rstrip("\"'”’)")) is not None  # card." counts as an end
     if punct or len(cur) >= 3 or i == len(words) - 1:
         chunks.append(cur)
         cur = []

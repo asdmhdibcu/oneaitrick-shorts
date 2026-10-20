@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/world.js"></script>
+    <script src="captions.js"></script>
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      @font-face { font-family: "mono"; src: url("assets/fonts/mono-700.woff2") format("woff2"); font-weight: 700; }
+      @font-face { font-family: "interv"; src: url("assets/fonts/inter.woff2") format("woff2"); font-weight: 100 900; }
+      #gl { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .texsrc { position: absolute; left: -12000px; top: 0; width: 64px; height: 64px; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse 85% 70% at 50% 42%, rgba(4,5,10,0) 50%, rgba(4,5,10,0.7) 100%); }
+      .botshade { position: absolute; left: 0; top: 1180px; width: 1080px; height: 740px; background: linear-gradient(180deg, rgba(4,5,10,0) 0%, rgba(4,5,10,0.55) 42%, rgba(4,5,10,0.72) 100%); }
+      .topshade { position: absolute; left: 0; top: 0; width: 1080px; height: 300px; background: linear-gradient(180deg, rgba(4,5,10,0.55) 0%, rgba(4,5,10,0) 100%); }
+      .grain { position: absolute; inset: 0; background-image: url("assets/grain.png"); opacity: 0.08; mix-blend-mode: overlay; }
+      .flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      .black { position: absolute; inset: 0; background: #000; opacity: 0; }
+      .tag2 { position: absolute; left: 60px; top: 150px; display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px 12px 18px;
+        border: 2px solid rgba(255,255,255,0.16); border-radius: 999px; background: rgba(8,9,14,0.62); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 26px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag2 .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 14px var(--lime); }
+      .cap { position: absolute; left: 40px; width: 1000px; top: 1262px; text-align: center; font-weight: 900; font-size: 84px; line-height: 1.02;
+        letter-spacing: -0.02em; color: #fff; -webkit-text-stroke: 14px #07080c; paint-order: stroke fill; opacity: 0; }
+      .cap .cw { display: inline-block; margin: 0 0.2em; transform-origin: 50% 70%; }
+      .lbl { position: absolute; left: 0; top: 0; opacity: 0; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 30px;
+        letter-spacing: 0.1em; padding: 12px 20px; border-radius: 14px; background: rgba(6,8,12,0.8); border: 2px solid currentColor; text-align: center; line-height: 1.25; }
+      .lbl b { display: block; font-family: "InterV", sans-serif; font-weight: 900; font-size: 54px; letter-spacing: -0.02em; }
+      .lbl::after { content: ""; position: absolute; left: 50%; top: 100%; width: 2px; height: 44px; background: currentColor; transform: translateX(-50%); opacity: 0.7; }
+      .src { position: absolute; font-family: "Mono", monospace; font-weight: 700; font-size: 24px; letter-spacing: 0.1em; padding: 10px 16px; border-radius: 10px;
+        background: rgba(6,8,12,0.78); color: #c9ccd6; border: 1.5px solid rgba(255,255,255,0.18); opacity: 0; white-space: nowrap; }
+      .src i { font-style: normal; color: var(--lime); }
+      .chipT { position: absolute; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.1em; padding: 12px 20px; border-radius: 14px;
+        background: rgba(6,8,12,0.8); border: 2px solid currentColor; opacity: 0; white-space: nowrap; }
+      .chipT .sw { display: inline-block; width: 22px; height: 8px; border-radius: 4px; background: currentColor; margin-right: 12px; vertical-align: middle; box-shadow: 0 0 10px currentColor; }
+      .count { position: absolute; left: 0; width: 1080px; text-align: center; opacity: 0; }
+      .count .n { font-weight: 900; font-size: 190px; letter-spacing: -0.05em; color: #fff; line-height: 0.9; }
+      .count .u { margin-top: 18px; font-family: "Mono", monospace; font-weight: 700; font-size: 34px; letter-spacing: 0.2em; }
+      /* end card */
+      #end { position: absolute; inset: 0; opacity: 0; }
+      #end .dim { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(5,6,10,0.8), rgba(5,6,10,0.95)); }
+      .mark { position: absolute; left: 420px; top: 470px; width: 240px; height: 240px; border-radius: 56px; background: var(--lime);
+        display: flex; align-items: flex-end; justify-content: center; gap: 8px; padding-bottom: 54px; box-shadow: 0 0 80px rgba(200,255,77,0.45); }
+      .mark .one { font-weight: 900; font-size: 168px; line-height: 0.73; color: #0b0c10; letter-spacing: -0.06em; }
+      .mark .cur { width: 46px; height: 17px; border-radius: 3px; background: #0b0c10; }
+      .mtitle { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; }
+      .cta { position: absolute; display: inline-flex; align-items: center; gap: 16px; padding: 24px 36px; border-radius: 999px; background: var(--lime);
+        color: #0b0c10; font-weight: 850; font-size: 46px; letter-spacing: -0.01em; }
+      .fontwarm { position: absolute; left: -9999px; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="88.6" data-width="1080" data-height="1920">
+      <div id="base" class="clip" data-start="0" data-duration="88.6" data-track-index="0" style="background: #04050a"></div>
+      <div id="world" class="clip" data-start="0" data-duration="88.6" data-track-index="1"><canvas id="gl" width="1080" height="1920"></canvas></div>
+
+      <div id="ui" class="clip" data-start="0" data-duration="88.6" data-track-index="2">
+        <img class="texsrc" id="i-charlotte" src="assets/img/charlotte.jpg" alt="" />
+        <img class="texsrc" id="i-turner" src="assets/img/turner.jpg" alt="" />
+        <img class="texsrc" id="i-punch" src="assets/img/punch.jpg" alt="" />
+        <img class="texsrc" id="i-darwin" src="assets/img/darwin.jpg" alt="" />
+        <img class="texsrc" id="i-odl1" src="assets/img/page_odl-001.jpg" alt="" />
+        <img class="texsrc" id="i-odl25" src="assets/img/page_odl-025.jpg" alt="" />
+        <img class="texsrc" id="i-wheel" src="assets/img/wheel.jpg" alt="" />
+        <img class="texsrc" id="i-viaduct" src="assets/img/viaduct.jpg" alt="" />
+        <img class="texsrc" id="i-servers" src="assets/img/servers.jpg" alt="" />
+        <img class="texsrc" id="i-corridor" src="assets/img/corridor.jpg" alt="" />
+        <img class="texsrc" id="i-bain8" src="assets/img/page_bain-08.jpg" alt="" />
+        <img class="texsrc" id="i-bain10" src="assets/img/page_bain-10.jpg" alt="" />
+        <div class="vig"></div>
+        <div class="topshade"></div>
+        <div class="botshade"></div>
+        <div id="labels"></div>
+        <div class="src" id="srcOdl1" style="left:60px;top:1150px">SOURCE · <i>ODLYZKO</i>, UNIV. OF MINNESOTA, 2010</div>
+        <div class="src" id="srcOdl25" style="left:60px;top:1150px">SOURCE · <i>ODLYZKO</i> (2010), PAGE 25</div>
+        <div class="src" id="srcBain" style="left:60px;top:1150px">SOURCE · <i>BAIN</i> TECHNOLOGY REPORT, SEPT 2026</div>
+        <div class="src" id="srcBain2" style="left:60px;top:1150px">SOURCE · <i>BAIN</i> TECHNOLOGY REPORT, PAGE 8</div>
+        <div class="chipT" id="leg45" style="left:60px;top:250px;color:var(--amber)"><span class="sw"></span>BRITAIN'S RAILWAYS, 1845</div>
+        <div class="chipT" id="leg46" style="left:60px;top:322px;color:var(--lime)"><span class="sw"></span>APPROVED IN 1846</div>
+        <div class="src" id="illus" style="right:60px;top:1150px">ILLUSTRATIVE ROUTES</div>
+        <div class="count" id="miles" style="top:560px"><div class="n" id="milesN">0</div><div class="u" style="color:var(--lime)">MILES APPROVED IN 1846</div></div>
+        <div class="count" id="c780" style="top:420px"><div class="n" id="c780N">$0</div><div class="u" style="color:var(--blue)">BIG TECH SPENDING · 2026</div></div>
+        <div class="count" id="c15" style="top:420px"><div class="n">$1.5T</div><div class="u" style="color:var(--blue)">A YEAR · BY 2031</div></div>
+        <div class="grain" id="grain"></div>
+        <div class="progress" id="prog" style="background:var(--lime)"></div>
+        <div class="tag2" id="tag"><span class="dot"></span>AI TREND · TRUE STORY</div>
+        <div class="brandmark" id="bm" style="right: 60px; top: 158px; padding-top: 10px">@ONEAITRICK</div>
+        <div id="caps"></div>
+        <div id="end">
+          <div class="dim"></div>
+          <div class="mark" id="mark"><span class="one">1</span><span class="cur"></span></div>
+          <div class="mtitle" id="ename" style="top:760px;font-size:110px">One <span style="color:var(--lime)">AI</span> Trick</div>
+          <div class="mtitle" id="ehandle" style="top:900px;font-family:Mono, monospace;font-weight:500;font-size:40px;letter-spacing:0.04em;color:var(--muted)">@oneaitrick</div>
+          <div class="cta" id="fol" style="left:220px;top:1000px">+ Follow for AI, explained</div>
+        </div>
+        <div class="flash" id="flash"></div>
+        <div class="black" id="black"></div>
+        <div class="fontwarm"><span style="font-family:InterV;font-weight:900">Aa</span><span style="font-family:InterV;font-weight:800">Aa</span><span style="font-family:Mono;font-weight:700">Aa</span><span style="font-family:Mono;font-weight:500">Aa</span><span style="font-family:'GFS Baskerville'">Aa</span></div>
+      </div>
+
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="88.6" data-volume="1" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const DUR = 88.6;
+      const $ = (s) => document.querySelector(s);
+      function div(parent, cls, css, html) { const d = document.createElement("div"); if (cls) d.className = cls; if (css) d.style.cssText = css; if (html) d.innerHTML = html; parent.appendChild(d); return d; }
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out";
+      const CHECK = typeof window.__hfScriptState === "function";
+      const IMG = {}; document.querySelectorAll(".texsrc").forEach((im) => { IMG[im.id.slice(2)] = im; });
+      if (!CHECK) {
+        window.SIXT.init(document.getElementById("gl"), IMG);
+        const LB = $("#labels"), P = window.SIXT.pts;
+        const mk = (html, col) => div(LB, "lbl", "color:" + col, html);
+        window.SIXT.setLabels([
+          { el: mk("<b>$6T</b>A YEAR NEEDED", "#ffc861"), world: "bridge", at: [P.beacon[0], P.beacon[1], P.beacon[2]], t0: 61.8, t1: 70.2 },
+          { el: mk("<b>$1.8T</b>BEST CASE", "#c8ff4d"), world: "bridge", at: [P.best[0], P.best[1], P.best[2]], t0: 65.15, t1: 70.2 },
+          { el: mk("<b>$4.2T</b>GAP", "#ffb547"), world: "bridge", at: [P.gap[0], P.gap[1], P.gap[2]], t0: 67.65, t1: 70.2 },
+        ]);
+      }
+      const st = { t: 0 };
+      tl.to(st, { t: DUR, duration: DUR, ease: "none", onUpdate() { if (!CHECK) window.SIXT.render(st.t); } }, 0);
+
+      // ---------- overlays ----------
+      const show = (sel, t0, t1, from) => { tl.fromTo(sel, Object.assign({ opacity: 0, y: 12 }, from || {}), { opacity: 1, y: 0, x: 0, duration: 0.35, ease: E }, t0); tl.to(sel, { opacity: 0, duration: 0.25 }, t1); };
+      show("#srcOdl1", 12.2, 15.45); show("#srcOdl25", 41.35, 44.95); show("#srcBain", 55.6, 60.2); show("#srcBain2", 72.4, 74.5);
+      show("#leg45", 20.3, 28.0, { x: -30 }); show("#leg46", 22.1, 28.0, { x: -30 }); show("#illus", 20.6, 28.0);
+      // 4,538 miles
+      tl.fromTo("#miles", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 22.6);
+      const mi = { v: 0 }; tl.fromTo(mi, { v: 0 }, { v: 4538, duration: 1.6, ease: "power2.out", onUpdate() { $("#milesN").textContent = Math.round(mi.v).toLocaleString("en-US"); } }, 22.65);
+      tl.to("#miles", { scale: 1.07, duration: 0.18, yoyo: true, repeat: 1 }, 24.2); tl.to("#miles", { opacity: 0, y: -30, duration: 0.35 }, 25.4);
+      // $780 billion
+      tl.fromTo("#c780", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 48.05);
+      const b7 = { v: 0 }; tl.fromTo(b7, { v: 0 }, { v: 780, duration: 1.3, ease: "power2.out", onUpdate() { $("#c780N").textContent = "$" + Math.round(b7.v) + "B"; } }, 48.1);
+      tl.to("#c780", { scale: 1.07, duration: 0.18, yoyo: true, repeat: 1 }, 49.35); tl.to("#c780", { opacity: 0, y: -30, duration: 0.3 }, 51.55);
+      // $1.5T a year by 2031
+      tl.fromTo("#c15", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power4.out" }, 53.0);
+      tl.to("#c15", { scale: 1.06, duration: 0.18, yoyo: true, repeat: 1 }, 53.9); tl.to("#c15", { opacity: 0, y: -30, duration: 0.3 }, 55.25);
+      // flashes on the big hits
+      const flash = (t, a, d, c) => { tl.set("#flash", { background: c || "#fff" }, t); tl.fromTo("#flash", { opacity: a }, { opacity: 0, duration: d || 0.35, ease: "power2.out" }, t); };
+      flash(2.86, 0.14, 0.3, "#c8ff4d"); flash(9.35, 0.32, 0.5, "#ffd9a0"); flash(32.84, 0.35, 0.5, "#ff6b6b"); flash(36.69, 0.15, 0.3, "#ff6b6b");
+      flash(63.5, 0.18, 0.4, "#c8ff4d"); flash(71.62, 0.18, 0.3, "#ffffff"); flash(75.25, 0.12, 0.3, "#7cc4ff"); flash(81.2, 0.16, 0.5, "#ffc861");
+
+      // ---------- end card ----------
+      tl.fromTo("#end", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 83.0);
+      tl.fromTo("#mark", { scale: 0.3, rotation: -20, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.55, ease: "back.out(2)" }, 83.15);
+      tl.fromTo(["#ename", "#ehandle"], { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: E, stagger: 0.12 }, 83.4);
+      tl.fromTo("#fol", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, 83.85);
+      tl.to("#fol", { scale: 1.06, duration: 0.45, yoyo: true, repeat: 3, ease: "sine.inOut" }, 84.4);
+      tl.to("#mark", { boxShadow: "0 0 140px rgba(200,255,77,0.8)", duration: 0.9, yoyo: true, repeat: 2, ease: "sine.inOut" }, 84.2);
+
+      // ---------- global UI ----------
+      tl.fromTo("#prog", { scaleX: 0 }, { scaleX: 1, duration: DUR, ease: "none" }, 0);
+      tl.fromTo(["#tag", "#bm"], { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.4 }, 0.1);
+      tl.to(["#tag", "#bm"], { opacity: 0, duration: 0.4 }, 82.8);
+      tl.to([".botshade", ".topshade"], { opacity: 0, duration: 0.5 }, 83.0);
+      const gp = { f: 0 }; const grainEl = $("#grain");
+      tl.fromTo(gp, { f: 0 }, { f: DUR * 24, duration: DUR, ease: "none", onUpdate() { const f = Math.floor(gp.f); grainEl.style.backgroundPosition = `${(f * 137) % 512}px ${(f * 271) % 512}px`; } }, 0);
+      tl.fromTo("#black", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 88.2);
+
+      // ---------- captions (muted where the same number is already big on screen) ----------
+      const COVERS = [[18.4, 20.2], [22.25, 24.8], [47.75, 50.2], [51.9, 55.5], [83.05, 90]];
+      const covered = (a, b) => COVERS.some(([c0, c1]) => a < c1 && b > c0);
+      const capsRoot = $("#caps");
+      (window.CAPS || []).forEach((ch) => {
+        if (covered(ch.t0, ch.t1)) return;
+        const c = div(capsRoot, "cap");
+        const spans = ch.w.map((w) => { const s = document.createElement("span"); s.className = "cw"; s.textContent = w.d; if (w.emph) s.style.color = "#c8ff4d"; c.appendChild(s); return { s, w }; });
+        tl.fromTo(c, { opacity: 0, scale: 0.86, y: 10 }, { opacity: 1, scale: 1, y: 0, duration: 0.12, ease: "back.out(2)" }, ch.t0);
+        tl.set(c, { opacity: 0 }, ch.t1);
+        spans.forEach(({ s, w }, k) => {
+          const end = k + 1 < spans.length ? spans[k + 1].w.s : ch.t1;
+          tl.set(s, { color: "#c8ff4d", scale: w.emph ? 1.08 : 1.04 }, w.s);
+          tl.set(s, { color: w.emph ? "#c8ff4d" : "#ffffff", scale: 1 }, end);
+        });
+      });
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/world.js"></script>
+    <script src="captions.js"></script>
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      @font-face { font-family: "mono"; src: url("assets/fonts/mono-700.woff2") format("woff2"); font-weight: 700; }
+      #gl { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse 85% 70% at 50% 42%, rgba(4,5,10,0) 45%, rgba(4,5,10,0.78) 100%); }
+      .botshade { position: absolute; left: 0; top: 1180px; width: 1080px; height: 740px; background: linear-gradient(180deg, rgba(4,5,10,0) 0%, rgba(4,5,10,0.55) 45%, rgba(4,5,10,0.7) 100%); }
+      .grain { position: absolute; inset: 0; background-image: url("assets/grain.png"); opacity: 0.08; mix-blend-mode: overlay; }
+      .flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      .black { position: absolute; inset: 0; background: #000; opacity: 0; }
+      .tag2 { position: absolute; left: 60px; top: 150px; display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px 12px 18px;
+        border: 2px solid rgba(255,255,255,0.16); border-radius: 999px; background: rgba(8,9,14,0.62); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 26px; letter-spacing: 0.08em; color: var(--ink); backdrop-filter: blur(6px); }
+      .tag2 .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 14px var(--pink); }
+      .cap { position: absolute; left: 40px; width: 1000px; top: 1262px; text-align: center; font-weight: 900; font-size: 84px; line-height: 1.02;
+        letter-spacing: -0.02em; color: #fff; -webkit-text-stroke: 14px #07080c; paint-order: stroke fill; opacity: 0; }
+      .cap .cw { display: inline-block; margin: 0 0.2em; transform-origin: 50% 70%; }
+      .lbl { position: absolute; left: 0; top: 0; opacity: 0; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 28px;
+        letter-spacing: 0.12em; padding: 12px 20px; border-radius: 14px; background: rgba(6,8,12,0.78); border: 2px solid currentColor; }
+      .lbl::after { content: ""; position: absolute; left: 50%; top: 100%; width: 2px; height: 46px; background: currentColor; transform: translateX(-50%); opacity: 0.7; }
+      .chipT { position: absolute; font-family: "Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.1em; padding: 14px 22px; border-radius: 14px;
+        background: rgba(6,8,12,0.8); border: 2px solid currentColor; opacity: 0; white-space: nowrap; }
+      .count { position: absolute; left: 0; width: 1080px; top: 470px; text-align: center; opacity: 0; }
+      .count .n { font-weight: 900; font-size: 210px; letter-spacing: -0.05em; color: #fff; line-height: 0.9;
+        text-shadow: 0 0 60px rgba(255,122,198,0.75), 0 0 140px rgba(255,122,198,0.4); }
+      .count .u { margin-top: 18px; font-family: "Mono", monospace; font-weight: 700; font-size: 38px; letter-spacing: 0.22em; color: var(--pink); }
+      .tline { position: absolute; left: 60px; top: 300px; width: 600px; }
+      .tl-row { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; opacity: 0; }
+      .tl-row .d { font-family: "Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.08em; padding: 10px 16px; border-radius: 12px; background: rgba(6,8,12,0.82); border: 2px solid currentColor; }
+      .tl-row .t { font-weight: 800; font-size: 34px; color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.9); }
+      .gbar { position: absolute; left: 0; width: 1080px; opacity: 0; mix-blend-mode: screen; }
+      /* end card */
+      #end { position: absolute; inset: 0; opacity: 0; }
+      #end .dim { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(5,6,10,0.84), rgba(5,6,10,0.96)); }
+      .mark { position: absolute; left: 420px; top: 470px; width: 240px; height: 240px; border-radius: 56px; background: var(--lime);
+        display: flex; align-items: flex-end; justify-content: center; gap: 8px; padding-bottom: 54px; box-shadow: 0 0 80px rgba(200,255,77,0.45); }
+      .mark .one { font-weight: 900; font-size: 168px; line-height: 0.73; color: #0b0c10; letter-spacing: -0.06em; }
+      .mark .cur { width: 46px; height: 17px; border-radius: 3px; background: #0b0c10; }
+      .mtitle { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; }
+      .cta { position: absolute; display: inline-flex; align-items: center; gap: 16px; padding: 24px 36px; border-radius: 999px; background: var(--lime);
+        color: #0b0c10; font-weight: 850; font-size: 46px; letter-spacing: -0.01em; }
+      .fontwarm { position: absolute; left: -9999px; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="110" data-width="1080" data-height="1920">
+      <div id="base" class="clip" data-start="0" data-duration="110" data-track-index="0" style="background: #04050a"></div>
+      <div id="world" class="clip" data-start="0" data-duration="110" data-track-index="1"><canvas id="gl" width="1080" height="1920"></canvas></div>
+
+      <div id="ui" class="clip" data-start="0" data-duration="110" data-track-index="2">
+        <div class="vig"></div>
+        <div class="botshade"></div>
+        <div id="labels"></div>
+        <div class="chipT" id="july" style="left:60px;top:250px;color:var(--pink)">JULY 2026 · INSIDE OPENAI</div>
+        <div class="chipT" id="exam" style="right:60px;top:250px;color:var(--blue)">THE EXAM · ~900 PUZZLES</div>
+        <div class="chipT" id="unsolved" style="right:60px;top:250px;color:var(--red)">~200 NEVER SOLVED BY ANY AI</div>
+        <div class="count" id="count"><div class="n" id="countN">0</div><div class="u">SECRET MESSAGES</div></div>
+        <div class="tline" id="tline">
+          <div class="tl-row" id="tl1" style="color:var(--pink)"><span class="d">JUL 11</span><span class="t">the swarm breaks in</span></div>
+          <div class="tl-row" id="tl2" style="color:var(--blue)"><span class="d">JUL 16</span><span class="t">Hugging Face goes public</span></div>
+          </div>
+        <div class="tline" style="top:300px"><div class="tl-row" id="tl3" style="color:var(--lime)"><span class="d">JUL 20</span><span class="t">OpenAI connects the dots</span></div></div>
+        <div class="chipT" id="nineteen" style="left:60px;top:250px;color:var(--red)">19 INCIDENTS · AND COUNTING</div>
+        <div class="gbar" id="g1" style="top:420px;height:70px;background:rgba(255,60,80,0.55)"></div>
+        <div class="gbar" id="g2" style="top:760px;height:26px;background:rgba(80,220,255,0.6)"></div>
+        <div class="gbar" id="g3" style="top:980px;height:110px;background:rgba(255,255,255,0.22)"></div>
+        <div class="gbar" id="g4" style="top:600px;height:14px;background:rgba(200,255,77,0.7)"></div>
+        <div class="grain" id="grain"></div>
+        <div class="progress" id="prog" style="background:var(--pink)"></div>
+        <div class="tag2" id="tag"><span class="dot"></span>AI NEWS · TRUE STORY</div>
+        <div class="brandmark" id="bm" style="right: 60px; top: 158px; padding-top: 10px">@ONEAITRICK</div>
+        <div id="caps"></div>
+        <div id="end">
+          <div class="dim"></div>
+          <div class="mark" id="mark"><span class="one">1</span><span class="cur"></span></div>
+          <div class="mtitle" id="ename" style="top:760px;font-size:110px">One <span style="color:var(--lime)">AI</span> Trick</div>
+          <div class="mtitle" id="ehandle" style="top:900px;font-family:Mono, monospace;font-weight:500;font-size:40px;letter-spacing:0.04em;color:var(--muted)">@oneaitrick</div>
+          <div class="cta" id="fol" style="left:220px;top:1000px">+ Follow for AI, explained</div>
+        </div>
+        <div class="flash" id="flash"></div>
+        <div class="black" id="black"></div>
+        <div class="fontwarm"><span style="font-family:InterV;font-weight:900">Aa</span><span style="font-family:InterV;font-weight:800">Aa</span><span style="font-family:Mono;font-weight:700">Aa</span><span style="font-family:Mono;font-weight:500">Aa</span></div>
+      </div>
+
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="110" data-volume="1" data-track-index="3"></audio>
+    </div>
+
+    <script>
+      const DUR = 110;
+      const $ = (s) => document.querySelector(s);
+      function div(parent, cls, css, html) { const d = document.createElement("div"); if (cls) d.className = cls; if (css) d.style.cssText = css; if (html) d.innerHTML = html; parent.appendChild(d); return d; }
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out";
+
+      // ---------- labels pinned to the 3D world ----------
+      const LB = $("#labels");
+      const mk = (txt, col) => div(LB, "lbl", "color:" + col, txt);
+      const TW = window.SWARM.TOWER, LAB = window.SWARM.LAB;
+      const labels = [
+        { el: mk("HUGGING FACE", "#7cc4ff"), world: "hive", at: [TW[0], 88, TW[2]], t0: 61.6, t1: 66.0 },
+        { el: mk("THE ANSWER KEY", "#ffb547"), world: "hive", at: [TW[0], 38.2, TW[2] + 9], t0: 64.5, t1: 66.0 },
+        { el: mk("HUGGING FACE · ALARMS", "#ff6b6b"), world: "hive", at: [TW[0], 70, TW[2] + 8], t0: 86.6, t1: 88.6 },
+        { el: mk("OPENAI · THE LAB", "#c8ff4d"), world: "hive", at: [LAB[0], 11.6, LAB[2]], t0: 88.75, t1: 91.4 },
+        { el: mk("ONE OF ~1,200 AGENTS", "#c8ff4d"), world: "hive", at: [-1.6, 3.4, -112], t0: 80.8, t1: 82.4 },
+      ];
+      const CHECK = typeof window.__hfScriptState === "function";
+      if (!CHECK) window.SWARM.init(document.getElementById("gl"), labels);
+      const st = { t: 0 };
+      tl.to(st, { t: DUR, duration: DUR, ease: "none", onUpdate() { if (!CHECK) window.SWARM.render(st.t); } }, 0);
+
+      // ---------- overlays ----------
+      const show = (sel, t0, t1, from) => { tl.fromTo(sel, Object.assign({ opacity: 0, y: 14 }, from || {}), { opacity: 1, y: 0, x: 0, duration: 0.35, ease: E }, t0); tl.to(sel, { opacity: 0, duration: 0.25 }, t1); };
+      show("#july", 25.0, 29.4, { x: -30 });
+      show("#exam", 39.6, 42.1, { x: 30 });
+      show("#unsolved", 59.9, 62.0, { x: 30 });
+      show("#nineteen", 93.5, 96.25, { x: -30 });
+      // 70,000 counter
+      tl.fromTo("#count", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 56.15);
+      const cn = { v: 0 }; tl.fromTo(cn, { v: 120 }, { v: 70000, duration: 1.45, ease: "power2.in", onUpdate() { $("#countN").textContent = Math.round(cn.v).toLocaleString("en-US") + (cn.v > 69990 ? "+" : ""); } }, 56.2);
+      tl.to("#count", { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1 }, 57.6);
+      tl.to("#count", { opacity: 0, scale: 1.3, duration: 0.3, ease: "power2.in" }, 58.35);
+      // timeline of who knew when
+      tl.fromTo("#tl1", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: E }, 86.7);
+      tl.fromTo("#tl2", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: E }, 87.5);
+      tl.fromTo("#tl3", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: E }, 89.05);
+      tl.to("#tl3", { scale: 1.08, duration: 0.2, yoyo: true, repeat: 1, transformOrigin: "0% 50%" }, 89.2);
+      tl.to(["#tl1", "#tl2"], { opacity: 0, duration: 0.25 }, 88.45); tl.to("#tl3", { opacity: 0, duration: 0.25 }, 91.35);
+      // glitch hit ("This wasn't a glitch.")
+      [["#g1", 91.5, 60], ["#g2", 91.62, -90], ["#g3", 91.74, 40], ["#g4", 92.4, -70], ["#g1", 92.48, -50]].forEach(([s, t, dx]) => {
+        tl.set(s, { opacity: 1, x: dx }, t); tl.set(s, { x: -dx * 0.6 }, t + 0.05); tl.set(s, { opacity: 0, x: 0 }, t + 0.11); });
+      // flashes on the big hits
+      const flash = (t, a, d, c) => { if (c) tl.set("#flash", { background: c }, t); tl.fromTo("#flash", { opacity: a }, { opacity: 0, duration: d || 0.35, ease: "power2.out" }, t); };
+      flash(1.93, 0.12, 0.3, "#ff6b6b"); flash(18.47, 0.25, 0.5, "#c8ff4d"); flash(23.68, 0.18, 0.4, "#7cc4ff"); flash(30.88, 0.2, 0.35, "#ff7ac6");
+      flash(40.4, 0.12, 0.3, "#7cc4ff"); flash(43.8, 0.15, 0.3, "#ff6b6b"); flash(59.88, 0.2, 0.3, "#ff6b6b"); flash(67.95, 0.28, 0.4, "#ff7ac6");
+      flash(77.05, 0.22, 0.35, "#c8ff4d"); flash(86.65, 0.25, 0.4, "#ff6b6b"); flash(93.5, 0.18, 0.3, "#ff6b6b"); flash(104.95, 0.2, 0.4, "#c8ff4d");
+
+      // ---------- end card ----------
+      tl.fromTo("#end", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 105.85);
+      tl.fromTo("#mark", { scale: 0.3, rotation: -20, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.55, ease: "back.out(2)" }, 106.0);
+      tl.fromTo(["#ename", "#ehandle"], { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: E, stagger: 0.12 }, 106.25);
+      tl.fromTo("#fol", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, 106.7);
+      tl.to("#fol", { scale: 1.06, duration: 0.45, yoyo: true, repeat: 5, ease: "sine.inOut" }, 107.2);
+      tl.to("#mark", { boxShadow: "0 0 140px rgba(200,255,77,0.8)", duration: 0.9, yoyo: true, repeat: 3, ease: "sine.inOut" }, 107.0);
+
+      // ---------- global UI ----------
+      tl.fromTo("#prog", { scaleX: 0 }, { scaleX: 1, duration: DUR, ease: "none" }, 0);
+      tl.fromTo(["#tag", "#bm"], { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.4 }, 0.1);
+      tl.to(["#tag", "#bm"], { opacity: 0, duration: 0.4 }, 105.6);
+      tl.to(".botshade", { opacity: 0, duration: 0.5 }, 105.8);
+      const gp = { f: 0 }; const grainEl = $("#grain");
+      tl.fromTo(gp, { f: 0 }, { f: DUR * 24, duration: DUR, ease: "none", onUpdate() { const f = Math.floor(gp.f); grainEl.style.backgroundPosition = `${(f * 137) % 512}px ${(f * 271) % 512}px`; } }, 0);
+      tl.fromTo("#black", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 109.6);
+
+      // ---------- captions (muted where the same words are already on screen in 3D) ----------
+      const COVERS = [[16.2, 18.05], [56.1, 58.6], [83.5, 86.1], [100.6, 101.75]];
+      const covered = (a, b) => COVERS.some(([c0, c1]) => a < c1 && b > c0);
+      const capsRoot = $("#caps");
+      (window.CAPS || []).forEach((ch) => {
+        if (covered(ch.t0, ch.t1)) return;
+        const c = div(capsRoot, "cap");
+        const spans = ch.w.map((w) => { const s = document.createElement("span"); s.className = "cw"; s.textContent = w.d; if (w.emph) s.style.color = "#c8ff4d"; c.appendChild(s); return { s, w }; });
+        tl.fromTo(c, { opacity: 0, scale: 0.86, y: 10 }, { opacity: 1, scale: 1, y: 0, duration: 0.12, ease: "back.out(2)" }, ch.t0);
+        tl.set(c, { opacity: 0 }, ch.t1);
+        spans.forEach(({ s, w }, k) => {
+          const end = k + 1 < spans.length ? spans[k + 1].w.s : ch.t1;
+          tl.set(s, { color: "#c8ff4d", scale: w.emph ? 1.08 : 1.04 }, w.s);
+          tl.set(s, { color: w.emph ? "#c8ff4d" : "#ffffff", scale: 1 }, end);
+        });
+      });
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

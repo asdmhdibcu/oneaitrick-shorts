@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #04050a; font-family: "InterV", sans-serif; color: var(--ink); }
+      .bg { position: absolute; left: 0; top: 60px; width: 1080px; height: 1920px; background: url("work/cover_bg.png") center top / cover no-repeat; }
+      .shade { position: absolute; inset: 0; background:
+        linear-gradient(180deg, rgba(4,5,10,0.6) 0%, rgba(4,5,10,0) 17%, rgba(4,5,10,0) 50%, rgba(4,5,10,0.78) 60%, rgba(4,5,10,0.95) 70%, rgba(4,5,10,0.97) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+      .stamp { position: absolute; left: 545px; top: 850px; width: 220px; height: 220px; border-radius: 50%; border: 12px solid #e8343a; color: #e8343a;
+        display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 112px; letter-spacing: -0.05em; transform: rotate(-12deg);
+        background: rgba(255,255,255,0.92); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+      .inset { position: absolute; left: 742px; top: 520px; width: 290px; height: 516px; border-radius: 26px; overflow: hidden; transform: rotate(5deg);
+        border: 6px solid #ff6b6b; box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 40px rgba(255,107,107,0.45); background: url("work/cover_inset.png") 35% center / cover no-repeat; }
+      .ilabel { position: absolute; left: 770px; top: 1010px; transform: rotate(5deg); font-family: "Mono", monospace; font-weight: 700; font-size: 30px; letter-spacing: 0.1em;
+        padding: 10px 18px; border-radius: 12px; background: #ff6b6b; color: #0b0c10; }
+      .title { position: absolute; left: 70px; right: 50px; top: 1150px; font-weight: 900; font-size: 104px; letter-spacing: -0.05em; line-height: 0.96; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); }
+      .title em { font-style: normal; color: var(--lime); text-shadow: 0 0 60px rgba(200,255,77,0.45); }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 34px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bg"></div>
+      <div class="stamp">A+</div>
+      <div class="shade"></div>
+      <div class="inset"></div>
+      <div class="ilabel">LEFT OPEN</div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI PAPER · STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">It aced every test… then <em>left the fridge open</em></div>
+      <div class="pill" style="top: 1560px; color: var(--lime)">GPT-6 ASTRA · REAL ROBOTS</div>
+    </div>
+  </body>
+</html>

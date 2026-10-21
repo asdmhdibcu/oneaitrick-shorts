@@ -69,6 +69,18 @@ Network: the shell can reach PyPI, npm and GitHub (raw files and release downloa
     - Extract frames from the MP4 itself and look at them.
 12. **Cover.** Copy `brand/cover05.html`, point its images at the art you need, and screenshot it at 1080×1920 with Playwright. Keep everything inside y 240–1680, the area Instagram's grid shows.
 
+## Footage shorts (from #5)
+
+Short #5 replaced the 3D scenes with generated and real footage: Veo 3.1 clips the creator makes in Google Flow from
+prompts in the Content Hub, plus real material (paper pages, the authors' project video). `shorts/05-aced-every-test/`
+is the template for this kind of build; its `BUILD.md` has the steps.
+
+- Shot list in `edl.py`; `build_edit.py` conforms every clip (1080×1920, 30 fps, grade, handles) and `make_index.py` writes the composition.
+- Only `<video>` elements carry `data-start`, each with an `id`. Never nest a timed video inside a timed `div`.
+- Phone screen recordings are often HDR (PQ). Tone-map them (`zscale` + `tonemap`) or they come out dim and grey.
+- Veo sometimes paints a flat dark band where a prompt says "keep the bottom third darker". Check each clip and crop or zoom past it.
+- Credit the generated footage and the real sources in the description, and turn on YouTube's "altered or synthetic content" label when generated footage looks real.
+
 ## Style rules (from the creator)
 
 - Stories and examples, not information dumps. At least 60 s. Every line has something moving on screen, and every cut has a transition.

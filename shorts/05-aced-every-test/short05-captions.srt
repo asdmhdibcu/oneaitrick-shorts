@@ -1,0 +1,125 @@
+1
+00:00:00,000 --> 00:00:05,120
+This AI aced its robot exams…
+then left the fridge open.
+
+2
+00:00:05,370 --> 00:00:08,650
+Researchers put OpenAI's GPT-6 Astra,
+
+3
+00:00:08,650 --> 00:00:12,140
+the same kind of AI you chat
+with, in charge of robots.
+
+4
+00:00:12,140 --> 00:00:15,480
+Think of it as a trainee
+chef… at cooking school.
+
+5
+00:00:15,480 --> 00:00:18,540
+Before each exam, it could
+study videos of the dish.
+
+6
+00:00:18,540 --> 00:00:21,050
+It got ten times as many moves.
+
+7
+00:00:21,050 --> 00:00:24,750
+And whenever it stopped to
+think… the clock stopped too.
+
+8
+00:00:24,750 --> 00:00:26,720
+So it smashed the tests.
+
+9
+00:00:26,720 --> 00:00:28,350
+Near-perfect on some.
+
+10
+00:00:28,350 --> 00:00:31,260
+Over 80% on fiddly hand tasks.
+
+11
+00:00:31,260 --> 00:00:35,490
+Then came its first real
+shift, on eight real robots.
+
+12
+00:00:35,490 --> 00:00:36,410
+No videos.
+
+13
+00:00:36,410 --> 00:00:37,610
+No pause button.
+
+14
+00:00:37,610 --> 00:00:39,360
+The clock keeps running.
+
+15
+00:00:39,360 --> 00:00:40,380
+Picking things up?
+
+16
+00:00:40,380 --> 00:00:42,110
+17 out of 18.
+
+17
+00:00:42,110 --> 00:00:43,300
+Pushing in a plug?
+
+18
+00:00:43,300 --> 00:00:45,150
+Zero out of 11.
+
+19
+00:00:45,150 --> 00:00:49,870
+On a humanoid, it spent about
+90% of the time just… thinking.
+
+20
+00:00:49,890 --> 00:00:52,240
+One task took over an hour.
+
+21
+00:00:52,240 --> 00:00:54,640
+Even in the exams, it spilled a drink,
+
+22
+00:00:54,640 --> 00:00:56,350
+and there's no undo for that.
+
+23
+00:00:56,350 --> 00:01:00,030
+It was sure a mug was hanging…
+while it lay on the table.
+
+24
+00:01:00,030 --> 00:01:03,580
+And in a test home, it forgot
+the fridge it had left open.
+
+25
+00:01:03,580 --> 00:01:04,980
+The researchers' verdict?
+
+26
+00:01:04,980 --> 00:01:07,950
+It's competent… but not yet practical.
+
+27
+00:01:07,950 --> 00:01:11,500
+So next time an AI aces
+a test, ask one thing:
+
+28
+00:01:11,500 --> 00:01:13,000
+did the clock keep running?
+
+29
+00:01:13,000 --> 00:01:16,070
+Follow for more AI, explained like this.

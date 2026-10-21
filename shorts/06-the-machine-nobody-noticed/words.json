@@ -1,0 +1,1112 @@
+[
+ {
+  "text": "Nine",
+  "start": 0.0,
+  "end": 0.39
+ },
+ {
+  "text": "hundred",
+  "start": 0.39,
+  "end": 0.74
+ },
+ {
+  "text": "and",
+  "start": 0.74,
+  "end": 0.9
+ },
+ {
+  "text": "fifty",
+  "start": 0.9,
+  "end": 1.37
+ },
+ {
+  "text": "AIs",
+  "start": 1.43,
+  "end": 1.99
+ },
+ {
+  "text": "searched",
+  "start": 1.99,
+  "end": 2.42
+ },
+ {
+  "text": "for",
+  "start": 2.42,
+  "end": 2.57
+ },
+ {
+  "text": "twenty-one",
+  "start": 2.57,
+  "end": 3.33
+ },
+ {
+  "text": "hours\u2026",
+  "start": 3.33,
+  "end": 4.07
+ },
+ {
+  "text": "and",
+  "start": 4.66,
+  "end": 4.83
+ },
+ {
+  "text": "found",
+  "start": 4.83,
+  "end": 5.24
+ },
+ {
+  "text": "a",
+  "start": 5.24,
+  "end": 5.27
+ },
+ {
+  "text": "machine",
+  "start": 5.27,
+  "end": 5.72
+ },
+ {
+  "text": "NOBODY",
+  "start": 5.9,
+  "end": 6.32
+ },
+ {
+  "text": "had",
+  "start": 6.32,
+  "end": 6.63
+ },
+ {
+  "text": "noticed.",
+  "start": 6.63,
+  "end": 7.28
+ },
+ {
+  "text": "Picture",
+  "start": 7.85,
+  "end": 8.24
+ },
+ {
+  "text": "the",
+  "start": 8.24,
+  "end": 8.33
+ },
+ {
+  "text": "biggest",
+  "start": 8.33,
+  "end": 8.89
+ },
+ {
+  "text": "library",
+  "start": 8.89,
+  "end": 9.45
+ },
+ {
+  "text": "on",
+  "start": 9.45,
+  "end": 9.61
+ },
+ {
+  "text": "Earth.",
+  "start": 9.61,
+  "end": 10.09
+ },
+ {
+  "text": "Every",
+  "start": 10.43,
+  "end": 10.77
+ },
+ {
+  "text": "book",
+  "start": 10.77,
+  "end": 11.16
+ },
+ {
+  "text": "is",
+  "start": 11.16,
+  "end": 11.37
+ },
+ {
+  "text": "written",
+  "start": 11.37,
+  "end": 11.7
+ },
+ {
+  "text": "in",
+  "start": 11.7,
+  "end": 11.85
+ },
+ {
+  "text": "DNA.",
+  "start": 11.85,
+  "end": 12.49
+ },
+ {
+  "text": "And",
+  "start": 12.83,
+  "end": 12.97
+ },
+ {
+  "text": "somewhere",
+  "start": 12.97,
+  "end": 13.47
+ },
+ {
+  "text": "in",
+  "start": 13.47,
+  "end": 13.63
+ },
+ {
+  "text": "there\u2026",
+  "start": 13.63,
+  "end": 14.05
+ },
+ {
+  "text": "is",
+  "start": 14.28,
+  "end": 14.43
+ },
+ {
+  "text": "a",
+  "start": 14.43,
+  "end": 14.47
+ },
+ {
+  "text": "book",
+  "start": 14.47,
+  "end": 14.85
+ },
+ {
+  "text": "nobody",
+  "start": 14.85,
+  "end": 15.44
+ },
+ {
+  "text": "has",
+  "start": 15.44,
+  "end": 15.74
+ },
+ {
+  "text": "ever",
+  "start": 15.74,
+  "end": 16.06
+ },
+ {
+  "text": "read.",
+  "start": 16.06,
+  "end": 16.47
+ },
+ {
+  "text": "So",
+  "start": 16.87,
+  "end": 17.23
+ },
+ {
+  "text": "Anthropic",
+  "start": 17.23,
+  "end": 17.79
+ },
+ {
+  "text": "sent",
+  "start": 17.79,
+  "end": 18.06
+ },
+ {
+  "text": "in",
+  "start": 18.06,
+  "end": 18.17
+ },
+ {
+  "text": "a",
+  "start": 18.17,
+  "end": 18.2
+ },
+ {
+  "text": "search",
+  "start": 18.2,
+  "end": 18.54
+ },
+ {
+  "text": "party:",
+  "start": 18.54,
+  "end": 18.9
+ },
+ {
+  "text": "nine",
+  "start": 19.25,
+  "end": 19.53
+ },
+ {
+  "text": "hundred",
+  "start": 19.53,
+  "end": 19.82
+ },
+ {
+  "text": "and",
+  "start": 19.82,
+  "end": 19.94
+ },
+ {
+  "text": "fifty",
+  "start": 19.94,
+  "end": 20.32
+ },
+ {
+  "text": "copies",
+  "start": 20.32,
+  "end": 20.77
+ },
+ {
+  "text": "of",
+  "start": 20.77,
+  "end": 20.87
+ },
+ {
+  "text": "its",
+  "start": 20.87,
+  "end": 21.04
+ },
+ {
+  "text": "AI,",
+  "start": 21.04,
+  "end": 21.52
+ },
+ {
+  "text": "Claude.",
+  "start": 21.52,
+  "end": 22.2
+ },
+ {
+  "text": "They",
+  "start": 22.47,
+  "end": 22.63
+ },
+ {
+  "text": "pulled",
+  "start": 22.63,
+  "end": 22.91
+ },
+ {
+  "text": "more",
+  "start": 22.91,
+  "end": 23.1
+ },
+ {
+  "text": "than",
+  "start": 23.1,
+  "end": 23.34
+ },
+ {
+  "text": "two",
+  "start": 23.34,
+  "end": 23.66
+ },
+ {
+  "text": "hundred",
+  "start": 23.66,
+  "end": 24.17
+ },
+ {
+  "text": "THOUSAND",
+  "start": 24.17,
+  "end": 24.83
+ },
+ {
+  "text": "enzymes",
+  "start": 24.83,
+  "end": 25.37
+ },
+ {
+  "text": "off",
+  "start": 25.37,
+  "end": 25.51
+ },
+ {
+  "text": "the",
+  "start": 25.51,
+  "end": 25.6
+ },
+ {
+  "text": "shelves.",
+  "start": 25.6,
+  "end": 26.11
+ },
+ {
+  "text": "Kept",
+  "start": 26.35,
+  "end": 26.66
+ },
+ {
+  "text": "three",
+  "start": 26.66,
+  "end": 26.88
+ },
+ {
+  "text": "thousand",
+  "start": 26.88,
+  "end": 27.23
+ },
+ {
+  "text": "five",
+  "start": 27.23,
+  "end": 27.46
+ },
+ {
+  "text": "hundred.",
+  "start": 27.46,
+  "end": 27.88
+ },
+ {
+  "text": "Then",
+  "start": 28.26,
+  "end": 28.67
+ },
+ {
+  "text": "just",
+  "start": 28.8,
+  "end": 29.07
+ },
+ {
+  "text": "twenty.",
+  "start": 29.07,
+  "end": 29.5
+ },
+ {
+  "text": "And",
+  "start": 29.89,
+  "end": 30.01
+ },
+ {
+  "text": "one",
+  "start": 30.01,
+  "end": 30.33
+ },
+ {
+  "text": "agent",
+  "start": 30.33,
+  "end": 30.79
+ },
+ {
+  "text": "noticed",
+  "start": 30.79,
+  "end": 31.16
+ },
+ {
+  "text": "something",
+  "start": 31.16,
+  "end": 31.57
+ },
+ {
+  "text": "odd.",
+  "start": 31.57,
+  "end": 32.08
+ },
+ {
+  "text": "Right",
+  "start": 32.4,
+  "end": 32.63
+ },
+ {
+  "text": "next",
+  "start": 32.63,
+  "end": 32.88
+ },
+ {
+  "text": "to",
+  "start": 32.88,
+  "end": 33.02
+ },
+ {
+  "text": "an",
+  "start": 33.02,
+  "end": 33.12
+ },
+ {
+  "text": "unusual",
+  "start": 33.12,
+  "end": 33.72
+ },
+ {
+  "text": "enzyme\u2026",
+  "start": 33.72,
+  "end": 34.35
+ },
+ {
+  "text": "a",
+  "start": 34.55,
+  "end": 34.61
+ },
+ {
+  "text": "long",
+  "start": 34.61,
+  "end": 35.13
+ },
+ {
+  "text": "row",
+  "start": 35.13,
+  "end": 35.41
+ },
+ {
+  "text": "of",
+  "start": 35.41,
+  "end": 35.55
+ },
+ {
+  "text": "repeating",
+  "start": 35.55,
+  "end": 36.13
+ },
+ {
+  "text": "DNA,",
+  "start": 36.13,
+  "end": 36.81
+ },
+ {
+  "text": "evenly",
+  "start": 37.0,
+  "end": 37.36
+ },
+ {
+  "text": "spaced,",
+  "start": 37.36,
+  "end": 38.0
+ },
+ {
+  "text": "like",
+  "start": 38.1,
+  "end": 38.29
+ },
+ {
+  "text": "lines",
+  "start": 38.29,
+  "end": 38.64
+ },
+ {
+  "text": "on",
+  "start": 38.64,
+  "end": 38.73
+ },
+ {
+  "text": "a",
+  "start": 38.73,
+  "end": 38.78
+ },
+ {
+  "text": "page.",
+  "start": 38.78,
+  "end": 39.35
+ },
+ {
+  "text": "Here's",
+  "start": 39.63,
+  "end": 39.95
+ },
+ {
+  "text": "why",
+  "start": 39.95,
+  "end": 40.13
+ },
+ {
+  "text": "that's",
+  "start": 40.13,
+  "end": 40.4
+ },
+ {
+  "text": "huge.",
+  "start": 40.4,
+  "end": 41.25
+ },
+ {
+  "text": "That",
+  "start": 41.5,
+  "end": 41.69
+ },
+ {
+  "text": "layout",
+  "start": 41.69,
+  "end": 42.04
+ },
+ {
+  "text": "looks",
+  "start": 42.04,
+  "end": 42.32
+ },
+ {
+  "text": "like",
+  "start": 42.32,
+  "end": 42.49
+ },
+ {
+  "text": "CRISPR,",
+  "start": 42.49,
+  "end": 43.16
+ },
+ {
+  "text": "the",
+  "start": 43.27,
+  "end": 43.36
+ },
+ {
+  "text": "gene-editing",
+  "start": 43.36,
+  "end": 44.02
+ },
+ {
+  "text": "tool",
+  "start": 44.02,
+  "end": 44.28
+ },
+ {
+  "text": "that",
+  "start": 44.28,
+  "end": 44.39
+ },
+ {
+  "text": "won",
+  "start": 44.39,
+  "end": 44.58
+ },
+ {
+  "text": "a",
+  "start": 44.58,
+  "end": 44.64
+ },
+ {
+  "text": "Nobel",
+  "start": 44.64,
+  "end": 44.97
+ },
+ {
+  "text": "Prize.",
+  "start": 44.97,
+  "end": 45.47
+ },
+ {
+  "text": "So",
+  "start": 45.75,
+  "end": 45.93
+ },
+ {
+  "text": "real",
+  "start": 45.93,
+  "end": 46.28
+ },
+ {
+  "text": "scientists",
+  "start": 46.28,
+  "end": 46.92
+ },
+ {
+  "text": "took",
+  "start": 46.92,
+  "end": 47.12
+ },
+ {
+  "text": "it",
+  "start": 47.12,
+  "end": 47.22
+ },
+ {
+  "text": "into",
+  "start": 47.22,
+  "end": 47.42
+ },
+ {
+  "text": "the",
+  "start": 47.42,
+  "end": 47.51
+ },
+ {
+  "text": "lab.",
+  "start": 47.51,
+  "end": 48.01
+ },
+ {
+  "text": "And",
+  "start": 48.3,
+  "end": 48.42
+ },
+ {
+  "text": "the",
+  "start": 48.42,
+  "end": 48.49
+ },
+ {
+  "text": "repeats",
+  "start": 48.49,
+  "end": 48.97
+ },
+ {
+  "text": "are",
+  "start": 48.97,
+  "end": 49.06
+ },
+ {
+  "text": "copied",
+  "start": 49.06,
+  "end": 49.53
+ },
+ {
+  "text": "into",
+  "start": 49.53,
+  "end": 49.78
+ },
+ {
+  "text": "a",
+  "start": 49.78,
+  "end": 49.82
+ },
+ {
+  "text": "set",
+  "start": 49.82,
+  "end": 50.12
+ },
+ {
+  "text": "of",
+  "start": 50.12,
+  "end": 50.21
+ },
+ {
+  "text": "short",
+  "start": 50.21,
+  "end": 50.65
+ },
+ {
+  "text": "RNA",
+  "start": 50.65,
+  "end": 51.09
+ },
+ {
+  "text": "messages\u2026",
+  "start": 51.09,
+  "end": 51.78
+ },
+ {
+  "text": "just",
+  "start": 52.07,
+  "end": 52.35
+ },
+ {
+  "text": "like",
+  "start": 52.35,
+  "end": 52.49
+ },
+ {
+  "text": "CRISPR's.",
+  "start": 52.49,
+  "end": 53.2
+ },
+ {
+  "text": "So",
+  "start": 53.53,
+  "end": 53.98
+ },
+ {
+  "text": "what",
+  "start": 53.98,
+  "end": 54.22
+ },
+ {
+  "text": "does",
+  "start": 54.22,
+  "end": 54.41
+ },
+ {
+  "text": "it",
+  "start": 54.41,
+  "end": 54.52
+ },
+ {
+  "text": "do?",
+  "start": 54.52,
+  "end": 54.9
+ },
+ {
+  "text": "Nobody",
+  "start": 55.6,
+  "end": 55.96
+ },
+ {
+  "text": "knows.",
+  "start": 55.96,
+  "end": 56.53
+ },
+ {
+  "text": "YET.",
+  "start": 56.97,
+  "end": 57.4
+ },
+ {
+  "text": "It",
+  "start": 57.78,
+  "end": 57.9
+ },
+ {
+  "text": "lives",
+  "start": 57.9,
+  "end": 58.2
+ },
+ {
+  "text": "mainly",
+  "start": 58.2,
+  "end": 58.58
+ },
+ {
+  "text": "in",
+  "start": 58.58,
+  "end": 58.71
+ },
+ {
+  "text": "viruses",
+  "start": 58.71,
+  "end": 59.31
+ },
+ {
+  "text": "that",
+  "start": 59.31,
+  "end": 59.49
+ },
+ {
+  "text": "infect",
+  "start": 59.49,
+  "end": 59.88
+ },
+ {
+  "text": "bacteria.",
+  "start": 59.88,
+  "end": 60.57
+ },
+ {
+  "text": "A",
+  "start": 60.9,
+  "end": 60.96
+ },
+ {
+  "text": "CRISPR",
+  "start": 60.96,
+  "end": 61.35
+ },
+ {
+  "text": "pioneer",
+  "start": 61.35,
+  "end": 61.85
+ },
+ {
+  "text": "says",
+  "start": 61.85,
+  "end": 62.12
+ },
+ {
+  "text": "it's",
+  "start": 62.12,
+  "end": 62.25
+ },
+ {
+  "text": "worth",
+  "start": 62.25,
+  "end": 62.52
+ },
+ {
+  "text": "investigating.",
+  "start": 62.52,
+  "end": 63.29
+ },
+ {
+  "text": "Critics",
+  "start": 63.55,
+  "end": 63.95
+ },
+ {
+  "text": "say",
+  "start": 63.95,
+  "end": 64.2
+ },
+ {
+  "text": "a",
+  "start": 64.2,
+  "end": 64.28
+ },
+ {
+  "text": "find",
+  "start": 64.28,
+  "end": 64.65
+ },
+ {
+  "text": "with",
+  "start": 64.65,
+  "end": 64.81
+ },
+ {
+  "text": "no",
+  "start": 64.81,
+  "end": 65.09
+ },
+ {
+  "text": "known",
+  "start": 65.09,
+  "end": 65.38
+ },
+ {
+  "text": "job",
+  "start": 65.38,
+  "end": 65.74
+ },
+ {
+  "text": "isn't",
+  "start": 65.74,
+  "end": 66.13
+ },
+ {
+  "text": "a",
+  "start": 66.13,
+  "end": 66.17
+ },
+ {
+  "text": "breakthrough",
+  "start": 66.17,
+  "end": 66.67
+ },
+ {
+  "text": "yet.",
+  "start": 66.67,
+  "end": 66.92
+ },
+ {
+  "text": "But",
+  "start": 67.24,
+  "end": 67.52
+ },
+ {
+  "text": "here's",
+  "start": 67.52,
+  "end": 67.77
+ },
+ {
+  "text": "the",
+  "start": 67.77,
+  "end": 67.94
+ },
+ {
+  "text": "astonishing",
+  "start": 67.94,
+  "end": 68.7
+ },
+ {
+  "text": "part.",
+  "start": 68.7,
+  "end": 69.06
+ },
+ {
+  "text": "The",
+  "start": 69.24,
+  "end": 69.33
+ },
+ {
+  "text": "humans",
+  "start": 69.33,
+  "end": 69.75
+ },
+ {
+  "text": "wrote",
+  "start": 69.75,
+  "end": 70.0
+ },
+ {
+  "text": "ONE",
+  "start": 70.0,
+  "end": 70.52
+ },
+ {
+  "text": "prompt\u2026",
+  "start": 70.52,
+  "end": 71.06
+ },
+ {
+  "text": "and",
+  "start": 71.23,
+  "end": 71.37
+ },
+ {
+  "text": "did",
+  "start": 71.37,
+  "end": 71.55
+ },
+ {
+  "text": "the",
+  "start": 71.55,
+  "end": 71.61
+ },
+ {
+  "text": "lab",
+  "start": 71.61,
+  "end": 71.95
+ },
+ {
+  "text": "work.",
+  "start": 71.95,
+  "end": 72.29
+ },
+ {
+  "text": "The",
+  "start": 72.53,
+  "end": 72.61
+ },
+ {
+  "text": "searching?",
+  "start": 72.61,
+  "end": 73.18
+ },
+ {
+  "text": "That",
+  "start": 73.52,
+  "end": 73.62
+ },
+ {
+  "text": "was",
+  "start": 73.62,
+  "end": 73.76
+ },
+ {
+  "text": "the",
+  "start": 73.76,
+  "end": 73.96
+ },
+ {
+  "text": "AI.",
+  "start": 73.96,
+  "end": 74.49
+ },
+ {
+  "text": "So",
+  "start": 74.79,
+  "end": 74.95
+ },
+ {
+  "text": "the",
+  "start": 74.95,
+  "end": 75.02
+ },
+ {
+  "text": "next",
+  "start": 75.02,
+  "end": 75.31
+ },
+ {
+  "text": "great",
+  "start": 75.31,
+  "end": 75.53
+ },
+ {
+  "text": "discovery",
+  "start": 75.53,
+  "end": 76.1
+ },
+ {
+  "text": "might",
+  "start": 76.1,
+  "end": 76.39
+ },
+ {
+  "text": "not",
+  "start": 76.39,
+  "end": 76.61
+ },
+ {
+  "text": "start",
+  "start": 76.61,
+  "end": 76.89
+ },
+ {
+  "text": "with",
+  "start": 76.89,
+  "end": 77.19
+ },
+ {
+  "text": "\"Eureka\"\u2026",
+  "start": 77.19,
+  "end": 77.92
+ },
+ {
+  "text": "it",
+  "start": 78.19,
+  "end": 78.29
+ },
+ {
+  "text": "might",
+  "start": 78.29,
+  "end": 78.52
+ },
+ {
+  "text": "start",
+  "start": 78.52,
+  "end": 78.77
+ },
+ {
+  "text": "with",
+  "start": 78.77,
+  "end": 78.94
+ },
+ {
+  "text": "a",
+  "start": 78.94,
+  "end": 78.98
+ },
+ {
+  "text": "search",
+  "start": 78.98,
+  "end": 79.36
+ },
+ {
+  "text": "party",
+  "start": 79.36,
+  "end": 79.7
+ },
+ {
+  "text": "that",
+  "start": 79.7,
+  "end": 79.85
+ },
+ {
+  "text": "never",
+  "start": 79.85,
+  "end": 80.23
+ },
+ {
+  "text": "sleeps.",
+  "start": 80.23,
+  "end": 80.8
+ },
+ {
+  "text": "Follow",
+  "start": 81.07,
+  "end": 81.37
+ },
+ {
+  "text": "for",
+  "start": 81.37,
+  "end": 81.51
+ },
+ {
+  "text": "more",
+  "start": 81.51,
+  "end": 81.77
+ },
+ {
+  "text": "AI,",
+  "start": 81.77,
+  "end": 82.28
+ },
+ {
+  "text": "explained",
+  "start": 82.39,
+  "end": 82.88
+ },
+ {
+  "text": "like",
+  "start": 82.88,
+  "end": 83.1
+ },
+ {
+  "text": "this.",
+  "start": 83.1,
+  "end": 83.5
+ }
+]

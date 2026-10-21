@@ -81,6 +81,21 @@ is the template for this kind of build; its `BUILD.md` has the steps.
 - Veo sometimes paints a flat dark band where a prompt says "keep the bottom third darker". Check each clip and crop or zoom past it.
 - Credit the generated footage and the real sources in the description, and turn on YouTube's "altered or synthetic content" label when generated footage looks real.
 
+## Real-material shorts (from #6)
+
+Short #6 is mostly real material with captions designed into each shot. `shorts/06-the-machine-nobody-noticed/` is the
+template; its `BUILD.md` has the steps.
+
+- A phone recording of a web page becomes one clean tall image (`stitch_page.py`): it measures the scroll between frames
+  and keeps only the content band, so the status bar, URL pill and AssistiveTouch button never appear. Pan over that
+  image instead of playing the shaky recording. Tone-map first (HDR), then lift levels until the page is white again.
+- `locate.py` OCRs pages and screenshots so highlights land on the exact words. Re-render paper figures from the PDF at 600 dpi.
+- Captions: `CAPLAY` picks S, A (hero word), B (the number is the caption) or C (glass panel with a leader line) per chunk;
+  the colour comes from the shot (`shotcolor.py`). The template's base.css already defines `.chip`, so don't reuse that class name.
+- 1080p landscape footage: use `mode="tall"` (3:4 window over its own blurred fill), not a 9:16 crop.
+- Render with Bash `run_in_background`, not `nohup … &`: a detached render is cancelled when its shell exits
+  (`render_cancelled_parent_exited`). Don't `pgrep -f "hyperframes render"` from a monitor: it matches the monitor itself.
+
 ## Style rules (from the creator)
 
 - Stories and examples, not information dumps. At least 60 s. Every line has something moving on screen, and every cut has a transition.

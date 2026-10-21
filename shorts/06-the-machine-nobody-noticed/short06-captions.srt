@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:07,630
+950 AIs searched for 21 hours… and
+found a machine nobody had noticed.
+
+2
+00:00:07,800 --> 00:00:10,380
+Picture the biggest library on Earth.
+
+3
+00:00:10,380 --> 00:00:12,780
+Every book is written in DNA.
+
+4
+00:00:12,780 --> 00:00:16,820
+And somewhere in there… is a
+book nobody has ever read.
+
+5
+00:00:16,820 --> 00:00:19,200
+So Anthropic sent in a search party:
+
+6
+00:00:19,200 --> 00:00:22,420
+950 copies of its AI, Claude.
+
+7
+00:00:22,420 --> 00:00:26,300
+They pulled more than 200,000
+enzymes off the shelves.
+
+8
+00:00:26,300 --> 00:00:28,210
+Kept 3,500.
+
+9
+00:00:28,210 --> 00:00:29,840
+Then just 20.
+
+10
+00:00:29,840 --> 00:00:32,350
+And one agent noticed something odd.
+
+11
+00:00:32,350 --> 00:00:36,950
+Right next to an unusual enzyme…
+a long row of repeating DNA,
+
+12
+00:00:36,950 --> 00:00:39,580
+evenly spaced, like lines on a page.
+
+13
+00:00:39,580 --> 00:00:41,450
+Here's why that's huge.
+
+14
+00:00:41,450 --> 00:00:44,530
+That layout looks like CRISPR,
+the gene-editing tool that won
+
+15
+00:00:44,530 --> 00:00:45,700
+a Nobel Prize.
+
+16
+00:00:45,700 --> 00:00:48,250
+So real scientists took it into the lab.
+
+17
+00:00:48,250 --> 00:00:52,300
+And the repeats are copied into a
+set of short RNA messages… just
+
+18
+00:00:52,300 --> 00:00:53,480
+like CRISPR's.
+
+19
+00:00:53,480 --> 00:00:55,250
+So what does it do?
+
+20
+00:00:55,550 --> 00:00:57,730
+Nobody knows. Yet.
+
+21
+00:00:57,730 --> 00:01:00,850
+It lives mainly in viruses
+that infect bacteria.
+
+22
+00:01:00,850 --> 00:01:03,500
+A CRISPR pioneer says
+it's worth investigating.
+
+23
+00:01:03,500 --> 00:01:07,190
+Critics say a find with no known
+job isn't a breakthrough yet.
+
+24
+00:01:07,190 --> 00:01:09,190
+But here's the astonishing part.
+
+25
+00:01:09,190 --> 00:01:12,480
+The humans wrote one prompt…
+and did the lab work.
+
+26
+00:01:12,480 --> 00:01:13,470
+The searching?
+
+27
+00:01:13,470 --> 00:01:14,740
+That was the AI.
+
+28
+00:01:14,740 --> 00:01:18,240
+So the next great discovery might
+not start with "Eureka"… it
+
+29
+00:01:18,240 --> 00:01:21,020
+might start with a search
+party that never sleeps.
+
+30
+00:01:21,020 --> 00:01:23,850
+Follow for more AI, explained like this.

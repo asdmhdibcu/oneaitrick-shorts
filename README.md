@@ -93,6 +93,9 @@ template; its `BUILD.md` has the steps.
 - Captions: `CAPLAY` picks S, A (hero word), B (the number is the caption) or C (glass panel with a leader line) per chunk;
   the colour comes from the shot (`shotcolor.py`). The template's base.css already defines `.chip`, so don't reuse that class name.
 - 1080p landscape footage: use `mode="tall"` (3:4 window over its own blurred fill), not a 9:16 crop.
+- `-q high` renders run about 37 Mbps (H.264 level 5.0, ~400 MB). The Claude app crashes opening a file that size, so also deliver a
+  phone copy: `ffmpeg -i in.mp4 -c:v libx264 -preset slow -crf 18 -maxrate 12M -bufsize 24M -profile:v high -level:v 4.1 -pix_fmt yuv420p -g 60 -c:a copy -movflags +faststart out-phone.mp4` (~130 MB).
+  The renderer also mixes the audio about 1.7 dB quieter: swap the mix back in (`-map 0:v -map 1:a -c:v copy`) and re-check −14 LUFS.
 - Render with Bash `run_in_background`, not `nohup … &`: a detached render is cancelled when its shell exits
   (`render_cancelled_parent_exited`). Don't `pgrep -f "hyperframes render"` from a monitor: it matches the monitor itself.
 

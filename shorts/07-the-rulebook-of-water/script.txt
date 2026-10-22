@@ -1,0 +1,34 @@
+[excited] An AI just cracked a MILLION-dollar maths problem… in eighty-eight hours.
+[curious] So why is nobody paying out?
+
+[warm] Every drop of water follows a rulebook. [short pause] Written in the 1800s, it predicts how water and air move: weather, plane wings, even the blood in your veins.
+[thoughtful] Mathematicians call it the Navier-Stokes equations.
+
+[curious] But one question was never answered. [short pause] [serious] Can that rulebook BREAK?
+[dramatic] Could a smooth swirl of water ever spin so tight… that one tiny spot moves INFINITELY fast?
+[excited] In 2000, a maths institute put a MILLION dollars on the answer.
+
+[excited] Then OpenAI sent in ten THOUSAND copies of its AI.
+[surprised] Eighty-eight hours later: [short pause] yes. It can break.
+[dramatic] A whirlpool spirals inward, its core shrinking and spinning faster… and faster… until, at one single point, the speed hits infinity.
+[laughs] Will your bath tap explode? No. Real water is made of molecules. This is about whether the MATHS holds up.
+
+[sarcastic] But here's the catch.
+[thoughtful] In the AI's version, the water is never left alone. It gets a gentle, smooth push the whole time, like stirring your tea.
+[serious] The prize rules allow that. But many mathematicians say the REAL mystery is water left alone.
+
+[curious] So who checks a proof this hard?
+[warm] A computer referee called Lean. It reads every step and only says yes if each one follows the rules.
+[excited] It said yes.
+[serious] But a referee checks the moves… not whether it's the right game. Humans still have to confirm the AI answered the RIGHT question.
+
+[surprised] And this month, mathematicians said OpenAI had described its OWN method wrong.
+[thoughtful] The man who wrote the official problem calls two human mathematicians the real heroes. Their work paved the way.
+
+[laughs] And the million dollars? The computing reportedly cost MORE than that… and OpenAI says it won't even claim it.
+[curious] Funny thing: the only other Millennium problem ever solved? Its winner turned the million down too.
+[serious] The prize committee is still checking. Slowly. Carefully.
+
+[thoughtful] So did an AI just break the rulebook of water? [short pause] Maybe.
+[excited] Either way, machines just cracked open a mystery humans chased for nearly a century.
+[warm] Follow for more AI, explained like this.

@@ -99,3 +99,13 @@ def run(cmd):
 run(["python3", "music8.py", "work/music.wav", str(DUR)])
 run(["python3", "../../tools/make_sfx.py", "sfx.json", "work/sfx.wav"])
 run(["python3", "../../tools/mix.py", "work/voice_clean.wav", "work/music.wav", "work/sfx.wav", "assets/mix.wav", str(DUR)])
+
+# The drop hit on "Then... the clue." (66.44 s) overshoots to -0.1 dBTP once AAC-encoded; a 140 ms, -1.8 dB Hann dip
+# around it brings the MP4 to -1.3 dBTP without touching anything else. Mux this file, not assets/mix.wav.
+import numpy as np
+import soundfile as sf
+a, sr = sf.read("assets/mix.wav")
+i0, i1 = int(66.38 * sr), int(66.52 * sr)
+a[i0:i1] *= (10 ** (-1.8 * np.hanning(i1 - i0) / 20))[:, None]
+sf.write("work/mix_final.wav", a, sr, subtype="PCM_24")
+print("wrote work/mix_final.wav")

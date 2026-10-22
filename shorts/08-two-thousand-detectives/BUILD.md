@@ -19,11 +19,16 @@ python3 render3d.py helix 2.7; python3 render3d.py walk 1.8; python3 render3d.py
 python3 pins3d.py                      # screen positions of the labelled 3D points, per frame
 # PDFs: pdftoppm -r 300 for oa/ag/at pages (work/pdf/<doc>-<page>.png), pdfwords.py for word boxes,
 # pdfimages -j -f 18 -l 21 for the 600 ppi figures (work/img/fig-00N.jpg) and the crops q4l/f1a/f4k/f4a.png
+python3 make_stills.py voice stills    # voice splice + figure crops, findings-site frame, proof strips (exact boxes)
 python3 build_edit.py                  # conform every shot (edl.py) -> assets/clips, assets/img, work/meta.json
+python3 make_stills.py tile            # the detective tile (needs assets/clips/s18.mp4)
 python3 shotcolor.py
 python3 prep_words.py && python3 ../../tools/make_captions.py work/words_cap.json captions.js "$(cat work/emph.txt)"
-python3 make_audio.py                  # music8.py score + sfx.json + mix -> assets/mix.wav
+python3 make_audio.py                  # music8.py score + sfx.json + mix -> assets/mix.wav, work/mix_final.wav (mux this)
 python3 make_index.py                  # index_template.tpl -> index.html
+npx hyperframes render -f 30 -q high -w 2 -o renders/short08-raw.mp4   # ~38 min on 2 CPUs
+ffmpeg -i renders/short08-raw.mp4 -i work/mix_final.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -ar 48000 \
+  -shortest -movflags +faststart renders/short08-two-thousand-detectives.mp4      # -14.0 LUFS, -1.3 dBTP
 ```
 
 ## What's in it
@@ -46,6 +51,13 @@ python3 make_index.py                  # index_template.tpl -> index.html
   turns to noir jazz (walking bass, ride, brushes, Rhodes) on "One wire"; drums drop out on "But careful"; Part A
   returns for the bookend and resolves to D major.
 - **Voice:** the creator's take with the corrected "Over SEVEN THOUSAND" sentence spliced in (`work/splice.json`).
+
+## Rebuilt from scratch (22 Oct, after a workspace reset)
+
+Inputs go to `work/raw/` under their Pexels names, Flow clips as `flow_<first 8 hex of the attachment>.mp4`, and #6's
+library/lab clips to `../06-…/work/raw/px_*.mp4`. The 3D renders and pins are deterministic, and `make_index.py` then
+wrote an `index.html` byte-identical to the committed one (colours, card sizes, OCR'd highlights, pins). `make_stills.py`
+now holds the boxes that had only been cut by hand, so the next rebuild needs no guesswork.
 
 ## Gotchas
 

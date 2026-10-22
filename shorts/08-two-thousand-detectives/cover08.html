@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #04050a; font-family: "InterV", sans-serif; color: var(--ink); }
+      /* the Flow case wall (s29's last frame), lifted so the glowing card sits at y ~ 640 */
+      .bg { position: absolute; left: 0; top: -330px; width: 1080px; height: 1920px; background: url("work/cover_bg.png") center top / cover no-repeat; filter: saturate(1.1) contrast(1.05); }
+      .shade { position: absolute; inset: 0; background:
+        linear-gradient(180deg, rgba(4,5,10,0.7) 0%, rgba(4,5,10,0) 16%, rgba(4,5,10,0) 46%, rgba(4,5,10,0.82) 58%, rgba(4,5,10,0.96) 68%, rgba(4,5,10,0.98) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+      .ev { position: absolute; left: 263px; width: 600px; top: 520px; text-align: center; }
+      .wash { position: absolute; left: 330px; top: 380px; width: 470px; height: 520px; border-radius: 30px; background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255,226,160,0.92), rgba(255,200,110,0.55) 60%, rgba(255,190,90,0) 100%); filter: blur(8px); }
+      .ev .et { font-family: "Mono", monospace; font-weight: 700; font-size: 122px; color: #3a1d05; letter-spacing: 0.04em; line-height: 1; }
+      .ev .es { font-family: "Mono", monospace; font-weight: 700; font-size: 30px; color: #6b3a0c; letter-spacing: 0.08em; margin-top: 10px; }
+      .stamp { position: absolute; left: 70px; top: 960px; font-weight: 900; font-size: 58px; padding: 6px 22px; border: 7px solid #ff5b5b; color: #ff5b5b; border-radius: 14px;
+        transform: rotate(-5deg); background: rgba(12,6,8,0.7); }
+      .title { position: absolute; left: 70px; right: 50px; top: 1120px; font-weight: 900; font-size: 98px; letter-spacing: -0.05em; line-height: 0.96; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); }
+      .title em { font-style: normal; color: #ffb547; text-shadow: 0 0 60px rgba(255,181,71,0.45); }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 32px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bg"></div>
+      <div class="shade"></div>
+      <div class="wash"></div>
+      <div class="ev"><div class="et">DCTN1</div><div class="es">THE LEAD</div></div>
+      <div class="stamp">NOBODY HAD CONNECTED IT</div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI EXPLAINED · TRUE STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">2,000 AI detectives searched 7.7M brain cells… <em>and found one clue.</em></div>
+      <div class="pill" style="top: 1590px; color: #ffb547">OPENAI × SCRIPPS · REAL RESEARCH</div>
+    </div>
+  </body>
+</html>

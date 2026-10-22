@@ -38,7 +38,7 @@ for key, (s, e) in fix.items():
 
 
 def display(t):
-    core = re.sub(r"[^\w'$£.,%-]", "", t).strip(".,")  # keeps $4.2, £120, 4,500; drops trailing punctuation
+    core = re.sub(r"[^\w'$£.,%:-]", "", t).strip(".,:")  # keeps $4.2, £120, 4,500, 32:00; drops trailing punctuation
     low = core.lower()
     # keep "one" as a word when it isn't a count ("one look", "one doctor" reads fine either way)
     d = NUM.get(low, core) if low != "one" else core

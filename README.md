@@ -108,6 +108,16 @@ template; its `BUILD.md` has the steps.
   +2.7 dBTP in #7. `make_sfx.py` now fades every sound in over 1.3 ms.
 - Stitch seams (a repeated or missing line) show when the camera zooms in. Where they do, crop one clean phone frame
   instead (#7's `frame_for.py`).
+- 3D without slowing the composition (#8): render three.js shots offline, one frame at a time, with Playwright +
+  SwiftShader (`render3d.py`, ~1 s a frame at 1080×1920 with bloom), then pin HTML labels to the 3D points with the
+  per-frame screen positions from `pins3d.py`. Check framing numerically first (`evalcam.py` projects the points):
+  the subject belongs in y 280–1220.
+- A paper sentence that matters is easier to read set large as a quote card, with the real strip under it as proof (#8's
+  `.quote` + `.proof`), than as a zoomed PDF crop. Animate the highlight as `background-size` on the inline span so it
+  sweeps across line breaks.
+- Pexels clips can carry things we must not show (#8's board footage had threatening notes): look at whole frames, not
+  just the crop you planned, and record the safe crop in the EDL.
+- Flow clips are 720×1280 and some come letterboxed: crop the picture box first (`pre`), then Lanczos + light unsharp.
 
 ## Style rules (from the creator)
 

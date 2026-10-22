@@ -23,3 +23,4 @@ raw3d_lf/
 raw3d_lf2/
 shorts/*/package-lock.json
 __pycache__/
+shorts/*/src3d/world3d.js

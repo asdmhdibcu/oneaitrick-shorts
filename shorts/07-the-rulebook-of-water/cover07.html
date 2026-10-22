@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #04050a; font-family: "InterV", sans-serif; color: var(--ink); }
+      .bg { position: absolute; left: -60px; top: -40px; width: 1200px; height: 2133px; background: url("work/cover_bg.png") center top / cover no-repeat; }
+      .shade { position: absolute; inset: 0; background:
+        linear-gradient(180deg, rgba(4,5,10,0.6) 0%, rgba(4,5,10,0) 17%, rgba(4,5,10,0) 48%, rgba(4,5,10,0.8) 59%, rgba(4,5,10,0.95) 70%, rgba(4,5,10,0.97) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+      .inset { position: absolute; left: 640px; top: 420px; width: 370px; height: 400px; border-radius: 24px; overflow: hidden; transform: rotate(4deg);
+        border: 6px solid #ffb066; box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 44px rgba(255,176,102,0.5); background: #fff url("work/cover_inset.png") center / contain no-repeat; }
+      .ilabel { position: absolute; left: 660px; top: 815px; transform: rotate(4deg); font-family: "Mono", monospace; font-weight: 700; font-size: 26px; letter-spacing: 0.1em;
+        padding: 10px 18px; border-radius: 12px; background: #ffb066; color: #0b0c10; }
+      .stamp { position: absolute; left: 70px; top: 1000px; font-weight: 900; font-size: 64px; padding: 6px 22px; border: 7px solid #ff5b5b; color: #ff5b5b; border-radius: 14px;
+        transform: rotate(-6deg); background: rgba(12,6,8,0.6); }
+      .title { position: absolute; left: 70px; right: 50px; top: 1150px; font-weight: 900; font-size: 96px; letter-spacing: -0.05em; line-height: 0.96; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); }
+      .title em { font-style: normal; color: var(--lime); text-shadow: 0 0 60px rgba(200,255,77,0.45); }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 34px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bg"></div>
+      <div class="shade"></div>
+      <div class="inset"></div>
+      <div class="ilabel">OPENAI'S REAL VORTEX</div><div class="stamp">UNCLAIMED</div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI EXPLAINED · TRUE STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">An AI cracked a $1M maths problem… <em>so why is nobody paying?</em></div>
+      <div class="pill" style="top: 1595px; color: var(--lime)">NAVIER–STOKES · EXPLAINED SIMPLY</div>
+    </div>
+  </body>
+</html>

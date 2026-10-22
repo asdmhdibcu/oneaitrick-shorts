@@ -102,6 +102,12 @@ template; its `BUILD.md` has the steps.
   The renderer also mixes the audio about 1.7 dB quieter: swap the mix back in (`-map 0:v -map 1:a -c:v copy`) and re-check −14 LUFS.
 - Render with Bash `run_in_background`, not `nohup … &`: a detached render is cancelled when its shell exits
   (`render_cancelled_parent_exited`). Don't `pgrep -f "hyperframes render"` from a monitor: it matches the monitor itself.
+- Document camera (#7): zooming a page card onto its highlight pushes the card past y 1220, under the captions. Give every
+  zoomed page shot a fade to dark above the caption band and under the top labels (`.docfade`/`.doctop` in #7's template).
+- Check the true peak of the delivered MP4, not just the WAV: a sound effect that starts on a jump made AAC overshoot to
+  +2.7 dBTP in #7. `make_sfx.py` now fades every sound in over 1.3 ms.
+- Stitch seams (a repeated or missing line) show when the camera zooms in. Where they do, crop one clean phone frame
+  instead (#7's `frame_for.py`).
 
 ## Style rules (from the creator)
 

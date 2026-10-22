@@ -24,6 +24,9 @@ def add(sig, t0, pan=0.0, gain=1.0):
     if i >= N:
         return
     sig = sig[: N - i] * gain
+    k = min(64, len(sig))  # 1.3 ms fade-in: a sound that starts on a jump clicks, and AAC overshoots on it
+    sig = sig.copy()
+    sig[:k] *= np.linspace(0, 1, k)
     L[i:i + len(sig)] += sig * np.sqrt(0.5 * (1 - pan))
     R[i:i + len(sig)] += sig * np.sqrt(0.5 * (1 + pan))
 

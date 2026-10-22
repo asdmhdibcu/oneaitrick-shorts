@@ -1,0 +1,23 @@
+[excited] Two THOUSAND AI detectives just searched seven-point-seven MILLION mouse brain cells… in thirty-two minutes.
+[curious] And one of them found a clue nobody had connected.
+[warm] Picture a city. Seven-point-seven million houses: those are the brain cells. Their wiring: the genes.
+[serious] Scientists cut ONE wire in each house, with a gene-editing tool called CRISPR. Nearly two thousand different wires, all linked to disease.
+[curious] Then they photographed every house, to see which lights stayed on… and which went dark.
+[surprised] The result? A MOUNTAIN of photos. One wire at a time, that's months of work… maybe a year.
+[excited] So OpenAI sent in the detectives: copies of its biology AI, GPT-Rosalind. One detective for every cut wire.
+[thoughtful] Each one studied its houses, read the research, and wrote a case report.
+[laughs] Given the same job, one AI on its own cited eleven papers. The team? Over SEVEN HUNDRED.
+[serious] First test: could they find what the scientists had already found… without seeing their paper? [short pause] They could.
+[curious] In blind tests, experts preferred the team over the lone AI, three times out of four.
+[dramatic] Then… the clue.
+[thoughtful] One wire, D-C-T-N-1, runs the delivery lorries inside neurons.
+[surprised] In houses where that wire was cut, the cholesterol-making genes switched ON.
+[warm] Like a town whose deliveries stop… so it starts baking its own bread.
+[curious] Why? Earlier research suggests that when cholesterol can't be moved, cells make MORE.
+[serious] And when D-C-T-N-1 breaks in people, it causes Perry syndrome: a rare brain disease with Parkinson's-like symptoms.
+[thoughtful] So maybe the problem isn't too little cholesterol. Maybe it's cholesterol in the WRONG place.
+[excited] Fix the deliveries… and maybe you protect the neurons.
+[serious] But careful: it's a lead, not a cure. It's from mice, it isn't peer-reviewed yet, and a lab still has to test it.
+[thoughtful] The AI didn't run a single experiment. It connected dots in evidence humans had already gathered.
+[warm] Two thousand detectives. Thirty-two minutes. One clue worth chasing.
+[warm] Follow for more AI, explained like this.

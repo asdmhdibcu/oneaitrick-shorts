@@ -119,6 +119,38 @@ template; its `BUILD.md` has the steps.
   just the crop you planned, and record the safe crop in the EDL.
 - Flow clips are 720×1280 and some come letterboxed: crop the picture box first (`pre`), then Lanczos + light unsharp.
 
+## Skill packs on the account (from 23 Oct 2026)
+
+Two plugins hold third-party video skills. They are technique libraries: this README, CLAUDE.md and the project
+instructions decide the workflow, and a skill is loaded for one technique when it helps a short.
+
+- **hyperframes** (HeyGen's official plugin, 0.8.186, Apache-2.0): `hyperframes`, `hyperframes-cli`,
+  `hyperframes-registry` (about 450 ready-made blocks: transitions, caption styles, camera moves, grain), `media-use`,
+  `figma`, `slideshow`, `remotion-to-hyperframes`. It tracks the latest CLI; our shorts stay on `hyperframes@0.8.162`
+  until one is rebuilt and checked on the newer version. `media-use` offers HeyGen voices, music and avatars, which
+  cost credits: ask the creator first. Keep `HYPERFRAMES_NO_TELEMETRY=1`.
+- **motion-video-skills** (24 skills, MIT and Apache-2.0):
+  - charlie947/motion-graphics-skills: `brand-intake`, `motion-brief-writer`, `motion-effects` (16 effect recipes),
+    `vox-explainer`, `title-sequence-3d`, `animated-chart`, `milestone-reveal`, `reel-export`, `reference-to-motion`,
+    `launch-video`, `apple-launch-film`, `loop-cover`, `model-showdown`, `newsletter-promo`, `motion-prompt-writer`.
+  - Barty-Bart/motion-graphics: `explainer-engaging` (one hero element through a one-take course), `explainer-default`,
+    `explainer-high-energy`, `motion-broll`, `object-separation` (SAM 2), `sound-effects` (CC0 library, measured
+    sound pass).
+  - `motionmaxxing` (anti-slop director, render gates `look.py` and `lint.mjs`), `business-motion-film` (independent
+    critic loop, quality bar), `manimce-best-practices` (Manim scenes for maths and model internals).
+
+Where they disagree with us, our rules win. The ones that clash:
+- `motionmaxxing` bans corner labels, counters and timecodes. Our source chips ("REAL · …", "AI ILLUSTRATION") and
+  number captions stay.
+- `sound-effects` bans synthesised sound. Our score and SFX tools stay; its CC0 recordings are an option on top.
+- `media-use` routes grades through `media-treatment`, which is newer than our pinned CLI. Our ffmpeg grades stay.
+
+Left out on purpose: onetake (non-commercial licence), imMamdouhaboammar/motion-graphics-skills (proprietary licence),
+lemo-opuscar (pulls and follows its latest instructions from GitHub on every run), claude-youtube (triggers on almost
+any "video" or "script" request, spawns agents, uses paid DataForSEO), Remotion-based packs (different renderer; the
+official Remotion plugin is in the Anthropic Directory if ever needed), HeyGen's internal craft skills (marked internal,
+tied to their own assembler).
+
 ## Style rules (from the creator)
 
 - Stories and examples, not information dumps. At least 60 s. Every line has something moving on screen, and every cut has a transition.

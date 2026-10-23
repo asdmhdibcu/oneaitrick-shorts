@@ -24,3 +24,4 @@ Read `README.md` before building anything. It has the full pipeline, commands, s
 - Credit "3D art: Microsoft Fluent Emoji (MIT licence)" in every YouTube description that uses it.
 - From Short #7: at most 10 generated videos and 5 generated images per short. Everything else is stock (Pexels, Pixabay, Unsplash, Mixkit, Coverr), public-domain or Creative Commons footage, screen recordings, screenshots and our own graphics. The Content Hub's "Visual playbook" lists the techniques.
 - Scripts from #7: an expression tag on almost every line; [whispers] at most once, only when the story needs it.
+- Skill packs on the account (hyperframes, motion-video-skills) are technique libraries. This file, README.md and the project instructions decide the workflow; README.md "Skill packs" lists where they clash with our rules.

@@ -1,0 +1,21 @@
+[excited] This shark is swimming down a flooded high street. Real… or AI? [short pause] You can find out in ten seconds, for FREE.
+[serious] AI video looks real now. Your eyes can't tell anymore.
+[curious] But banknotes had the same problem… and they solved it years ago.
+[warm] Every note carries a hidden mark. Shine a UV light on it, and the mark GLOWS.
+[thoughtful] Google's AI does the same thing. Every picture, video and sound it makes gets an invisible stamp woven right into it. It's called SynthID.
+[surprised] Over a hundred and eighty BILLION images and videos stamped so far. Plus two hundred and forty thousand YEARS of audio.
+[excited] And on October the seventh, Google handed everyone the UV light.
+[warm] Here's how to use it. Step one: go to synthid dot com, and sign in.
+[warm] Step two: drop in the photo, the video, or the sound.
+[curious] Step three: wait a few seconds… and read the result.
+[curious] So I tested it on our shark. I made it with Google's video AI, Veo.
+[dramatic] Stamp DETECTED.
+[surprised] And it doesn't only catch Google. OpenAI, NVIDIA and Kakao stamp their work too, and Apple is joining soon.
+[serious] But here's the catch.
+[whispers] No stamp… doesn't mean it's real.
+[thoughtful] Not every AI tool uses this ink. The light can only find marks that are there.
+[serious] So read it like this. A stamp means AI made it, or edited it. No stamp means… keep asking.
+[warm] Find who posted it first. Look for the original. Check if a trusted news outlet is reporting it.
+[curious] The same check is built into the Gemini app, Google Search and Chrome. Together, they handle over a MILLION checks a day.
+[excited] Real or AI? Upload it. Look for the stamp. And if there isn't one… don't trust it yet.
+[warm] Follow for more AI, explained like this.

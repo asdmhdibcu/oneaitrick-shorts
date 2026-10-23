@@ -1,0 +1,16 @@
+[dramatic] Hackers just set an AI loose on over two thousand two hundred companies' clouds… [short pause] and some fell in under THREE hours.
+[serious] Picture a street. Every house is a company's cloud: its emails, its files, its secrets.
+[curious] Now picture a burglar that never sleeps. [short pause] A robot.
+[excited] It tries EVERY door at once… nights, weekends, holidays.
+[serious] Microsoft says a China-aligned hacking group sent it after fourteen industries, from banks to governments. [short pause] China rejects the accusation.
+[surprised] At its peak: two thousand nine hundred passwords… a MINUTE.
+[dramatic] And not ONE got in. The locks jammed shut.
+[curious] So how DID it get in? [short pause] It didn't pick the locks. It used a KEY.
+[thoughtful] Many houses had given a spare key to one trusted company, ConnectWise, so its backup service could copy their files.
+[dramatic] The hackers stole those spare keys. No password needed. The locks already TRUSTED them.
+[excited] Inside some houses, the robot searched the rooms, cut extra keys, and made itself BOSS.
+[serious] Here's the twist. [short pause] The robot is called ARTEX… and it was built for the GOOD guys.
+[thoughtful] Its maker gave it away free, so companies could test their OWN locks.
+[thoughtful] Now the burglar and the locksmith run the same robot. Whoever runs it first… wins.
+[curious] So before you let an app into your account, ask: [short pause] who ELSE has a spare key?
+[warm] Follow for more AI, explained like this.

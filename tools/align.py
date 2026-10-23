@@ -18,7 +18,7 @@ SUBS = {"centres": "centers", "thirty-five": "thirty five", "brontë": "bronte",
         "gpt-rosalind": "g p t rosalind", "d-c-t-n-1": "d c t n one"}  # substring fixes (years are spoken words; digits would be dropped)
 # Whole-word fixes, applied after cleaning: spoken forms the dictionary lacks or says wrong
 # ("ai" is in the dictionary as one syllable, "eye"; the voice says "A-I").
-WORDMAP = {"ai": "a i", "ai's": "a eyes", "ais": "a eyes", "openai": "open a i", "exploitgym": "exploit gym", "openai's": "open a eyes", "refusers": "refuse errs", "fiddly": "fiddle lee", "anthropic": "an throw pick", "crispr": "crisper", "crispr's": "crisper s", "navier": "nav yay"}
+WORDMAP = {"ai": "a i", "ai's": "a eyes", "ais": "a eyes", "openai": "open a i", "exploitgym": "exploit gym", "openai's": "open a eyes", "refusers": "refuse errs", "fiddly": "fiddle lee", "anthropic": "an throw pick", "crispr": "crisper", "crispr's": "crisper s", "navier": "nav yay", "connectwise": "connect wise", "artex": "art ex"}
 display_words = raw.split()
 align_words = []
 for w in display_words:

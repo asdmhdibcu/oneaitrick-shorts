@@ -166,6 +166,9 @@ ITEMS = [
     ("ghostcam", "Video camera", None),
     ("alarm", "Alarm clock", None),
     ("lightning", "Cloud with lightning", None),
+    # Short #9 (key, folder and stopwatch are listed above, from the long-form)
+    ("oldkey", "Old key", None),
+    ("crown", "Crown", None),
 ]
 
 

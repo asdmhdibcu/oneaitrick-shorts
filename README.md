@@ -20,12 +20,12 @@ Videos, WAVs and model weights stay out of git (see `.gitignore`). Deliver them 
 pip install --break-system-packages pocketsphinx torch scipy pillow numpy playwright
 mkdir -p models && curl -L -o models/RealESRGAN_x4plus.pth \
   https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
-export HYPERFRAMES_BROWSER_PATH=$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell | head -1)
+export HYPERFRAMES_BROWSER_PATH=$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell 2>/dev/null | head -1)
 export HYPERFRAMES_NO_TELEMETRY=1
 cd template && npx --yes hyperframes@0.8.162 check
 ```
 
-HyperFrames can't download its own browser here. Point it at the Playwright headless shell, as above.
+HyperFrames can't download its own browser here. Point it at the Playwright headless shell, as above (its folder layout changed in Oct 2026: the line tries the new path first).
 
 Network: the shell can reach PyPI, npm and GitHub (raw files and release downloads). It **can't** reach Unsplash, Pexels, Hugging Face downloads or jsdelivr. The Unsplash connector can search, but its download returns a URL the shell can't fetch. When real photos are wanted, ask the person to download and attach them. Don't route around blocks.
 
@@ -118,6 +118,13 @@ template; its `BUILD.md` has the steps.
 - Pexels clips can carry things we must not show (#8's board footage had threatening notes): look at whole frames, not
   just the crop you planned, and record the safe crop in the EDL.
 - Flow clips are 720×1280 and some come letterboxed: crop the picture box first (`pre`), then Lanczos + light unsharp.
+- One generated still can carry a shot (#9): cut the subject out with rembg (`isnet-general-use` keeps hands; `u2net`
+  lost them), lay the cut-out over the untouched picture and push it faster about the feet (`make_photo.py`). Scaling up
+  only, about a point inside the subject, never reveals what's underneath, so no inpainting is needed.
+- Landscape footage whose subject is a thin band (houses under a big sky): `mode="box"` sets the region full width over
+  its own blurred fill instead of a 9:16 crop that's mostly sky.
+- Story transitions (#9's `door`, `keyhole`, `scratch`, `light` in its template) sit under the captions and labels, so the
+  words stay readable while the frame changes.
 
 ## Skill packs on the account (from 23 Oct 2026)
 

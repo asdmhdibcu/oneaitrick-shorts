@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #04050a; font-family: "InterV", sans-serif; color: var(--ink); }
+      /* the robot picture (make_photo.py), framed head-to-hips in the upper half */
+      .bg { position: absolute; left: 0; top: 60px; width: 1080px; height: 1920px; background: url("assets/img/i1_full.jpg") center top / cover no-repeat; filter: saturate(1.08) contrast(1.06); }
+      .shade { position: absolute; inset: 0; background:
+        linear-gradient(180deg, rgba(4,5,10,0.72) 0%, rgba(4,5,10,0) 15%, rgba(4,5,10,0) 44%, rgba(4,5,10,0.8) 56%, rgba(4,5,10,0.96) 66%, rgba(4,5,10,0.98) 100%); }
+      .glow { position: absolute; left: 470px; top: 500px; width: 300px; height: 120px; border-radius: 50%; mix-blend-mode: screen;
+        background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255,214,120,0.95) 0, rgba(255,170,60,0.6) 25%, rgba(255,140,30,0) 70%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+      .stamp { position: absolute; left: 70px; top: 960px; font-weight: 900; font-size: 58px; padding: 6px 22px; border: 7px solid #ffb547; color: #ffb547; border-radius: 14px;
+        transform: rotate(-5deg); background: rgba(12,8,4,0.72); }
+      .title { position: absolute; left: 70px; right: 50px; top: 1110px; font-weight: 900; font-size: 98px; letter-spacing: -0.05em; line-height: 0.96; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); }
+      .title em { font-style: normal; color: #ffb547; text-shadow: 0 0 60px rgba(255,181,71,0.45); }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 32px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bg"></div>
+      <div class="glow"></div>
+      <div class="shade"></div>
+      <div class="stamp">IT USED A SPARE KEY</div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI EXPLAINED · TRUE STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">An AI burglar tried 2,250+ company clouds… <em>and never picked a lock.</em></div>
+      <div class="pill" style="top: 1590px; color: #ffb547">MICROSOFT THREAT INTEL · 21 OCT</div>
+    </div>
+  </body>
+</html>

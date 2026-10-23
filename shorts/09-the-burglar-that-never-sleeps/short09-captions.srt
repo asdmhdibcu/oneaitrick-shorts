@@ -1,0 +1,141 @@
+1
+00:00:00,000 --> 00:00:05,300
+Hackers just set an AI loose on
+over 2,200 companies' clouds…
+
+2
+00:00:05,540 --> 00:00:08,270
+and some fell in under 3 hours.
+
+3
+00:00:08,360 --> 00:00:09,710
+Picture a street.
+
+4
+00:00:09,710 --> 00:00:12,790
+Every house is a company's
+cloud: its emails,
+
+5
+00:00:12,790 --> 00:00:15,080
+its files, its secrets.
+
+6
+00:00:15,090 --> 00:00:17,770
+Now picture a burglar that never sleeps.
+
+7
+00:00:17,770 --> 00:00:18,750
+A robot.
+
+8
+00:00:18,750 --> 00:00:21,200
+It tries every door at once… nights,
+
+9
+00:00:21,200 --> 00:00:23,040
+weekends, holidays.
+
+10
+00:00:23,040 --> 00:00:26,770
+Microsoft says a China-aligned
+hacking group sent it after 14
+
+11
+00:00:26,770 --> 00:00:29,340
+industries, from banks to governments.
+
+12
+00:00:29,340 --> 00:00:31,440
+China rejects the accusation.
+
+13
+00:00:31,440 --> 00:00:35,810
+At its peak: 2,900 passwords… a minute.
+
+14
+00:00:35,810 --> 00:00:37,450
+And not one got in.
+
+15
+00:00:37,450 --> 00:00:39,240
+The locks jammed shut.
+
+16
+00:00:39,240 --> 00:00:41,190
+So how did it get in?
+
+17
+00:00:41,190 --> 00:00:42,650
+It didn't pick the locks.
+
+18
+00:00:42,650 --> 00:00:44,060
+It used a key.
+
+19
+00:00:44,070 --> 00:00:47,300
+Many houses had given a spare
+key to one trusted company,
+
+20
+00:00:47,300 --> 00:00:50,860
+ConnectWise, so its backup
+service could copy their files.
+
+21
+00:00:50,860 --> 00:00:53,120
+The hackers stole those spare keys.
+
+22
+00:00:53,120 --> 00:00:54,480
+No password needed.
+
+23
+00:00:54,480 --> 00:00:56,510
+The locks already trusted them.
+
+24
+00:00:56,510 --> 00:00:59,190
+Inside some houses, the
+robot searched the rooms,
+
+25
+00:00:59,190 --> 00:01:02,170
+cut extra keys, and made itself boss.
+
+26
+00:01:02,170 --> 00:01:03,410
+Here's the twist.
+
+27
+00:01:03,410 --> 00:01:07,170
+The robot is called ARTEX… and
+it was built for the good guys.
+
+28
+00:01:07,170 --> 00:01:11,160
+Its maker gave it away free, so
+companies could test their own locks.
+
+29
+00:01:11,160 --> 00:01:14,210
+Now the burglar and the
+locksmith run the same robot.
+
+30
+00:01:14,210 --> 00:01:16,410
+Whoever runs it first… wins.
+
+31
+00:01:16,410 --> 00:01:18,840
+So before you let an
+app into your account,
+
+32
+00:01:18,840 --> 00:01:21,550
+ask: who else has a spare key?
+
+33
+00:01:21,550 --> 00:01:24,320
+Follow for more AI, explained like this.

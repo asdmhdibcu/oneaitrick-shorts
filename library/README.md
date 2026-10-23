@@ -91,3 +91,8 @@ Microsoft Fluent Emoji 3D (MIT licence), upscaled 4× to 1024×1024 with Real-ES
 | `question.png` | Red question mark | — |
 | `locked.png` | Locked | — |
 | `hourglass.png` | Hourglass done | — |
+| `key.png` | Key | — |
+| `oldkey.png` | Old key | — |
+| `folder.png` | File folder | — |
+| `crown.png` | Crown | — |
+| `stopwatch.png` | Stopwatch | — |

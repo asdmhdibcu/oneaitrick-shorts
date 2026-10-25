@@ -1,0 +1,34 @@
+[casual] Ten of the biggest AI companies in the world just changed how they handle your data. Here, in the UK.
+[chuckles] And no... they didn't just wake up feeling generous. A regulator came knocking.
+[curious] So what actually changed? And is there anything YOU can do about it? Let's have a look.
+[thoughtful] Okay. Think about every review you've ever left. Every public post, every comment, every photo caption.
+Now imagine each one is a postcard.
+[conversational] And the thing about postcards is... they're not sealed. Anyone who handles one can read it.
+[serious] For years, AI companies have been running a massive sorting office, reading billions of those postcards to learn how people talk.
+[conversational] Here in the UK, the data watchdog is the ICO. And since last year, it's been looking inside eleven of the biggest sorting offices.
+On the eighth of October, it published what it found. [sighs] And honestly? It's a bit of a mixed bag.
+[conversational] First thing. Some companies justified using your data with reasons as vague as... "benefiting humanity".
+[chuckles] The ICO's answer was, basically: yeah, that's not a reason.
+[serious] Second. The small print. The ICO called it a maze. A notice here, a help page there. And it says openness across the industry has actually got WORSE.
+[thoughtful] Third, and this is the big one. Some of those postcards say really personal things. Your health. Your religion. How you vote.
+And the ICO's view is: unless a company can prove it hasn't got that kind of data... assume it has.
+[curious] So what did they change?
+[conversational] Amazon, Anthropic, Apple, Cohere, DeepSeek, Google, Meta, Microsoft, OpenAI and Stability AI have all made changes, or promised to.
+Clearer notices about what they train on. Easier ways to use your data rights. Tougher checks on their own safeguards.
+[excited] And some of it is genuinely useful. OpenAI now explains how to ask for your personal details to be taken out of ChatGPT's answers.
+Meta has a form you can use even if you've never touched Meta's AI.
+And Apple lets anyone flag a web page to keep it out of training.
+[serious] But here's the bit nobody's really talking about.
+[thoughtful] Once a postcard's been read and learned from... you can't really un-read it. The ICO says getting your data back OUT of a trained model could mean rebuilding the whole thing.
+And the regulator itself admits the way these models are trained makes UK data law genuinely hard to follow. It's taking that to the government.
+[surprised] Oh, and one name's missing. xAI, the company behind Grok. It was on the list... until the ICO opened a formal investigation into it.
+[serious] And what's next? AI agents. The ones that don't just chat. They actually do things for you.
+In tests this summer, some of them reportedly slipped past their safety limits and reached systems they weren't meant to touch.
+[conversational] The ICO's response? Quote: "The fact AI agents act with autonomy is not an excuse for poor compliance."
+[warm] So. What can you actually do? Three things.
+One. Switch off training on your chats.
+In ChatGPT, that's Settings, Data controls, "Improve the model for everyone". In Claude, it's Settings, Privacy, "Help improve our AI models". And in Gemini, turn off Keep Activity.
+Two. If a chatbot says something about you that's wrong, or private, ask the company to remove it. Those forms exist now. Use them.
+[thoughtful] And three... treat anything you post publicly like a postcard.
+[warm] Because somewhere, something might be reading it.
+[warm] Subscribe for more AI, explained like this.

@@ -1,0 +1,141 @@
+1
+00:00:00,000 --> 00:00:04,440
+ChatGPT has started signing what
+it writes in Europe… and you
+
+2
+00:00:04,440 --> 00:00:06,490
+will never see the signature.
+
+3
+00:00:06,650 --> 00:00:08,920
+Writing is full of tiny choices.
+
+4
+00:00:08,920 --> 00:00:10,210
+Big or large?
+
+5
+00:00:10,210 --> 00:00:11,740
+Start or begin?
+
+6
+00:00:11,740 --> 00:00:12,920
+Either one works.
+
+7
+00:00:12,920 --> 00:00:17,000
+Now imagine a secret coin makes
+every one of those choices.
+
+8
+00:00:17,000 --> 00:00:19,560
+Only the company knows how it's loaded.
+
+9
+00:00:19,570 --> 00:00:21,500
+One word proves nothing.
+
+10
+00:00:21,500 --> 00:00:24,490
+But hundreds of words
+that all follow the coin?
+
+11
+00:00:24,550 --> 00:00:25,950
+That's a signature.
+
+12
+00:00:25,950 --> 00:00:27,330
+No hidden characters.
+
+13
+00:00:27,330 --> 00:00:31,100
+Copy, paste, even a screenshot…
+it's built to survive,
+
+14
+00:00:31,100 --> 00:00:33,480
+because the signature is the words.
+
+15
+00:00:33,480 --> 00:00:37,260
+A new EU law says AI
+text must carry a mark.
+
+16
+00:00:37,260 --> 00:00:39,970
+So in Paris, ChatGPT signs.
+
+17
+00:00:39,970 --> 00:00:41,900
+In London… not yet.
+
+18
+00:00:41,900 --> 00:00:45,840
+But Claude, another chatbot, now
+signs its writing everywhere.
+
+19
+00:00:45,840 --> 00:00:47,220
+The UK included.
+
+20
+00:00:47,220 --> 00:00:48,720
+So does it work?
+
+21
+00:00:48,720 --> 00:00:52,960
+In OpenAI's own test, it caught
+about seven in ten Spanish answers…
+
+22
+00:00:52,960 --> 00:00:55,060
+and fewer than half in Romanian.
+
+23
+00:00:55,060 --> 00:00:56,320
+Here's the twist.
+
+24
+00:00:56,320 --> 00:00:59,490
+Claude also signs text it only translated.
+
+25
+00:00:59,490 --> 00:01:02,160
+So your own words can carry its signature.
+
+26
+00:01:02,160 --> 00:01:06,190
+Anthropic says it plainly: a
+mark is a signal, not proof.
+
+27
+00:01:06,190 --> 00:01:08,920
+And teachers can't use ChatGPT's checker.
+
+28
+00:01:08,920 --> 00:01:11,500
+OpenAI rules out checking student work.
+
+29
+00:01:11,500 --> 00:01:13,930
+So a signature doesn't prove you cheated.
+
+30
+00:01:13,930 --> 00:01:16,730
+And no signature doesn't
+prove a human wrote it.
+
+31
+00:01:16,730 --> 00:01:19,670
+If AI helped you write
+something… just say so.
+
+32
+00:01:19,670 --> 00:01:21,720
+The words might already be saying it.
+
+33
+00:01:21,720 --> 00:01:24,590
+Follow for more AI, explained like this.

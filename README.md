@@ -180,6 +180,9 @@ tied to their own assembler).
 - The Fluent robot has blue eyes on a dark visor. #2's `robot()` helper overlays pink (hijacked) or lime (protected) eyes and keeps body motion separate from the entrance.
 - Lime text is unreadable on cream paper. Put lime ink on a dark label instead.
 - Round line caps leave a dot before a stroke draws on. `draw()` now hides the path until it starts.
+- Zero-length `tl.set()` calls at exactly 0 s revert when the renderer seeks back to 0 (#10 lost its frame-one signature). Give frame one's start state with a `fromTo` from 0, and hide everything else with an inline style.
+- An overlay that flickers must finish flickering before its fade-out, then get a hard `set` to 0 after its shot, or it can linger to the end card (#10's dashed line and stamp).
+- A published chart can be redrawn as an animated one: read the bar heights off the figure and calibrate them on values the text states (#10, `work/chart_data.json`). Label it "redrawn".
 - Keep scratch files (snapshots, contact sheets, WAVs) in the short's `work/` folder, which git ignores.
 - AI labels:
   - YouTube doesn't need one for a generic AI narrator.

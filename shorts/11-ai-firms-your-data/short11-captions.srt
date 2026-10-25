@@ -1,0 +1,156 @@
+1
+00:00:00,000 --> 00:00:03,460
+Ten of the biggest AI companies
+in the world just changed how
+
+2
+00:00:03,460 --> 00:00:04,940
+they handle your data.
+
+3
+00:00:04,940 --> 00:00:06,500
+Here, in the UK.
+
+4
+00:00:06,620 --> 00:00:07,140
+And no...
+
+5
+00:00:07,140 --> 00:00:09,650
+they didn't just wake up feeling generous.
+
+6
+00:00:09,650 --> 00:00:11,490
+A regulator came knocking.
+
+7
+00:00:11,490 --> 00:00:14,290
+Now imagine each one is a postcard.
+
+8
+00:00:14,290 --> 00:00:16,100
+And the thing about postcards is...
+
+9
+00:00:16,100 --> 00:00:17,300
+they're not sealed.
+
+10
+00:00:17,300 --> 00:00:19,430
+Anyone who handles one can read it.
+
+11
+00:00:19,430 --> 00:00:23,490
+For years, AI companies have been
+running a massive sorting office,
+
+12
+00:00:23,490 --> 00:00:27,020
+reading billions of those postcards
+to learn how people talk.
+
+13
+00:00:27,020 --> 00:00:30,170
+Some of those postcards say
+really personal things.
+
+14
+00:00:30,170 --> 00:00:31,020
+Your health.
+
+15
+00:00:31,020 --> 00:00:31,870
+Your religion.
+
+16
+00:00:31,870 --> 00:00:32,970
+How you vote.
+
+17
+00:00:32,970 --> 00:00:36,510
+And the ICO's view is: unless a
+company can prove it hasn't got
+
+18
+00:00:36,510 --> 00:00:37,740
+that kind of data...
+
+19
+00:00:37,740 --> 00:00:39,050
+assume it has.
+
+20
+00:00:39,050 --> 00:00:40,890
+So what did they change?
+
+21
+00:00:40,910 --> 00:00:44,220
+Amazon, Anthropic,
+Apple, Cohere, DeepSeek,
+
+22
+00:00:44,220 --> 00:00:48,770
+Google, Meta, Microsoft, OpenAI
+and Stability AI have all made
+
+23
+00:00:48,770 --> 00:00:50,750
+changes, or promised to.
+
+24
+00:00:50,750 --> 00:00:53,670
+But here's the bit nobody's
+really talking about.
+
+25
+00:00:53,700 --> 00:00:56,220
+Once a postcard's been
+read and learned from...
+
+26
+00:00:56,220 --> 00:00:58,200
+you can't really un-read it.
+
+27
+00:00:58,200 --> 00:01:00,530
+Oh, and one name's missing.
+
+28
+00:01:00,550 --> 00:01:03,550
+xAI, the company behind Grok.
+
+29
+00:01:03,550 --> 00:01:05,010
+It was on the list...
+
+30
+00:01:05,010 --> 00:01:08,790
+until the ICO opened a formal
+investigation into it.
+
+31
+00:01:08,790 --> 00:01:10,850
+Switch off training on your chats.
+
+32
+00:01:10,850 --> 00:01:14,480
+In ChatGPT, that's
+Settings, Data controls,
+
+33
+00:01:14,480 --> 00:01:16,510
+"Improve the model for everyone".
+
+34
+00:01:16,510 --> 00:01:19,880
+Treat anything you post
+publicly like a postcard.
+
+35
+00:01:19,880 --> 00:01:22,850
+Because somewhere, something
+might be reading it.
+
+36
+00:01:22,850 --> 00:01:26,076
+Follow for more AI, explained like this.

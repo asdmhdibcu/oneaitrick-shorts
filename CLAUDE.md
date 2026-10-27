@@ -15,7 +15,7 @@ Read `README.md` before building anything. It has the full pipeline, commands, s
 ## Rules
 
 - Story first, never an information dump. 60–90 s. Something moves on screen in every line, and every cut has a transition.
-- The creator records the voice in Gemini TTS. Video timing follows their WAV, aligned word by word.
+- The creator records the voice in ElevenLabs (a clone of their own voice, so the AI labels stay on). Video timing follows their WAV, aligned word by word.
 - Before rendering, check `npx hyperframes check` and snapshot contact sheets of every scene **and** ±0.1 s around every cut. Fix anything cramped, overlapping or empty.
 - Render with `-f 30 -q high`. Verify the MP4: 1080×1920, 30 fps, −14 LUFS. Look at frames pulled from the file itself.
 - Keep the session active while a render runs (watch it with a monitor). An idle session once killed a background render.
@@ -26,3 +26,8 @@ Read `README.md` before building anything. It has the full pipeline, commands, s
 - Scripts from #7: an expression tag on almost every line; [whispers] at most once, only when the story needs it.
 - Skill packs on the account (hyperframes, motion-video-skills) are technique libraries. This file, README.md and the project instructions decide the workflow; README.md "Skill packs" lists where they clash with our rules.
 - From #9: the first 1–2 seconds lead with the surprising result, never background. Every script runs Hook → evidence → twist → takeaway, 60–90 s. Story-led explainers, not how-to tutorials.
+- From #12, the Instagram plan (Content Hub tab "Instagram plan"):
+  - Every Reel hides one on-screen word that the voice never says. The line before "Follow for more AI, explained like this." is "There's one word in this video I never said out loud. Spotted it? Comment it."
+  - Every episode also gets a carousel (8–10 slides, 1080×1350) and 2–3 opening variants for Trial Reels.
+  - Instagram alone adds a third post type, "the trick": a 30–45 s demo of one AI tool. The "not how-to" rule still holds for YouTube and TikTok.
+  - No face on camera for now.

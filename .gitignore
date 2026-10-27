@@ -24,3 +24,12 @@ raw3d_lf2/
 shorts/*/package-lock.json
 __pycache__/
 shorts/*/src3d/world3d.js
+longform/*/assets/clips/
+longform/*/assets/img/
+longform/*/assets/pages/
+longform/*/assets/logos/
+longform/*/assets/fonts/
+longform/*/assets/js/
+longform/*/assets/grain.png
+longform/*/assets/base.css
+longform/*/assets/mix.wav

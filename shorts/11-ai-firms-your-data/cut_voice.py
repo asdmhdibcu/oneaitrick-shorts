@@ -16,8 +16,9 @@ SR, V = wavfile.read(f"{LF}/work/voice_clean.wav")
 _, FOLLOW = wavfile.read(f"{LF}/work/follow_clean.wav")
 V = V.astype(np.float32); FOLLOW = FOLLOW.astype(np.float32)
 # (label, first word ~start, last word ~end) on the long-form timeline
-PARTS = [("A", 0.00, 11.18), ("B", 24.21, 39.38), ("C", 77.17, 88.84), ("D", 89.20, 100.54),
-         ("E", 123.43, 130.52), ("F", 144.66, 154.89), ("G", 180.88, 188.24), ("H", 205.94, 211.99)]
+# (C-H moved 2.84 s later on 27 Oct, when the corrected "First thing..." take went into the long recording)
+PARTS = [("A", 0.00, 11.18), ("B", 24.21, 39.38), ("C", 80.01, 91.68), ("D", 92.04, 103.38),
+         ("E", 126.27, 133.36), ("F", 147.50, 157.73), ("G", 183.72, 191.08), ("H", 208.78, 214.83)]
 GAP = 0.12
 
 

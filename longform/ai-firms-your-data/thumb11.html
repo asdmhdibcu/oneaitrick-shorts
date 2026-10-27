@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1280px; height: 720px; margin: 0; overflow: hidden; }
+      .stage { position: relative; width: 1280px; height: 720px; overflow: hidden; background: #04050a; font-family: "InterV", sans-serif; color: var(--ink); }
+      /* the sorting office (Flow clip G3 at 3.4 s): a scanner beam reading postcards */
+      .bg { position: absolute; right: -40px; top: -330px; width: 760px; height: 1351px; background: url("assets/img/cover_bg.png") center / cover no-repeat; filter: saturate(1.15) contrast(1.06); }
+      .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,5,10,1) 0%, rgba(4,5,10,0.97) 42%, rgba(4,5,10,0.4) 62%, rgba(4,5,10,0) 80%); }
+      .bar { position: absolute; left: 0; top: 0; height: 8px; width: 1280px; background: var(--lime); }
+      .k { position: absolute; left: 56px; top: 64px; font-family: "Mono", monospace; font-weight: 700; font-size: 26px; letter-spacing: 0.14em; color: var(--lime); }
+      .t { position: absolute; left: 52px; top: 110px; font-weight: 900; font-size: 128px; letter-spacing: -0.05em; line-height: 0.92; text-transform: uppercase; color: #fff;
+        text-shadow: 0 8px 40px rgba(0,0,0,0.7); }
+      .t em { font-style: normal; color: var(--lime); text-shadow: 0 0 60px rgba(200,255,77,0.45); }
+      .logos { position: absolute; left: 56px; top: 520px; display: grid; grid-template-columns: repeat(5, 118px); gap: 10px; }
+      .logos div { height: 54px; border-radius: 10px; background: #fff; display: flex; align-items: center; justify-content: center; }
+      .logos div.s { background: #7000e0; }
+      .logos img { max-width: 84%; max-height: 64%; }
+      .ico { position: absolute; right: 48px; bottom: 44px; width: 210px; height: 120px; border-radius: 18px; background: #fff; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+      .ico img { max-width: 80%; max-height: 75%; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bg"></div>
+      <div class="shade"></div>
+      <div class="bar"></div>
+      <div class="k">● UK REGULATOR · 8 OCT 2026</div>
+      <div class="t">10 AI firms.<br /><em>Your</em> data.</div>
+      <div class="logos">
+        <div><img src="assets/logos/L9.png" /></div><div><img src="assets/logos/L7.png" /></div><div><img src="assets/logos/L10.png" /></div>
+        <div><img src="assets/logos/L12.png" /></div><div><img src="assets/logos/L13.png" /></div><div><img src="assets/logos/L5.png" /></div>
+        <div><img src="assets/logos/L4.png" /></div><div><img src="assets/logos/L11.png" /></div><div><img src="assets/logos/L2.png" /></div>
+        <div class="s"><img src="assets/logos/L14.png" /></div>
+      </div>
+      <div class="ico"><img src="assets/logos/L1.png" /></div>
+    </div>
+  </body>
+</html>

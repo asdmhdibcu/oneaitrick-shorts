@@ -1,7 +1,7 @@
 """Edit decision list for #11 "What AI firms just promised about your data" (16:9 YouTube video, 1920x1080).
 Shared by build_edit.py, make_index.py and make_audio.py.
 
-Each shot starts on a word of the script (its index in words.json, 579 words), so the cuts follow the creator's
+Each shot starts on a word of the script (its index in words.json, 584 words), so the cuts follow the creator's
 recording. A cut sits just before the anchor word (into the pause when there is one).
 Kinds:
   V       footage, full frame. spec: m (material code), sin (source second at the shot's start), rate, cx, cy, grade
@@ -66,78 +66,79 @@ PLAN = [
     # 0:00 ten AI firms changed course
     ("v01", 0, "V", dict(m="S1", sin=0.5, cy=0.62)),                # London at dusk: title + the ten logos on frame one
     ("v02", 16, "V", dict(m="S8", sin=1.0, cx=0.45)),               # Here, in the UK.
-    ("v03", 20, "V", dict(m="G1", sin=0.0)),                        # didn't just wake up feeling generous
-    ("v04", 29, "V", dict(m="G1", sin=3.2)),                        # A regulator came knocking. (ICO logo)
+    ("v03", 20, "V", dict(m="G1", sin=0.0, rate=0.18, mode="box")),                        # didn't just wake up feeling generous
+    ("v04", 29, "V", dict(m="G1", sin=0.6, mode="box")),                        # A regulator came knocking. (ICO logo)
     ("v05", 33, "V", dict(m="S2", sin=0.5)),                        # So what actually changed? anything YOU can do?
-    ("v06", 46, "V", dict(m="S3", sin=0.5)),                        # Let's have a look. Okay.
-    ("v07", 51, "V", dict(m="S3", sin=2.5, cx=0.4)),                # every review you've ever left
-    ("v08", 58, "V", dict(m="S3", sin=5.5, cx=0.6)),                # every public post, comment, photo caption
+    ("v06", 46, "V", dict(m="S3", sin=1.0, cx=0.6)),                        # Let's have a look. Okay.
+    ("v07", 51, "V", dict(m="S3", sin=8.0, cx=0.55)),                # every review you've ever left
+    ("v08", 58, "V", dict(m="S3", sin=14.0, cx=0.62)),                # every public post, comment, photo caption
     # 0:24 the postcard problem
     ("v09", 66, "V", dict(m="G2", sin=0.6, mode="box")),            # each one is a postcard
     ("v10", 73, "V", dict(m="S4", sin=0.2, cy=0.55)),               # they're not sealed
     ("v11", 82, "V", dict(m="S4", sin=3.2, cy=0.5)),                # anyone who handles one can read it
-    ("v12", 89, "V", dict(m="G3", sin=0.5)),                        # a massive sorting office
+    ("v12", 89, "V", dict(m="G3", sin=0.3, mode="box")),                        # a massive sorting office
     ("v13", 100, "V", dict(m="S10", sin=1.0)),                      # reading billions of those postcards
     # 0:40 what the regulator found
     ("v14", 110, "V", dict(m="S8", sin=5.0, cx=0.55)),              # the data watchdog is the ICO (logo lands)
     ("v15", 120, "GFX", dict(bd="S10", bdsin=3.0)),                 # eleven of the biggest sorting offices
     ("v16", 134, "PAGE", dict(pg="r_cover", bd="S8", bdsin=7.0)),   # On the eighth of October...
     ("v17", 144, "GFX", dict(bd="S8", bdsin=2.0)),                  # a bit of a mixed bag
-    ("v18", 153, "PAGE", dict(pg="r_humanity", bd="S10", bdsin=5.0)),   # finding 1: "benefitting humanity"
-    ("v19", 168, "GFX", dict(bd="S10", bdsin=1.0)),                 # that's not a reason
-    ("v20", 178, "PAGE", dict(pg="r_maze", bd="S2", bdsin=1.0)),    # finding 2: a maze
-    ("v21", 188, "PAGE", dict(pg="r_notices", bd="S2", bdsin=3.0)), # a notice here, a help page there
-    ("v22", 195, "PAGE", dict(pg="r_decline", bd="S2", bdsin=5.0)), # openness has got WORSE
-    ("v23", 206, "V", dict(m="G3", sin=5.0)),                       # finding 3: the big one
-    ("v24", 213, "PAGE", dict(pg="r_social", bd="S10", bdsin=4.0)), # really personal things
-    ("v25", 221, "V", dict(m="S5", sin=0.6, cy=0.4)),                       # Your health.
-    ("v26", 223, "V", dict(m="S6", sin=12.5, cy=0.62)),                       # Your religion.
-    ("v27", 225, "V", dict(m="S7", sin=1.0)),                       # How you vote.
-    ("v28", 228, "PAGE", dict(pg="r_sensitive", bd="S10", bdsin=6.0)),  # assume it has
+    ("v18", 153, "PAGE", dict(pg="r_interests", bd="S10", bdsin=5.0)),  # finding 1: couldn't clearly say WHY
+    ("v19", 165, "PAGE", dict(pg="r_humanity", bd="G3", bdsin=2.0)),   # a reason as vague as "benefiting humanity"?
+    ("v19b", 178, "GFX", dict(bd="S10", bdsin=1.0)),                # Yeah, that's not a reason.
+    ("v20", 183, "PAGE", dict(pg="r_maze", bd="S2", bdsin=1.0)),    # finding 2: a maze
+    ("v21", 193, "PAGE", dict(pg="r_notices", bd="S2", bdsin=3.0)), # a notice here, a help page there
+    ("v22", 200, "PAGE", dict(pg="r_decline", bd="S2", bdsin=5.0)), # openness has got WORSE
+    ("v23", 211, "V", dict(m="G3", sin=5.0, mode="box")),                       # finding 3: the big one
+    ("v24", 218, "PAGE", dict(pg="r_social", bd="S10", bdsin=4.0)), # really personal things
+    ("v25", 226, "V", dict(m="S5", sin=0.6, cy=0.4)),                       # Your health.
+    ("v26", 228, "V", dict(m="S6", sin=12.5, cy=0.62)),                       # Your religion.
+    ("v27", 230, "V", dict(m="S7", sin=0.2, cx=0.3)),                       # How you vote.
+    ("v28", 233, "PAGE", dict(pg="r_sensitive", bd="S10", bdsin=6.0)),  # assume it has
     # 1:29 what they changed
-    ("v29", 248, "PAGE", dict(pg="r_changed", bd="S1", bdsin=1.0)), # So what did they change?
-    ("v30", 253, "GFX", dict(bd="S1", bdsin=2.5)),                  # ten names, ten logos
-    ("v31", 272, "PAGE", dict(pg="r_measures", bd="S1", bdsin=5.0)),    # notices, rights, safeguards
-    ("v32", 292, "GFX", dict(bd="S1", bdsin=2.0)),                  # some of it is genuinely useful
-    ("v33", 299, "PAGE", dict(pg="p4_openai", bd="S2", bdsin=2.0)), # OpenAI ... out of ChatGPT's answers
-    ("v34", 316, "PAGE", dict(pg="p5_anyone", bd="S2", bdsin=4.0)), # Meta has a form
-    ("v35", 330, "PAGE", dict(pg="r_apple", bd="S2", bdsin=6.0)),   # Apple lets anyone flag a web page
+    ("v29", 253, "PAGE", dict(pg="r_changed", bd="S1", bdsin=1.0)), # So what did they change?
+    ("v30", 258, "GFX", dict(bd="S1", bdsin=2.5)),                  # ten names, ten logos
+    ("v31", 277, "PAGE", dict(pg="r_measures", bd="S1", bdsin=5.0)),    # notices, rights, safeguards
+    ("v32", 297, "GFX", dict(bd="S1", bdsin=2.0)),                  # some of it is genuinely useful
+    ("v33", 304, "PAGE", dict(pg="p4_openai", bd="S2", bdsin=2.0)), # OpenAI ... out of ChatGPT's answers
+    ("v34", 321, "PAGE", dict(pg="p5_anyone", bd="S2", bdsin=4.0)), # Meta has a form
+    ("v35", 335, "PAGE", dict(pg="r_apple", bd="S2", bdsin=6.0)),   # Apple lets anyone flag a web page
     # 2:03 what nobody's talking about
-    ("v36", 344, "FREEZE", dict()),                                 # the record scratch
-    ("v37", 352, "V", dict(m="G4", sin=0.5)),                       # once a postcard's been read
-    ("v38", 360, "PAGE", dict(pg="p5_deleted", bd="S4", bdsin=1.0)),    # you can't really un-read it (Meta's own words)
-    ("v39", 365, "PAGE", dict(pg="r_retrain", bd="S10", bdsin=2.0)),    # the ICO says getting your data back OUT...
-    ("v40", 379, "V", dict(m="S9", sin=0.5)),                       # rebuilding the whole thing
-    ("v41", 383, "PAGE", dict(pg="r_law", bd="S8", bdsin=3.0)),     # genuinely hard to follow
-    ("v42", 402, "V", dict(m="S8", sin=7.0, cx=0.3)),               # taking that to the government
-    ("v43", 408, "GFX", dict(bd="S1", bdsin=4.0)),                  # one name's missing: xAI, Grok
-    ("v44", 418, "PAGE", dict(pg="r_suspend", bd="S1", bdsin=6.0)), # until the ICO opened a formal investigation
+    ("v36", 349, "FREEZE", dict()),                                 # the record scratch
+    ("v37", 357, "V", dict(m="G4", sin=1.0, rate=1.4, mode="box")),                       # once a postcard's been read
+    ("v38", 365, "PAGE", dict(pg="p5_deleted", bd="G4", bdsin=5.0)),    # you can't really un-read it (Meta's own words)
+    ("v39", 370, "PAGE", dict(pg="r_retrain", bd="S10", bdsin=2.0)),    # the ICO says getting your data back OUT...
+    ("v40", 384, "V", dict(m="S9", sin=3.0)),                       # rebuilding the whole thing
+    ("v41", 388, "PAGE", dict(pg="r_law", bd="S8", bdsin=3.0)),     # genuinely hard to follow
+    ("v42", 407, "V", dict(m="S8", sin=7.0, cx=0.3)),               # taking that to the government
+    ("v43", 413, "GFX", dict(bd="S1", bdsin=4.0)),                  # one name's missing: xAI, Grok
+    ("v44", 423, "PAGE", dict(pg="r_suspend", bd="S1", bdsin=6.0)), # until the ICO opened a formal investigation
     # 2:35 AI agents are next
-    ("v45", 432, "PAGE", dict(pg="p2_agents", bd="G5", bdsin=0.5)), # AI agents. The ones that don't just chat.
-    ("v46", 443, "V", dict(m="R5", sin=70.4, rate=1.6)),                       # They actually do things for you.
-    ("v47", 449, "V", dict(m="G5", sin=0.8, mode="box")),           # slipped past their safety limits
-    ("v48", 462, "PAGE", dict(pg="r_agents", bd="G5", bdsin=4.0)),  # reached systems they weren't meant to touch
-    ("v49", 470, "GFX", dict(bd="G5", bdsin=2.0)),                  # Nevinson: "not an excuse for poor compliance"
+    ("v45", 437, "PAGE", dict(pg="p2_agents", bd="G5", bdsin=0.5)), # AI agents. The ones that don't just chat.
+    ("v46", 448, "V", dict(m="R5", sin=70.4, rate=1.6)),                       # They actually do things for you.
+    ("v47", 454, "V", dict(m="G5", sin=0.8, mode="box")),           # slipped past their safety limits
+    ("v48", 467, "PAGE", dict(pg="r_agents", bd="G5", bdsin=4.0)),  # reached systems they weren't meant to touch
+    ("v49", 475, "GFX", dict(bd="G5", bdsin=2.0)),                  # Nevinson: "not an excuse for poor compliance"
     # 2:56 three things you can do
-    ("v50", 488, "GFX", dict(bd="S2", bdsin=3.0)),                  # So. What can you actually do? Three things.
-    ("v51", 496, "PHONE", dict(m="R1", keys=[[0.0, 0.12], [2.6, 0.62], [2.9, 0.72]])),     # One. Switch off training
-    ("v52", 503, "PHONE", dict(m="R1", keys=[[0.0, 9.1], [1.75, 11.0], [2.3, 12.2], [2.62, 12.6], [2.62, 13.85],
+    ("v50", 493, "GFX", dict(bd="S2", bdsin=3.0)),                  # So. What can you actually do? Three things.
+    ("v51", 501, "PHONE", dict(m="R1", keys=[[0.0, 0.12], [2.6, 0.62], [2.9, 0.72]])),     # One. Switch off training
+    ("v52", 508, "PHONE", dict(m="R1", keys=[[0.0, 9.1], [1.75, 11.0], [2.3, 12.2], [2.62, 12.6], [2.62, 13.85],
                                               [4.7, 14.8], [5.9, 16.2]])),               # ChatGPT: Settings, Data controls...
-    ("v53", 514, "PHONE", dict(m="R2", keys=[[0.0, 0.55], [1.80, 1.85], [2.45, 3.0], [2.85, 9.75], [3.75, 10.2],
+    ("v53", 519, "PHONE", dict(m="R2", keys=[[0.0, 0.55], [1.80, 1.85], [2.45, 3.0], [2.85, 9.75], [3.75, 10.2],
                                               [4.05, 10.5], [5.6, 11.0]])),              # Claude: Settings, Privacy...
-    ("v54", 524, "PHONE", dict(m="R3", keys=[[0.0, 1.6], [3.2, 2.8]], pre=(0, 50, 1320, 2410))),                  # Gemini: Keep Activity
-    ("v55", 531, "GFX", dict(bd="S2", bdsin=6.0)),                  # Two. If a chatbot says something about you
-    ("v56", 543, "PAGE", dict(pg="p4_how", bd="S2", bdsin=4.5)),    # ask the company to remove it
-    ("v57", 549, "PAGE", dict(pg="p5_form", bd="S2", bdsin=6.5)),   # Those forms exist now. Use them.
-    ("v58", 555, "V", dict(m="S4", sin=4.2, cy=0.45)),              # treat anything you post publicly like a postcard
-    ("v59", 565, "V", dict(m="G3", sin=6.0)),                       # something might be reading it
-    ("v60", 572, "END", dict()),
+    ("v54", 529, "PHONE", dict(m="R3", keys=[[0.0, 1.6], [3.2, 2.8]], pre=(0, 50, 1320, 2410))),                  # Gemini: Keep Activity
+    ("v55", 536, "GFX", dict(bd="S2", bdsin=6.0)),                  # Two. If a chatbot says something about you
+    ("v56", 548, "PAGE", dict(pg="p4_how", bd="S2", bdsin=4.5)),    # ask the company to remove it
+    ("v57", 554, "PAGE", dict(pg="p5_form", bd="S2", bdsin=6.5)),   # Those forms exist now. Use them.
+    ("v58", 560, "V", dict(m="S4", sin=4.2, cy=0.45)),              # treat anything you post publicly like a postcard
+    ("v59", 570, "V", dict(m="G3", sin=6.0, mode="box")),                       # something might be reading it
+    ("v60", 577, "END", dict()),
 ]
 
 # PAGE highlights: the word (index) on which each phrase group of the page's crop sweeps on, in group order
-HL = {"v16": [136], "v18": [166], "v20": [187], "v21": [189], "v22": [198], "v24": [218], "v28": [245, 233],
-      "v29": [249, 251], "v31": [272, 279, 286], "v33": [304], "v34": [323], "v35": [333], "v38": [361], "v39": [372],
-      "v41": [394, 399], "v44": [428, 423], "v45": [440], "v48": [463], "v56": [545], "v57": [550]}
+HL = {"v16": [136], "v18": [158], "v19": [176], "v20": [192], "v21": [194], "v22": [203], "v24": [223], "v28": [250, 238],
+      "v29": [254, 256], "v31": [277, 284, 291], "v33": [309], "v34": [328], "v35": [338], "v38": [366], "v39": [377],
+      "v41": [399, 404], "v44": [433, 428], "v45": [445], "v48": [468], "v56": [550], "v57": [555]}
 # YouTube chapters: (first shot, number, title)
 CHAPTERS = [("v09", "02", "The postcard problem"), ("v14", "03", "What the regulator found"), ("v29", "04", "What they changed"),
             ("v36", "05", "What nobody's talking about"), ("v45", "06", "AI agents are next"), ("v50", "07", "Three things you can do")]
@@ -148,7 +149,7 @@ def _words():
 
 
 W = _words()
-assert len(W) == 579, len(W)
+assert len(W) == 584, len(W)   # 579 before the corrected take (27 Oct)
 
 
 def cut_at(k):

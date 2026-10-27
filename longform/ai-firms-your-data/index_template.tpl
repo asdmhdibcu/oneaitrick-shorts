@@ -46,6 +46,7 @@
       #caps { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
       .cap { position: absolute; left: 210px; width: 1500px; bottom: 58px; text-align: center; opacity: 0; font-weight: 800; font-size: 52px;
         letter-spacing: -0.01em; line-height: 1.1; color: #fff; text-shadow: 0 4px 22px rgba(0,0,0,0.75), 0 2px 4px rgba(0,0,0,0.7); }
+      .cap .cb { display: inline-block; padding: 8px 22px 12px; border-radius: 14px; background: rgba(6,7,11,0.62); }
       .cw { display: inline-block; margin: 0 0.12em; }
       .cw.dim { opacity: 0.5; }
 
@@ -210,32 +211,34 @@
         el("div", "ok", "", "✓", d); return d; };
 
       // ---------- documents: the camera finds each highlighted line on its word ----------
+      const CAMEND = {};
       const docCam = (id) => { const g = GEO[id]; const a = Math.max(0, T0[id] - HND), b = T1[id] + HND;
         const CX = 960, CY = 470;
         const kf = (S, px, py) => { let x = CX - S * px, y = CY - S * py;
           x = Math.min(0, Math.max(1920 * (1 - S), x)); y = Math.min(0, Math.max(1080 * (1 - S), y)); return { scale: S, x, y }; };
         tl.set(cam(id), { transformOrigin: "0px 0px" }, 0);
-        const zs = (ww) => Math.max(1.04, Math.min(1.45, 1500 / (ww + 160)));
+        const zs = (ww) => Math.min(g.zmax || 1.6, Math.max(1.12, 1650 / (ww + 120)));
         let prev = kf(1, CX, CY), tPrev = a;
         tl.set(cam(id), prev, a);
         g.hl.forEach(([t, hx, hy, ww], k) => { const S = zs(ww); const k1 = kf(S, hx, hy); const t0 = Math.max(tPrev + 0.05, t - 0.45);
           tl.to(cam(id), Object.assign({}, k1, { duration: Math.max(0.3, t + 0.2 - t0), ease: "power2.inOut" }), t0); tPrev = t + 0.2; prev = k1; });
-        if (b > tPrev + 0.05) tl.to(cam(id), Object.assign(kf(prev.scale * 1.035, (CX - prev.x) / prev.scale, (CY - prev.y) / prev.scale), { duration: b - tPrev, ease: "none" }), tPrev); };
+        const last = kf(prev.scale * 1.035, (CX - prev.x) / prev.scale, (CY - prev.y) / prev.scale); CAMEND[id] = last;
+        if (b > tPrev + 0.05) tl.to(cam(id), Object.assign({}, last, { duration: b - tPrev, ease: "none" }), tPrev); };
       Object.keys(GEO).forEach((id) => { const g = GEO[id];
         g.sweeps.forEach(([hid, t, d]) => tl.to("#" + hid, { scaleX: 1, duration: d, ease: "power2.inOut" }, t));
         if (KIND[id] === "PAGE") docCam(id); });
       // a badge for the page's owner: the logo tile overlapping the card's top-right corner
       const badge = (id, code, label) => { const g = GEO[id]; const wd = 220, ht = 110;
-        const d = logo(code, g.left + g.w - wd + 34, g.top - 44, wd, ht, label, $("#cam-" + id));
+        const d = logo(code, 1660, 96, 200, 100, label);
         pop(d, A(id) + 0.18, B(id) - 0.08, 0.6); return d; };
 
       // ---------- phones: the steps on the right, the switch going off ----------
-      const steps = (id, code, items, offAt, ringAt) => { const P = PHONE[id];
+      const steps = (id, code, items, offAt, ringAt, offTxt) => { const P = PHONE[id];
         const L = logo(code, 1110, 120, 300, 130); pop(L, A(id) + 0.1, B(id) - 0.08, 0.6);
         items.forEach(([k, txt, t], j) => { const s = el("div", "step", `left:1110px;top:${300 + j * 104}px`, `<span class="k">${k}</span>${txt}`);
           tl.fromTo(s, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.28, ease: E }, t); tl.set(s, { className: "step on" }, t);
           if (j + 1 < items.length) tl.set(s, { className: "step" }, items[j + 1][2]); tl.to(s, { opacity: 0, duration: 0.15 }, B(id) - 0.1); });
-        if (offAt) { const o = el("div", "off", `left:1110px;top:${300 + items.length * 104 + 10}px`, "OFF ✓"); pop(o, offAt, B(id) - 0.1, 0.5); }
+        if (offAt) { const o = el("div", "off", `left:1110px;top:${300 + items.length * 104 + 10}px`, offTxt || "OFF ✓"); pop(o, offAt, B(id) - 0.1, 0.5); }
         if (ringAt && P.tog) { const [x, y, rw, rh] = P.tog; const r = el("div", "ring", `left:${x - rw / 2}px;top:${y - rh / 2}px;width:${rw}px;height:${rh}px`, "", $("#cam-" + id));
           tl.fromTo(r, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, ringAt); tl.to(r, { opacity: 0, duration: 0.15 }, B(id) - 0.1); } };
       const phoneCam = (id, tz, S) => { const P = PHONE[id]; const a = Math.max(0, T0[id] - HND), b = T1[id] + HND;
@@ -271,7 +274,7 @@
       const capsRoot = $("#caps");
       CAPS.forEach((ch) => { if (NOCAP.some(([a, b]) => ch.t0 < b && ch.t1 > a)) return;
         const c = el("div", "cap", "", undefined, capsRoot);
-        const spans = ch.w.map((x) => { const s = el("span", "cw dim", "", x.d, c); return { s, x }; });
+        const cb = el("span", "cb", "", undefined, c); const spans = ch.w.map((x) => { const s = el("span", "cw dim", "", x.d, cb); return { s, x }; });
         tl.fromTo(c, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.12, ease: "power2.out" }, ch.t0);
         tl.set(c, { opacity: 0 }, ch.t1);
         spans.forEach(({ s, x }, k) => { const end = k + 1 < spans.length ? spans[k + 1].x.s : ch.t1;

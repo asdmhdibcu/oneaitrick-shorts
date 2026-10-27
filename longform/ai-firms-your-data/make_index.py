@@ -21,7 +21,8 @@ ORDER = [s[0] for s in SHOTS]
 GEO, PHONE = {}, {}
 
 # ---------------------------------------------------------------- page cards
-def card(sid, pg, maxw=1080, maxh=700, cx=960, cy=470, sweep_at=None):
+ZMAX = {"r_cover": 1.15}
+def card(sid, pg, maxw=1240, maxh=700, cx=880, cy=470, sweep_at=None):
     m = PAGES[pg]
     s = min(maxw / m["w"], maxh / m["h"])
     w, h = round(m["w"] * s), round(m["h"] * s)
@@ -42,7 +43,7 @@ def card(sid, pg, maxw=1080, maxh=700, cx=960, cy=470, sweep_at=None):
         bx = [m["boxes"][i] for i in idxs]
         x0 = min(b[0] for b in bx); x1 = max(b[0] + b[2] for b in bx); y0 = min(b[1] for b in bx); y1 = max(b[1] + b[3] for b in bx)
         hls.append([round(t, 3), round(left + (x0 + x1) / 2 * s, 1), round(top + (y0 + y1) / 2 * s, 1), round((x1 - x0) * s, 1)])
-    GEO[sid] = dict(left=left, top=top, w=w, h=h, s=round(s, 4), hl=hls, sweeps=sweeps)
+    GEO[sid] = dict(left=left, top=top, w=w, h=h, s=round(s, 4), hl=hls, sweeps=sweeps, zmax=ZMAX.get(pg, 1.6))
     return f'<div class="card" id="card-{sid}" style="left:{left}px;top:{top}px;width:{w}px;height:{h}px">{inner}</div>'
 
 
@@ -60,7 +61,7 @@ def slate(codes):
 # phone toggles / targets in the conformed source clip's pixels: (x, y, ring w, ring h)
 TOG = {"R1": (1130, 421, 210, 120), "R2": (1127, 985, 190, 110), "R3": (280, 1002, 370, 140)}
 TOG_SHOT = {"v51": (192, 472, 240, 240)}     # the ChatGPT icon in the folder (frame one of R1)
-PH_DISP = 0.88                                # a phone screen is conformed 1000 px tall and shown 880 px tall
+PH_DISP = 0.82                                # a phone screen is conformed 1000 px tall and shown 880 px tall
 SRCH = {"R1": 2620, "R2": 2120, "R3": 2410}
 
 blocks = []
@@ -82,7 +83,7 @@ for z, (sid, t0, t1, kind, sp) in enumerate(SHOTS):
     elif kind == "PHONE":
         if ok:
             pw = META[sid]["pw"]; dw, dh = round(pw * PH_DISP), round(1000 * PH_DISP)
-            left, top = round(640 - dw / 2), 100
+            left, top = round(640 - dw / 2), 84
             inner = vid(clip, f"v-{sid}", a, d, ms) + (f'<div class="phone" style="left:{left}px;top:{top}px;width:{dw}px;height:{dh}px">'
                      + vid(f"assets/clips/{sid}_ph.mp4", f"p-{sid}", a, d, ms, style=f"left:0;top:0;width:{dw}px;height:{dh}px", cls="") + "</div>")
             k = PH_DISP * 1000 / SRCH[sp["m"]]
@@ -141,7 +142,7 @@ for sid, kind, sp in ((s[0], s[3], s[4]) for s in SHOTS):
                       "REAL · META, HOW META USES INFORMATION FOR AI" if pg.startswith("p5") else "REAL · OPENAI HELP CENTER" if pg.startswith("p4") else
                       "REAL · ICO CALL FOR EVIDENCE" if pg.startswith("p3") else "REAL")
 LABEL["v36"] = LABEL.get("v35", "")
-LABEL.update({"v15": "LOGOS · THE ICO'S PRIORITY LIST", "v19": "QUOTED · ICO REPORT, P.13", "v30": "LOGOS · NAMED BY THE ICO",
+LABEL.update({"v15": "LOGOS · THE ICO'S PRIORITY LIST", "v19b": "QUOTED · ICO REPORT, P.14", "v30": "LOGOS · NAMED BY THE ICO",
               "v32": "LOGOS · NAMED BY THE ICO", "v43": "LOGOS · NAMED BY THE ICO", "v49": "QUOTED · ICO NEWS RELEASE, 8 OCT 2026"})
 groups = {}
 for sid in ORDER:
@@ -172,7 +173,7 @@ for j, (sid, n, title) in enumerate(CHAPTERS):
     CHAP_JS.append([f"#ch{j}", round(T[sid][0] + 0.15, 2), round(min(T[sid][0] + 2.6, T[sid][1] + 1.2), 2)])
 
 # ---------------------------------------------------------------- captions: sentence case, karaoke chunks
-EMPH = {41, 205, 372, 187, 128, 166, 167, 494}           # YOU, WORSE, OUT, maze, eleven, "benefiting humanity", Three
+EMPH = {41, 210, 377, 192, 128, 176, 177, 499}           # YOU, WORSE, OUT, maze, eleven, "benefiting humanity", Three
 
 
 def disp(t):

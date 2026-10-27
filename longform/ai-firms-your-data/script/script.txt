@@ -7,8 +7,8 @@ Now imagine each one is a postcard.
 [serious] For years, AI companies have been running a massive sorting office, reading billions of those postcards to learn how people talk.
 [conversational] Here in the UK, the data watchdog is the ICO. And since last year, it's been looking inside eleven of the biggest sorting offices.
 On the eighth of October, it published what it found. [sighs] And honestly? It's a bit of a mixed bag.
-[conversational] First thing. Some companies justified using your data with reasons as vague as... "benefiting humanity".
-[chuckles] The ICO's answer was, basically: yeah, that's not a reason.
+[conversational] First thing. Some companies couldn't clearly say WHY they needed your data.
+[chuckles] And the ICO's view is basically: a reason as vague as... "benefiting humanity"? Yeah, that's not a reason.
 [serious] Second. The small print. The ICO called it a maze. A notice here, a help page there. And it says openness across the industry has actually got WORSE.
 [thoughtful] Third, and this is the big one. Some of those postcards say really personal things. Your health. Your religion. How you vote.
 And the ICO's view is: unless a company can prove it hasn't got that kind of data... assume it has.

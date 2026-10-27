@@ -25,6 +25,9 @@ LOGOS = {
     "L13": ("d9920922-image.webp", "DeepSeek", False),
     "L14": ("f515f095-image.png", "Stability AI", True),
     "L16": ("8989c95a-image.png", "xAI · Grok", False),
+    "L3": ("35ef3304-image.png", "ChatGPT", False),
+    "L4": ("5350dd74-image.webp", "Meta", False),
+    "L6": ("fb218936-image.png", "Gemini", False),
 }
 os.makedirs("assets/logos", exist_ok=True)
 meta = {}

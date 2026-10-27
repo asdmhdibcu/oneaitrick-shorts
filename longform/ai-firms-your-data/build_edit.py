@@ -165,6 +165,6 @@ if __name__ == "__main__":
             run(["ffmpeg", "-v", "error", "-y", "-sseof", "-0.3", "-i", f"assets/clips/{sid}_ph.mp4", "-frames:v", "1",
                  f"assets/img/{sid}_last.png"])
         elif kind in ("PAGE", "GFX"):
-            conform_bd(sid, sp["bd"], span, sp.get("bdsin", 1.0)); meta[sid] = {"ok": 1}
+            conform_bd(sid, sp["bd"], span, sp.get("bdsin", 1.0)); last_frame(sid); meta[sid] = {"ok": 1}
     json.dump(meta, open("work/meta.json", "w"), indent=1)
     print("done")

@@ -39,30 +39,32 @@ def pops(ks, pitch=1.0, g=0.2, step=0.0):
 moments = [
     {"type": "swell", "t": 0.0, "dur": 0.5, "g": 0.25},
 ] + [{"type": "pop", "t": wt(3) + j * 0.09, "pitch": 0.9 + j * 0.03, "g": 0.14} for j in range(10)] + [   # the ten logos
-    {"type": "boom", "t": wt(30), "g": 0.45}, {"type": "ding", "t": wt(30) + 0.05, "base": 1320, "g": 0.2},   # a regulator
+    {"type": "boom", "t": wt(30), "g": 0.3}, {"type": "ding", "t": wt(30) + 0.05, "base": 1320, "g": 0.18},   # a regulator
+    {"type": "boom", "t": wt(31), "g": 0.4}, {"type": "tick", "t": wt(31), "g": 0.9},                    # knock
+    {"type": "boom", "t": wt(32) + 0.05, "g": 0.4}, {"type": "tick", "t": wt(32) + 0.05, "g": 0.9},      # knock
 ] + pops([54, 60, 62, 65], 1.0, 0.25, 0.08) + [                                                            # reviews, posts...
     {"type": "tick", "t": wt(80), "g": 0.6}, {"type": "scan", "t": wt(98), "dur": 0.6, "g": 0.18},
     {"type": "boom", "t": wt(101), "g": 0.35}, {"type": "ding", "t": wt(116), "base": 1320, "g": 0.22},
 ] + [{"type": "pop", "t": wt(126) + j * 0.07, "pitch": 0.9 + j * 0.025, "g": 0.13} for j in range(11)] + [
     {"type": "ding", "t": wt(128), "base": 1760, "g": 0.22},
     {"type": "pop", "t": wt(150), "pitch": 1.2, "g": 0.25}, {"type": "pop", "t": wt(151) + 0.1, "pitch": 0.8, "g": 0.25},
-    {"type": "whoosh", "t": wt(174), "rise": 0.12, "fall": 0.2, "g": 0.4}, {"type": "boom", "t": wt(175), "g": 0.45},   # NOT A REASON
-    {"type": "boom", "t": wt(205), "g": 0.35},                                                                     # WORSE
-    {"type": "tick", "t": wt(222), "g": 0.8}, {"type": "tick", "t": wt(224), "g": 0.8}, {"type": "tick", "t": wt(227), "g": 0.8},
-] + [{"type": "pop", "t": wt(k), "pitch": 0.9 + j * 0.04, "g": 0.18} for j, k in enumerate([253, 254, 255, 256, 257, 258, 259, 260, 261, 263])] + [
-    {"type": "ding", "t": wt(267), "base": 1760, "g": 0.25}, {"type": "shimmer", "t": wt(297), "g": 0.3},
-    {"type": "glitch", "t": wt(410) + 0.1, "dur": 0.25, "g": 0.15}, {"type": "boom", "t": wt(413), "g": 0.5},     # xAI drops in
-    {"type": "zap", "t": wt(428), "g": 0.35},
-    {"type": "glitch", "t": wt(457), "dur": 0.3, "g": 0.2},                                                         # slipped past
-    {"type": "scan", "t": wt(482), "dur": 0.6, "g": 0.18},
-] + pops([494], 1.0, 0.3) + [{"type": "pop", "t": wt(494) + 0.12 * j, "pitch": 1.0 + 0.1 * j, "g": 0.25} for j in range(3)] + [
-    {"type": "tick", "t": wt(506), "g": 0.7}, {"type": "tick", "t": wt(507), "g": 0.7}, {"type": "tick", "t": wt(509), "g": 0.7},
+    {"type": "whoosh", "t": wt(180), "rise": 0.12, "fall": 0.2, "g": 0.4}, {"type": "boom", "t": wt(182), "g": 0.45},   # NOT A REASON
+    {"type": "boom", "t": wt(210), "g": 0.35},                                                                     # WORSE
+    {"type": "tick", "t": wt(227), "g": 0.8}, {"type": "tick", "t": wt(229), "g": 0.8}, {"type": "tick", "t": wt(232), "g": 0.8},
+] + [{"type": "pop", "t": wt(k), "pitch": 0.9 + j * 0.04, "g": 0.18} for j, k in enumerate([258, 259, 260, 261, 262, 263, 264, 265, 266, 268])] + [
+    {"type": "ding", "t": wt(272), "base": 1760, "g": 0.25}, {"type": "shimmer", "t": wt(302), "g": 0.3},
+    {"type": "glitch", "t": wt(415) + 0.1, "dur": 0.25, "g": 0.15}, {"type": "boom", "t": wt(418), "g": 0.5},     # xAI drops in
+    {"type": "zap", "t": wt(433), "g": 0.35},
+    {"type": "glitch", "t": wt(462), "dur": 0.3, "g": 0.2},                                                         # slipped past
+    {"type": "scan", "t": wt(487), "dur": 0.6, "g": 0.18},
+] + pops([499], 1.0, 0.3) + [{"type": "pop", "t": wt(499) + 0.12 * j, "pitch": 1.0 + 0.1 * j, "g": 0.25} for j in range(3)] + [
+    {"type": "tick", "t": wt(511), "g": 0.7}, {"type": "tick", "t": wt(512), "g": 0.7}, {"type": "tick", "t": wt(514), "g": 0.7},
     {"type": "ding", "t": T0["v52"] + 4.75, "base": 1320, "g": 0.25},
-    {"type": "tick", "t": wt(517), "g": 0.7}, {"type": "tick", "t": wt(518), "g": 0.7}, {"type": "tick", "t": wt(519), "g": 0.7},
-    {"type": "ding", "t": T0["v53"] + 4.1, "base": 1320, "g": 0.25}, {"type": "ding", "t": wt(528), "base": 1320, "g": 0.25},
-    {"type": "pop", "t": wt(532), "pitch": 1.1, "g": 0.22}, {"type": "pop", "t": wt(535), "pitch": 0.9, "g": 0.22},
-    {"type": "zap", "t": wt(540), "g": 0.25}, {"type": "zap", "t": wt(542), "g": 0.25},
-    {"type": "scan", "t": wt(567), "dur": 0.8, "g": 0.15},
+    {"type": "tick", "t": wt(522), "g": 0.7}, {"type": "tick", "t": wt(523), "g": 0.7}, {"type": "tick", "t": wt(524), "g": 0.7},
+    {"type": "ding", "t": T0["v53"] + 4.1, "base": 1320, "g": 0.25}, {"type": "ding", "t": wt(533), "base": 1320, "g": 0.25},
+    {"type": "pop", "t": wt(537), "pitch": 1.1, "g": 0.22}, {"type": "pop", "t": wt(540), "pitch": 0.9, "g": 0.22},
+    {"type": "zap", "t": wt(545), "g": 0.25}, {"type": "zap", "t": wt(547), "g": 0.25},
+    {"type": "scan", "t": wt(572), "dur": 0.8, "g": 0.15},
     {"type": "swell", "t": T0["v60"] - 0.2, "dur": 0.5, "g": 0.3}, {"type": "pop", "t": T0["v60"] + 0.15, "pitch": 1.0, "g": 0.35},
     {"type": "ding", "t": T0["v60"] + 0.85, "base": 1320, "g": 0.3},
 ]
@@ -77,6 +79,14 @@ def run(cmd):
     print(r.stdout.strip()[-200:])
 
 
+# the score's plan follows the cuts: minor, lifting to major on "what they changed", silent under the record scratch
+c = lambda sid: round(T0[sid], 2)
+plan = {"bpm": 90,
+        "sections": [[0.0, c("v05"), "MIN", 2], [c("v05"), c("v14"), "MIN", 1], [c("v14"), c("v23"), "MIN", 2], [c("v23"), c("v29"), "MIN", 3],
+                     [c("v29"), c("v36") - 0.08, "MAJ", 2], [c("v37"), c("v45"), "MIN", 1], [c("v45"), c("v50"), "MIN", 3],
+                     [c("v50"), c("v55"), "MAJ", 1], [c("v55"), c("v60"), "MAJ", 2]],
+        "silence": [[c("v36") - 0.08, c("v37")]], "hits": [c("v29"), c("v37"), c("v45")], "risers": [[c("v45") - 1.5, 1.5]], "end": c("v60")}
+json.dump(plan, open("plan_video.json", "w"))
 run(["python3", "music11.py", "plan_video.json", "work/music.wav", str(DUR)])
 run(["python3", "../../tools/make_sfx.py", "sfx.json", "work/sfx.wav"])
 run(["python3", "../../tools/mix.py", "work/voice_clean.wav", "work/music.wav", "work/sfx.wav", "assets/mix.wav", str(DUR)])

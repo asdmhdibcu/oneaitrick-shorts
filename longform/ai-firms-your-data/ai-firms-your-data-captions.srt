@@ -98,309 +98,310 @@ it published what it found.
 And honestly?
 
 24
-00:00:51,900 --> 00:00:53,590
+00:00:51,900 --> 00:00:53,600
 It's a bit of a mixed bag.
 
 25
-00:00:53,590 --> 00:00:54,470
+00:00:53,600 --> 00:00:54,630
 First thing.
 
 26
-00:00:54,470 --> 00:00:58,320
-Some companies justified using your
-data with reasons as vague as...
+00:00:54,730 --> 00:00:58,790
+Some companies couldn't clearly
+say why they needed your data.
 
 27
-00:00:58,320 --> 00:01:00,000
-"benefiting humanity".
+00:00:59,260 --> 00:01:03,410
+And the ICO's view is basically:
+a reason as vague as...
 
 28
-00:01:00,390 --> 00:01:03,130
-The ICO's answer was, basically: yeah,
+00:01:03,410 --> 00:01:05,310
+"benefiting humanity"?
 
 29
-00:01:03,130 --> 00:01:04,530
-that's not a reason.
+00:01:05,310 --> 00:01:07,370
+Yeah, that's not a reason.
 
 30
-00:01:04,530 --> 00:01:05,430
+00:01:07,370 --> 00:01:08,270
 Second.
 
 31
-00:01:05,430 --> 00:01:06,660
+00:01:08,270 --> 00:01:09,500
 The small print.
 
 32
-00:01:06,660 --> 00:01:08,840
+00:01:09,500 --> 00:01:11,680
 The ICO called it a maze.
 
 33
-00:01:08,840 --> 00:01:11,160
+00:01:11,680 --> 00:01:14,000
 A notice here, a help page there.
 
 34
-00:01:11,160 --> 00:01:14,930
+00:01:14,000 --> 00:01:17,770
 And it says openness across the
 industry has actually got worse.
 
 35
-00:01:14,930 --> 00:01:17,120
+00:01:17,770 --> 00:01:19,960
 Third, and this is the big one.
 
 36
-00:01:17,120 --> 00:01:20,270
+00:01:19,960 --> 00:01:23,110
 Some of those postcards say
 really personal things.
 
 37
-00:01:20,270 --> 00:01:21,120
+00:01:23,110 --> 00:01:23,960
 Your health.
 
 38
-00:01:21,120 --> 00:01:21,970
+00:01:23,960 --> 00:01:24,810
 Your religion.
 
 39
-00:01:21,970 --> 00:01:23,070
+00:01:24,810 --> 00:01:25,910
 How you vote.
 
 40
-00:01:23,070 --> 00:01:26,610
+00:01:25,910 --> 00:01:29,450
 And the ICO's view is: unless a
 company can prove it hasn't got
 
 41
-00:01:26,610 --> 00:01:27,840
+00:01:29,450 --> 00:01:30,680
 that kind of data...
 
 42
-00:01:27,840 --> 00:01:29,150
+00:01:30,680 --> 00:01:31,990
 assume it has.
 
 43
-00:01:29,150 --> 00:01:30,990
+00:01:31,990 --> 00:01:33,830
 So what did they change?
 
 44
-00:01:31,010 --> 00:01:34,320
+00:01:33,850 --> 00:01:37,160
 Amazon, Anthropic,
 Apple, Cohere, DeepSeek,
 
 45
-00:01:34,320 --> 00:01:38,870
+00:01:37,160 --> 00:01:41,710
 Google, Meta, Microsoft, OpenAI
 and Stability AI have all made
 
 46
-00:01:38,870 --> 00:01:40,860
+00:01:41,710 --> 00:01:43,700
 changes, or promised to.
 
 47
-00:01:40,860 --> 00:01:43,170
+00:01:43,700 --> 00:01:46,010
 Clearer notices about what they train on.
 
 48
-00:01:43,170 --> 00:01:45,270
+00:01:46,010 --> 00:01:48,110
 Easier ways to use your data rights.
 
 49
-00:01:45,270 --> 00:01:47,540
+00:01:48,110 --> 00:01:50,380
 Tougher checks on their own safeguards.
 
 50
-00:01:47,540 --> 00:01:49,790
+00:01:50,380 --> 00:01:52,630
 And some of it is genuinely useful.
 
 51
-00:01:49,790 --> 00:01:53,140
+00:01:52,630 --> 00:01:55,980
 OpenAI now explains how to ask
 for your personal details to be
 
 52
-00:01:53,140 --> 00:01:55,600
+00:01:55,980 --> 00:01:58,440
 taken out of ChatGPT's answers.
 
 53
-00:01:55,600 --> 00:01:58,820
+00:01:58,440 --> 00:02:01,660
 Meta has a form you can use even
 if you've never touched Meta's
 
 54
-00:01:58,820 --> 00:01:59,610
+00:02:01,660 --> 00:02:02,450
 AI.
 
 55
-00:01:59,610 --> 00:02:03,380
+00:02:02,450 --> 00:02:06,220
 And Apple lets anyone flag a web
 page to keep it out of training.
 
 56
-00:02:03,380 --> 00:02:06,300
+00:02:06,220 --> 00:02:09,140
 But here's the bit nobody's
 really talking about.
 
 57
-00:02:06,330 --> 00:02:08,850
+00:02:09,170 --> 00:02:11,690
 Once a postcard's been
 read and learned from...
 
 58
-00:02:08,850 --> 00:02:10,800
+00:02:11,690 --> 00:02:13,640
 you can't really un-read it.
 
 59
-00:02:10,800 --> 00:02:14,220
+00:02:13,640 --> 00:02:17,060
 The ICO says getting your data
 back out of a trained model could
 
 60
-00:02:14,220 --> 00:02:16,250
+00:02:17,060 --> 00:02:19,090
 mean rebuilding the whole thing.
 
 61
-00:02:16,250 --> 00:02:19,380
+00:02:19,090 --> 00:02:22,220
 And the regulator itself admits
 the way these models are trained
 
 62
-00:02:19,380 --> 00:02:22,460
+00:02:22,220 --> 00:02:25,300
 makes UK data law
 genuinely hard to follow.
 
 63
-00:02:22,460 --> 00:02:24,610
+00:02:25,300 --> 00:02:27,450
 It's taking that to the government.
 
 64
-00:02:24,610 --> 00:02:26,940
+00:02:27,450 --> 00:02:29,790
 Oh, and one name's missing.
 
 65
-00:02:26,960 --> 00:02:29,960
+00:02:29,800 --> 00:02:32,800
 xAI, the company behind Grok.
 
 66
-00:02:29,960 --> 00:02:31,420
+00:02:32,800 --> 00:02:34,260
 It was on the list...
 
 67
-00:02:31,420 --> 00:02:35,240
+00:02:34,260 --> 00:02:38,080
 until the ICO opened a formal
 investigation into it.
 
 68
-00:02:35,280 --> 00:02:36,580
+00:02:38,120 --> 00:02:39,420
 And what's next?
 
 69
-00:02:36,600 --> 00:02:38,110
+00:02:39,440 --> 00:02:40,950
 AI agents.
 
 70
-00:02:38,110 --> 00:02:39,770
+00:02:40,950 --> 00:02:42,610
 The ones that don't just chat.
 
 71
-00:02:39,770 --> 00:02:41,900
+00:02:42,610 --> 00:02:44,740
 They actually do things for you.
 
 72
-00:02:41,970 --> 00:02:45,390
+00:02:44,810 --> 00:02:48,230
 In tests this summer, some of them
 reportedly slipped past their
 
 73
-00:02:45,390 --> 00:02:48,980
+00:02:48,230 --> 00:02:51,820
 safety limits and reached systems
 they weren't meant to touch.
 
 74
-00:02:48,980 --> 00:02:50,550
+00:02:51,820 --> 00:02:53,390
 The ICO's response?
 
 75
-00:02:50,550 --> 00:02:54,930
+00:02:53,390 --> 00:02:57,770
 Quote: "The fact AI agents act
 with autonomy is not an excuse
 
 76
-00:02:54,930 --> 00:02:56,440
+00:02:57,770 --> 00:02:59,280
 for poor compliance."
 
 77
-00:02:56,440 --> 00:02:57,170
+00:02:59,280 --> 00:03:00,010
 So.
 
 78
-00:02:57,170 --> 00:02:58,950
+00:03:00,010 --> 00:03:01,790
 What can you actually do?
 
 79
-00:02:58,950 --> 00:03:00,110
+00:03:01,790 --> 00:03:02,950
 3 things.
 
 80
-00:03:00,110 --> 00:03:00,830
+00:03:02,950 --> 00:03:03,670
 One.
 
 81
-00:03:00,830 --> 00:03:02,890
+00:03:03,670 --> 00:03:05,730
 Switch off training on your chats.
 
 82
-00:03:02,890 --> 00:03:06,520
+00:03:05,730 --> 00:03:09,360
 In ChatGPT, that's
 Settings, Data controls,
 
 83
-00:03:06,520 --> 00:03:08,490
+00:03:09,360 --> 00:03:11,330
 "Improve the model for everyone".
 
 84
-00:03:08,490 --> 00:03:13,350
+00:03:11,330 --> 00:03:16,190
 In Claude, it's Settings, Privacy,
 "Help improve our AI models".
 
 85
-00:03:13,350 --> 00:03:16,260
+00:03:16,190 --> 00:03:19,100
 And in Gemini, turn off Keep Activity.
 
 86
-00:03:16,260 --> 00:03:16,940
+00:03:19,100 --> 00:03:19,780
 Two.
 
 87
-00:03:16,940 --> 00:03:19,200
+00:03:19,780 --> 00:03:22,040
 If a chatbot says something
 about you that's wrong,
 
 88
-00:03:19,200 --> 00:03:22,340
+00:03:22,040 --> 00:03:25,180
 or private, ask the company to remove it.
 
 89
-00:03:22,340 --> 00:03:23,850
+00:03:25,180 --> 00:03:26,690
 Those forms exist now.
 
 90
-00:03:23,850 --> 00:03:24,840
+00:03:26,690 --> 00:03:27,680
 Use them.
 
 91
-00:03:24,840 --> 00:03:25,860
+00:03:27,680 --> 00:03:28,700
 And 3...
 
 92
-00:03:25,890 --> 00:03:29,260
+00:03:28,730 --> 00:03:32,100
 Treat anything you post
 publicly like a postcard.
 
 93
-00:03:29,260 --> 00:03:32,270
+00:03:32,100 --> 00:03:35,110
 Because somewhere, something
 might be reading it.
 
 94
-00:03:32,270 --> 00:03:35,340
+00:03:35,110 --> 00:03:38,180
 Subscribe for more AI,
 explained like this.

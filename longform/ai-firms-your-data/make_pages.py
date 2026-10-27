@@ -77,6 +77,7 @@ PAGES = {
     "r_retrain":  ("r16", ["it can be difficult to erase their information from the model itself without retraining the entire model."], 2, 1, 0),
     "r_social":   ("r19", ["social media posts often contain information about a person’s political opinions, religious beliefs or health."], 2, 0, 0),
     "r_sensitive": ("r19", ["are likely to be processing special category data (whether intentionally or not", "unless they can clearly demonstrate"], 1, 1, 0),
+    "r_interests": ("r25", ["firms didn’t always clearly identify specific interests"], 1, 1, 0),
     "r_suspend":  ("r25", ["initiated a formal investigation into X Internet Unlimited Company (XIUC) and X.AI LLC (X.AI).", "we decided to suspend engagement with X.AI"], 1, 1, 0),
     "r_changed":  ("r27", ["Apple, Cohere and OpenAI have made changes", "Amazon, Anthropic, DeepSeek, Google, Meta, Microsoft and Stability AI have each made changes or committed to implementing"], 1, 0, 0),
     "r_measures": ("r27", ["Non-technical summaries of the types and sources of information used to train",

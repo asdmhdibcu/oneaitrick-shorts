@@ -22,6 +22,8 @@ python3 make_audio.py                  # music11.py (plan_short.json) + sfx.json
 npx hyperframes render -f 30 -q high -w 2 -o renders/short11-raw.mp4                  # Bash run_in_background
 ffmpeg -i renders/short11-raw.mp4 -i assets/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -ar 48000 \
   -shortest -movflags +faststart renders/short11-ai-firms-your-data.mp4
+ffmpeg -i renders/short11-ai-firms-your-data.mp4 -c:v libx264 -preset slow -crf 18 -maxrate 12M -bufsize 24M -profile:v high \
+  -level:v 4.1 -pix_fmt yuv420p -g 60 -c:a copy -movflags +faststart renders/short11-ai-firms-your-data-phone.mp4
 python3 ../../longform/ai-firms-your-data/shot.py cover11.html short11-cover.png 1080 1920
 ```
 

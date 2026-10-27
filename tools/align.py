@@ -15,10 +15,10 @@ raw = re.sub(r"<[^>]+>", " ", raw)
 SUBS = {"centres": "centers", "thirty-five": "thirty five", "brontë": "bronte", "maths": "math",
         "1845": "eighteen forty-five", "1846": "eighteen forty-six", "1849": "eighteen forty-nine",
         "2031": "twenty thirty-one", "gpt-6": "g p t six", "1800s": "eighteen hundreds", "2000": "two thousand",
-        "gpt-rosalind": "g p t rosalind", "d-c-t-n-1": "d c t n one"}  # substring fixes (years are spoken words; digits would be dropped)
+        "gpt-rosalind": "g p t rosalind", "d-c-t-n-1": "d c t n one", "2023": "twenty twenty-three", "2024": "twenty twenty-four"}  # substring fixes (years are spoken words; digits would be dropped)
 # Whole-word fixes, applied after cleaning: spoken forms the dictionary lacks or says wrong
 # ("ai" is in the dictionary as one syllable, "eye"; the voice says "A-I").
-WORDMAP = {"ai": "a i", "ai's": "a eyes", "ais": "a eyes", "openai": "open a i", "exploitgym": "exploit gym", "openai's": "open a eyes", "refusers": "refuse errs", "fiddly": "fiddle lee", "anthropic": "an throw pick", "crispr": "crisper", "crispr's": "crisper s", "navier": "nav yay", "connectwise": "connect wise", "artex": "art ex", "chatgpt": "chat g p t", "chatgpt's": "chat g p tees", "chatbot": "chat bot", "eu": "e u", "uk": "u k", "deepseek": "deep seek", "grok": "grog", "ico": "i c o", "ico's": "i c owes", "meta's": "met as", "xai": "x a i", "postcard's": "postcards"}
+WORDMAP = {"ai": "a i", "ai's": "a eyes", "ais": "a eyes", "openai": "open a i", "exploitgym": "exploit gym", "openai's": "open a eyes", "refusers": "refuse errs", "fiddly": "fiddle lee", "anthropic": "an throw pick", "crispr": "crisper", "crispr's": "crisper s", "navier": "nav yay", "connectwise": "connect wise", "artex": "art ex", "chatgpt": "chat g p t", "chatgpt's": "chat g p tees", "chatbot": "chat bot", "eu": "e u", "uk": "u k", "deepseek": "deep seek", "grok": "grog", "ico": "i c o", "ico's": "i c owes", "meta's": "met as", "xai": "x a i", "postcard's": "postcards", "cvs": "c v s", "arup": "are up", "deepfakes": "deep fakes", "chatbots": "chat bots", "samsung's": "samsung s", "overshare": "over share", "amazon's": "amazons", "starling": "starling"}
 display_words = raw.split()
 align_words = []
 for w in display_words:

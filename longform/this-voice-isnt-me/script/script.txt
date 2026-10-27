@@ -1,0 +1,54 @@
+[casual] The voice you're hearing right now... isn't me.
+[chuckles] Well. It IS me. It's a clone of my voice, made with AI.
+[serious] And if I can do that with my own voice... someone else can do it with yours.
+[thoughtful] That's one of five dangers hiding inside the AI you use every day. The weather on your phone. The chatbot that settles an argument. The app that fixes your photos.
+[conversational] Here's how I think about it. AI is like a brilliant stranger who's moved into your phone. Super helpful. Never sleeps. Knows a bit about everything.
+[curious] But would you tell a stranger your secrets? Let him decide who gets a job? Believe every photo he shows you? Trust him when he sounds exactly like your mum?
+[warm] Let's go through all five. And stay to the end, because there's one free trick that protects your whole family.
+[serious] Danger number one. Your secrets.
+[conversational] People tell chatbots everything. Health worries. Money problems. Work documents. The lot.
+[surprised] In 2023, an engineer at Samsung pasted secret source code into ChatGPT, asking it to help fix a problem. Another shared a whole meeting so it could write the minutes.
+[serious] Samsung's answer? It banned staff from using tools like ChatGPT at work. For a while, anyway.
+[thoughtful] And what happens to all that depends on the company. Some use your chats to train their next model. Some have staff who review conversations for safety. And none of it is protected the way a chat with your doctor is.
+[surprised] Plus... things leak. In March 2023, a bug in ChatGPT let some users see the titles of OTHER people's chats.
+[serious] And for a small number of paying subscribers, it may have shown their name, their email, and the last four digits of their card... to someone else.
+[conversational] OpenAI took ChatGPT offline, fixed it, and said full card numbers were never exposed. But it shows you just how sensitive this stuff is.
+[warm] So here's the rule. Don't type anything into a chatbot that you wouldn't write on a postcard. And switch off training in your settings. In ChatGPT, that's Data controls, "Improve the model for everyone".
+[serious] Danger number two. Fairness.
+[conversational] We like to think computers are neutral. But AI learns from us. From our history. And our history isn't always fair.
+[thoughtful] Here's a famous one. Amazon once built an experimental AI to sort through job applications. It learned from ten years of CVs the company had received.
+[sighs] And most of those CVs came from men. Tech has been a man's world for a long time.
+[serious] So the AI taught itself that men were the better candidates. It marked down CVs with the word "women's" in them. Like... "captain of the women's chess club". It even downgraded graduates of two all-women's colleges.
+[conversational] To be fair, Amazon's recruiters never let it make the final call. And the company scrapped it, because it couldn't guarantee the AI wouldn't find NEW ways to discriminate.
+[thoughtful] But here's the scary part. When a person is unfair, you can see it. When a machine is unfair... it looks like maths. And that makes it so much harder to spot, and to challenge. And AI now helps make decisions about jobs, loans, even healthcare.
+[warm] Here in the UK, if a really important decision about you is made only by a machine, the law says you can ask for a human to look at it. So ask.
+[serious] Danger number three. Your eyes.
+[conversational] Seeing used to be believing. Not anymore.
+[surprised] In May 2023, a photo of an explosion near the Pentagon went viral. Black smoke. Shared by accounts that looked official.
+[serious] It was fake. Made with AI. But US stocks still dipped for a few minutes... before officials confirmed there'd been no explosion at all.
+[thoughtful] The same year, after President Biden announced he'd run again, the Republican National Committee answered with an ad built ENTIRELY from AI images. A made-up, dark future if he won.
+[serious] And the problem isn't one fake photo. It's what happens when anyone can make "proof" of anything. If we can't agree on what's real... how do we agree on anything?
+[warm] So when something online makes you angry or scared in two seconds flat... that's your cue. Slow down. Who posted it first? Is any real news outlet reporting it? Check it somewhere you trust.
+[serious] Danger number four. And this is where it gets personal.
+[thoughtful] Remember my voice at the start?
+[conversational] Starling Bank says scammers can clone a voice from as little as three seconds of audio. A birthday video. A voice note. A clip you posted online.
+[serious] Then the phone rings. And it's your daughter. Or your dad. Crying. They've had an accident. They've been arrested. They need money. NOW.
+[thoughtful] America's Federal Trade Commission has warned about exactly this. It calls it the family emergency scam. And here in the UK, in a 2024 survey for Starling, more than a quarter of adults said they'd been targeted by a voice-cloning scam in the past year.
+[surprised] And it's not just voices. In 2024, a finance worker in Hong Kong joined a video call with his company's chief financial officer and a few colleagues. He recognised them. He did what they asked. And he sent about twenty-five million dollars.
+[serious] Hong Kong police later said every single person he saw on that call... was fake. All deepfakes. The company turned out to be Arup. A British engineering firm.
+[conversational] I used to work in banking. And trust me, the scam call isn't new. What's new... is that it sounds exactly like someone you love.
+[serious] Danger number five. The quietest one. Your own judgment.
+[thoughtful] The more we use AI, the more we trust it. There's even a name for it. Automation bias. We trust the machine over our own gut.
+[conversational] And AI always sounds confident. Polished. Even when it's completely wrong.
+[surprised] Last year, England's High Court dealt with two cases where fake legal citations ended up in front of judges. In one, the research had been done partly with AI tools. Forty-five cases cited. Eighteen of them... didn't exist.
+[serious] The judges warned of "serious implications for the administration of justice". These were trained professionals. And the confident answer still won.
+[thoughtful] And that's what makes this one the worst. If we stop checking, we overshare. We accept unfair answers. We believe the fake photo. And we pick up the phone... and trust the voice.
+[warm] So. What do you actually do? You don't have to throw your phone in the sea. Four habits.
+[conversational] One. The postcard rule. Nothing goes into a chatbot that you wouldn't put on a postcard. And switch off training wherever you can.
+Two. Question it. If an answer matters, ask the AI for its sources... then go and check them yourself. Because AI can make up sources too.
+[warm] Three. And this is the trick I promised. Agree a safe phrase with your family. Tonight. A word or a phrase that only you know. Say it face to face. Never text it. Never post it.
+[serious] If "Mum" ever calls in a panic asking for money... ask for the phrase. No phrase? Hang up. And call her back on the number you already have.
+[thoughtful] And four. Use AI as a co-pilot, not an autopilot. Let it draft, brainstorm, explain. But the final call is yours. If you can't explain its answer in your own words, you haven't learned it. You've just copied it.
+[warm] AI isn't the villain here. The stranger in your phone can be brilliant company. Just don't hand him the keys.
+[conversational] There's one word in this video I never said out loud. Spotted it? Comment it.
+[warm] Subscribe for more AI, explained like this.

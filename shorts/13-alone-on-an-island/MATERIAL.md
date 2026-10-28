@@ -79,3 +79,37 @@ Keep the bottom third clear of busy detail (captions sit at y 1240–1460), and 
 Paper: Cloos, Norelli, Durbin, Andreas, Rus & Isola, "Is this machine playing?" (MIT CSAIL, arXiv 2610.07130).
 Island footage recreated in Clawblox (MIT licence). Stock: the Pexels / Pixabay creators, by name. Generated
 illustrations: Google Veo.
+
+## Footage in hand (28 Oct, `work/footage/`, git-ignored)
+
+All stock is Mixkit, **Mixkit Stock Video Free License** (checked on each page; "Restricted" clips skipped), 1080p.
+Pexels and Pixabay answer automated browsers with a bot check, so those come from the creator if wanted.
+
+| File | Mixkit id | Shot | Note |
+|---|---|---|---|
+| `01_rocky_island_mk44391.mp4` | 44391 | Wild rocky island from the air | best opener (no buildings) |
+| `01_island_aerial_mk2890/2888/5368.mp4` | 2890, 2888, 5368 | Tropical islands | 2888/2890 show resort huts and a pier, 5368 a boat: back-ups only |
+| `01b_sunset_sea_mk4119.mp4` | 4119 | Sun setting over the sea | the 30 hours passing |
+| `05_sea_rock_mk51506.mp4` | 51506 | Waves around a lone rock, top-down, vertical | |
+| `05_cliffs_sea_mk1952.mp4`, `05_cliff_waves_mk51454.mp4` | 1952, 51454 | Rocky outcrops in surf | |
+| `06b_climb_mk41045.mp4`, `06b_summit_mk43311.mp4` | 41045, 43311 | Climber on rock; sitting on a summit | 43311 has a summit cross |
+| `08_bubbles_mk1273.mp4`, `08_drops_water_mk51955.mp4` | 1273, 51955 | Underwater light (vertical); a drop into water | for the ring sinking |
+| `09_waves_shore_mk1925.mp4`, `09_waves_beach_mk44482.mp4` | 1925, 44482 | Waves on sand at golden hour | base for the stone heart |
+| `11_programmer_mk41639.mp4`, `11_code_screen_mk41654.mp4` | 41639, 41654 | Programmer from behind; code on screens | "real work" |
+| `14_lego_hands_mk42175.mp4`, `14_lego_pieces_mk42165.mp4` | 42175, 42165 | A child's hands building blocks | crop to hands (face edge in frame one) |
+| `14b_dog_play_mk50688.mp4` | 50688 | Dog playing with a ball | |
+| `14c_skate_park_mk34382.mp4`, `14c_skate_vert_mk1366.mp4` | 34382, 1366 | Skateboarders | trying again |
+| `15_sand_mk1564.mp4` | 1564 | White sand beach, palms | for JOY in the sand |
+
+Flow (creator, 4 of 10, all 1920×1080 landscape, 24 fps, 10 s): `02_eko_beach_flow` (dark blue lobster on wet
+sand), `05b_eko_climb_flow` (red lobster climbs a pillar and falls on its back: the "first try? it failed" beat),
+`10_thirteen_flow` (a line of lobsters on the shore: count them before using with "thirteen"),
+`14d_eko_spire_flow` (silver robot lobster on a spire at sunset). The three Ekos look different (blue, red,
+silver); cut so they never sit side by side, or ask for a re-take in one look.
+
+The real island runs locally: Clawblox built from source, `worlds/mesa-island` served on :8280 with three.js 0.160.0
+from npm, the HUD icons stubbed, and the spectator token from the server log. The paper's own recorded runs
+(`data.clawblox.com/paper/replays/v1/...`) need that host allowed.
+
+Paper: `work/pdf/paper.pdf` (arXiv 2610.07130, 6 MB). Project page: machineplaying.org (interactive replays, a
+YouTube video, data on Hugging Face `nacloos/machine-playing-paper`).

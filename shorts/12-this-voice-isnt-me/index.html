@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="captions.js"></script>
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      .shot { position: absolute; inset: 0; overflow: hidden; }
+      .fx, .cam { position: absolute; inset: 0; transform-origin: 50% 45%; }
+      .vid { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .bd { position: absolute; inset: 0; background-size: cover; background-position: center; }
+      .slate { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 45%, #1b2030, #07080d); }
+      .slate .st { position: absolute; left: 0; width: 1080px; top: 700px; text-align: center; font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.12em; color: #ff8a7a; }
+      .slate .sd { position: absolute; left: 60px; width: 960px; top: 760px; text-align: center; font-weight: 700; font-size: 44px; color: #c9ccd6; }
+      .card { position: absolute; overflow: hidden; border-radius: 18px; background: #fff;
+        box-shadow: 0 40px 90px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08); }
+      .card img { position: absolute; left: 0; top: 0; }
+      .hl { position: absolute; mix-blend-mode: multiply; border-radius: 5px; transform-origin: 0 50%; transform: scaleX(0); background: rgba(200,255,77,0.78); }
+      .phone { position: absolute; overflow: hidden; border-radius: 46px; background: #000;
+        box-shadow: 0 50px 110px rgba(0,0,0,0.7), 0 0 0 12px #111318, 0 0 0 14px rgba(255,255,255,0.12); }
+      .phone video { position: absolute; left: 0; top: 0; }
+      .gfx { position: absolute; inset: 0; }
+      .vig { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 75% at 50% 45%, rgba(4,5,10,0) 58%, rgba(4,5,10,0.5) 100%); }
+      .botshade { position: absolute; left: 0; top: 1100px; width: 1080px; height: 820px;
+        background: linear-gradient(180deg, rgba(4,5,10,0) 0%, rgba(4,5,10,0.66) 30%, rgba(4,5,10,0.86) 100%); }
+      .topshade { position: absolute; left: 0; top: 0; width: 1080px; height: 330px; background: linear-gradient(180deg, rgba(4,5,10,0.55) 0%, rgba(4,5,10,0) 100%); }
+      .grain { position: absolute; inset: 0; background-image: url("assets/grain.png"); opacity: 0.07; mix-blend-mode: overlay; }
+      .flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      .black { position: absolute; inset: 0; background: #000; opacity: 0; }
+      .tag2 { position: absolute; left: 60px; top: 150px; display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px 12px 18px;
+        border: 2px solid rgba(255,255,255,0.16); border-radius: 999px; background: rgba(8,9,14,0.62); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 26px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag2 .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 14px var(--lime); }
+      .brand { position: absolute; right: 60px; top: 168px; font-family: "Mono", monospace; font-weight: 700; font-size: 22px; letter-spacing: 0.08em; color: rgba(245,245,242,0.78); }
+      .src { position: absolute; left: 60px; top: 232px; display: inline-flex; align-items: center; gap: 10px; font-family: "Mono", monospace; font-weight: 700;
+        font-size: 19px; letter-spacing: 0.1em; padding: 9px 15px; border-radius: 10px; background: rgba(6,8,12,0.72); color: #d4d6de;
+        border: 1.5px solid rgba(255,255,255,0.16); opacity: 0; white-space: nowrap; }
+      .src .sd { width: 10px; height: 10px; border-radius: 50%; background: #ff5b5b; box-shadow: 0 0 10px #ff5b5b; }
+      .src.gen .sd { background: #b9a2ff; box-shadow: 0 0 10px #b9a2ff; }
+      .src.q .sd { background: #7cc4ff; box-shadow: 0 0 10px #7cc4ff; }
+      .src.st .sd { background: #9a9ca6; box-shadow: none; }
+      .chap { position: absolute; left: 56px; top: 98px; display: inline-flex; align-items: baseline; gap: 16px; opacity: 0; white-space: nowrap;
+        padding: 12px 22px 14px; border-radius: 14px; background: rgba(8,9,14,0.8); border: 2px solid rgba(200,255,77,0.55); }
+      .chap .n { font-family: "Mono", monospace; font-weight: 700; font-size: 24px; color: var(--lime); letter-spacing: 0.06em; }
+      .chap .t { font-weight: 850; font-size: 34px; letter-spacing: -0.015em; color: #fff; }
+
+      /* captions: sentence case, karaoke */
+      #caps { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 40px; width: 1000px; top: 1250px; text-align: center; opacity: 0; font-weight: 900; font-size: 84px; text-transform: uppercase;
+        letter-spacing: -0.02em; line-height: 1.0; color: #fff; text-shadow: 0 6px 26px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.55); }
+      .cap .cb { display: inline-block; }
+      .cw { display: inline-block; margin: 0 0.12em; }
+      .cw.dim { opacity: 0.5; }
+
+      /* chips, logos, cards of my own */
+      .chip { position: absolute; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.08em; padding: 14px 22px;
+        border-radius: 14px; background: rgba(6,8,12,0.86); border: 2px solid currentColor; opacity: 0; white-space: nowrap; color: var(--lime); }
+      .chip .sw { display: inline-block; width: 13px; height: 13px; border-radius: 50%; background: currentColor; margin-right: 14px; vertical-align: 2px; box-shadow: 0 0 12px currentColor; }
+      .big { position: absolute; font-weight: 900; letter-spacing: -0.04em; line-height: 0.95; color: #fff; opacity: 0; white-space: nowrap;
+        text-shadow: 0 10px 40px rgba(0,0,0,0.7); text-transform: uppercase; }
+      .logo { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 22px; background: #fff; opacity: 0;
+        box-shadow: 0 24px 60px rgba(0,0,0,0.55); }
+      .logo img { max-width: 82%; max-height: 72%; object-fit: contain; }
+      .logo.need { background: rgba(10,12,18,0.85); border: 3px dashed #ff8a7a; color: #ff8a7a; font-family: "Mono", monospace; font-weight: 700;
+        font-size: 18px; letter-spacing: 0.08em; text-align: center; line-height: 1.3; }
+      .logo .ln { position: absolute; left: 0; right: 0; bottom: -40px; text-align: center; font-family: "Mono", monospace; font-weight: 700; font-size: 18px;
+        letter-spacing: 0.1em; color: #e8e9ee; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+      .logo .ok { position: absolute; right: -16px; top: -16px; width: 48px; height: 48px; border-radius: 50%; background: var(--lime); color: #0b0c10;
+        font-weight: 900; font-size: 30px; display: flex; align-items: center; justify-content: center; opacity: 0; box-shadow: 0 0 22px rgba(200,255,77,0.8); }
+      .logo.slot { background: rgba(255,255,255,0.06); border: 3px dashed rgba(255,255,255,0.6); box-shadow: none; }
+      .tag { position: absolute; padding: 8px 14px; border-radius: 10px; font-family: "Mono", monospace; font-weight: 700; font-size: 18px; letter-spacing: 0.1em;
+        background: #e0322b; color: #fff; white-space: nowrap; opacity: 0; }
+      .panel { position: absolute; border-radius: 26px; background: rgba(8,9,14,0.86); border: 2px solid rgba(255,255,255,0.12);
+        box-shadow: 0 40px 90px rgba(0,0,0,0.6); opacity: 0; }
+      .quote { position: absolute; padding: 44px 54px 40px; border-radius: 26px; background: rgba(250,247,240,0.98); box-shadow: 0 40px 90px rgba(0,0,0,0.6); opacity: 0; }
+      .quote .qk { font-family: "Mono", monospace; font-weight: 700; font-size: 21px; letter-spacing: 0.14em; color: #b4532a; margin-bottom: 20px; }
+      .quote .qt { position: relative; font-family: Georgia, serif; font-size: 58px; line-height: 1.24; color: #1b1c22; }
+      .quote .qh { background-image: linear-gradient(rgba(200,255,77,0.9), rgba(200,255,77,0.9)); background-repeat: no-repeat; background-position: 0 88%; background-size: 0% 80%; }
+      .quote .qa { margin-top: 26px; font-family: "Mono", monospace; font-weight: 700; font-size: 20px; letter-spacing: 0.1em; color: #6b6e78; }
+      .strike { position: absolute; height: 10px; border-radius: 5px; background: #e0322b; transform-origin: 0 50%; transform: scaleX(0); box-shadow: 0 0 18px rgba(224,50,43,0.6); }
+      .stamp { position: absolute; font-weight: 900; font-size: 64px; letter-spacing: 0.01em; padding: 6px 26px; border: 8px solid currentColor; border-radius: 16px;
+        color: #e0322b; opacity: 0; white-space: nowrap; background: rgba(255,255,255,0.04); }
+      .step { position: absolute; display: flex; align-items: center; gap: 16px; padding: 16px 24px; border-radius: 16px; background: rgba(8,9,14,0.88);
+        border: 2px solid rgba(255,255,255,0.16); font-weight: 800; font-size: 36px; color: #fff; opacity: 0; white-space: nowrap; }
+      .step .k { font-family: "Mono", monospace; font-weight: 700; font-size: 22px; color: #9a9ca6; letter-spacing: 0.08em; }
+      .step.on { border-color: var(--lime); box-shadow: 0 0 30px rgba(200,255,77,0.25); }
+      .off { position: absolute; padding: 12px 26px; border-radius: 999px; background: var(--lime); color: #0b0c10; font-weight: 900; font-size: 34px;
+        letter-spacing: 0.02em; opacity: 0; white-space: nowrap; box-shadow: 0 0 40px rgba(200,255,77,0.5); }
+      .ring { position: absolute; border: 6px solid var(--lime); border-radius: 999px; opacity: 0; box-shadow: 0 0 26px rgba(200,255,77,0.8); }
+      .bubble { position: absolute; border-radius: 26px; padding: 26px 32px; font-size: 34px; font-weight: 600; line-height: 1.35; opacity: 0; }
+      .bubble.me { background: #2a6df4; color: #fff; border-bottom-right-radius: 8px; }
+      .bubble.bot { background: #f3f1ea; color: #1b1c22; border-bottom-left-radius: 8px; }
+      .bar { display: block; height: 22px; border-radius: 11px; background: rgba(27,28,34,0.18); margin: 14px 0; position: relative; }
+      .bar .bt { position: absolute; right: -10px; top: -14px; transform: translateX(100%); }
+      .score { position: absolute; width: 640px; padding: 40px 44px; border-radius: 26px; background: rgba(8,9,14,0.88); opacity: 0;
+        border: 3px solid currentColor; box-shadow: 0 40px 90px rgba(0,0,0,0.6); }
+      .score .si { font-weight: 900; font-size: 96px; line-height: 1; }
+      .score .sl { margin-top: 16px; font-weight: 850; font-size: 46px; color: #fff; letter-spacing: -0.02em; line-height: 1.1; }
+      .three { position: absolute; display: flex; gap: 26px; opacity: 0; }
+      .three .n { width: 200px; height: 200px; border-radius: 28px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 120px;
+        color: #0b0c10; background: var(--lime); box-shadow: 0 0 40px rgba(200,255,77,0.45); }
+      #title { position: absolute; left: 60px; top: 300px; width: 960px; }
+      #title .k { font-family: "Mono", monospace; font-weight: 700; font-size: 26px; letter-spacing: 0.16em; color: var(--lime); margin-bottom: 18px; }
+      #title .t { font-weight: 900; font-size: 112px; letter-spacing: -0.045em; line-height: 0.96; color: #fff; text-transform: uppercase; text-shadow: 0 10px 40px rgba(0,0,0,0.7); }
+      #title .t em { font-style: normal; color: var(--lime); }
+      #title .s { margin-top: 22px; font-weight: 700; font-size: 38px; color: #e8e9ee; text-shadow: 0 4px 20px rgba(0,0,0,0.7); }
+      /* end card */
+      #end { position: absolute; inset: 0; opacity: 0; }
+      #end .dim { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(5,6,10,0.72), rgba(5,6,10,0.95)); }
+      .mark { position: absolute; left: 430px; top: 470px; width: 220px; height: 220px; border-radius: 52px; background: var(--lime);
+        display: flex; align-items: flex-end; justify-content: center; gap: 8px; padding-bottom: 50px; box-shadow: 0 0 80px rgba(200,255,77,0.45); }
+      .mark .one { font-weight: 900; font-size: 154px; line-height: 0.73; color: #0b0c10; letter-spacing: -0.06em; }
+      .mark .cur { width: 42px; height: 16px; border-radius: 3px; background: #0b0c10; }
+      .etitle { position: absolute; left: 0; width: 1080px; text-align: center; font-weight: 900; letter-spacing: -0.05em; line-height: 0.95; white-space: nowrap; }
+      .cta { position: absolute; display: inline-flex; align-items: center; gap: 16px; padding: 22px 36px; border-radius: 999px; background: var(--lime);
+        color: #0b0c10; font-weight: 850; font-size: 42px; letter-spacing: -0.01em; white-space: nowrap; }
+      .fontwarm { position: absolute; left: -9999px; top: 0; }
+      /* #12: the call screen, the safe-phrase card */
+      .call { position: absolute; left: 280px; top: 330px; width: 520px; height: 700px; border-radius: 56px; opacity: 0;
+        background: linear-gradient(180deg, #1d2333 0%, #0b0d14 100%); box-shadow: 0 50px 110px rgba(0,0,0,0.7), 0 0 0 12px #111318, 0 0 0 14px rgba(255,255,255,0.12); }
+      .call .cl { position: absolute; left: 0; right: 0; top: 70px; text-align: center; font-family: "Mono", monospace; font-weight: 700; font-size: 22px; letter-spacing: 0.14em; color: #9aa0b4; }
+      .call .cn { position: absolute; left: 0; right: 0; top: 120px; text-align: center; font-weight: 850; font-size: 72px; letter-spacing: -0.02em; color: #fff; }
+      .call .cs { position: absolute; left: 0; right: 0; top: 214px; text-align: center; font-weight: 600; font-size: 28px; color: #9aa0b4; }
+      .call .av { position: absolute; left: 190px; top: 300px; width: 140px; height: 140px; border-radius: 50%; background: #3a4258; display: flex; align-items: center;
+        justify-content: center; font-weight: 900; font-size: 64px; color: #e8e9ee; }
+      .call .pulse { position: absolute; left: 190px; top: 300px; width: 140px; height: 140px; border-radius: 50%; border: 4px solid rgba(200,255,77,0.7); opacity: 0; }
+      .call .bt { position: absolute; top: 540px; width: 110px; height: 110px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        font-weight: 900; font-size: 26px; color: #fff; }
+      .call .no { left: 90px; background: #d42a23; } .call .yes { right: 90px; background: #1e9443; }
+      .note { position: absolute; left: 120px; top: 380px; width: 840px; padding: 46px 52px 44px; border-radius: 20px; background: #fbf6e7; opacity: 0;
+        box-shadow: 0 40px 90px rgba(0,0,0,0.6); transform: rotate(-2deg); }
+      .note .nk { font-family: "Mono", monospace; font-weight: 700; font-size: 26px; letter-spacing: 0.14em; color: #b4532a; }
+      .note .nw { font-family: Georgia, serif; font-style: italic; font-weight: 700; font-size: 124px; color: #1b1c22; margin: 18px 0 10px; letter-spacing: -0.01em; }
+      .note .ns { font-weight: 700; font-size: 30px; color: #6b6e78; }
+      .row { position: absolute; display: flex; align-items: center; gap: 22px; padding: 22px 30px; border-radius: 20px; background: rgba(8,9,14,0.86);
+        border: 2px solid rgba(255,255,255,0.16); font-weight: 850; font-size: 50px; color: #fff; opacity: 0; white-space: nowrap; }
+      .row .bx { width: 54px; height: 54px; border-radius: 12px; border: 4px solid var(--lime); display: flex; align-items: center; justify-content: center;
+        font-size: 38px; color: var(--lime); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="82.16" data-width="1080" data-height="1920">
+      <div id="base" class="clip" data-start="0" data-duration="82.16" style="background: #04050a; z-index: 0"></div>
+      <div class="shot" id="sh-k01" style="z-index:1"><div class="fx" id="fx-k01"><div class="cam" id="cam-k01"><video id="v-k01" class="vid" src="assets/clips/k01.mp4" muted playsinline data-start="0.000" data-duration="3.540" data-media-start="0.250" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k02" style="z-index:2"><div class="fx" id="fx-k02"><div class="cam" id="cam-k02"><video id="v-k02" class="vid" src="assets/clips/k02.mp4" muted playsinline data-start="3.040" data-duration="5.250" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video><div class="card" id="card-k02" style="left:165px;top:410px;width:750px;height:540px"><img src="assets/pages/e_tts.png" alt="" style="width:750px" /><div class="hl" id="hl-k02-0" style="left:35px;top:184px;width:213px;height:35px"></div><div class="hl" id="hl-k02-1" style="left:525px;top:225px;width:95px;height:35px"></div><div class="hl" id="hl-k02-2" style="left:35px;top:389px;width:118px;height:35px"></div></div></div></div></div>
+      <div class="shot" id="sh-k03" style="z-index:3"><div class="fx" id="fx-k03"><div class="cam" id="cam-k03"><video id="v-k03" class="vid" src="assets/clips/k03.mp4" muted playsinline data-start="7.790" data-duration="5.050" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k04" style="z-index:4"><div class="fx" id="fx-k04"><div class="cam" id="cam-k04"><video id="v-k04" class="vid" src="assets/clips/k04.mp4" muted playsinline data-start="12.340" data-duration="5.520" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video><div class="card" id="card-k04" style="left:40px;top:528px;width:1000px;height:463px"><img src="assets/pages/s_three.png" alt="" style="width:1000px" /><div class="hl" id="hl-k04-0" style="left:71px;top:424px;width:653px;height:28px"></div></div></div></div></div>
+      <div class="shot" id="sh-k05" style="z-index:5"><div class="fx" id="fx-k05"><div class="cam" id="cam-k05"><video id="v-k05" class="vid" src="assets/clips/k05.mp4" muted playsinline data-start="17.360" data-duration="4.600" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k06" style="z-index:6"><div class="fx" id="fx-k06"><div class="cam" id="cam-k06"><video id="v-k06" class="vid" src="assets/clips/k06.mp4" muted playsinline data-start="21.460" data-duration="4.210" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k07" style="z-index:7"><div class="fx" id="fx-k07"><div class="cam" id="cam-k07"><video id="v-k07" class="vid" src="assets/clips/k07.mp4" muted playsinline data-start="25.170" data-duration="5.800" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k08" style="z-index:8"><div class="fx" id="fx-k08"><div class="cam" id="cam-k08"><video id="v-k08" class="vid" src="assets/clips/k08.mp4" muted playsinline data-start="30.470" data-duration="5.560" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k09" style="z-index:9"><div class="fx" id="fx-k09"><div class="cam" id="cam-k09"><video id="v-k09" class="vid" src="assets/clips/k09.mp4" muted playsinline data-start="35.530" data-duration="5.050" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k10" style="z-index:10"><div class="fx" id="fx-k10"><div class="cam" id="cam-k10"><video id="v-k10" class="vid" src="assets/clips/k10.mp4" muted playsinline data-start="40.080" data-duration="6.540" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video><div class="card" id="card-k10" style="left:40px;top:670px;width:1000px;height:181px"><img src="assets/pages/c_head.png" alt="" style="width:1000px" /><div class="hl" id="hl-k10-0" style="left:11px;top:1px;width:974px;height:90px"></div><div class="hl" id="hl-k10-1" style="left:9px;top:51px;width:933px;height:83px"></div><div class="hl" id="hl-k10-2" style="left:10px;top:124px;width:167px;height:53px"></div></div></div></div></div>
+      <div class="shot" id="sh-k11" style="z-index:11"><div class="fx" id="fx-k11"><div class="cam" id="cam-k11"><video id="v-k11" class="vid" src="assets/clips/k11.mp4" muted playsinline data-start="46.120" data-duration="5.750" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video><div class="card" id="card-k11" style="left:40px;top:541px;width:1000px;height:438px"><img src="assets/pages/c_fake.png" alt="" style="width:1000px" /><div class="hl" id="hl-k11-0" style="left:759px;top:181px;width:68px;height:28px"></div><div class="hl" id="hl-k11-1" style="left:15px;top:224px;width:755px;height:35px"></div><div class="hl" id="hl-k11-2" style="left:492px;top:345px;width:351px;height:35px"></div><div class="hl" id="hl-k11-3" style="left:16px;top:388px;width:189px;height:32px"></div></div></div></div></div>
+      <div class="shot" id="sh-k12" style="z-index:12"><div class="fx" id="fx-k12"><div class="cam" id="cam-k12"><video id="v-k12" class="vid" src="assets/clips/k12.mp4" muted playsinline data-start="51.370" data-duration="1.920" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k13" style="z-index:13"><div class="fx" id="fx-k13"><div class="cam" id="cam-k13"><video id="v-k13" class="vid" src="assets/clips/k13.mp4" muted playsinline data-start="52.790" data-duration="3.790" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k14" style="z-index:14"><div class="fx" id="fx-k14"><div class="cam" id="cam-k14"><video id="v-k14" class="vid" src="assets/clips/k14.mp4" muted playsinline data-start="56.080" data-duration="7.170" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k15" style="z-index:15"><div class="fx" id="fx-k15"><div class="cam" id="cam-k15"><video id="v-k15" class="vid" src="assets/clips/k15.mp4" muted playsinline data-start="62.750" data-duration="9.480" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k16" style="z-index:16"><div class="fx" id="fx-k16"><div class="cam" id="cam-k16"><video id="v-k16" class="vid" src="assets/clips/k16.mp4" muted playsinline data-start="71.730" data-duration="5.580" data-media-start="0.000" style="left:0;top:0;width:1080px;height:1920px"></video></div></div></div>
+      <div class="shot" id="sh-k17" style="z-index:17"><div class="fx" id="fx-k17"><div class="cam" id="cam-k17"><div class="bd" style="background-image:url(assets/img/k16_last.png);filter:blur(30px) brightness(0.45)"></div></div></div></div>
+      <div id="ui" class="clip" data-start="0" data-duration="82.16" style="z-index: 100">
+        <div class="vig"></div>
+        <div class="topshade"></div>
+        <div class="botshade" id="botshade"></div>
+        <div id="tshade" style="position:absolute;left:0;top:0;width:1080px;height:980px;opacity:0;background:linear-gradient(180deg,rgba(4,5,10,0.92) 0%,rgba(4,5,10,0.8) 38%,rgba(4,5,10,0) 100%)"></div>
+        <div id="title"><div class="k">● LISTEN CLOSELY</div><div class="t">This voice<br />isn't <em>me</em>.</div></div>
+        <div id="fx"></div>
+        <div class="src gen" id="src0"><span class="sd"></span>AI ILLUSTRATION · GOOGLE FLOW</div>
+        <div class="src q" id="src1"><span class="sd"></span>SCREEN RECORDING · ELEVENLABS</div>
+        <div class="src st" id="src2"><span class="sd"></span>STOCK · PEXELS</div>
+        <div class="src" id="src3"><span class="sd"></span>REAL · STARLING BANK, 18 SEPT 2024</div>
+        <div class="src" id="src4"><span class="sd"></span>REAL · CNN, 4 FEB 2024</div>
+        
+        <div class="grain" id="grain"></div>
+        <div class="progress" id="prog" style="background:var(--lime)"></div>
+        <div class="tag2" id="tag"><span class="dot"></span>AI EXPLAINED · PROTECT YOURSELF</div>
+        <div class="brand" id="bm">@ONEAITRICK</div>
+        <div id="caps"></div>
+        <div id="end">
+          <div class="dim"></div>
+          <div class="mark" id="mark"><span class="one">1</span><span class="cur"></span></div>
+          <div class="etitle" id="ename" style="top:760px;font-size:110px">One <span style="color:var(--lime)">AI</span> Trick</div>
+          <div class="etitle" id="ehandle" style="top:890px;font-family:Mono, monospace;font-weight:500;font-size:40px;letter-spacing:0.04em;color:var(--muted)">@oneaitrick</div>
+          <div class="cta" id="fol" style="left:205px;top:990px">+ Follow for AI, explained</div>
+        </div>
+        <div class="flash" id="flash"></div>
+        <div class="black" id="black"></div>
+        <div class="fontwarm"><span style="font-family:InterV;font-weight:900">Aa</span><span style="font-family:Mono;font-weight:700">Aa</span><span style="font-family:Mono;font-weight:500">Aa</span><span style="font-family:Georgia">Aa</span></div>
+      </div>
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="82.16" data-volume="1"></audio>
+    </div>
+
+    <script>
+      const DUR = 82.16, HND = 0.25;
+      const SH = [{"id": "k01", "t0": 0.0, "t1": 3.29, "k": "V"}, {"id": "k02", "t0": 3.29, "t1": 8.04, "k": "PAGE"}, {"id": "k03", "t0": 8.04, "t1": 12.59, "k": "V"}, {"id": "k04", "t0": 12.59, "t1": 17.61, "k": "PAGE"}, {"id": "k05", "t0": 17.61, "t1": 21.71, "k": "V"}, {"id": "k06", "t0": 21.71, "t1": 25.42, "k": "GFX"}, {"id": "k07", "t0": 25.42, "t1": 30.72, "k": "V"}, {"id": "k08", "t0": 30.72, "t1": 35.78, "k": "V"}, {"id": "k09", "t0": 35.78, "t1": 40.33, "k": "V"}, {"id": "k10", "t0": 40.33, "t1": 46.37, "k": "PAGE"}, {"id": "k11", "t0": 46.37, "t1": 51.62, "k": "PAGE"}, {"id": "k12", "t0": 51.62, "t1": 53.04, "k": "V"}, {"id": "k13", "t0": 53.04, "t1": 56.33, "k": "V"}, {"id": "k14", "t0": 56.33, "t1": 63.0, "k": "GFX"}, {"id": "k15", "t0": 63.0, "t1": 71.98, "k": "GFX"}, {"id": "k16", "t0": 71.98, "t1": 77.06, "k": "GFX"}, {"id": "k17", "t0": 77.06, "t1": 82.16, "k": "END"}];
+      const GEO = {"k02": {"left": 165, "top": 410, "w": 750, "h": 540, "s": 0.5684, "hl": [[5.39, 306.5, 611.5, 212.6], [6.19, 737.7, 652.4, 94.9], [7.04, 259.4, 816.1, 118.2]], "sweeps": [["hl-k02-0", 5.39, 0.58], ["hl-k02-1", 6.19, 0.58], ["hl-k02-2", 7.04, 0.58]], "zmax": 1.12}, "k04": {"left": 40, "top": 528, "w": 1000, "h": 463, "s": 0.4854, "hl": [[15.93, 438.1, 966.1, 653.4]], "sweeps": [["hl-k04-0", 15.93, 0.58]], "zmax": 1.15}, "k10": {"left": 40, "top": 670, "w": 1000, "h": 181, "s": 0.4255, "hl": [[44.105, 536.6, 758.9, 976.2]], "sweeps": [["hl-k10-0", 44.105, 0.315], ["hl-k10-1", 44.42, 0.305], ["hl-k10-2", 44.725, 0.12]], "zmax": 1.2}, "k11": {"left": 40, "top": 541, "w": 1000, "h": 438, "s": 0.6849, "hl": [[48.085, 460.9, 760.9, 811.6], [50.655, 469.5, 923.5, 827.4]], "sweeps": [["hl-k11-0", 48.085, 0.121], ["hl-k11-1", 48.206, 0.539], ["hl-k11-2", 50.655, 0.405], ["hl-k11-3", 51.06, 0.255]], "zmax": 1.6}}, PHONE = {}, LOGOS = {"L1": {"name": "ElevenLabs", "have": true, "bg": "#0b0c10"}, "L4": {"name": "Samsung", "have": true, "bg": null}, "L6": {"name": "Republican National Committee", "have": true, "bg": null}, "L7": {"name": "Starling Bank", "have": true, "bg": null}, "L8": {"name": "Federal Trade Commission", "have": true, "bg": null}, "L9": {"name": "Arup", "have": true, "bg": null}, "L2": {"name": "OpenAI", "have": true, "bg": null}, "L3": {"name": "ChatGPT", "have": true, "bg": null}, "L5": {"name": "Amazon", "have": true, "bg": null}, "L10": {"name": "ICO", "have": true, "bg": null}};
+      const WS = [0.02, 0.14, 0.45, 0.58, 0.93, 1.12, 2.08, 2.35, 3.41, 4.16, 4.4, 4.72, 5.39, 5.52, 5.56, 5.94, 6.05, 6.19, 6.8, 7.04, 7.23, 8.16, 8.26, 8.4, 8.51, 8.68, 8.86, 9.02, 9.19, 9.41, 9.73, 10.58, 10.95, 11.23, 11.4, 11.54, 11.64, 11.8, 12.71, 13.23, 13.5, 13.74, 14.24, 14.43, 14.76, 14.8, 15.17, 15.34, 15.45, 15.75, 15.93, 16.3, 16.81, 16.93, 17.73, 17.81, 18.28, 18.95, 19.03, 19.41, 19.98, 20.04, 20.43, 20.55, 20.95, 21.83, 22.03, 22.1, 22.45, 23.26, 23.39, 23.52, 23.66, 24.5, 24.63, 24.76, 25.54, 26.44, 26.59, 26.75, 26.85, 27.72, 27.86, 28.01, 28.9, 29.02, 29.26, 29.89, 30.845, 30.985, 31.155, 31.385, 31.625, 32.685, 32.825, 33.995, 34.055, 34.645, 35.005, 35.095, 35.375, 35.775, 36.085, 36.125, 36.545, 36.835, 36.965, 37.125, 37.645, 37.955, 38.545, 38.945, 39.145, 39.185, 39.465, 40.445, 40.585, 41.185, 41.745, 41.865, 42.055, 42.185, 42.305, 43.215, 43.335, 43.425, 43.785, 44.105, 44.955, 45.575, 46.485, 46.705, 46.935, 47.345, 47.655, 48.085, 48.465, 48.855, 49.255, 49.385, 49.705, 49.845, 50.035, 50.655, 50.845, 51.735, 52.045, 53.155, 53.605, 53.675, 54.055, 54.485, 54.605, 54.735, 55.525, 56.445, 56.505, 56.975, 57.185, 57.215, 57.695, 57.885, 58.175, 58.515, 59.225, 59.505, 59.615, 59.955, 60.055, 60.785, 61.095, 61.495, 61.865, 62.225, 62.605, 63.115, 63.415, 64.025, 64.275, 64.625, 64.705, 64.755, 65.195, 65.615, 65.735, 66.525, 66.795, 66.885, 66.965, 67.915, 68.095, 68.775, 69.055, 69.585, 69.705, 69.945, 70.065, 70.345, 70.415, 70.495, 70.775, 70.985, 71.395, 72.025, 72.325, 72.605, 72.935, 73.055, 73.225, 73.715, 73.815, 74.225, 74.485, 74.655, 75.395, 75.775, 76.325, 76.655, 77.185, 77.545, 77.685, 77.905, 78.645, 79.115, 79.325], WE = [0.14, 0.45, 0.58, 0.93, 1.12, 1.66, 2.35, 2.66, 3.7, 4.4, 4.72, 5.04, 5.52, 5.56, 5.94, 6.05, 6.19, 6.72, 7.04, 7.23, 7.74, 8.26, 8.4, 8.51, 8.68, 8.86, 9.02, 9.19, 9.41, 9.73, 10.31, 10.95, 11.23, 11.4, 11.54, 11.64, 11.8, 12.35, 13.23, 13.5, 13.74, 14.24, 14.43, 14.76, 14.8, 15.17, 15.34, 15.45, 15.75, 15.93, 16.3, 16.81, 16.93, 17.33, 17.81, 18.28, 18.66, 19.03, 19.41, 19.75, 20.04, 20.43, 20.55, 20.95, 21.51, 22.03, 22.1, 22.45, 22.97, 23.39, 23.52, 23.66, 24.15, 24.63, 24.76, 25.22, 26.12, 26.59, 26.75, 26.85, 27.5, 27.86, 28.01, 28.65, 29.02, 29.26, 29.77, 30.51, 30.985, 31.155, 31.385, 31.625, 32.365, 32.825, 33.875, 34.055, 34.645, 35.005, 35.095, 35.375, 35.775, 36.085, 36.125, 36.545, 36.835, 36.965, 37.125, 37.645, 37.955, 38.545, 38.945, 39.145, 39.185, 39.465, 40.085, 40.585, 41.185, 41.425, 41.865, 42.055, 42.185, 42.305, 42.795, 43.335, 43.425, 43.785, 44.105, 44.955, 45.575, 46.105, 46.705, 46.935, 47.345, 47.655, 48.085, 48.465, 48.855, 49.255, 49.385, 49.705, 49.845, 50.035, 50.455, 50.845, 51.295, 52.045, 52.795, 53.605, 53.675, 54.055, 54.485, 54.605, 54.735, 55.275, 56.075, 56.505, 56.975, 57.185, 57.215, 57.695, 57.885, 58.175, 58.515, 58.835, 59.505, 59.615, 59.955, 60.055, 60.565, 61.095, 61.495, 61.705, 62.225, 62.605, 62.815, 63.415, 64.025, 64.275, 64.625, 64.705, 64.755, 65.195, 65.615, 65.735, 66.225, 66.795, 66.885, 66.965, 67.535, 68.095, 68.575, 69.055, 69.295, 69.705, 69.945, 70.065, 70.345, 70.415, 70.495, 70.775, 70.985, 71.395, 71.765, 72.325, 72.605, 72.935, 73.055, 73.225, 73.715, 73.815, 74.225, 74.485, 74.655, 75.035, 75.775, 75.935, 76.655, 76.835, 77.545, 77.685, 77.905, 78.365, 79.115, 79.325, 79.755];
+      const w = (k) => WS[k], we = (k) => WE[k];
+      const $ = (s) => document.querySelector(s);
+      const tl = gsap.timeline({ paused: true });
+      const E = "power3.out";
+      const fx = (id) => "#fx-" + id, cam = (id) => "#cam-" + id;
+      const T0 = Object.fromEntries(SH.map((s) => [s.id, s.t0])), T1 = Object.fromEntries(SH.map((s) => [s.id, s.t1]));
+      const KIND = Object.fromEntries(SH.map((s) => [s.id, s.k]));
+      const A = (id) => T0[id], B = (id) => T1[id];
+      const FXR = $("#fx");
+      const el = (tag, cls, css, html, parent) => { const e = document.createElement(tag); if (cls) e.className = cls; if (css) e.style.cssText = css;
+        if (html !== undefined) e.innerHTML = html; (parent || FXR).appendChild(e); return e; };
+
+      // ---------- shots: visibility and default camera ----------
+      const CUSTOM_CAM = new Set(Object.keys(GEO).concat(Object.keys(PHONE)));
+      SH.forEach((s, i) => {
+        tl.set(fx(s.id), { opacity: i === 0 ? 1 : 0 }, 0);
+        const a = Math.max(0, s.t0 - HND), b = s.t1 + HND;
+        if (CUSTOM_CAM.has(s.id)) return;
+        tl.fromTo(cam(s.id), { scale: 1 }, { scale: 1.06, duration: b - a, ease: "none" }, a);
+      });
+      const flash = (t, a, d, c) => { tl.set("#flash", { background: c || "#fff" }, t); tl.fromTo("#flash", { opacity: a }, { opacity: 0, duration: d || 0.35, ease: "power2.out", immediateRender: false }, t); };
+      const cardIn = (id, t) => { const c = document.querySelectorAll("#cam-" + id + " .card, #cam-" + id + " .phone");
+        tl.fromTo(c, { opacity: 0, scale: 0.9, y: 50 }, { opacity: 1, scale: 1, y: 0, duration: 0.42, ease: "back.out(1.6)", stagger: 0.1 }, t); };
+      const swap = (a, b, T) => { tl.set(fx(b), { opacity: 1 }, T); tl.set(fx(a), { opacity: 0 }, T); };
+      const TR = {
+        whip(a, b, T) { tl.fromTo(fx(b), { opacity: 1, x: 1080, filter: "blur(24px)" }, { x: 0, filter: "blur(0px)", duration: 0.3, ease: "power3.inOut" }, T - 0.17);
+          tl.to(fx(a), { x: -760, filter: "blur(24px)", duration: 0.3, ease: "power3.inOut" }, T - 0.17); tl.set(fx(a), { opacity: 0 }, T + 0.15); },
+        slideup(a, b, T) { tl.fromTo(fx(b), { opacity: 1, y: 1920, filter: "blur(22px)" }, { y: 0, filter: "blur(0px)", duration: 0.3, ease: "power3.inOut" }, T - 0.17);
+          tl.to(fx(a), { y: -1100, filter: "blur(22px)", duration: 0.3, ease: "power3.inOut" }, T - 0.17); tl.set(fx(a), { opacity: 0 }, T + 0.15); },
+        zoom(a, b, T) { tl.to(fx(a), { scale: 1.4, filter: "blur(18px)", opacity: 0, duration: 0.26, ease: "power2.in" }, T - 0.16);
+          tl.fromTo(fx(b), { opacity: 0, scale: 0.86, filter: "blur(16px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.32, ease: E }, T - 0.1); flash(T - 0.02, 0.22, 0.3); },
+        flash(a, b, T, c) { swap(a, b, T); flash(T, 0.6, 0.42, c); },
+        cut(a, b, T) { swap(a, b, T); tl.fromTo(fx(b), { scale: 1.08 }, { scale: 1, duration: 0.35, ease: E, immediateRender: false }, T); },
+        dip(a, b, T) { tl.to("#black", { opacity: 1, duration: 0.14, ease: "power1.in" }, T - 0.14); swap(a, b, T); tl.to("#black", { opacity: 0, duration: 0.28, ease: "power1.out" }, T); },
+        card(a, b, T) { tl.fromTo(fx(b), { opacity: 0 }, { opacity: 1, duration: 0.22, ease: "power1.out" }, T - 0.12); tl.set(fx(a), { opacity: 0 }, T + 0.12); cardIn(b, T - 0.05); },
+        fade(a, b, T) { tl.fromTo(fx(b), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, T - 0.25); tl.set(fx(a), { opacity: 0 }, T + 0.26); },
+        scratch(a, b, T) { swap(a, b, T); flash(T, 0.85, 0.25, "#ffffff");
+          for (let k = 0; k < 7; k++) tl.set(fx(b), { x: (k % 2 ? -1 : 1) * 26 * (1 - k / 7), y: (k % 3 - 1) * 10 }, T + k * 0.035); tl.set(fx(b), { x: 0, y: 0 }, T + 0.25); },
+      };
+      const CUTS = [["k01", "k02", "card"], ["k02", "k03", "slideup"], ["k03", "k04", "card"], ["k04", "k05", "zoom"], ["k05", "k06", "zoom"], ["k06", "k07", "slideup"], ["k07", "k08", "whip"], ["k08", "k09", "zoom"], ["k09", "k10", "card"], ["k10", "k11", "card"], ["k11", "k12", "cut"], ["k12", "k13", "zoom"], ["k13", "k14", "zoom"], ["k14", "k15", "zoom"], ["k15", "k16", "zoom"], ["k16", "k17", "fade"]];
+      CUTS.forEach(([a, b, k, c]) => TR[k](a, b, T0[b], c));
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+
+      // ---------- helpers ----------
+      const show = (sel, t0, t1, from) => { tl.fromTo(sel, Object.assign({ opacity: 0, y: 14 }, from || {}), { opacity: 1, y: 0, x: 0, duration: 0.3, ease: E }, t0);
+        tl.to(sel, { opacity: 0, duration: 0.18 }, t1); };
+      const pop = (sel, t0, t1, sc) => { tl.fromTo(sel, { opacity: 0, scale: sc || 0.4 }, { opacity: 1, scale: 1, duration: 0.38, ease: "back.out(2.2)" }, t0);
+        if (t1) tl.to(sel, { opacity: 0, duration: 0.16 }, t1); };
+      const punch = (id, t, s) => { tl.fromTo(fx(id), { scale: 1 }, { scale: 1 + (s || 0.05), duration: 0.12, ease: "power2.out", immediateRender: false }, t);
+        tl.to(fx(id), { scale: 1, duration: 0.5, ease: "power2.inOut" }, t + 0.12); };
+      const chip = (txt, x, y, col, t0, t1, from) => { const c = el("div", "chip", `left:${x}px;top:${y}px;color:${col || "var(--lime)"}`, `<span class="sw"></span>${txt}`);
+        show(c, t0, t1, from || { x: -24, y: 0 }); return c; };
+      const big = (txt, x, y, fs, col, t0, t1) => { const b = el("div", "big", `left:${x}px;top:${y}px;font-size:${fs}px;color:${col || "#fff"}`, txt);
+        tl.fromTo(b, { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.out" }, t0); tl.to(b, { opacity: 0, duration: 0.14 }, t1); return b; };
+      // an official logo on a white tile (a dashed "needed" tile if its file hasn't arrived)
+      const logo = (code, x, y, wd, ht, label, parent) => { const L = LOGOS[code] || {};
+        const d = el("div", "logo" + (L.have ? "" : " need"), `left:${x}px;top:${y}px;width:${wd}px;height:${ht}px;` + (L.bg ? `background:${L.bg}` : ""),
+          L.have ? `<img src="assets/logos/${code}.png" alt="" />` : `LOGO NEEDED<br/>${code} · ${L.name || ""}`, parent);
+        if (label) el("div", "ln", "", label, d);
+        el("div", "ok", "", "✓", d); return d; };
+
+      // ---------- documents: the camera finds each highlighted line on its word ----------
+      const CAMEND = {};
+      const docCam = (id) => { const g = GEO[id]; const a = Math.max(0, T0[id] - HND), b = T1[id] + HND;
+        const CX = 540, CY = 760;
+        const kf = (S, px, py) => { let x = CX - S * px, y = CY - S * py;
+          x = Math.min(0, Math.max(1080 * (1 - S), x)); y = Math.min(0, Math.max(1920 * (1 - S), y)); return { scale: S, x, y }; };
+        tl.set(cam(id), { transformOrigin: "0px 0px" }, 0);
+        const zs = (ww) => Math.min(g.zmax || 1.5, Math.max(1.08, 960 / (ww + 60)));
+        let prev = kf(1, CX, CY), tPrev = a;
+        tl.set(cam(id), prev, a);
+        g.hl.forEach(([t, hx, hy, ww], k) => { const S = zs(ww); const k1 = kf(S, hx, hy); const t0 = Math.max(tPrev + 0.05, t - 0.45);
+          tl.to(cam(id), Object.assign({}, k1, { duration: Math.max(0.3, t + 0.2 - t0), ease: "power2.inOut" }), t0); tPrev = t + 0.2; prev = k1; });
+        const last = kf(prev.scale * 1.035, (CX - prev.x) / prev.scale, (CY - prev.y) / prev.scale); CAMEND[id] = last;
+        if (b > tPrev + 0.05) tl.to(cam(id), Object.assign({}, last, { duration: b - tPrev, ease: "none" }), tPrev); };
+      Object.keys(GEO).forEach((id) => { const g = GEO[id];
+        g.sweeps.forEach(([hid, t, d]) => tl.to("#" + hid, { scaleX: 1, duration: d, ease: "power2.inOut" }, t));
+        if (KIND[id] === "PAGE") docCam(id); });
+      // a badge for the page's owner: the logo tile overlapping the card's top-right corner
+      const badge = (id, code, label) => { const g = GEO[id]; const wd = 220, ht = 110;
+        const d = logo(code, 820, 296, 200, 100, null);
+        pop(d, A(id) + 0.18, B(id) - 0.08, 0.6); return d; };
+
+      // ---------- phones: the steps on the right, the switch going off ----------
+      const steps = (id, code, items, offAt, ringAt, offTxt) => { const P = PHONE[id];
+        const L = logo(code, 580, 310, 300, 130); pop(L, A(id) + 0.1, B(id) - 0.08, 0.6);
+        items.forEach(([k, txt, t], j) => { const s = el("div", "step", `left:580px;top:${490 + j * 120}px;white-space:normal;max-width:460px;font-size:32px`, `<span class="k">${k}</span>${txt}`);
+          tl.fromTo(s, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.28, ease: E }, t); tl.set(s, { className: "step on" }, t);
+          if (j + 1 < items.length) tl.set(s, { className: "step" }, items[j + 1][2]); tl.to(s, { opacity: 0, duration: 0.15 }, B(id) - 0.1); });
+        if (offAt) { const o = el("div", "off", `left:580px;top:${490 + items.length * 120 + 20}px`, offTxt || "OFF ✓"); pop(o, offAt, B(id) - 0.1, 0.5); }
+        if (ringAt && P.tog) { const [x, y, rw, rh] = P.tog; const r = el("div", "ring", `left:${x - rw / 2}px;top:${y - rh / 2}px;width:${rw}px;height:${rh}px`, "", $("#cam-" + id));
+          tl.fromTo(r, { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, ringAt); tl.to(r, { opacity: 0, duration: 0.15 }, B(id) - 0.1); } };
+      const phoneCam = (id, tz, S) => { const P = PHONE[id]; const a = Math.max(0, T0[id] - HND), b = T1[id] + HND;
+        tl.set(cam(id), { transformOrigin: "0px 0px" }, 0);
+        tl.fromTo(cam(id), { scale: 1, x: 0, y: 0 }, { scale: 1.02, x: -10, y: -6, duration: Math.max(0.3, (tz || b) - a - 0.4), ease: "none" }, a);
+        if (tz && P.tog) { const [x, y] = P.tog; const s = S || 1.35; const tx = Math.min(0, Math.max(1080 * (1 - s), 300 - s * x)), ty = Math.min(0, Math.max(1920 * (1 - s), 760 - s * y));
+          tl.to(cam(id), { scale: s, x: tx, y: ty, duration: 0.45, ease: "power2.inOut" }, tz - 0.4);
+          tl.to(cam(id), { scale: s * 1.02, duration: Math.max(0.2, b - tz), ease: "none" }, tz + 0.05); } };
+
+      // ===================================================== the shots =====================================================
+      // Short #12: what happens on top of each shot (9:16). Inlined by make_index.py (helpers in index_template.tpl).
+// Visuals sit in y 280-1220; captions own 1240-1460; the bottom ~450 px stays clear for the platform buttons.
+// Word indices are the main cut's; the Trial Reel (its first shot is t01) runs 20 words shorter at the start.
+const TRIAL = SH[0].id === "t01";
+const S0 = TRIAL ? -20 : 0;
+const wk = (k) => w(k + S0);
+const stamp = (txt, x, y, t, tOut, rot) => { const st = el("div", "stamp", `left:${x}px;top:${y}px;transform:rotate(${rot || -6}deg)`, txt);
+  tl.fromTo(st, { opacity: 0, scale: 2.2 }, { opacity: 0.95, scale: 1, duration: 0.18, ease: "power4.out" }, t); tl.to(st, { opacity: 0, duration: 0.15 }, tOut); return st; };
+const callScreen = (who, tIn, tOut) => { const c = el("div", "call", "", `<div class="cl">INCOMING CALL</div><div class="cn">${who}</div><div class="cs">mobile</div>` +
+    `<div class="pulse"></div><div class="av">${who[0]}</div><div class="bt no">✕</div><div class="bt yes">✆</div>`);
+  tl.fromTo(c, { opacity: 0, y: 60, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(1.6)" }, tIn);
+  const pu = c.querySelector(".pulse");
+  for (let k = 0; k < Math.max(1, Math.floor((tOut - tIn) / 0.9)); k++) tl.fromTo(pu, { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.7, duration: 0.85, ease: "power1.out", immediateRender: false }, tIn + 0.2 + k * 0.9);
+  tl.to(c, { opacity: 0, duration: 0.15 }, tOut); return c; };
+
+// ---------- the opening ----------
+if (!TRIAL) {
+  tl.fromTo("#title", { opacity: 1, y: 0 }, { opacity: 1, y: 0, duration: 0.01 }, 0);
+  tl.fromTo("#tshade", { opacity: 1 }, { opacity: 1, duration: 0.01 }, 0);
+  tl.to("#title", { opacity: 0, y: -20, duration: 0.2 }, B("k01") - 0.15);
+  tl.to("#tshade", { opacity: 0, duration: 0.3 }, B("k01") - 0.15);
+  punch("k01", w(6), 0.05);
+  badge("k02", "L1", "ELEVENLABS");
+  chip("MY VOICE · CLONED WITH AI", 60, 1110, "var(--lime)", w(14), B("k02") - 0.1);
+  big("…and yours.", 60, 900, 120, "var(--lime)", w(37) - 0.05, B("k03") - 0.08);
+} else {   // t01: "If your mum called you right now... would you know it was really her?"
+  tl.set("#title", { opacity: 0 }, 0);
+  const c = callScreen("Mum", 0.05, B("t01") - 0.1);
+  chip("WOULD YOU KNOW IT WASN'T HER?", 60, 1110, "var(--lime)", w(11), B("t01") - 0.1);
+}
+
+// ---------- three seconds of audio ----------
+badge("k04", "L7", "STARLING BANK");
+big("3 seconds.", 60, 880, 170, "var(--lime)", wk(50), B("k04") - 0.08);
+chip("OF AUDIO. THAT'S ALL A SCAMMER NEEDS.", 60, 1110, "#ffffff", wk(53), B("k04") - 0.1);
+chip("A BIRTHDAY VIDEO", 60, 700, "#ffffff", wk(55), B("k05") - 0.1);
+chip("A VOICE NOTE", 60, 800, "#ffffff", wk(58), B("k05") - 0.1);
+chip("A CLIP YOU POSTED", 60, 900, "#ffffff", wk(61), B("k05") - 0.1);
+(function () { const c = callScreen("Daughter", A("k06") - 0.12, B("k06") - 0.1);
+  tl.set(c.querySelector(".cn"), { innerHTML: "Dad" }, wk(75) - 0.05); tl.set(c.querySelector(".av"), { innerHTML: "D" }, wk(75) - 0.05); })();
+[[80, "Accident", 420], [83, "Arrested", 600], [86, "Money. Now.", 780]].forEach(([k, t, y], j) => {
+  const b = el("div", "big", `left:60px;top:${y}px;font-size:130px;color:${j % 2 ? "#ffffff" : "var(--lime)"}`, t);
+  tl.fromTo(b, { opacity: 0, x: 60, rotation: j % 2 ? 2 : -2 }, { opacity: 1, x: 0, rotation: j % 2 ? 1 : -1, duration: 0.25, ease: "back.out(2)" }, wk(k));
+  tl.to(b, { opacity: 0, duration: 0.15 }, B("k07") - 0.1); });
+
+// ---------- Hong Kong: every face was fake ----------
+chip("HONG KONG · 2024", 60, 1110, "#ffffff", wk(99), B("k08") - 0.1);
+chip("A VIDEO CALL WITH HIS CFO", 60, 1110, "#ffffff", wk(103), B("k09") - 0.1);
+stamp("ALL FAKE", 560, 1060, wk(143), B("k11") - 0.06, -6);
+chip("ALL DEEPFAKES", 60, 1110, "#ff8a7a", wk(145), B("k12") - 0.05);
+
+// ---------- the fix: a family safe phrase ----------
+chip("THE FIX · A FAMILY SAFE PHRASE", 60, 330, "var(--lime)", A("k13") + 0.1, B("k13") - 0.1);
+big("Tonight.", 60, 900, 150, "var(--lime)", wk(154), B("k13") - 0.08);
+(function () { // the safe-phrase card. MARMALADE is the hidden word: it is never said out loud.
+  const n = el("div", "note", "", '<div class="nk">OUR FAMILY SAFE PHRASE</div><div class="nw">Marmalade</div><div class="ns">An example. Pick your own and never post it.</div>');
+  tl.fromTo(n, { opacity: 0, y: 50, rotation: -5 }, { opacity: 1, y: 0, rotation: -2, duration: 0.4, ease: "back.out(1.6)" }, A("k14") + 0.05);
+  tl.to(n, { opacity: 0, duration: 0.15 }, B("k14") - 0.1);
+  chip("✓ SAY IT FACE TO FACE", 120, 860, "var(--lime)", wk(164), B("k14") - 0.1);
+  chip("✕ NEVER TEXT IT", 120, 960, "#ff8a7a", wk(169), B("k14") - 0.1);
+  chip("✕ NEVER POST IT", 120, 1060, "#ff8a7a", wk(172), B("k14") - 0.1); })();
+(function () { // "Mum" calls in a panic
+  const c = callScreen("Mum", A("k15") + 0.05, B("k15") - 0.1);
+  chip("ASK FOR THE PHRASE", 60, 1110, "var(--lime)", wk(185), wk(189) - 0.22);
+  chip("NO PHRASE? HANG UP.", 60, 1110, "#ff6b5b", wk(189), wk(193) - 0.22);
+  chip("CALL BACK ON THE NUMBER YOU HAVE", 60, 1110, "var(--lime)", wk(193), B("k15") - 0.1);
+  tl.to(c.querySelector(".no"), { scale: 1.3, boxShadow: "0 0 50px rgba(224,50,43,0.9)", duration: 0.2, yoyo: true, repeat: 1 }, wk(191)); })();
+
+// ---------- the hidden word ----------
+(function () { big("One word I never<br/>said out loud.", 60, 380, 92, "#ffffff", wk(203), B("k16") - 0.1);
+  const cb = el("div", "row", "left:60px;top:700px;font-size:44px;font-weight:700;color:#9aa0b4", '<span class="bx" style="border-color:#9aa0b4;color:#9aa0b4">?</span>Add a comment…');
+  tl.fromTo(cb, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: E }, wk(214)); tl.to(cb, { opacity: 0, duration: 0.15 }, B("k16") - 0.1);
+  big("Comment it.", 60, 900, 140, "var(--lime)", wk(216), B("k16") - 0.06); })();
+
+
+      // ---------- end card ----------
+      const TE = A("k17");
+      tl.fromTo("#end", { opacity: 0 }, { opacity: 1, duration: 0.5 }, TE);
+      tl.fromTo("#mark", { scale: 0.3, rotation: -20, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.55, ease: "back.out(2)" }, TE + 0.15);
+      tl.fromTo(["#ename", "#ehandle"], { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.45, ease: E, stagger: 0.12 }, TE + 0.4);
+      tl.fromTo("#fol", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, TE + 0.85);
+      tl.to("#fol", { scale: 1.05, duration: 0.45, yoyo: true, repeat: 3, ease: "sine.inOut" }, TE + 1.4);
+      tl.to("#mark", { boxShadow: "0 0 140px rgba(200,255,77,0.8)", duration: 0.9, yoyo: true, repeat: 1, ease: "sine.inOut" }, TE + 1.1);
+
+      // ---------- global UI ----------
+      [["#src0", 51.74, 52.96], ["#src1", 3.41, 7.96], ["#src2", 8.16, 12.51], ["#src2", 17.73, 21.63], ["#src2", 25.54, 40.25], ["#src2", 53.16, 56.25], ["#src3", 12.71, 17.53], ["#src4", 40.45, 51.54]].forEach(([sel, a, b]) => show(sel, a, b, { x: -20, y: 0 }));
+      [].forEach(([sel, a, b]) => { tl.fromTo(sel, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.4, ease: "back.out(1.6)" }, a); tl.to(sel, { opacity: 0, duration: 0.25 }, b); });
+      tl.set(["#bm", "#tag"], { opacity: 1 }, 0); tl.to(["#bm", "#tag"], { opacity: 0, duration: 0.4 }, TE - 0.2);
+      tl.fromTo("#prog", { scaleX: 0 }, { scaleX: 1, duration: DUR, ease: "none" }, 0);
+      tl.to([".botshade", ".topshade"], { opacity: 0, duration: 0.5 }, TE);
+      const gp = { f: 0 }; const grainEl = $("#grain");
+      tl.fromTo(gp, { f: 0 }, { f: DUR * 24, duration: DUR, ease: "none", onUpdate() { const f = Math.floor(gp.f); grainEl.style.backgroundPosition = `${(f * 137) % 512}px ${(f * 271) % 512}px`; } }, 0);
+      tl.fromTo("#black", { opacity: 0 }, { opacity: 1, duration: 0.4, immediateRender: false }, DUR - 0.45);
+
+      // ---------- captions: sentence case, the spoken word lights up ----------
+      const CAPS = (window.CAPS || []).map((c) => ({ t0: c.t0, t1: c.t1, w: c.w.map((x) => ({ d: x.d, s: x.s, e: x.e, em: x.emph })) })), NOCAP = [[0.0, 0.0], [77.21000000000001, 999]];
+      const capsRoot = $("#caps");
+      CAPS.forEach((ch) => { if (NOCAP.some(([a, b]) => ch.t0 < b && ch.t1 > a)) return;
+        const c = el("div", "cap", "", undefined, capsRoot);
+        const cb = el("span", "cb", "", undefined, c); const spans = ch.w.map((x) => { const s = el("span", "cw dim", "", x.d, cb); return { s, x }; });
+        tl.fromTo(c, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.12, ease: "power2.out" }, ch.t0);
+        tl.set(c, { opacity: 0 }, ch.t1);
+        spans.forEach(({ s, x }, k) => { const end = k + 1 < spans.length ? spans[k + 1].x.s : ch.t1;
+          tl.set(s, { opacity: 1, color: "#c8ff4d" }, x.s); tl.set(s, { color: x.em ? "#c8ff4d" : "#ffffff" }, end); }); });
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

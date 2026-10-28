@@ -1,0 +1,882 @@
+1
+00:00:00,000 --> 00:00:03,010
+The voice you're hearing
+right now... isn't me.
+
+2
+00:00:03,360 --> 00:00:04,050
+Well.
+
+3
+00:00:04,110 --> 00:00:05,340
+It is me.
+
+4
+00:00:05,340 --> 00:00:08,090
+It's a clone of my voice, made with AI.
+
+5
+00:00:08,110 --> 00:00:10,530
+And if I can do that with my own voice...
+
+6
+00:00:10,530 --> 00:00:12,660
+someone else can do it with yours.
+
+7
+00:00:12,660 --> 00:00:17,240
+That's one of five dangers hiding
+inside the AI you use every day.
+
+8
+00:00:17,240 --> 00:00:18,510
+The weather on your phone.
+
+9
+00:00:18,510 --> 00:00:20,510
+The chatbot that settles an argument.
+
+10
+00:00:20,510 --> 00:00:22,620
+The app that fixes your photos.
+
+11
+00:00:22,620 --> 00:00:24,240
+Here's how I think about it.
+
+12
+00:00:24,240 --> 00:00:27,640
+AI is like a brilliant stranger
+who's moved into your phone.
+
+13
+00:00:27,640 --> 00:00:28,800
+Super helpful.
+
+14
+00:00:28,800 --> 00:00:29,670
+Never sleeps.
+
+15
+00:00:29,670 --> 00:00:31,390
+Knows a bit about everything.
+
+16
+00:00:31,390 --> 00:00:33,910
+But would you tell a
+stranger your secrets?
+
+17
+00:00:33,910 --> 00:00:35,900
+Let him decide who gets a job?
+
+18
+00:00:35,900 --> 00:00:38,160
+Believe every photo he shows you?
+
+19
+00:00:38,160 --> 00:00:40,870
+Trust him when he sounds
+exactly like your mum?
+
+20
+00:00:40,870 --> 00:00:42,340
+Let's go through all five.
+
+21
+00:00:42,340 --> 00:00:45,300
+And stay to the end, because there's
+one free trick that protects
+
+22
+00:00:45,300 --> 00:00:46,700
+your whole family.
+
+23
+00:00:46,700 --> 00:00:48,120
+Danger number one.
+
+24
+00:00:48,120 --> 00:00:49,380
+Your secrets.
+
+25
+00:00:49,380 --> 00:00:51,580
+People tell chatbots everything.
+
+26
+00:00:51,580 --> 00:00:52,470
+Health worries.
+
+27
+00:00:52,470 --> 00:00:53,420
+Money problems.
+
+28
+00:00:53,420 --> 00:00:54,490
+Work documents.
+
+29
+00:00:54,490 --> 00:00:55,460
+The lot.
+
+30
+00:00:55,460 --> 00:00:59,770
+In 2023, an engineer at Samsung
+pasted secret source code into
+
+31
+00:00:59,770 --> 00:01:02,810
+ChatGPT, asking it to help fix a problem.
+
+32
+00:01:02,810 --> 00:01:05,870
+Another shared a whole meeting
+so it could write the minutes.
+
+33
+00:01:05,870 --> 00:01:07,150
+Samsung's answer?
+
+34
+00:01:07,150 --> 00:01:10,570
+It banned staff from using
+tools like ChatGPT at work.
+
+35
+00:01:10,570 --> 00:01:11,930
+For a while, anyway.
+
+36
+00:01:11,930 --> 00:01:14,570
+And what happens to all that
+depends on the company.
+
+37
+00:01:14,570 --> 00:01:16,930
+Some use your chats to
+train their next model.
+
+38
+00:01:16,930 --> 00:01:19,870
+Some have staff who review
+conversations for safety.
+
+39
+00:01:19,870 --> 00:01:23,080
+And none of it is protected the
+way a chat with your doctor is.
+
+40
+00:01:23,080 --> 00:01:24,970
+Plus... things leak.
+
+41
+00:01:24,970 --> 00:01:29,510
+In March 2023, a bug in ChatGPT
+let some users see the titles
+
+42
+00:01:29,510 --> 00:01:31,260
+of other people's chats.
+
+43
+00:01:31,260 --> 00:01:33,460
+And for a small number
+of paying subscribers,
+
+44
+00:01:33,460 --> 00:01:35,690
+it may have shown their name, their email,
+
+45
+00:01:35,690 --> 00:01:37,820
+and the last 4 digits of their card...
+
+46
+00:01:37,820 --> 00:01:39,090
+to someone else.
+
+47
+00:01:39,090 --> 00:01:41,910
+OpenAI took ChatGPT offline, fixed it,
+
+48
+00:01:41,910 --> 00:01:44,590
+and said full card numbers
+were never exposed.
+
+49
+00:01:44,590 --> 00:01:47,570
+But it shows you just how
+sensitive this stuff is.
+
+50
+00:01:47,570 --> 00:01:48,780
+So here's the rule.
+
+51
+00:01:48,780 --> 00:01:52,560
+Don't type anything into a chatbot
+that you wouldn't write on a postcard.
+
+52
+00:01:52,560 --> 00:01:54,670
+And switch off training in your settings.
+
+53
+00:01:54,670 --> 00:01:59,190
+In ChatGPT, that's Data controls,
+"Improve the model for everyone".
+
+54
+00:01:59,190 --> 00:02:00,620
+Danger number two.
+
+55
+00:02:00,620 --> 00:02:01,740
+Fairness.
+
+56
+00:02:01,740 --> 00:02:03,780
+We like to think computers are neutral.
+
+57
+00:02:03,780 --> 00:02:05,410
+But AI learns from us.
+
+58
+00:02:05,410 --> 00:02:06,510
+From our history.
+
+59
+00:02:06,510 --> 00:02:08,740
+And our history isn't always fair.
+
+60
+00:02:08,740 --> 00:02:10,020
+Here's a famous one.
+
+61
+00:02:10,020 --> 00:02:14,130
+Amazon once built an experimental AI
+to sort through job applications.
+
+62
+00:02:14,130 --> 00:02:18,250
+It learned from ten years of
+CVs the company had received.
+
+63
+00:02:19,320 --> 00:02:21,950
+And most of those CVs came from men.
+
+64
+00:02:22,190 --> 00:02:25,000
+Tech has been a man's
+world for a long time.
+
+65
+00:02:25,000 --> 00:02:28,840
+So the AI taught itself that
+men were the better candidates.
+
+66
+00:02:28,880 --> 00:02:32,230
+It marked down CVs with the
+word "women's" in them.
+
+67
+00:02:32,230 --> 00:02:33,020
+Like...
+
+68
+00:02:33,020 --> 00:02:35,250
+"captain of the women's chess club".
+
+69
+00:02:35,250 --> 00:02:39,110
+It even downgraded graduates
+of two all-women's colleges.
+
+70
+00:02:39,110 --> 00:02:43,050
+To be fair, Amazon's recruiters
+never let it make the final call.
+
+71
+00:02:43,050 --> 00:02:45,800
+And the company scrapped it,
+because it couldn't guarantee the
+
+72
+00:02:45,800 --> 00:02:48,540
+AI wouldn't find new ways to discriminate.
+
+73
+00:02:48,540 --> 00:02:50,490
+But here's the scary part.
+
+74
+00:02:50,490 --> 00:02:53,300
+When a person is unfair, you can see it.
+
+75
+00:02:53,360 --> 00:02:55,110
+When a machine is unfair...
+
+76
+00:02:55,150 --> 00:02:56,690
+it looks like maths.
+
+77
+00:02:56,690 --> 00:02:59,120
+And that makes it so much harder to spot,
+
+78
+00:02:59,120 --> 00:03:00,430
+and to challenge.
+
+79
+00:03:00,430 --> 00:03:03,320
+And AI now helps make
+decisions about jobs,
+
+80
+00:03:03,320 --> 00:03:05,450
+loans, even healthcare.
+
+81
+00:03:05,450 --> 00:03:08,980
+Here in the UK, if a really
+important decision about you is made
+
+82
+00:03:08,980 --> 00:03:13,410
+only by a machine, the law says you
+can ask for a human to look at it.
+
+83
+00:03:13,410 --> 00:03:14,630
+So ask.
+
+84
+00:03:14,630 --> 00:03:16,270
+Danger number 3.
+
+85
+00:03:16,310 --> 00:03:17,500
+Your eyes.
+
+86
+00:03:17,500 --> 00:03:19,780
+Seeing used to be believing.
+
+87
+00:03:19,820 --> 00:03:20,900
+Not anymore.
+
+88
+00:03:20,900 --> 00:03:25,960
+In May 2023, a photo of an explosion
+near the Pentagon went viral.
+
+89
+00:03:25,960 --> 00:03:27,110
+Black smoke.
+
+90
+00:03:27,110 --> 00:03:29,570
+Shared by accounts that looked official.
+
+91
+00:03:29,570 --> 00:03:30,620
+It was fake.
+
+92
+00:03:30,620 --> 00:03:32,030
+Made with AI.
+
+93
+00:03:32,030 --> 00:03:34,730
+But US stocks still dipped
+for a few minutes...
+
+94
+00:03:34,730 --> 00:03:38,090
+before officials confirmed
+there'd been no explosion at all.
+
+95
+00:03:38,090 --> 00:03:41,530
+The same year, after President
+Biden announced he'd run again,
+
+96
+00:03:41,530 --> 00:03:45,200
+the Republican National Committee
+answered with an ad built entirely
+
+97
+00:03:45,200 --> 00:03:46,760
+from AI images.
+
+98
+00:03:46,760 --> 00:03:49,500
+A made-up, dark future if he won.
+
+99
+00:03:49,500 --> 00:03:51,950
+And the problem isn't one fake photo.
+
+100
+00:03:51,950 --> 00:03:55,460
+It's what happens when anyone
+can make "proof" of anything.
+
+101
+00:03:55,460 --> 00:03:57,540
+If we can't agree on what's real...
+
+102
+00:03:57,540 --> 00:03:59,350
+how do we agree on anything?
+
+103
+00:03:59,350 --> 00:04:03,680
+So when something online makes you
+angry or scared in two seconds flat...
+
+104
+00:04:03,680 --> 00:04:04,870
+that's your cue.
+
+105
+00:04:04,870 --> 00:04:06,080
+Slow down.
+
+106
+00:04:06,080 --> 00:04:07,640
+Who posted it first?
+
+107
+00:04:07,640 --> 00:04:10,230
+Is any real news outlet reporting it?
+
+108
+00:04:10,230 --> 00:04:12,030
+Check it somewhere you trust.
+
+109
+00:04:12,030 --> 00:04:13,630
+Danger number 4.
+
+110
+00:04:13,630 --> 00:04:15,880
+And this is where it gets personal.
+
+111
+00:04:15,880 --> 00:04:17,730
+Remember my voice at the start?
+
+112
+00:04:17,730 --> 00:04:20,950
+Starling Bank says scammers can
+clone a voice from as little as
+
+113
+00:04:20,950 --> 00:04:22,750
+3 seconds of audio.
+
+114
+00:04:22,750 --> 00:04:23,970
+A birthday video.
+
+115
+00:04:23,970 --> 00:04:25,000
+A voice note.
+
+116
+00:04:25,000 --> 00:04:26,850
+A clip you posted online.
+
+117
+00:04:26,850 --> 00:04:28,280
+Then the phone rings.
+
+118
+00:04:28,280 --> 00:04:29,520
+And it's your daughter.
+
+119
+00:04:29,520 --> 00:04:30,560
+Or your dad.
+
+120
+00:04:30,560 --> 00:04:31,460
+Crying.
+
+121
+00:04:31,460 --> 00:04:32,740
+They've had an accident.
+
+122
+00:04:32,740 --> 00:04:33,920
+They've been arrested.
+
+123
+00:04:33,920 --> 00:04:35,840
+They need money. Now.
+
+124
+00:04:35,840 --> 00:04:39,570
+America's Federal Trade Commission
+has warned about exactly this.
+
+125
+00:04:39,570 --> 00:04:42,120
+It calls it the family emergency scam.
+
+126
+00:04:42,120 --> 00:04:46,520
+And here in the UK, in a
+2024 survey for Starling,
+
+127
+00:04:46,520 --> 00:04:50,290
+more than a quarter of adults said
+they'd been targeted by a voice-cloning
+
+128
+00:04:50,290 --> 00:04:51,940
+scam in the past year.
+
+129
+00:04:51,940 --> 00:04:53,780
+And it's not just voices.
+
+130
+00:04:53,780 --> 00:04:58,060
+In 2024, a finance worker in Hong
+Kong joined a video call with
+
+131
+00:04:58,060 --> 00:05:01,540
+his company's chief financial
+officer and a few colleagues.
+
+132
+00:05:01,540 --> 00:05:02,840
+He recognised them.
+
+133
+00:05:02,840 --> 00:05:04,290
+He did what they asked.
+
+134
+00:05:04,310 --> 00:05:07,580
+And he sent about
+twenty-five million dollars.
+
+135
+00:05:07,580 --> 00:05:12,790
+Hong Kong police later said every single
+person he saw on that call... was fake.
+
+136
+00:05:12,830 --> 00:05:14,290
+All deepfakes.
+
+137
+00:05:14,400 --> 00:05:16,360
+The company turned out to be Arup.
+
+138
+00:05:16,360 --> 00:05:18,150
+A British engineering firm.
+
+139
+00:05:18,150 --> 00:05:19,610
+I used to work in banking.
+
+140
+00:05:19,610 --> 00:05:22,300
+And trust me, the scam call isn't new.
+
+141
+00:05:22,300 --> 00:05:23,220
+What's new...
+
+142
+00:05:23,220 --> 00:05:26,140
+is that it sounds exactly
+like someone you love.
+
+143
+00:05:26,140 --> 00:05:27,760
+Danger number five.
+
+144
+00:05:27,760 --> 00:05:29,190
+The quietest one.
+
+145
+00:05:29,300 --> 00:05:30,940
+Your own judgment.
+
+146
+00:05:30,940 --> 00:05:33,830
+The more we use AI, the more we trust it.
+
+147
+00:05:33,830 --> 00:05:35,360
+There's even a name for it.
+
+148
+00:05:35,360 --> 00:05:37,100
+Automation bias.
+
+149
+00:05:37,100 --> 00:05:39,650
+We trust the machine over our own gut.
+
+150
+00:05:39,650 --> 00:05:42,150
+And AI always sounds confident.
+
+151
+00:05:42,150 --> 00:05:43,040
+Polished.
+
+152
+00:05:43,040 --> 00:05:44,950
+Even when it's completely wrong.
+
+153
+00:05:44,950 --> 00:05:48,730
+Last year, England's High Court
+dealt with two cases where fake
+
+154
+00:05:48,730 --> 00:05:51,740
+legal citations ended
+up in front of judges.
+
+155
+00:05:51,740 --> 00:05:55,570
+In one, the research had been
+done partly with AI tools.
+
+156
+00:05:55,570 --> 00:05:57,710
+Forty-five cases cited.
+
+157
+00:05:57,710 --> 00:05:59,990
+Eighteen of them... didn't exist.
+
+158
+00:05:59,990 --> 00:06:04,630
+The judges warned of "serious implications
+for the administration of justice".
+
+159
+00:06:04,720 --> 00:06:06,620
+These were trained professionals.
+
+160
+00:06:06,620 --> 00:06:09,030
+And the confident answer still won.
+
+161
+00:06:09,030 --> 00:06:11,590
+And that's what makes this one the worst.
+
+162
+00:06:11,590 --> 00:06:14,250
+If we stop checking, we overshare.
+
+163
+00:06:14,300 --> 00:06:16,450
+We accept unfair answers.
+
+164
+00:06:16,450 --> 00:06:17,870
+We believe the fake photo.
+
+165
+00:06:17,870 --> 00:06:19,730
+And we pick up the phone...
+
+166
+00:06:19,730 --> 00:06:21,170
+and trust the voice.
+
+167
+00:06:21,170 --> 00:06:21,890
+So.
+
+168
+00:06:21,890 --> 00:06:23,060
+What do you actually do?
+
+169
+00:06:23,060 --> 00:06:25,830
+You don't have to throw
+your phone in the sea.
+
+170
+00:06:25,830 --> 00:06:26,990
+4 habits.
+
+171
+00:06:26,990 --> 00:06:27,650
+One.
+
+172
+00:06:27,650 --> 00:06:29,030
+The postcard rule.
+
+173
+00:06:29,030 --> 00:06:32,480
+Nothing goes into a chatbot that
+you wouldn't put on a postcard.
+
+174
+00:06:32,480 --> 00:06:34,760
+And switch off training wherever you can.
+
+175
+00:06:34,760 --> 00:06:35,420
+Two.
+
+176
+00:06:35,420 --> 00:06:36,460
+Question it.
+
+177
+00:06:36,460 --> 00:06:39,760
+If an answer matters, ask
+the AI for its sources...
+
+178
+00:06:39,760 --> 00:06:41,530
+then go and check them yourself.
+
+179
+00:06:41,540 --> 00:06:43,990
+Because AI can make up sources too.
+
+180
+00:06:43,990 --> 00:06:44,790
+3.
+
+181
+00:06:44,790 --> 00:06:46,580
+And this is the trick I promised.
+
+182
+00:06:46,580 --> 00:06:48,950
+Agree a safe phrase with your family.
+
+183
+00:06:48,950 --> 00:06:49,870
+Tonight.
+
+184
+00:06:49,870 --> 00:06:52,650
+A word or a phrase that only you know.
+
+185
+00:06:52,650 --> 00:06:54,210
+Say it face to face.
+
+186
+00:06:54,210 --> 00:06:55,290
+Never text it.
+
+187
+00:06:55,290 --> 00:06:56,540
+Never post it.
+
+188
+00:06:56,540 --> 00:06:59,950
+If "Mum" ever calls in a
+panic asking for money...
+
+189
+00:06:59,950 --> 00:07:01,340
+ask for the phrase.
+
+190
+00:07:01,340 --> 00:07:02,200
+No phrase?
+
+191
+00:07:02,200 --> 00:07:03,010
+Hang up.
+
+192
+00:07:03,010 --> 00:07:05,590
+And call her back on the
+number you already have.
+
+193
+00:07:05,590 --> 00:07:06,510
+And 4.
+
+194
+00:07:06,510 --> 00:07:10,220
+Use AI as a co-pilot, not an autopilot.
+
+195
+00:07:10,230 --> 00:07:13,170
+Let it draft, brainstorm, explain.
+
+196
+00:07:13,170 --> 00:07:15,250
+But the final call is yours.
+
+197
+00:07:15,250 --> 00:07:18,240
+If you can't explain its
+answer in your own words,
+
+198
+00:07:18,240 --> 00:07:19,560
+you haven't learned it.
+
+199
+00:07:19,560 --> 00:07:21,150
+You've just copied it.
+
+200
+00:07:21,150 --> 00:07:23,240
+AI isn't the villain here.
+
+201
+00:07:23,240 --> 00:07:26,230
+The stranger in your phone
+can be brilliant company.
+
+202
+00:07:26,230 --> 00:07:28,190
+Just don't hand him the keys.
+
+203
+00:07:28,190 --> 00:07:31,400
+There's one word in this
+video I never said out loud.
+
+204
+00:07:31,400 --> 00:07:32,330
+Spotted it?
+
+205
+00:07:32,330 --> 00:07:33,140
+Comment it.
+
+206
+00:07:33,140 --> 00:07:36,820
+Subscribe for more AI,
+explained like this.

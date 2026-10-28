@@ -20,6 +20,7 @@ Read `README.md` before building anything. It has the full pipeline, commands, s
 - Render with `-f 30 -q high`. Verify the MP4: 1080×1920, 30 fps, −14 LUFS. Look at frames pulled from the file itself.
 - Keep the session active while a render runs (watch it with a monitor). An idle session once killed a background render.
 - Commit sources and new library art. Never commit MP4, WAV or model weights. Deliver those as files.
+- No ads, pop-ups, cookie banners, subscribe boxes or browser chrome in any PDF, page crop or screenshot we show. Ask for pages saved from Safari Reader (or the site's print view), check every crop at full size, and crop past or recapture anything that slipped in.
 - Real photos: the workspace can't download from Unsplash, Pexels or Hugging Face. Ask the creator to attach them. Never work around a network block.
 - Credit "3D art: Microsoft Fluent Emoji (MIT licence)" in every YouTube description that uses it.
 - From Short #7: at most 10 generated videos and 5 generated images per short. Everything else is stock (Pexels, Pixabay, Unsplash, Mixkit, Coverr), public-domain or Creative Commons footage, screen recordings, screenshots and our own graphics. The Content Hub's "Visual playbook" lists the techniques.

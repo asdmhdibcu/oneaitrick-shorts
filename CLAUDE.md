@@ -31,3 +31,10 @@ Read `README.md` before building anything. It has the full pipeline, commands, s
   - Every episode also gets a carousel (8–10 slides, 1080×1350) and 2–3 opening variants for Trial Reels.
   - Instagram alone adds a third post type, "the trick": a 30–45 s demo of one AI tool. The "not how-to" rule still holds for YouTube and TikTok.
   - No face on camera for now.
+- From #13, every short is made for a worldwide audience, not just the UK:
+  - Pick stories that matter in any country: global tools (ChatGPT, Gemini, WhatsApp, Gmail), studies with worldwide results. A one-country story only when the mechanism happens everywhere; name the country once, as one example.
+  - Plain international English that non-native viewers follow: short words, no idioms or slang, US spelling on screen (math, color). Say "phone", "mail", "mom or dad"; avoid local institutions (NHS, ICO, Parliament) unless the story needs one, then say what it is in a few words.
+  - Money in US dollars, or no currency at all. Numbers rounded and said simply ("about one in eight").
+  - Every key idea readable from the picture alone, so it lands even with the sound off or for a weaker English speaker.
+  - Titles and hashtags in plain English with no local references. Upload translated title, description and subtitles (Spanish, Portuguese, Hindi, Indonesian) for every short.
+  - Post at about 14:00 UTC (US morning, UK afternoon, India evening).

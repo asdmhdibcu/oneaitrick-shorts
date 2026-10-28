@@ -8,6 +8,9 @@ The other two pitches, not picked: "The AI that felt pain" (The Pain Axis, arXiv
 relief button that deletes a user's family photos, 71% for the 72B model; next in line) and "Ten minutes with
 ChatGPT made them quit" (Brian Christian et al., arXiv 2604.04721, COLM).
 
+**Update 28 Oct:** the creator wants real footage, not icons or cartoon art. `MATERIAL.md` replaces the Fluent 3D
+art and the island-graphics ideas below; graphics stay only as labels, numbers and highlights.
+
 ## The story
 
 Hook → evidence → twist → takeaway. MIT left 13 copies of an AI alone on a virtual island for 30 hours with no task

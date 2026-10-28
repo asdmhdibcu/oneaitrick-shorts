@@ -1,7 +1,7 @@
 # Short #13: "Alone on an island, the AI started to play" (brief and handoff)
 
 Status on 28 Oct 2026: the creator picked this pitch (2 of 3). `script.txt` is draft v1, **waiting for the creator's
-OK** before they record it in ElevenLabs. It is 226 words, about 85 s at #9's pace. Nothing is built yet. First short
+OK** before they record it in ElevenLabs. It is 233 words, about 88 s at #9's pace. Nothing is built yet. First short
 under the worldwide-audience rule (CLAUDE.md, from #13): plain international English, US spelling on screen.
 
 The other two pitches, not picked: "The AI that felt pain" (The Pain Axis, arXiv 2609.16247, 25 open models, a

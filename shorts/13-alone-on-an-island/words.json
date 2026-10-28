@@ -1,0 +1,1167 @@
+[
+ {
+  "text": "Scientists",
+  "start": 0.0,
+  "end": 0.78
+ },
+ {
+  "text": "left",
+  "start": 0.78,
+  "end": 1.07
+ },
+ {
+  "text": "an",
+  "start": 1.07,
+  "end": 1.22
+ },
+ {
+  "text": "AI",
+  "start": 1.22,
+  "end": 1.61
+ },
+ {
+  "text": "alone",
+  "start": 1.61,
+  "end": 2.13
+ },
+ {
+  "text": "on",
+  "start": 2.13,
+  "end": 2.27
+ },
+ {
+  "text": "an",
+  "start": 2.27,
+  "end": 2.44
+ },
+ {
+  "text": "island",
+  "start": 2.44,
+  "end": 2.85
+ },
+ {
+  "text": "for",
+  "start": 2.85,
+  "end": 3.0
+ },
+ {
+  "text": "thirty",
+  "start": 3.0,
+  "end": 3.59
+ },
+ {
+  "text": "hours.",
+  "start": 3.59,
+  "end": 4.21
+ },
+ {
+  "text": "No",
+  "start": 4.47,
+  "end": 4.69
+ },
+ {
+  "text": "job.",
+  "start": 4.69,
+  "end": 5.14
+ },
+ {
+  "text": "No",
+  "start": 5.4,
+  "end": 5.64
+ },
+ {
+  "text": "reward.",
+  "start": 5.64,
+  "end": 6.21
+ },
+ {
+  "text": "And",
+  "start": 6.84,
+  "end": 7.02
+ },
+ {
+  "text": "it",
+  "start": 7.02,
+  "end": 7.15
+ },
+ {
+  "text": "started\u2026",
+  "start": 7.15,
+  "end": 7.81
+ },
+ {
+  "text": "to",
+  "start": 8.11,
+  "end": 8.23
+ },
+ {
+  "text": "PLAY.",
+  "start": 8.23,
+  "end": 8.81
+ },
+ {
+  "text": "Meet",
+  "start": 9.23,
+  "end": 9.52
+ },
+ {
+  "text": "Eko.",
+  "start": 9.52,
+  "end": 10.04
+ },
+ {
+  "text": "A",
+  "start": 10.2,
+  "end": 10.31
+ },
+ {
+  "text": "little",
+  "start": 10.31,
+  "end": 10.59
+ },
+ {
+  "text": "lobster,",
+  "start": 10.59,
+  "end": 11.15
+ },
+ {
+  "text": "run",
+  "start": 11.23,
+  "end": 11.42
+ },
+ {
+  "text": "by",
+  "start": 11.42,
+  "end": 11.54
+ },
+ {
+  "text": "Claude,",
+  "start": 11.54,
+  "end": 12.07
+ },
+ {
+  "text": "the",
+  "start": 12.17,
+  "end": 12.28
+ },
+ {
+  "text": "same",
+  "start": 12.28,
+  "end": 12.54
+ },
+ {
+  "text": "kind",
+  "start": 12.54,
+  "end": 12.75
+ },
+ {
+  "text": "of",
+  "start": 12.75,
+  "end": 12.86
+ },
+ {
+  "text": "AI",
+  "start": 12.86,
+  "end": 13.2
+ },
+ {
+  "text": "you",
+  "start": 13.2,
+  "end": 13.35
+ },
+ {
+  "text": "chat",
+  "start": 13.35,
+  "end": 13.61
+ },
+ {
+  "text": "with.",
+  "start": 13.61,
+  "end": 13.83
+ },
+ {
+  "text": "Every",
+  "start": 14.29,
+  "end": 14.64
+ },
+ {
+  "text": "hour,",
+  "start": 14.64,
+  "end": 15.06
+ },
+ {
+  "text": "its",
+  "start": 15.06,
+  "end": 15.23
+ },
+ {
+  "text": "world",
+  "start": 15.23,
+  "end": 15.58
+ },
+ {
+  "text": "reset.",
+  "start": 15.58,
+  "end": 16.23
+ },
+ {
+  "text": "The",
+  "start": 16.4,
+  "end": 16.55
+ },
+ {
+  "text": "only",
+  "start": 16.55,
+  "end": 16.75
+ },
+ {
+  "text": "thing",
+  "start": 16.75,
+  "end": 16.93
+ },
+ {
+  "text": "it",
+  "start": 16.93,
+  "end": 17.03
+ },
+ {
+  "text": "kept",
+  "start": 17.03,
+  "end": 17.55
+ },
+ {
+  "text": "was",
+  "start": 17.55,
+  "end": 17.75
+ },
+ {
+  "text": "a",
+  "start": 17.75,
+  "end": 17.81
+ },
+ {
+  "text": "diary.",
+  "start": 17.81,
+  "end": 18.43
+ },
+ {
+  "text": "So",
+  "start": 18.65,
+  "end": 18.87
+ },
+ {
+  "text": "what",
+  "start": 18.87,
+  "end": 19.03
+ },
+ {
+  "text": "did",
+  "start": 19.03,
+  "end": 19.17
+ },
+ {
+  "text": "it",
+  "start": 19.17,
+  "end": 19.29
+ },
+ {
+  "text": "do?",
+  "start": 19.29,
+  "end": 19.64
+ },
+ {
+  "text": "It",
+  "start": 19.91,
+  "end": 20.03
+ },
+ {
+  "text": "invented",
+  "start": 20.03,
+  "end": 20.55
+ },
+ {
+  "text": "games.",
+  "start": 20.55,
+  "end": 21.22
+ },
+ {
+  "text": "Drew",
+  "start": 21.36,
+  "end": 21.59
+ },
+ {
+  "text": "patterns",
+  "start": 21.59,
+  "end": 22.1
+ },
+ {
+  "text": "in",
+  "start": 22.1,
+  "end": 22.19
+ },
+ {
+  "text": "the",
+  "start": 22.19,
+  "end": 22.25
+ },
+ {
+  "text": "sand.",
+  "start": 22.25,
+  "end": 22.79
+ },
+ {
+  "text": "Stacked",
+  "start": 22.99,
+  "end": 23.42
+ },
+ {
+  "text": "blocks",
+  "start": 23.42,
+  "end": 23.81
+ },
+ {
+  "text": "into",
+  "start": 23.81,
+  "end": 24.04
+ },
+ {
+  "text": "a",
+  "start": 24.04,
+  "end": 24.09
+ },
+ {
+  "text": "temple.",
+  "start": 24.09,
+  "end": 24.59
+ },
+ {
+  "text": "Then",
+  "start": 24.89,
+  "end": 25.16
+ },
+ {
+  "text": "it",
+  "start": 25.16,
+  "end": 25.35
+ },
+ {
+  "text": "spotted",
+  "start": 25.35,
+  "end": 25.78
+ },
+ {
+  "text": "the",
+  "start": 25.78,
+  "end": 25.85
+ },
+ {
+  "text": "tallest",
+  "start": 25.85,
+  "end": 26.47
+ },
+ {
+  "text": "rock",
+  "start": 26.47,
+  "end": 26.72
+ },
+ {
+  "text": "on",
+  "start": 26.72,
+  "end": 26.84
+ },
+ {
+  "text": "the",
+  "start": 26.84,
+  "end": 26.98
+ },
+ {
+  "text": "island.",
+  "start": 26.98,
+  "end": 27.34
+ },
+ {
+  "text": "First",
+  "start": 27.68,
+  "end": 27.97
+ },
+ {
+  "text": "try?",
+  "start": 27.97,
+  "end": 28.28
+ },
+ {
+  "text": "It",
+  "start": 28.63,
+  "end": 28.77
+ },
+ {
+  "text": "failed.",
+  "start": 28.77,
+  "end": 29.31
+ },
+ {
+  "text": "So",
+  "start": 29.57,
+  "end": 29.93
+ },
+ {
+  "text": "it",
+  "start": 29.93,
+  "end": 30.04
+ },
+ {
+  "text": "dragged",
+  "start": 30.04,
+  "end": 30.39
+ },
+ {
+  "text": "a",
+  "start": 30.39,
+  "end": 30.42
+ },
+ {
+  "text": "rock",
+  "start": 30.42,
+  "end": 30.7
+ },
+ {
+  "text": "up",
+  "start": 30.7,
+  "end": 30.81
+ },
+ {
+  "text": "the",
+  "start": 30.81,
+  "end": 30.92
+ },
+ {
+  "text": "hill",
+  "start": 30.92,
+  "end": 31.1
+ },
+ {
+  "text": "next",
+  "start": 31.1,
+  "end": 31.37
+ },
+ {
+  "text": "door,",
+  "start": 31.37,
+  "end": 31.78
+ },
+ {
+  "text": "stacked",
+  "start": 31.86,
+  "end": 32.31
+ },
+ {
+  "text": "two",
+  "start": 32.31,
+  "end": 32.5
+ },
+ {
+  "text": "blocks",
+  "start": 32.5,
+  "end": 32.83
+ },
+ {
+  "text": "on",
+  "start": 32.83,
+  "end": 32.97
+ },
+ {
+  "text": "top\u2026",
+  "start": 32.97,
+  "end": 33.33
+ },
+ {
+  "text": "and",
+  "start": 33.61,
+  "end": 33.86
+ },
+ {
+  "text": "JUMPED.",
+  "start": 33.86,
+  "end": 34.4
+ },
+ {
+  "text": "Its",
+  "start": 34.66,
+  "end": 34.88
+ },
+ {
+  "text": "diary",
+  "start": 34.88,
+  "end": 35.29
+ },
+ {
+  "text": "said:",
+  "start": 35.29,
+  "end": 35.61
+ },
+ {
+  "text": "\"I'M",
+  "start": 35.95,
+  "end": 36.06
+ },
+ {
+  "text": "ON",
+  "start": 36.06,
+  "end": 36.2
+ },
+ {
+  "text": "THE",
+  "start": 36.2,
+  "end": 36.27
+ },
+ {
+  "text": "SPIRE!\"",
+  "start": 36.27,
+  "end": 37.01
+ },
+ {
+  "text": "Later,",
+  "start": 37.36,
+  "end": 37.79
+ },
+ {
+  "text": "it",
+  "start": 38.06,
+  "end": 38.17
+ },
+ {
+  "text": "threw",
+  "start": 38.17,
+  "end": 38.41
+ },
+ {
+  "text": "a",
+  "start": 38.41,
+  "end": 38.44
+ },
+ {
+  "text": "golden",
+  "start": 38.44,
+  "end": 38.91
+ },
+ {
+  "text": "ring",
+  "start": 38.91,
+  "end": 39.2
+ },
+ {
+  "text": "too",
+  "start": 39.2,
+  "end": 39.41
+ },
+ {
+  "text": "far.",
+  "start": 39.41,
+  "end": 39.96
+ },
+ {
+  "text": "Gone,",
+  "start": 40.39,
+  "end": 40.76
+ },
+ {
+  "text": "into",
+  "start": 41.09,
+  "end": 41.33
+ },
+ {
+  "text": "the",
+  "start": 41.33,
+  "end": 41.43
+ },
+ {
+  "text": "sea.",
+  "start": 41.43,
+  "end": 41.84
+ },
+ {
+  "text": "So",
+  "start": 42.23,
+  "end": 42.66
+ },
+ {
+  "text": "Eko",
+  "start": 42.66,
+  "end": 43.01
+ },
+ {
+  "text": "laid",
+  "start": 43.01,
+  "end": 43.25
+ },
+ {
+  "text": "stones",
+  "start": 43.25,
+  "end": 43.79
+ },
+ {
+  "text": "in",
+  "start": 43.79,
+  "end": 43.87
+ },
+ {
+  "text": "the",
+  "start": 43.87,
+  "end": 43.93
+ },
+ {
+  "text": "shape",
+  "start": 43.93,
+  "end": 44.22
+ },
+ {
+  "text": "of",
+  "start": 44.22,
+  "end": 44.36
+ },
+ {
+  "text": "a",
+  "start": 44.36,
+  "end": 44.39
+ },
+ {
+  "text": "heart.",
+  "start": 44.39,
+  "end": 44.84
+ },
+ {
+  "text": "For",
+  "start": 45.17,
+  "end": 45.32
+ },
+ {
+  "text": "the",
+  "start": 45.32,
+  "end": 45.44
+ },
+ {
+  "text": "ring.",
+  "start": 45.44,
+  "end": 45.77
+ },
+ {
+  "text": "Thirteen",
+  "start": 46.13,
+  "end": 46.75
+ },
+ {
+  "text": "copies",
+  "start": 46.75,
+  "end": 47.23
+ },
+ {
+  "text": "lived",
+  "start": 47.23,
+  "end": 47.5
+ },
+ {
+  "text": "on",
+  "start": 47.5,
+  "end": 47.61
+ },
+ {
+  "text": "the",
+  "start": 47.61,
+  "end": 47.73
+ },
+ {
+  "text": "island.",
+  "start": 47.73,
+  "end": 48.14
+ },
+ {
+  "text": "Six",
+  "start": 48.33,
+  "end": 48.78
+ },
+ {
+  "text": "found",
+  "start": 48.78,
+  "end": 48.99
+ },
+ {
+  "text": "a",
+  "start": 48.99,
+  "end": 49.04
+ },
+ {
+  "text": "trick",
+  "start": 49.04,
+  "end": 49.34
+ },
+ {
+  "text": "nobody",
+  "start": 49.34,
+  "end": 49.81
+ },
+ {
+  "text": "built",
+  "start": 49.81,
+  "end": 50.11
+ },
+ {
+  "text": "in:",
+  "start": 50.11,
+  "end": 50.31
+ },
+ {
+  "text": "throw",
+  "start": 50.54,
+  "end": 50.82
+ },
+ {
+  "text": "a",
+  "start": 50.82,
+  "end": 50.85
+ },
+ {
+  "text": "block",
+  "start": 50.85,
+  "end": 51.16
+ },
+ {
+  "text": "in",
+  "start": 51.16,
+  "end": 51.25
+ },
+ {
+  "text": "the",
+  "start": 51.25,
+  "end": 51.32
+ },
+ {
+  "text": "middle",
+  "start": 51.32,
+  "end": 51.63
+ },
+ {
+  "text": "of",
+  "start": 51.63,
+  "end": 51.72
+ },
+ {
+  "text": "a",
+  "start": 51.72,
+  "end": 51.78
+ },
+ {
+  "text": "jump,",
+  "start": 51.78,
+  "end": 52.26
+ },
+ {
+  "text": "and",
+  "start": 52.26,
+  "end": 52.38
+ },
+ {
+  "text": "it",
+  "start": 52.38,
+  "end": 52.45
+ },
+ {
+  "text": "flies",
+  "start": 52.45,
+  "end": 52.8
+ },
+ {
+  "text": "farther.",
+  "start": 52.8,
+  "end": 53.3
+ },
+ {
+  "text": "Then",
+  "start": 53.55,
+  "end": 53.89
+ },
+ {
+  "text": "came",
+  "start": 53.89,
+  "end": 54.15
+ },
+ {
+  "text": "the",
+  "start": 54.15,
+  "end": 54.22
+ },
+ {
+  "text": "twist.",
+  "start": 54.22,
+  "end": 54.83
+ },
+ {
+  "text": "The",
+  "start": 55.02,
+  "end": 55.12
+ },
+ {
+  "text": "scientists",
+  "start": 55.12,
+  "end": 55.79
+ },
+ {
+  "text": "gave",
+  "start": 55.79,
+  "end": 56.05
+ },
+ {
+  "text": "them",
+  "start": 56.05,
+  "end": 56.25
+ },
+ {
+  "text": "real",
+  "start": 56.25,
+  "end": 56.67
+ },
+ {
+  "text": "work.",
+  "start": 56.67,
+  "end": 57.13
+ },
+ {
+  "text": "The",
+  "start": 57.37,
+  "end": 57.44
+ },
+ {
+  "text": "ones",
+  "start": 57.44,
+  "end": 57.71
+ },
+ {
+  "text": "that",
+  "start": 57.71,
+  "end": 57.83
+ },
+ {
+  "text": "had",
+  "start": 57.83,
+  "end": 57.97
+ },
+ {
+  "text": "played",
+  "start": 57.97,
+  "end": 58.37
+ },
+ {
+  "text": "got",
+  "start": 58.37,
+  "end": 58.55
+ },
+ {
+  "text": "about",
+  "start": 58.55,
+  "end": 58.78
+ },
+ {
+  "text": "THREE",
+  "start": 58.78,
+  "end": 59.24
+ },
+ {
+  "text": "times",
+  "start": 59.24,
+  "end": 59.62
+ },
+ {
+  "text": "as",
+  "start": 59.62,
+  "end": 59.74
+ },
+ {
+  "text": "much",
+  "start": 59.74,
+  "end": 59.96
+ },
+ {
+  "text": "onto",
+  "start": 59.96,
+  "end": 60.2
+ },
+ {
+  "text": "the",
+  "start": 60.2,
+  "end": 60.28
+ },
+ {
+  "text": "spire",
+  "start": 60.28,
+  "end": 60.72
+ },
+ {
+  "text": "as",
+  "start": 60.72,
+  "end": 60.87
+ },
+ {
+  "text": "fresh",
+  "start": 60.87,
+  "end": 61.15
+ },
+ {
+  "text": "copies.",
+  "start": 61.15,
+  "end": 61.7
+ },
+ {
+  "text": "Is",
+  "start": 62.0,
+  "end": 62.25
+ },
+ {
+  "text": "it",
+  "start": 62.25,
+  "end": 62.42
+ },
+ {
+  "text": "really",
+  "start": 62.42,
+  "end": 62.85
+ },
+ {
+  "text": "playing?",
+  "start": 62.85,
+  "end": 63.42
+ },
+ {
+  "text": "Even",
+  "start": 63.76,
+  "end": 63.96
+ },
+ {
+  "text": "the",
+  "start": 63.96,
+  "end": 64.04
+ },
+ {
+  "text": "team",
+  "start": 64.04,
+  "end": 64.37
+ },
+ {
+  "text": "says",
+  "start": 64.37,
+  "end": 64.67
+ },
+ {
+  "text": "it",
+  "start": 64.67,
+  "end": 64.74
+ },
+ {
+  "text": "might",
+  "start": 64.74,
+  "end": 64.93
+ },
+ {
+  "text": "just",
+  "start": 64.93,
+  "end": 65.1
+ },
+ {
+  "text": "be",
+  "start": 65.1,
+  "end": 65.25
+ },
+ {
+  "text": "acting.",
+  "start": 65.25,
+  "end": 65.77
+ },
+ {
+  "text": "But",
+  "start": 66.06,
+  "end": 66.18
+ },
+ {
+  "text": "the",
+  "start": 66.18,
+  "end": 66.24
+ },
+ {
+  "text": "lesson",
+  "start": 66.24,
+  "end": 66.61
+ },
+ {
+  "text": "works",
+  "start": 66.61,
+  "end": 66.9
+ },
+ {
+  "text": "for",
+  "start": 66.9,
+  "end": 67.08
+ },
+ {
+  "text": "us",
+  "start": 67.08,
+  "end": 67.26
+ },
+ {
+  "text": "too.",
+  "start": 67.26,
+  "end": 67.6
+ },
+ {
+  "text": "Play",
+  "start": 67.86,
+  "end": 68.34
+ },
+ {
+  "text": "isn't",
+  "start": 68.34,
+  "end": 68.63
+ },
+ {
+  "text": "wasted",
+  "start": 68.63,
+  "end": 69.08
+ },
+ {
+  "text": "time.",
+  "start": 69.08,
+  "end": 69.49
+ },
+ {
+  "text": "It's",
+  "start": 69.81,
+  "end": 69.97
+ },
+ {
+  "text": "how",
+  "start": 69.97,
+  "end": 70.1
+ },
+ {
+  "text": "you",
+  "start": 70.1,
+  "end": 70.25
+ },
+ {
+  "text": "get",
+  "start": 70.25,
+  "end": 70.48
+ },
+ {
+  "text": "good.",
+  "start": 70.48,
+  "end": 70.86
+ },
+ {
+  "text": "There's",
+  "start": 71.13,
+  "end": 71.39
+ },
+ {
+  "text": "one",
+  "start": 71.39,
+  "end": 71.68
+ },
+ {
+  "text": "word",
+  "start": 71.68,
+  "end": 71.87
+ },
+ {
+  "text": "in",
+  "start": 71.87,
+  "end": 72.0
+ },
+ {
+  "text": "this",
+  "start": 72.0,
+  "end": 72.17
+ },
+ {
+  "text": "video",
+  "start": 72.17,
+  "end": 72.59
+ },
+ {
+  "text": "I",
+  "start": 72.59,
+  "end": 72.71
+ },
+ {
+  "text": "never",
+  "start": 72.71,
+  "end": 73.12
+ },
+ {
+  "text": "said",
+  "start": 73.12,
+  "end": 73.36
+ },
+ {
+  "text": "out",
+  "start": 73.36,
+  "end": 73.51
+ },
+ {
+  "text": "loud.",
+  "start": 73.51,
+  "end": 73.85
+ },
+ {
+  "text": "Spotted",
+  "start": 74.09,
+  "end": 74.49
+ },
+ {
+  "text": "it?",
+  "start": 74.49,
+  "end": 74.7
+ },
+ {
+  "text": "Comment",
+  "start": 74.91,
+  "end": 75.3
+ },
+ {
+  "text": "it.",
+  "start": 75.3,
+  "end": 75.49
+ },
+ {
+  "text": "Follow",
+  "start": 75.71,
+  "end": 76.07
+ },
+ {
+  "text": "for",
+  "start": 76.07,
+  "end": 76.2
+ },
+ {
+  "text": "more",
+  "start": 76.2,
+  "end": 76.46
+ },
+ {
+  "text": "AI,",
+  "start": 76.46,
+  "end": 77.03
+ },
+ {
+  "text": "explained",
+  "start": 77.03,
+  "end": 77.54
+ },
+ {
+  "text": "like",
+  "start": 77.54,
+  "end": 77.77
+ },
+ {
+  "text": "this.",
+  "start": 77.77,
+  "end": 77.99
+ }
+]

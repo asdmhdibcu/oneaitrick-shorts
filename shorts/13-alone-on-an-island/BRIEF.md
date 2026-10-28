@@ -45,6 +45,26 @@ Phillip Isola (MIT CSAIL). arXiv 2610.07130, posted 5 Oct 2026, not peer reviewe
 
 **Unreachable from the workspace:** arxiv.org, technologyreview.com, gizmodo.com, mit.edu. GitHub works.
 
+
+## Fact check against the paper (28 Oct, recorded take, 78.3 s)
+
+Checked line by line in `work/pdf/paper.pdf` (arXiv 2610.07130):
+- 13 agents, Claude Opus 4.7 in Claude Code, named Eko, 30 hours, no task or reward: p. 1–3. OK.
+- "Every hour, its world reset. The only thing it kept was a diary.": objects restored and context reset hourly;
+  memory files in the workspace persist. OK.
+- Games, sand patterns (mandalas), a temple of blocks ("The Temple of the Spawn Axis", agent 9, hour 10). OK.
+- The Spire (Figure 1, hour 2): Eko carries the Rock up to Summit, climbs on, jumps and falls short; throws a cube onto
+  the Rock, "One more on top", then climbs the stack and leaps. "I'M ON THE SPIRE." The script says the failed try came
+  before the rock; in the paper it fell short standing on the rock, before the two blocks. A compression, not a
+  wrong fact; the edit shows rock → fall → blocks → jump, in the paper's order.
+- Golden ring lost in the ocean (hour 5, "Ouch. Lost the Ring."), then a stone heart "as a memorial to the lost
+  Ring". OK.
+- Six agents discover the mid-jump throw, "a technique we did not know our simulator allowed". OK.
+- Objects on the Spire: 10.3 (30-hour agents) vs 3.5 (0-hour agents), 2.9×, "about three times". OK.
+- "Even the team says it might just be acting": the paper leaves open "whether it is experiencing enjoyment,
+  absorption, or fun" (p. 2) and asks whether agents "genuinely learn ... or merely narrate having done so"; Cloos to
+  MIT Technology Review: "All of this could be role-playing." OK. Quote card uses the paper's own line.
+
 ## Material to ask for once the script is OK
 
 - NEEDED: the paper PDF (arxiv.org/pdf/2610.07130) into `work/pdf/` (git-ignored). Its figures and any screenshots of

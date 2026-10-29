@@ -22,7 +22,7 @@ python3 build_edit.py                  # conform every shot (edl.py) -> assets/c
 python3 make_index.py                  # index_template.tpl + fx_shots.js -> index.html, work/cuts.json
 python3 make_audio.py                  # music12.py score (plan_video.json) + sfx.json + mix -> assets/mix.wav (-14 LUFS)
 export HYPERFRAMES_BROWSER_PATH=/opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell
-npx hyperframes render -f 30 -q high -w 2 -o renders/video12-raw.mp4      # Bash run_in_background
+HF_CAPTURE_PARALLEL_STREAM=true npx hyperframes render -f 30 -q high -w 2 -o renders/video12-raw.mp4   # Bash run_in_background
 ffmpeg -i renders/video12-raw.mp4 -i assets/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -ar 48000 \
   -shortest -movflags +faststart renders/video12-this-voice-isnt-me.mp4
 ffmpeg -i renders/video12-this-voice-isnt-me.mp4 -c:v libx264 -preset slow -crf 18 -maxrate 12M -bufsize 24M -profile:v high \
@@ -48,3 +48,7 @@ The thumbnail, the Short's cover and the Instagram carousel come from `shorts/12
 - p7's first frames are Google's AI Overview, not Starling: only frames 13+ (the press release) are used.
 - `"F": "flow"` in DEFAULT_GRADE: the #11 Flow clips keep their codes.
 - `make_audio.py` reads work/cuts.json: run it after every `make_index.py`.
+- A 7:39 render with 2 workers wants ~29 GB of frame files on disk; `HF_CAPTURE_PARALLEL_STREAM=true` streams them to the
+  encoder instead (the workspace had 15 GB free).
+- `hyperframes check` never finishes its runtime pass on this composition, even in 60 s windows: the review is the
+  contact sheets plus `tools/overlay_audit.py`.

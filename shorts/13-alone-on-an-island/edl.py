@@ -45,7 +45,7 @@ MAT = {
     "R4": (REP + "R04_block", "a block lands on the Rock (agent 9, 1:45)", "REAL RUN · AGENT 9"),
     "R5": (REP + "R05b_spire", "Eko on the Spire, just after the leap (agent 9, 1:54)", "REAL RUN · AGENT 9"),
     "R6": (REP + "R06b_ring", "Eko with the Ring at the edge, before the throw (agent 9, 4:13)", "REAL RUN · AGENT 9"),
-    "R7": (REP + "R07_heart", "the stone heart (agent 9, 4:33)", "REAL RUN · AGENT 9"),
+    "R7": (REP + "R07b_heart", "the stone heart, finished (agent 9, 4:33)", "REAL RUN · AGENT 9"),
     "R9": (REP + "R09b_temple", "the Temple of the Spawn Axis (agent 2, 9:56)", "REAL RUN · AGENT 2"),
 }
 FIGS = {

@@ -93,7 +93,7 @@ PLAN = [
     # the Ring
     ("s17", 104, "V", dict(m="R6", sin=0.0, rate=0.7)),                  # Later, it threw a golden ring too far.
     ("s18", 112, "V", dict(m="S5", sin=2.0)),                    # Gone, into the sea.
-    ("s19", 116, "V", dict(m="R7", sin=0.0)),                    # So Eko laid stones in the shape of a heart.
+    ("s19", 116, "V", dict(m="R7", sin=0.0, roll180=True)),                  # So Eko laid stones in the shape of a heart.
     ("s20", 126, "IMG", dict(img="heart", bd="S6", bdsin=8.0)),  # For the ring.
     # the trick
     ("s21", 129, "V", dict(m="G3", sin=0.5)),                    # Thirteen copies lived on the island.

@@ -88,7 +88,8 @@ def conform_v(sid, sp, span):
     grade = GRADES[sp.get("grade", DEFAULT_GRADE[code[0]])]
     ss, need, chain = timing(sp.get("sin", 0.0), span, sp.get("rate", 1.0), dur, sp.get("blend", True))
     pre, post = seek(code, ss, need)
-    g = f"[0:v]{chain},{fill(w, h, sp.get('cx', 0.5), sp.get('cy', 0.5))},{grade},fps=30,format=yuv420p"
+    roll = "hflip,vflip," if sp.get("roll180") else ""   # a straight-down camera, turned so the picture reads the right way up
+    g = f"[0:v]{chain},{roll}{fill(w, h, sp.get('cx', 0.5), sp.get('cy', 0.5))},{grade},fps=30,format=yuv420p"
     run(["ffmpeg", "-v", "error", "-y"] + pre + inp + post + ["-filter_complex", g, "-t", f"{span:.3f}"] + enc(f"assets/clips/{sid}.mp4"))
 
 

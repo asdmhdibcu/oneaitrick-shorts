@@ -22,8 +22,12 @@ python3 build_edit.py                  # conform every shot (edl.py) -> assets/c
 python3 make_index.py                  # index_template.tpl + fx_shots.js -> index.html, work/cuts.json
 python3 make_audio.py                  # music12.py score (plan_video.json) + sfx.json + mix -> assets/mix.wav (-14 LUFS)
 export HYPERFRAMES_BROWSER_PATH=/opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell
-HF_CAPTURE_PARALLEL_STREAM=true npx hyperframes render -f 30 -q high -w 2 -o renders/video12-raw.mp4   # Bash run_in_background
-ffmpeg -i renders/video12-raw.mp4 -i assets/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -ar 48000 \
+python3 make_parts.py                  # two silent halves (part_a/, part_b/): one render must finish inside 2 h
+export HF_CAPTURE_PARALLEL_STREAM=true  # stream frames to the encoder (a full-length disk capture wants ~29 GB)
+(cd part_a && npx hyperframes render -f 30 -q high -w 2 -o ../renders/video12-part-a.mp4)   # Bash run_in_background, ~1 h
+(cd part_b && npx hyperframes render -f 30 -q high -w 2 -o ../renders/video12-part-b.mp4)   # then the second half
+printf "file 'video12-part-a.mp4'\nfile 'video12-part-b.mp4'\n" > renders/parts.txt
+ffmpeg -f concat -safe 0 -i renders/parts.txt -i assets/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -ar 48000 \
   -shortest -movflags +faststart renders/video12-this-voice-isnt-me.mp4
 ffmpeg -i renders/video12-this-voice-isnt-me.mp4 -c:v libx264 -preset slow -crf 18 -maxrate 12M -bufsize 24M -profile:v high \
   -level:v 4.1 -pix_fmt yuv420p -g 60 -c:a copy -movflags +faststart renders/video12-this-voice-isnt-me-upload.mp4
@@ -50,5 +54,8 @@ The thumbnail, the Short's cover and the Instagram carousel come from `shorts/12
 - `make_audio.py` reads work/cuts.json: run it after every `make_index.py`.
 - A 7:39 render with 2 workers wants ~29 GB of frame files on disk; `HF_CAPTURE_PARALLEL_STREAM=true` streams them to the
   encoder instead (the workspace had 15 GB free).
+- A background job is stopped after 2 hours and the full render needs ~2 h 15 min; detached processes are stopped too.
+  `make_parts.py` splits at the cut nearest the middle; part B plays the timeline from T through a wrapper and matched the
+  full composition pixel for pixel in snapshots.
 - `hyperframes check` never finishes its runtime pass on this composition, even in 60 s windows: the review is the
   contact sheets plus `tools/overlay_audit.py`.

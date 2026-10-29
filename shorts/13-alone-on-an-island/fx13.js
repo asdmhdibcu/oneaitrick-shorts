@@ -84,7 +84,7 @@ chip("TEST: GET OBJECTS ONTO THE SPIRE", 60, 1100, "#ffb547", w(161), B("s23") -
   tl.fromTo(c1, { v: 0 }, { v: 3.5, duration: 0.6, ease: "power2.out", onUpdate() { $("#n35").textContent = c1.v.toFixed(1); } }, t0 + 0.2);
   tl.fromTo(c2, { v: 0 }, { v: 10.3, duration: 0.9, ease: "power2.out", onUpdate() { $("#n103").textContent = c2.v.toFixed(1); } }, w(172) - 0.3);
   tl.fromTo("#x3", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power4.out" }, w(173));
-  const p = el("div", "proof", "left:330px;top:820px;width:420px", `<img src="assets/img/fig5b.png" alt="" />`);
+  const p = el("div", "proof", "left:410px;top:800px;width:260px", `<img src="assets/img/fig5b.png" alt="" />`);
   tl.fromTo(p, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: E }, w(176));
   tl.to([b, p], { opacity: 0, duration: 0.15 }, B("s24") - 0.08); })();
 

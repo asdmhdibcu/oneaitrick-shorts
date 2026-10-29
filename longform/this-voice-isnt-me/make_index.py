@@ -20,7 +20,8 @@ ORDER = [s[0] for s in SHOTS]
 GEO, PHONE = {}, {}
 
 # ---------------------------------------------------------------- page cards
-ZMAX = {"ad_frame": 1.25, "e_tts": 1.35, "c_head": 1.2, "u_arup": 1.25, "r_head": 1.3, "o_title": 1.3, "t_head": 1.3}
+CARD = {"e_tts": dict(maxh=620)}     # the ElevenLabs screen: smaller, so its zoom stays clear of the captions
+ZMAX = {"ad_frame": 1.25, "e_tts": 1.12, "c_head": 1.2, "u_arup": 1.25, "r_head": 1.3, "o_title": 1.3, "t_head": 1.3}
 
 
 def card(sid, pg, maxw=1240, maxh=700, cx=880, cy=470):
@@ -75,7 +76,7 @@ for z, (sid, t0, t1, kind, sp) in enumerate(SHOTS):
     if kind == "V":
         inner = vid(clip, f"v-{sid}", a, d, ms) if ok else slate(need)
     elif kind == "PAGE":
-        inner = (vid(clip, f"v-{sid}", a, d, ms) if ok else slate(need)) + card(sid, sp["pg"])
+        inner = (vid(clip, f"v-{sid}", a, d, ms) if ok else slate(need)) + card(sid, sp["pg"], **CARD.get(sp["pg"], {}))
     elif kind == "GFX":
         inner = vid(clip, f"v-{sid}", a, d, ms) if ok else slate(need)
     elif kind == "PHONE":

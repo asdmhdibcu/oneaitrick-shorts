@@ -61,6 +61,9 @@ Network: the shell can reach PyPI, npm and GitHub (raw files and release downloa
    - Helpers: `img()` (bottom-anchored art), `shadow()`, `chip()`, `lobby()`, `svg()`, `popIn()`, `slideIn()`, `bob()`, `shake()`, `draw()`.
 9. **Review.** Run `npx hyperframes check`, then `npx hyperframes snapshot -o DIR --at t1,t2,… --no-end --keep`, and make contact sheets.
    - Look at every scene **and** frames about ±0.1 s around every cut. Fix overlaps, empty frames and cramped captions.
+   - `python3 tools/overlay_audit.py index.html` seeks the timeline and lists any overlay left on screen too long. In #12 a
+     fade-in that started after its own fade-out kept a card up for six minutes.
+   - On long compositions `check` times out on the runtime pass: run it in windows (`--timeout 120000 --range 0,28`).
 10. **Render.** Run `npx hyperframes render -f 30 -q high -w 3 -o OUT.mp4`. It takes about 15 min for 86 s on 2 CPUs.
     - Keep the session active and watch it with a monitor. A background render died once when the session went idle.
 11. **Verify.**

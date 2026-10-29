@@ -15,7 +15,9 @@ const smallLogo = (code, x, y, t, tOut, label) => { const d = logo(code, x, y, 2
 
 // ---------- v01 - v03: the hook ----------
 (function () { tl.fromTo("#title", { opacity: 1, y: 0 }, { opacity: 1, y: 0, duration: 0.01 }, 0);
+  tl.fromTo("#tshade", { opacity: 1 }, { opacity: 1, duration: 0.01 }, 0);
   tl.to("#title", { opacity: 0, y: -20, duration: 0.2 }, B("v01") - 0.15);
+  tl.to("#tshade", { opacity: 0, duration: 0.3 }, B("v01") - 0.15);
   punch("v01", w(6), 0.05); })();
 badge("v02", "L1", "ELEVENLABS");
 chip("MY VOICE · CLONED WITH AI", 120, 110, "var(--lime)", w(14), B("v02") - 0.1);
@@ -43,7 +45,7 @@ chip("KNOWS A BIT ABOUT EVERYTHING", 1180, 460, "var(--lime)", w(89), B("v09") -
     tl.fromTo(c, { opacity: 0, y: 40, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, w(k) - 0.25);
     tl.to(c, { opacity: 0, duration: 0.15 }, B("v10") - 0.1); });
   const s5 = el("div", "qc slot", "left:585px;top:610px", '<div class="qn">AND · 5</div><div class="qq">The quietest one…</div>');
-  tl.fromTo(s5, { opacity: 0, scale: 0.9 }, { opacity: 0.85, scale: 1, duration: 0.3 }, w(123) + 0.6); tl.to(s5, { opacity: 0, duration: 0.15 }, B("v10") - 0.1); })();
+  tl.fromTo(s5, { opacity: 0, scale: 0.9 }, { opacity: 0.85, scale: 1, duration: 0.3 }, w(123) + 0.35); tl.to(s5, { opacity: 0, duration: 0.15 }, w(129) - 0.1); })();
 chip("ONE FREE TRICK · AT THE END", 120, 760, "var(--lime)", w(136), B("v11") - 0.1);
 
 // ---------- v12 - v25: danger 1, your secrets ----------
@@ -140,14 +142,14 @@ const callScreen = (id, who, tIn, tOut) => { const c = el("div", "call", "", `<d
   const pu = c.querySelector(".pulse");
   for (let k = 0; k < Math.max(1, Math.floor((tOut - tIn) / 0.9)); k++) tl.fromTo(pu, { opacity: 0.9, scale: 1 }, { opacity: 0, scale: 1.7, duration: 0.85, ease: "power1.out", immediateRender: false }, tIn + 0.2 + k * 0.9);
   tl.to(c, { opacity: 0, duration: 0.15 }, tOut); return c; };
-(function () { const c = callScreen("v52", "Daughter", A("v52") + 0.1, B("v52") - 0.1);
+(function () { const c = callScreen("v52", "Daughter", A("v52") - 0.12, B("v52") - 0.1);
   tl.set(c.querySelector(".cn"), { innerHTML: "Dad" }, w(768)); tl.set(c.querySelector(".av"), { innerHTML: "D" }, w(768)); })();
 words([[774, "Accident"], [777, "Arrested"], [779, "Money. Now."]], 1060, 200, 160, 110, B("v53") - 0.1);
 badge("v54", "L8", "US FEDERAL TRADE COMMISSION");
 chip("THE FAMILY EMERGENCY SCAM", 120, 760, "#ff8a7a", w(795), B("v54") - 0.1);
 badge("v55", "L7", "STARLING BANK");
-big("28%", 1300, 600, 190, "var(--lime)", w(811), B("v55") - 0.08);
-chip("OF UK ADULTS TARGETED IN A YEAR", 1180, 790, "#ffffff", w(814), B("v55") - 0.1);
+big("28%", 120, 720, 180, "var(--lime)", w(811), B("v55") - 0.08);
+chip("OF UK ADULTS TARGETED IN A YEAR", 540, 790, "#ffffff", w(814), B("v55") - 0.1);
 chip("HONG KONG · 2024", 120, 760, "#ffffff", w(838), B("v56") - 0.1);
 chip("A VIDEO CALL WITH HIS CFO", 120, 760, "#ffffff", w(842), B("v57") - 0.1);
 stamp("ALL FAKE", 1300, 790, w(882), B("v59") - 0.06, -6);
@@ -176,6 +178,7 @@ chip("ENGLAND'S HIGH COURT · JUNE 2025", 120, 760, "#ffffff", w(971), B("v67") 
   for (let j = 0; j < 45; j++) { const c = el("div", "case", `left:${300 + (j % 9) * 110}px;top:${170 + Math.floor(j / 9) * 82}px`, "CASE"); cs.push(c);
     tl.fromTo(c, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.18, ease: "back.out(2)" }, w(998) + j * 0.025); }
   cs.forEach((c, j) => { if (BAD.has(j)) { tl.set(c, { className: "case bad", innerHTML: "✕" }, w(1001) + 0.03 * j); } });
+  big("One case:<br/>research done<br/>partly with AI.", 300, 260, 104, "#ffffff", A("v68") + 0.05, w(998) - 0.15);
   big("45 cited", 1340, 220, 96, "#ffffff", w(998), B("v68") - 0.1);
   big("18 didn't exist", 1340, 360, 66, "#ff6b5b", w(1001) + 0.2, B("v68") - 0.1);
   tl.to(cs, { opacity: 0, duration: 0.15 }, B("v68") - 0.1); })();
@@ -189,6 +192,7 @@ chip("ENGLAND'S HIGH COURT · JUNE 2025", 120, 760, "#ffffff", w(971), B("v67") 
 chip("TRAINED PROFESSIONALS", 120, 760, "#ffffff", w(1019), B("v70") - 0.1);
 (function () { // v71: judgment makes the other four worse
   const R = [[1040, "1", "We overshare"], [1044, "2", "Accept unfair answers"], [1049, "3", "Believe the fake photo"], [1059, "4", "Trust the voice"]];
+  big("This one<br/>is the worst.", 420, 300, 120, "var(--lime)", A("v71") + 0.05, w(1035) - 0.15);
   const top = el("div", "tile on", "left:810px;top:120px", '<div class="tn">5</div><div class="tt">Stop checking</div>');
   tl.fromTo(top, { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, w(1035));
   R.forEach(([k, n, t], j) => { const c = el("div", "tile", `left:${150 + j * 420}px;top:430px;width:360px`, `<div class="tn">${n}</div><div class="tt">${t}</div>`);
@@ -202,7 +206,8 @@ chip("TRAINED PROFESSIONALS", 120, 760, "#ffffff", w(1019), B("v70") - 0.1);
   t.querySelectorAll(".n").forEach((n, j) => tl.fromTo(n, { opacity: 0, scale: 0.3, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.3, ease: "back.out(2.5)" }, w(1076) + j * 0.12));
   tl.to(t, { opacity: 0, duration: 0.15 }, B("v72") - 0.1);
   big("Four habits", 440, 540, 104, "#ffffff", w(1077), B("v72") - 0.1);
-  chip("NO NEED TO THROW YOUR PHONE IN THE SEA", 440, 110, "#ffffff", w(1066), w(1076) - 0.1); })();
+  big("So what do you<br/>actually do?", 440, 330, 104, "#ffffff", A("v72") + 0.05, w(1076) - 0.1);
+  chip("NO NEED TO THROW YOUR PHONE IN THE SEA", 440, 600, "var(--lime)", w(1066), w(1076) - 0.1); })();
 chip("1 · THE POSTCARD RULE", 120, 110, "var(--lime)", w(1079), B("v73") - 0.1);
 chip("2 · QUESTION IT", 1110, 780, "var(--lime)", w(1101), B("v74") - 0.1);
 steps("v74", "L3", [["", "Ask for its sources", w(1108)], ["", "Open one", w(1114)], ["", "Check it yourself", w(1117)]], null, A("v74") + 3.35);
@@ -217,7 +222,7 @@ big("Tonight.", 120, 620, 140, "var(--lime)", w(1142), B("v75") - 0.08);
   chip("✕ NEVER TEXT IT", 160, 340, "#ff8a7a", w(1157), B("v76") - 0.1);
   chip("✕ NEVER POST IT", 160, 440, "#ff8a7a", w(1160), B("v76") - 0.1); })();
 (function () { // v77: Mum calls in a panic
-  const c = callScreen("v77", "Mum", w(1164) - 0.2, B("v77") - 0.1);
+  const c = callScreen("v77", "Mum", A("v77") - 0.1, B("v77") - 0.1);
   chip("ASK FOR THE PHRASE", 1300, 240, "var(--lime)", w(1173), B("v77") - 0.1);
   chip("NO PHRASE?", 1300, 340, "#ff8a7a", w(1177), B("v77") - 0.1);
   chip("HANG UP", 1300, 440, "#ff6b5b", w(1179), B("v77") - 0.1);

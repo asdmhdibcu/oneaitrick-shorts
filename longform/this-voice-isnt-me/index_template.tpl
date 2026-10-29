@@ -168,6 +168,7 @@
         <div class="vig"></div>
         <div class="topshade"></div>
         <div class="botshade" id="botshade"></div>
+        <div id="tshade" style="position:absolute;left:0;top:0;width:1920px;height:1080px;opacity:0;background:linear-gradient(90deg,rgba(4,5,10,0.88) 0%,rgba(4,5,10,0.7) 30%,rgba(4,5,10,0) 58%)"></div>
         <div id="title"><div class="k">● AI EXPLAINED · 5 HIDDEN DANGERS</div><div class="t">This voice<br />isn't <em>me</em>.</div><div class="s">It's an AI clone. Here's why that matters to you.</div></div>
         <div id="fx"></div>
         %LABELS%

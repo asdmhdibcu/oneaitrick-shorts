@@ -85,7 +85,7 @@ PLAN = [
     ("s11", 62, "V", dict(m="R9", sin=0.0)),                     # Stacked blocks into a temple.
     # the Spire
     ("s12", 67, "V", dict(m="S4", sin=3.0)),                     # Then it spotted the tallest rock on the island.
-    ("s13", 76, "V", dict(m="R3", sin=0.0)),                     # First try? It failed.
+    ("s13", 76, "V", dict(m="R3", sin=0.0, rate=0.32)),                   # First try? It failed.
     ("s14", 80, "V", dict(m="R4", sin=0.0)),                     # So it dragged a rock up the hill next door, stacked two blocks on top...
     ("s15", 95, "V", dict(m="R5", sin=0.0)),                     # and JUMPED.
     ("s16", 97, "GFX", dict(bd="R5", bdsin=5.0)),                # Its diary said: "I'M ON THE SPIRE!"

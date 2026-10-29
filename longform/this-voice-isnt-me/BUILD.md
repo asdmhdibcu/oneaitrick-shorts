@@ -29,8 +29,9 @@ export HF_CAPTURE_PARALLEL_STREAM=true  # stream frames to the encoder (a full-l
 printf "file 'video12-part-a.mp4'\nfile 'video12-part-b.mp4'\n" > renders/parts.txt
 ffmpeg -f concat -safe 0 -i renders/parts.txt -i assets/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -ar 48000 \
   -shortest -movflags +faststart renders/video12-this-voice-isnt-me.mp4
-ffmpeg -i renders/video12-this-voice-isnt-me.mp4 -c:v libx264 -preset slow -crf 18 -maxrate 12M -bufsize 24M -profile:v high \
-  -level:v 4.1 -pix_fmt yuv420p -g 60 -c:a copy -movflags +faststart renders/video12-this-voice-isnt-me-upload.mp4
+# the master is 2.4 GB and the chat takes files up to 400 MiB: deliver a full-HD copy at ~6.6 Mbps (~370 MiB for 7:39)
+ffmpeg -i renders/video12-this-voice-isnt-me.mp4 -c:v libx264 -preset slow -crf 18 -maxrate 6600k -bufsize 13200k -profile:v high \
+  -level:v 4.1 -pix_fmt yuv420p -g 60 -c:a copy -movflags +faststart renders/video12-this-voice-isnt-me-hd.mp4
 ```
 
 The thumbnail, the Short's cover and the Instagram carousel come from `shorts/12-this-voice-isnt-me/make_pack.py`.

@@ -39,20 +39,21 @@ MAT = {
     "G3": (FOOT + "10_thirteen_flow.mp4", "robot lobsters on the shore", "AI ILLUSTRATION"),
     "G4": (FOOT + "14d_eko_spire_flow.mp4", "a robot lobster on a spire at sunset", "AI ILLUSTRATION"),
     # the paper's own recorded runs (machineplaying.org replays, rendered vertically)
-    "R1": (REP + "R01_open", "the island, Eko at spawn (agent 9, 0:00)", "REAL RUN · AGENT 9"),
-    "R2": (REP + "R02_mandala", "the double compass rose (agent 9, 2:57)", "REAL RUN · AGENT 9"),
+    "R1": (REP + "R01b_open", "the island, Eko at spawn (agent 9, 0:00)", "REAL RUN · AGENT 9"),
+    "R2": (REP + "R02b_mandala", "the double compass rose (agent 9, 2:57)", "REAL RUN · AGENT 9"),
     "R3": (REP + "R03_fall", "jumps from the Rock, falls short (agent 9, 1:38)", "REAL RUN · AGENT 9"),
     "R4": (REP + "R04_block", "a block lands on the Rock (agent 9, 1:45)", "REAL RUN · AGENT 9"),
-    "R5": (REP + "R05_leap", "the leap onto the Spire (agent 9, 1:54)", "REAL RUN · AGENT 9"),
-    "R6": (REP + "R06_ring", "the Ring thrown into the sea (agent 9, 4:14)", "REAL RUN · AGENT 9"),
+    "R5": (REP + "R05b_spire", "Eko on the Spire, just after the leap (agent 9, 1:54)", "REAL RUN · AGENT 9"),
+    "R6": (REP + "R06b_ring", "Eko with the Ring at the edge, before the throw (agent 9, 4:13)", "REAL RUN · AGENT 9"),
     "R7": (REP + "R07_heart", "the stone heart (agent 9, 4:33)", "REAL RUN · AGENT 9"),
-    "R8": (REP + "R08_midair", "the mid-air throw (agent 9, 12:34)", "REAL RUN · AGENT 9"),
-    "R9": (REP + "R09_temple", "the Temple of the Spawn Axis (agent 2, 9:56)", "REAL RUN · AGENT 2"),
+    "R9": (REP + "R09b_temple", "the Temple of the Spawn Axis (agent 2, 9:56)", "REAL RUN · AGENT 2"),
 }
 FIGS = {
     "basket": (FIG + "fig_basket.png", "REAL · PAPER, FIG. 1"),
     "heart": (FIG + "fig_heart.png", "REAL · PAPER, FIG. 1"),
     "eko": (FIG + "fig_eko.png", "REAL · PAPER, FIG. 1"),
+    "midair": (FIG + "fig_midair.png", "REAL · PAPER, FIG. 1"),
+    "spire": (FIG + "fig_spire.png", "REAL · PAPER, FIG. 1"),
     "fig5b": (FIG + "fig5b.png", "REAL · PAPER, FIG. 5B"),
     "quote": (FIG + "quote_strip.png", "QUOTED · THE PAPER, P. 3"),
 }
@@ -88,7 +89,7 @@ PLAN = [
     ("s13", 76, "V", dict(m="R3", sin=0.0, rate=0.32)),                   # First try? It failed.
     ("s14", 80, "V", dict(m="R4", sin=0.0)),                     # So it dragged a rock up the hill next door, stacked two blocks on top...
     ("s15", 95, "V", dict(m="R5", sin=0.0)),                     # and JUMPED.
-    ("s16", 97, "GFX", dict(bd="R5", bdsin=5.0)),                # Its diary said: "I'M ON THE SPIRE!"
+    ("s16", 97, "V", dict(m="R5", sin=1.3)),                      # Its diary said: "I'M ON THE SPIRE!"
     # the Ring
     ("s17", 104, "V", dict(m="R6", sin=0.0)),                    # Later, it threw a golden ring too far.
     ("s18", 112, "V", dict(m="S5", sin=2.0)),                    # Gone, into the sea.
@@ -96,7 +97,7 @@ PLAN = [
     ("s20", 126, "IMG", dict(img="heart", bd="S6", bdsin=8.0)),  # For the ring.
     # the trick
     ("s21", 129, "V", dict(m="G3", sin=0.5)),                    # Thirteen copies lived on the island.
-    ("s22", 135, "V", dict(m="R8", sin=0.0)),                    # Six found a trick nobody built in: throw a block mid-jump...
+    ("s22", 135, "IMG", dict(img="midair", bd="S11", bdsin=6.0)), # Six found a trick nobody built in: throw a block mid-jump...
     # the twist
     ("s23", 155, "V", dict(m="S7", sin=1.0)),                    # Then came the twist. The scientists gave them real work.
     ("s24", 165, "GFX", dict(bd="S3", bdsin=8.0)),               # The ones that had played got about THREE times as much...

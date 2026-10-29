@@ -5,7 +5,7 @@ if (window.SplitText) gsap.registerPlugin(SplitText);
 
 // a line that types itself, letter by letter (SplitText), then holds
 const typeOn = (sel, t, per) => { const n = $(sel); if (!n) return;
-  const parts = window.SplitText ? new SplitText(n, { type: "chars" }).chars : [n];
+  const parts = window.SplitText ? new SplitText(n, { type: "words,chars" }).chars : [n];
   tl.set(parts, { opacity: 0 }, 0);
   parts.forEach((c, i) => tl.set(c, { opacity: 1 }, t + i * (per || 0.028))); };
 // a big word that lands letter by letter
@@ -52,7 +52,7 @@ chip("THE SPIRE · TALLEST POINT", 60, 1100, "#ffb547", w(70), B("s12") - 0.08);
 chip("1 · CARRY THE ROCK UP", 60, 1010, "#ffffff", w(82), B("s14") - 0.08);
 chip("2 · STACK TWO BLOCKS", 60, 1100, "var(--lime)", w(90), B("s14") - 0.08);
 punch("s15", w(96), 0.07);
-(function () { const q = el("div", "say", "top:520px;font-size:74px;line-height:1.1", "<span id='spire'>“I'M ON THE SPIRE.”</span>");
+(function () { const q = el("div", "say", "top:1060px;font-size:66px;line-height:1.1", "<span id='spire'>“I'M ON THE SPIRE.”</span>");
   tl.set(q, { opacity: 1 }, A("s16")); typeOn("#spire", w(100) - 0.05, 0.045);
   tl.to(q, { opacity: 0, duration: 0.15 }, B("s16") - 0.08); })();
 
@@ -100,8 +100,8 @@ chip("TEST: GET OBJECTS ONTO THE SPIRE", 60, 1100, "#ffb547", w(161), B("s23") -
 
 // ---------- s26 - s28: the takeaway ----------
 chip("YOU TOO", 60, 1100, "var(--lime)", w(199), B("s26") - 0.08);
-bigLetters("PLAY ≠ WASTED", 70, 600, 118, "#fff", w(202), B("s27") - 0.08);
-bigLetters("IT'S HOW YOU GET GOOD", 60, 640, 82, "var(--lime)", w(206), B("s28") - 0.08);
+bigLetters("PLAY ≠ WASTED", 70, 1000, 112, "#fff", w(202), B("s27") - 0.08);
+bigLetters("HOW YOU GET GOOD", 70, 1040, 92, "var(--lime)", w(206), B("s28") - 0.08);
 
 // ---------- s29: the hidden word for Instagram (JOY, written in the sand; never said) ----------
 (function () { const j = el("div", "sand", "left:610px;top:1010px;font-size:120px;transform:rotate(-7deg)", "joy", $("#cam-s29"));

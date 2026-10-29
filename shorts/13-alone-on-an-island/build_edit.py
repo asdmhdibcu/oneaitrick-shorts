@@ -66,12 +66,12 @@ def fill(w, h, cx=0.5, cy=0.5):
     return f"crop={cw}:{ch}:{x}:{y},scale={W}:{HH}:flags=lanczos{sharp}"
 
 
-def timing(sin, span, rate, dur):
+def timing(sin, span, rate, dur, blend=True):
     ss = max(0.0, sin - H * rate)
     need = span * rate + 0.3
     hold = max(0.0, (ss + need) - dur + 0.1) / rate
     chain = f"setpts=(PTS-STARTPTS)/{rate:.4f}"
-    if rate < 0.97:
+    if rate < 0.97 and blend:
         chain += ",minterpolate=fps=30:mi_mode=blend"
     if hold > 0:
         chain += f",tpad=stop_mode=clone:stop_duration={hold + 0.5:.2f}"
@@ -86,7 +86,7 @@ def seek(code, ss, need):
 def conform_v(sid, sp, span):
     code = sp["m"]; inp, (w, h, dur) = inputs(code)
     grade = GRADES[sp.get("grade", DEFAULT_GRADE[code[0]])]
-    ss, need, chain = timing(sp.get("sin", 0.0), span, sp.get("rate", 1.0), dur)
+    ss, need, chain = timing(sp.get("sin", 0.0), span, sp.get("rate", 1.0), dur, sp.get("blend", True))
     pre, post = seek(code, ss, need)
     g = f"[0:v]{chain},{fill(w, h, sp.get('cx', 0.5), sp.get('cy', 0.5))},{grade},fps=30,format=yuv420p"
     run(["ffmpeg", "-v", "error", "-y"] + pre + inp + post + ["-filter_complex", g, "-t", f"{span:.3f}"] + enc(f"assets/clips/{sid}.mp4"))

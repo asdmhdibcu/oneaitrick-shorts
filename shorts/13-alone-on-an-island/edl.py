@@ -77,7 +77,7 @@ PLAN = [
     ("s04", 15, "V", dict(m="R2", sin=0.0)),                     # And it started... to PLAY.
     # meet Eko
     ("s05", 20, "V", dict(m="G1", sin=0.5)),                     # Meet Eko. A little lobster,
-    ("s06", 25, "V", dict(m="S12", sin=0.5)),                    # run by Claude, the same kind of AI you chat with.
+    ("s06", 25, "V", dict(m="S12", sin=0.0)),                    # run by Claude, the same kind of AI you chat with.
     ("s07", 36, "V", dict(m="S2", sin=6.0, rate=3.0)),           # Every hour, its world reset.
     ("s08", 41, "GFX", dict(bd="S6", bdsin=2.0)),                # The only thing it kept was a diary. (its real notes)
     # what it did
@@ -86,7 +86,7 @@ PLAN = [
     ("s11", 62, "V", dict(m="R9", sin=0.0)),                     # Stacked blocks into a temple.
     # the Spire
     ("s12", 67, "V", dict(m="S4", sin=3.0)),                     # Then it spotted the tallest rock on the island.
-    ("s13", 76, "V", dict(m="R3", sin=0.0, rate=0.32)),                   # First try? It failed.
+    ("s13", 76, "V", dict(m="R3", sin=0.0, rate=0.32, blend=False)),                   # First try? It failed.
     ("s14", 80, "V", dict(m="R4", sin=0.0)),                     # So it dragged a rock up the hill next door, stacked two blocks on top...
     ("s15", 95, "V", dict(m="R5", sin=0.0)),                     # and JUMPED.
     ("s16", 97, "V", dict(m="R5", sin=1.3)),                      # Its diary said: "I'M ON THE SPIRE!"
@@ -103,7 +103,7 @@ PLAN = [
     ("s24", 165, "GFX", dict(bd="S3", bdsin=8.0)),               # The ones that had played got about THREE times as much...
     ("s25", 182, "GFX", dict(bd="S3", bdsin=20.0)),              # Is it really playing? Even the team says it might just be acting.
     # the takeaway
-    ("s26", 195, "V", dict(m="S8", sin=1.0, cy=0.62)),           # But the lesson works for us too.
+    ("s26", 195, "V", dict(m="S8", sin=4.0)),           # But the lesson works for us too.
     ("s27", 202, "V", dict(m="S9", sin=1.5)),                    # Play isn't wasted time.
     ("s28", 206, "V", dict(m="G4", sin=2.0)),                    # It's how you get good.
     ("s29", 211, "V", dict(m="S11", sin=4.0)),                   # There's one word in this video I never said out loud... (JOY in the sand)

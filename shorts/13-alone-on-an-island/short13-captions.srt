@@ -1,7 +1,7 @@
 1
 00:00:00,000 --> 00:00:04,420
-Scientists left an AI alone on
-an island for thirty hours.
+Scientists left an AI alone
+on an island for thirty hours.
 
 2
 00:00:04,420 --> 00:00:05,350
@@ -50,8 +50,8 @@ Stacked blocks into a temple.
 
 13
 00:00:24,840 --> 00:00:27,630
-Then it spotted the tallest
-rock on the island.
+Then it spotted the
+tallest rock on the island.
 
 14
 00:00:27,630 --> 00:00:28,580
@@ -72,7 +72,7 @@ stacked two blocks on top… and jumped.
 
 18
 00:00:34,610 --> 00:00:37,310
-Its diary said: "i'm on the spire!"
+Its diary said: "I'M ON THE SPIRE!"
 
 19
 00:00:37,310 --> 00:00:40,310

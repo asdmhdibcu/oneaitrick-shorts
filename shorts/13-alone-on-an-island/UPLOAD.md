@@ -21,6 +21,9 @@ Stock footage: Mixkit. Robot-lobster shots: AI illustrations (Google Veo).
 
 #AI #Science #Shorts
 
+**Tags:** AI, artificial intelligence, AI experiment, AI agent, Claude, MIT, MIT CSAIL, AI playing, machine learning,
+AI explained, science, AI news, AI research, robot lobster, Eko, virtual island, play and learning, AI shorts
+
 ## Translations (YouTube: "Add language" for title and description; upload the matching SRT as subtitles)
 
 **Spanish (es)**

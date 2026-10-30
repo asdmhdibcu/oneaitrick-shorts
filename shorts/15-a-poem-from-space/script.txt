@@ -1,15 +1,28 @@
-[excited] Google just sent an AI into space. And the first thing it said back… was a POEM.
-[laughs] Okay, they DID ask for one. A haiku about life up there.
-[warm] It came down over the top of the world. Three short lines about looking down at Earth.
-[curious] But why put an AI in SPACE? [short pause] Because AI is hungry.
-[serious] Every answer you get takes electricity. And AI needs more of it every year.
-[conversational] Think of solar panels on a roof. At night, they stop. Clouds get in the way.
-[excited] But in the right orbit, the sun almost NEVER sets. A panel up there can make up to EIGHT times more power.
-[serious] Here's the catch. You know when your phone gets too hot and has to cool down?
-[dramatic] In space, it's worse. There's no air to carry the heat away. No fans. No water.
-[conversational] So for now, this one works in short bursts… then it rests, while big panels let the heat out.
-[thoughtful] And this is one small test. To match a single data center on Earth, you'd need groups of satellites, flying close together, talking by laser. The next two go up in 2027.
-[skeptical] Even the project's leader says it won't be cheaper for years.
-[warm] So every question you ask an AI costs a little power. And the search for more… just left the planet.
+[excited] Google just launched an AI into space. And the very first thing it said back… was a POEM.
+[laughs] Okay, to be fair… they asked for one.
+[curious] But that little poem is the start of a really BIG idea.
+[conversational] A month ago, a SpaceX rocket carried a fridge-sized satellite into orbit, built with a company called Planet.
+[impressed] Inside: a Google AI chip, the kind it uses in its giant data centers, running Google's own AI model, Gemma.
+[playful] It circles Earth about every hour and a half, so engineers message it each time it flies over.
+[warm] Their first request? A haiku about space. It came down over the top of the world: three short lines about looking down at Earth.
+[curious] But why go to all this trouble? [short pause] Because AI is HUNGRY.
+[serious] Almost every AI answer you get comes from a data center: a building full of computers, all eating electricity.
+[surprised] By 2030, data centers could use more electricity than the whole of Japan uses today.
+[excited] So Google looked UP. The sun puts out a hundred TRILLION times more energy than all the electricity people make.
+[conversational] Down here, solar panels stop at night, and clouds get in the way.
+[impressed] But in the right orbit, riding the line where day meets night, the sun almost never sets.
+[excited] A panel up there makes up to EIGHT times more power.
+[playful] Free sunshine, forever. Perfect? [short pause] Not quite.
+[serious] Chips turn electricity into heat. You know when your phone gets too hot and has to cool down?
+[conversational] On Earth, fans and water carry that heat away. [dramatic] In space? No air. No wind. No water.
+[thoughtful] Think of a thermos. The empty gap between its walls keeps your coffee hot. [whispers] Space… is one giant thermos.
+[serious] Up there, heat can only escape as invisible light, like the warmth of a fire. So the satellite carries panels, called radiators, to glow it away.
+[conversational] For now, the AI works in short bursts… then rests to cool down.
+[surprised] Then there's radiation. Tiny, fast particles can flip a one into a zero. A typo, right in the middle of the AI's thinking.
+[impressed] So Google blasted its chips with a particle beam while they ran AI. They survived more than five years' worth of radiation.
+[excited] The big dream? Dozens of satellites, flying a hundred or so meters apart, sharing the work and talking by laser.
+[impressed] Google says aiming those lasers is like hitting a coin from miles away… while you're both moving. Two test satellites go up in 2027.
+[skeptical] But let's be honest. Google's own math says launches need to get much cheaper: under two hundred dollars a kilo. No one can fix a broken chip up there. And even the project's leader says it won't be cheaper than Earth for years.
+[warm] So that little poem tells us something big. Every question you ask an AI costs power… and the search for more just left the planet.
 [playful] There's one word in this video I never said out loud. Spotted it? Comment it.
 [warm] Follow for more AI, explained like this.

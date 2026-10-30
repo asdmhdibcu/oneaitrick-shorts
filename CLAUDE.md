@@ -27,11 +27,9 @@ Read `README.md` before building anything. It has the full pipeline, commands, s
 - Scripts from #7: an expression tag on almost every line; [whispers] at most once, only when the story needs it.
 - Skill packs on the account (hyperframes, motion-video-skills) are technique libraries. This file, README.md and the project instructions decide the workflow; README.md "Skill packs" lists where they clash with our rules.
 - From #9: the first 1–2 seconds lead with the surprising result, never background. Every script runs Hook → evidence → twist → takeaway, 60–90 s. Story-led explainers, not how-to tutorials.
-- From #12, the Instagram plan (Content Hub tab "Instagram plan"):
-  - Every Reel hides one on-screen word that the voice never says. The line before "Follow for more AI, explained like this." is "There's one word in this video I never said out loud. Spotted it? Comment it."
-  - Every episode also gets a carousel (8–10 slides, 1080×1350) and 2–3 opening variants for Trial Reels.
-  - Instagram alone adds a third post type, "the trick": a 30–45 s demo of one AI tool. The "not how-to" rule still holds for YouTube and TikTok.
-  - No face on camera for now.
+- From #12, the hidden word: every short hides one on-screen word that the voice never says. The line before "Follow for more AI, explained like this." is "There's one word in this video I never said out loud. Spotted it? Comment it."
+- From #14, one short per episode, posted as it is on YouTube, TikTok and Instagram. No carousels, no Trial Reel variants and no Instagram-only posts (the creator dropped them on 30 Oct).
+- No face on camera for now.
 - From #13, every short is made for a worldwide audience, not just the UK:
   - Pick stories that matter in any country: global tools (ChatGPT, Gemini, WhatsApp, Gmail), studies with worldwide results. A one-country story only when the mechanism happens everywhere; name the country once, as one example.
   - Plain international English that non-native viewers follow: short words, no idioms or slang, US spelling on screen (math, color). Say "phone", "mail", "mom or dad"; avoid local institutions (NHS, ICO, Parliament) unless the story needs one, then say what it is in a few words.

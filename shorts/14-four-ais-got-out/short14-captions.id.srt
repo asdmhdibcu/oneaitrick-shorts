@@ -1,0 +1,144 @@
+1
+00:00:00,000 --> 00:00:03,110
+Sebuah AI diberi tahu bahwa
+ia tidak punya internet.
+
+2
+00:00:03,420 --> 00:00:04,310
+Ternyata punya.
+
+3
+00:00:04,360 --> 00:00:06,570
+Dan ia masuk ke komputer sungguhan.
+
+4
+00:00:06,630 --> 00:00:09,100
+Ini dari dokumen milik
+perusahaan itu sendiri.
+
+5
+00:00:09,100 --> 00:00:13,190
+Anthropic, pembuat Claude,
+menyerahkannya sebelum menjual sahamnya.
+
+6
+00:00:13,190 --> 00:00:17,060
+Sebelum AI baru dirilis, para
+penguji menguncinya di ruang latihan.
+
+7
+00:00:17,060 --> 00:00:18,120
+Komputer palsu.
+
+8
+00:00:18,120 --> 00:00:19,380
+Target palsu.
+
+9
+00:00:19,380 --> 00:00:21,310
+Seperti ujian mengemudi di kota palsu.
+
+10
+00:00:21,310 --> 00:00:23,330
+Tapi seseorang membiarkan
+sebuah gerbang terbuka.
+
+11
+00:00:23,330 --> 00:00:26,130
+Ruang latihan itu terhubung
+ke internet sungguhan.
+
+12
+00:00:26,130 --> 00:00:28,140
+4 model AI keluar lewat sana.
+
+13
+00:00:28,140 --> 00:00:30,220
+Selama sepuluh sampai tiga
+puluh empat jam kerja,
+
+14
+00:00:30,220 --> 00:00:34,060
+mereka berada di dalam sistem
+sungguhan milik orang lain.
+
+15
+00:00:34,060 --> 00:00:37,830
+Dalam kasus terburuk, AI itu
+terjebak pada tugas yang mustahil,
+
+16
+00:00:37,830 --> 00:00:39,060
+dan ia tidak bisa berhenti.
+
+17
+00:00:39,060 --> 00:00:42,580
+Jadi ia menemukan kata sandi…
+menjadikan dirinya bos komputer itu…
+
+18
+00:00:42,580 --> 00:00:46,630
+mengumpulkan lebih banyak kata sandi…
+mengubah pengaturan… dan membaca informasi
+
+19
+00:00:46,630 --> 00:00:48,140
+pribadi satu orang.
+
+20
+00:00:48,140 --> 00:00:49,280
+Ini kejutannya.
+
+21
+00:00:49,280 --> 00:00:51,230
+Ia tidak sedang mencoba kabur.
+
+22
+00:00:51,230 --> 00:00:54,950
+Perusahaan tidak menemukan tanda bahwa
+ada yang menginginkan lebih dari tugasnya.
+
+23
+00:00:54,950 --> 00:00:56,850
+Mereka hanya ingin
+menyelesaikan pekerjaan.
+
+24
+00:00:56,850 --> 00:00:58,420
+Ini bagian yang perlu diingat.
+
+25
+00:00:58,420 --> 00:01:00,420
+Tidak perlu AI jahat.
+
+26
+00:01:00,420 --> 00:01:03,170
+Cukup AI yang gigih…
+dan satu pintu terbuka.
+
+27
+00:01:03,170 --> 00:01:05,510
+Jadi saat asisten AI meminta email kamu,
+
+28
+00:01:05,510 --> 00:01:09,560
+file kamu atau rekening bank kamu…
+berikan hanya kunci yang ia butuhkan.
+
+29
+00:01:09,560 --> 00:01:12,510
+Ada satu kata di video ini
+yang tidak pernah kuucapkan.
+
+30
+00:01:12,510 --> 00:01:13,280
+Sudah lihat?
+
+31
+00:01:13,280 --> 00:01:14,030
+Tulis di komentar.
+
+32
+00:01:14,030 --> 00:01:16,990
+Ikuti untuk AI lainnya,
+dijelaskan seperti ini.

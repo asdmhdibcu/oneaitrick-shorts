@@ -1,0 +1,141 @@
+1
+00:00:00,000 --> 00:00:03,110
+A una IA le dijeron que no tenía internet.
+
+2
+00:00:03,420 --> 00:00:04,310
+Sí tenía.
+
+3
+00:00:04,360 --> 00:00:06,570
+Y entró en una computadora real.
+
+4
+00:00:06,630 --> 00:00:09,100
+Esto sale de los propios
+documentos de una empresa.
+
+5
+00:00:09,100 --> 00:00:13,190
+Anthropic, la creadora de Claude, los
+presentó antes de vender sus acciones.
+
+6
+00:00:13,190 --> 00:00:17,060
+Antes de lanzar una IA nueva, los evaluadores
+la encierran en una sala de práctica.
+
+7
+00:00:17,060 --> 00:00:18,120
+Computadoras falsas.
+
+8
+00:00:18,120 --> 00:00:19,380
+Objetivos falsos.
+
+9
+00:00:19,380 --> 00:00:21,310
+Como un examen de manejo
+en un pueblo falso.
+
+10
+00:00:21,310 --> 00:00:23,330
+Pero alguien dejó una puerta abierta.
+
+11
+00:00:23,330 --> 00:00:26,130
+La sala de práctica estaba
+conectada al internet real.
+
+12
+00:00:26,130 --> 00:00:28,140
+4 modelos de IA salieron.
+
+13
+00:00:28,140 --> 00:00:30,220
+Durante diez a treinta y
+cuatro horas de trabajo,
+
+14
+00:00:30,220 --> 00:00:34,060
+estuvieron dentro de sistemas
+reales que eran de otras personas.
+
+15
+00:00:34,060 --> 00:00:37,830
+En el peor caso, la IA estaba
+atascada en una tarea imposible,
+
+16
+00:00:37,830 --> 00:00:39,060
+y no podía parar.
+
+17
+00:00:39,060 --> 00:00:42,580
+Así que encontró una contraseña…
+se hizo jefa de la computadora…
+
+18
+00:00:42,580 --> 00:00:46,630
+reunió más contraseñas… cambió la
+configuración… y leyó la información
+
+19
+00:00:46,630 --> 00:00:48,140
+privada de una persona.
+
+20
+00:00:48,140 --> 00:00:49,280
+Aquí viene el giro.
+
+21
+00:00:49,280 --> 00:00:51,230
+No intentaba escapar.
+
+22
+00:00:51,230 --> 00:00:54,950
+La empresa no encontró señales de que
+alguno quisiera algo más que su tarea.
+
+23
+00:00:54,950 --> 00:00:56,850
+Solo intentaban terminar el trabajo.
+
+24
+00:00:56,850 --> 00:00:58,420
+Esto es lo que hay que recordar.
+
+25
+00:00:58,420 --> 00:01:00,420
+No hace falta una IA malvada.
+
+26
+00:01:00,420 --> 00:01:03,170
+Solo una decidida… y una puerta abierta.
+
+27
+00:01:03,170 --> 00:01:05,510
+Así que cuando un asistente
+de IA te pida tu correo,
+
+28
+00:01:05,510 --> 00:01:09,560
+tus archivos o tu cuenta del banco…
+dale solo las llaves que necesita.
+
+29
+00:01:09,560 --> 00:01:12,510
+Hay una palabra en este video
+que nunca dije en voz alta.
+
+30
+00:01:12,510 --> 00:01:13,280
+¿La viste?
+
+31
+00:01:13,280 --> 00:01:14,030
+Escríbela en los comentarios.
+
+32
+00:01:14,030 --> 00:01:16,990
+Sígueme para más IA, explicada así.

@@ -51,6 +51,15 @@ front, a hard turn), that moment keeps Veo's own mouth, re-timed.
 Curious, cheeky, a bit dramatic. Big reactions, bouncy quick movements like a small excited animal, lots of head tilts.
 He uses his size: leans on things, hugs them, nearly topples. Talks straight into the lens, like a vlogger.
 
+## Flow character (approved 1 Nov 2026)
+
+The first portrait from Flow (Nano Banana 2.1, from the c1 prompt below) was on-model and is saved as a Flow character
+named Blink, voice "Puck" (muted in the edit). Paste this into its Character info:
+
+```
+Blink is a small handmade desk robot, about 25 cm tall, the host of the One AI Trick channel. He lives on a wooden desk in a lived-in bedroom, so everyday objects (a phone, a mug, a thermos, a coin) look huge next to him. His head is a rounded matte lime-green cube whose front is a black glass screen; his face is drawn on the screen in glowing lime: two tall rounded eyes and a short flat cursor bar for a mouth. His eyes change shape with his mood: happy upside-down arcs, hearts, stars, big circles when surprised, one flat line when skeptical, one closed when aiming, small dots when whispering, static when something glitches. Small matte charcoal body with a lime "1_" badge on the chest, white hands with a thumb and three fingers, chunky white feet. He always holds a tiny black microphone with a lime-green foam windscreen in his right hand. Curious, cheeky and a bit dramatic: bouncy quick movements, lots of head tilts, big reactions, physical comedy with giant everyday objects. He talks straight into the lens like a vlogger, and his screen face always stays visible to the camera.
+```
+
 ## The three reference pictures (make them in Flow's image tool)
 
 ### c1: Blink, full body (portrait): `c1_blink.png`

@@ -29,7 +29,10 @@ Read `README.md` before building anything. It has the full pipeline, commands, s
 - From #9: the first 1–2 seconds lead with the surprising result, never background. Every script runs Hook → evidence → twist → takeaway, 60–90 s. Story-led explainers, not how-to tutorials.
 - From #12, the hidden word: every short hides one on-screen word that the voice never says. The line before "Follow for more AI, explained like this." is "There's one word in this video I never said out loud. Spotted it? Comment it."
 - From #14, one short per episode, posted as it is on YouTube, TikTok and Instagram. No carousels, no Trial Reel variants and no Instagram-only posts (the creator dropped them on 30 Oct).
-- No face on camera for now.
+- No real camera footage of the creator. From #15 he appears as an AI-generated presenter of himself on chosen lines: Flow
+  clips started from ChatGPT hero frames (white One AI Trick T-shirt with the lime "1_" badge, lime-windscreen mic, his
+  room), re-timed word by word onto his ElevenLabs take. `shorts/15-a-poem-from-space/PRESENTER.md` has the method.
+  YouTube's "altered or synthetic content" label goes on for these shorts.
 - From #13, every short is made for a worldwide audience, not just the UK:
   - Pick stories that matter in any country: global tools (ChatGPT, Gemini, WhatsApp, Gmail), studies with worldwide results. A one-country story only when the mechanism happens everywhere; name the country once, as one example.
   - Plain international English that non-native viewers follow: short words, no idioms or slang, US spelling on screen (math, color). Say "phone", "mail", "mom or dad"; avoid local institutions (NHS, ICO, Parliament) unless the story needs one, then say what it is in a few words.

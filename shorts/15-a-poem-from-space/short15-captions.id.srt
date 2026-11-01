@@ -1,0 +1,315 @@
+1
+00:00:00,000 --> 00:00:02,840
+Google baru saja meluncurkan
+AI ke luar angkasa.
+
+2
+00:00:02,840 --> 00:00:06,740
+Dan hal pertama yang ia
+jawab… adalah sebuah puisi.
+
+3
+00:00:06,920 --> 00:00:10,010
+Oke, jujur saja… mereka memang memintanya.
+
+4
+00:00:10,010 --> 00:00:13,980
+Tapi puisi kecil itu adalah
+awal dari ide yang sangat besar.
+
+5
+00:00:14,030 --> 00:00:17,510
+Sebulan lalu, roket SpaceX
+membawa satelit seukuran kulkas
+
+6
+00:00:17,510 --> 00:00:20,440
+ke orbit, dibuat bersama
+perusahaan bernama Planet.
+
+7
+00:00:20,440 --> 00:00:25,450
+Di dalamnya: chip AI Google, jenis
+yang dipakai di pusat data raksasanya,
+
+8
+00:00:25,450 --> 00:00:28,120
+menjalankan model AI milik
+Google sendiri, Gemma.
+
+9
+00:00:28,140 --> 00:00:30,540
+Ia mengelilingi Bumi kira-kira
+setiap satu setengah jam,
+
+10
+00:00:30,540 --> 00:00:33,410
+jadi para insinyur mengirim pesan
+setiap kali ia lewat di atas.
+
+11
+00:00:33,410 --> 00:00:34,680
+Permintaan pertama mereka?
+
+12
+00:00:34,680 --> 00:00:36,590
+Sebuah haiku tentang luar angkasa.
+
+13
+00:00:36,590 --> 00:00:38,770
+Jawabannya turun di atas puncak dunia:
+
+14
+00:00:38,770 --> 00:00:41,530
+3 baris pendek tentang
+memandang Bumi dari atas.
+
+15
+00:00:41,530 --> 00:00:43,640
+Tapi kenapa repot-repot begini?
+
+16
+00:00:43,640 --> 00:00:46,050
+Karena AI itu lapar.
+
+17
+00:00:46,050 --> 00:00:49,490
+Hampir setiap jawaban AI yang kamu
+dapat berasal dari pusat data:
+
+18
+00:00:49,490 --> 00:00:52,740
+gedung penuh komputer,
+semuanya memakan listrik.
+
+19
+00:00:52,740 --> 00:00:56,500
+Pada 2030, pusat data bisa memakai
+listrik lebih banyak daripada seluruh
+
+20
+00:00:56,500 --> 00:00:58,230
+Jepang saat ini.
+
+21
+00:00:58,230 --> 00:00:59,960
+Jadi Google melihat ke atas.
+
+22
+00:00:59,960 --> 00:01:03,540
+Matahari menghasilkan energi seratus
+triliun kali lebih banyak daripada semua
+
+23
+00:01:03,540 --> 00:01:05,120
+listrik yang dibuat manusia.
+
+24
+00:01:05,120 --> 00:01:07,370
+Di bawah sini, panel surya
+berhenti di malam hari,
+
+25
+00:01:07,370 --> 00:01:08,810
+dan awan menghalangi.
+
+26
+00:01:08,810 --> 00:01:12,180
+Tapi di orbit yang tepat, menyusuri
+garis tempat siang bertemu malam,
+
+27
+00:01:12,180 --> 00:01:14,290
+matahari hampir tidak pernah terbenam.
+
+28
+00:01:14,290 --> 00:01:17,220
+Panel di atas sana menghasilkan listrik
+hingga delapan kali lebih banyak.
+
+29
+00:01:17,220 --> 00:01:18,970
+Sinar matahari gratis, selamanya.
+
+30
+00:01:18,970 --> 00:01:19,880
+Sempurna?
+
+31
+00:01:19,880 --> 00:01:21,120
+Tidak juga.
+
+32
+00:01:21,120 --> 00:01:23,360
+Chip mengubah listrik menjadi panas.
+
+33
+00:01:23,360 --> 00:01:26,000
+Kamu tahu saat ponselmu terlalu
+panas dan harus didinginkan dulu?
+
+34
+00:01:26,000 --> 00:01:28,930
+Di Bumi, kipas dan air
+membawa panas itu pergi.
+
+35
+00:01:28,930 --> 00:01:29,880
+Di luar angkasa?
+
+36
+00:01:29,880 --> 00:01:30,820
+Tak ada udara.
+
+37
+00:01:30,820 --> 00:01:31,720
+Tak ada angin.
+
+38
+00:01:31,720 --> 00:01:32,740
+Tak ada air.
+
+39
+00:01:32,740 --> 00:01:33,960
+Bayangkan termos.
+
+40
+00:01:33,960 --> 00:01:36,900
+Celah kosong di antara dindingnya
+menjaga kopimu tetap panas.
+
+41
+00:01:36,900 --> 00:01:40,550
+Luar angkasa… adalah satu termos raksasa.
+
+42
+00:01:40,550 --> 00:01:42,890
+Di atas sana, panas hanya bisa
+keluar sebagai cahaya tak terlihat,
+
+43
+00:01:42,890 --> 00:01:44,420
+seperti hangatnya api unggun.
+
+44
+00:01:44,420 --> 00:01:47,070
+Jadi satelit membawa panel,
+yang disebut radiator,
+
+45
+00:01:47,070 --> 00:01:48,260
+untuk memancarkannya keluar.
+
+46
+00:01:48,260 --> 00:01:52,460
+Untuk saat ini, AI bekerja dalam waktu
+singkat… lalu istirahat untuk mendingin.
+
+47
+00:01:52,460 --> 00:01:54,080
+Lalu ada radiasi.
+
+48
+00:01:54,080 --> 00:01:57,530
+Partikel kecil dan cepat bisa
+mengubah angka satu menjadi nol.
+
+49
+00:01:57,530 --> 00:02:00,220
+Salah ketik, tepat di tengah pemikiran AI.
+
+50
+00:02:00,220 --> 00:02:03,570
+Jadi Google menembakkan berkas partikel
+ke chipnya saat chip itu menjalankan
+
+51
+00:02:03,570 --> 00:02:04,270
+AI.
+
+52
+00:02:04,270 --> 00:02:07,250
+Chip itu bertahan dari radiasi
+setara lebih dari lima tahun.
+
+53
+00:02:07,250 --> 00:02:08,160
+Mimpi besarnya?
+
+54
+00:02:08,160 --> 00:02:11,330
+Puluhan satelit, terbang sekitar
+seratus meter satu sama lain,
+
+55
+00:02:11,330 --> 00:02:13,820
+berbagi pekerjaan dan
+berbicara lewat laser.
+
+56
+00:02:13,840 --> 00:02:17,840
+Google bilang mengarahkan laser itu
+seperti mengenai koin dari jarak bermil-mil
+
+57
+00:02:17,840 --> 00:02:20,540
+jauhnya… sambil keduanya bergerak.
+
+58
+00:02:20,630 --> 00:02:23,590
+Dua satelit uji akan naik pada 2027.
+
+59
+00:02:23,590 --> 00:02:25,230
+Tapi mari jujur.
+
+60
+00:02:25,230 --> 00:02:28,860
+Hitungan Google sendiri bilang biaya
+peluncuran harus jauh lebih murah:
+
+61
+00:02:28,860 --> 00:02:31,040
+di bawah dua ratus dolar per kilo.
+
+62
+00:02:31,060 --> 00:02:33,530
+Tak ada yang bisa memperbaiki
+chip rusak di atas sana.
+
+63
+00:02:33,530 --> 00:02:37,810
+Dan bahkan pemimpin proyeknya bilang ini tak akan
+lebih murah daripada di Bumi selama bertahun-tahun.
+
+64
+00:02:37,830 --> 00:02:40,630
+Jadi puisi kecil itu memberi
+tahu kita sesuatu yang besar.
+
+65
+00:02:40,720 --> 00:02:44,900
+Setiap pertanyaan yang kamu ajukan ke AI
+butuh listrik… dan pencarian akan lebih banyak
+
+66
+00:02:44,900 --> 00:02:46,440
+baru saja meninggalkan planet ini.
+
+67
+00:02:46,440 --> 00:02:49,560
+Ada satu kata di video ini
+yang tidak pernah kuucapkan.
+
+68
+00:02:49,560 --> 00:02:50,320
+Sudah lihat?
+
+69
+00:02:50,320 --> 00:02:51,230
+Tulis di komentar.
+
+70
+00:02:51,230 --> 00:02:54,280
+Ikuti untuk AI lainnya,
+dijelaskan seperti ini.

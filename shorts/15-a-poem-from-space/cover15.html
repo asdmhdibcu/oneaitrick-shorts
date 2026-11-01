@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #04050a; font-family: "InterV", sans-serif; color: var(--ink); }
+      /* real Earth from the space station (NASA, v03a_earth_limb.mp4 at 6 s), with my satellite drawing and the poem as three lines of light */
+      .bg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: url("assets/img/cover_bg.png") center top / cover no-repeat; }
+      .shade { position: absolute; inset: 0; background:
+        linear-gradient(180deg, rgba(4,5,10,0.55) 0%, rgba(4,5,10,0) 16%, rgba(4,5,10,0) 46%, rgba(4,5,10,0.8) 57%, rgba(4,5,10,0.95) 66%, rgba(4,5,10,0.98) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+      .stamp { position: absolute; left: 70px; top: 1010px; font-weight: 900; font-size: 54px; padding: 6px 22px; border: 7px solid #c8ff4d; color: #c8ff4d; border-radius: 14px;
+        transform: rotate(-4deg); background: rgba(6,10,4,0.72); }
+      .title { position: absolute; left: 70px; right: 50px; top: 1150px; font-weight: 900; font-size: 112px; letter-spacing: -0.05em; line-height: 0.95; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); text-transform: uppercase; }
+      .title em { font-style: normal; color: #c8ff4d; text-shadow: 0 0 60px rgba(200,255,77,0.45); }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 30px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="bg"></div>
+      <div class="shade"></div>
+      <svg style="position:absolute;left:560px;top:430px" width="420" height="200" viewBox="-210 -100 420 200"><g transform="scale(2.6)"><rect x="-70" y="-14" width="48" height="28" rx="3" fill="#2a6df4" stroke="#cfe0ff" stroke-width="2"/><rect x="22" y="-14" width="48" height="28" rx="3" fill="#2a6df4" stroke="#cfe0ff" stroke-width="2"/><rect x="-20" y="-22" width="40" height="44" rx="6" fill="#d9dde6" stroke="#fff" stroke-width="2"/><circle r="7" fill="#c8ff4d"/></g></svg>
+      <div style="position:absolute;left:700px;top:600px;width:12px;height:250px;background:repeating-linear-gradient(180deg,#c8ff4d 0 18px,transparent 18px 32px);filter:drop-shadow(0 0 10px #c8ff4d)"></div>
+      <div style="position:absolute;left:470px;top:850px;width:520px;height:250px;border-radius:24px;background:rgba(8,12,24,0.88);border:2px solid rgba(200,255,77,0.6);box-shadow:0 0 70px rgba(200,255,77,0.3)">
+        <div style="position:absolute;left:36px;top:52px;width:330px;height:18px;border-radius:9px;background:linear-gradient(90deg,#fff,#c8ff4d);box-shadow:0 0 20px #c8ff4d"></div>
+        <div style="position:absolute;left:36px;top:112px;width:430px;height:18px;border-radius:9px;background:linear-gradient(90deg,#fff,#c8ff4d);box-shadow:0 0 20px #c8ff4d"></div>
+        <div style="position:absolute;left:36px;top:172px;width:370px;height:18px;border-radius:9px;background:linear-gradient(90deg,#fff,#c8ff4d);box-shadow:0 0 20px #c8ff4d"></div></div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI EXPLAINED · REAL MISSION</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">An AI in space.<br /><em>Its first words: a poem.</em></div>
+      <div class="pill" style="top: 1590px; color: #c8ff4d">GOOGLE · PROJECT SUNCATCHER</div>
+    </div>
+  </body>
+</html>

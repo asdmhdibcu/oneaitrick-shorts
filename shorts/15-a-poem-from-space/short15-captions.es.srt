@@ -1,0 +1,314 @@
+1
+00:00:00,000 --> 00:00:02,840
+Google acaba de lanzar una IA al espacio.
+
+2
+00:00:02,840 --> 00:00:06,740
+Y lo primero que respondió… fue un poema.
+
+3
+00:00:06,920 --> 00:00:10,010
+Bueno, para ser justos… se lo pidieron.
+
+4
+00:00:10,010 --> 00:00:13,980
+Pero ese pequeño poema es el
+comienzo de una idea muy grande.
+
+5
+00:00:14,030 --> 00:00:17,510
+Hace un mes, un cohete de SpaceX llevó
+un satélite del tamaño de un refrigerador
+
+6
+00:00:17,510 --> 00:00:20,440
+a la órbita, hecho junto con
+una empresa llamada Planet.
+
+7
+00:00:20,440 --> 00:00:25,450
+Dentro: un chip de IA de Google, del tipo
+que usa en sus enormes centros de datos,
+
+8
+00:00:25,450 --> 00:00:28,120
+con el propio modelo
+de IA de Google, Gemma.
+
+9
+00:00:28,140 --> 00:00:30,540
+Da la vuelta a la Tierra más
+o menos cada hora y media,
+
+10
+00:00:30,540 --> 00:00:33,410
+así que los ingenieros le escriben
+cada vez que pasa por encima.
+
+11
+00:00:33,410 --> 00:00:34,680
+¿Su primer pedido?
+
+12
+00:00:34,680 --> 00:00:36,590
+Un haiku sobre el espacio.
+
+13
+00:00:36,590 --> 00:00:38,770
+Llegó desde lo más alto del mundo:
+
+14
+00:00:38,770 --> 00:00:41,530
+3 líneas cortas sobre mirar
+la Tierra desde arriba.
+
+15
+00:00:41,530 --> 00:00:43,640
+Pero ¿por qué tanto esfuerzo?
+
+16
+00:00:43,640 --> 00:00:46,050
+Porque la IA tiene hambre.
+
+17
+00:00:46,050 --> 00:00:49,490
+Casi cada respuesta de IA que
+recibes viene de un centro de datos:
+
+18
+00:00:49,490 --> 00:00:52,740
+un edificio lleno de computadoras,
+todas comiendo electricidad.
+
+19
+00:00:52,740 --> 00:00:56,500
+Para 2030, los centros de datos
+podrían usar más electricidad que todo
+
+20
+00:00:56,500 --> 00:00:58,230
+Japón hoy.
+
+21
+00:00:58,230 --> 00:00:59,960
+Así que Google miró hacia arriba.
+
+22
+00:00:59,960 --> 00:01:03,540
+El sol produce cien billones
+de veces más energía que toda
+
+23
+00:01:03,540 --> 00:01:05,120
+la electricidad que produce la gente.
+
+24
+00:01:05,120 --> 00:01:07,370
+Aquí abajo, los paneles
+solares se detienen de noche,
+
+25
+00:01:07,370 --> 00:01:08,810
+y las nubes estorban.
+
+26
+00:01:08,810 --> 00:01:12,180
+Pero en la órbita correcta, siguiendo la
+línea donde el día se junta con la noche,
+
+27
+00:01:12,180 --> 00:01:14,290
+el sol casi nunca se pone.
+
+28
+00:01:14,290 --> 00:01:17,220
+Un panel allá arriba produce
+hasta ocho veces más energía.
+
+29
+00:01:17,220 --> 00:01:18,970
+Sol gratis, para siempre.
+
+30
+00:01:18,970 --> 00:01:19,880
+¿Perfecto?
+
+31
+00:01:19,880 --> 00:01:21,120
+No del todo.
+
+32
+00:01:21,120 --> 00:01:23,360
+Los chips convierten la
+electricidad en calor.
+
+33
+00:01:23,360 --> 00:01:26,000
+¿Sabes cuando tu teléfono se calienta
+demasiado y tiene que enfriarse?
+
+34
+00:01:26,000 --> 00:01:28,930
+En la Tierra, ventiladores
+y agua se llevan ese calor.
+
+35
+00:01:28,930 --> 00:01:29,880
+¿En el espacio?
+
+36
+00:01:29,880 --> 00:01:30,820
+Sin aire.
+
+37
+00:01:30,820 --> 00:01:31,720
+Sin viento.
+
+38
+00:01:31,720 --> 00:01:32,740
+Sin agua.
+
+39
+00:01:32,740 --> 00:01:33,960
+Piensa en un termo.
+
+40
+00:01:33,960 --> 00:01:36,900
+El espacio vacío entre sus
+paredes mantiene caliente tu café.
+
+41
+00:01:36,900 --> 00:01:40,550
+El espacio… es un termo gigante.
+
+42
+00:01:40,550 --> 00:01:42,890
+Allá arriba, el calor solo
+puede salir como luz invisible,
+
+43
+00:01:42,890 --> 00:01:44,420
+como el calor de una fogata.
+
+44
+00:01:44,420 --> 00:01:47,070
+Por eso el satélite lleva
+paneles, llamados radiadores,
+
+45
+00:01:47,070 --> 00:01:48,260
+para irradiarlo.
+
+46
+00:01:48,260 --> 00:01:52,460
+Por ahora, la IA trabaja en ráfagas
+cortas… y luego descansa para enfriarse.
+
+47
+00:01:52,460 --> 00:01:54,080
+Luego está la radiación.
+
+48
+00:01:54,080 --> 00:01:57,530
+Partículas diminutas y rápidas
+pueden cambiar un uno por un cero.
+
+49
+00:01:57,530 --> 00:02:00,220
+Un error de tipeo, justo en
+medio del pensamiento de la IA.
+
+50
+00:02:00,220 --> 00:02:03,570
+Así que Google bombardeó sus chips con
+un haz de partículas mientras ejecutaban
+
+51
+00:02:03,570 --> 00:02:04,270
+IA.
+
+52
+00:02:04,270 --> 00:02:07,250
+Resistieron más de
+cinco años de radiación.
+
+53
+00:02:07,250 --> 00:02:08,160
+¿El gran sueño?
+
+54
+00:02:08,160 --> 00:02:11,330
+Decenas de satélites, volando
+a unos cien metros entre sí,
+
+55
+00:02:11,330 --> 00:02:13,820
+compartiendo el trabajo
+y hablando por láser.
+
+56
+00:02:13,840 --> 00:02:17,840
+Google dice que apuntar esos láseres es
+como darle a una moneda desde kilómetros
+
+57
+00:02:17,840 --> 00:02:20,540
+de distancia… mientras los dos se mueven.
+
+58
+00:02:20,630 --> 00:02:23,590
+Dos satélites de prueba subirán en 2027.
+
+59
+00:02:23,590 --> 00:02:25,230
+Pero seamos honestos.
+
+60
+00:02:25,230 --> 00:02:28,860
+Las propias cuentas de Google dicen que los
+lanzamientos tienen que abaratarse mucho:
+
+61
+00:02:28,860 --> 00:02:31,040
+menos de doscientos dólares por kilo.
+
+62
+00:02:31,060 --> 00:02:33,530
+Nadie puede arreglar un
+chip roto allá arriba.
+
+63
+00:02:33,530 --> 00:02:37,810
+Y hasta el líder del proyecto dice que no
+será más barato que en la Tierra por años.
+
+64
+00:02:37,830 --> 00:02:40,630
+Así que ese pequeño poema
+nos dice algo grande.
+
+65
+00:02:40,720 --> 00:02:44,900
+Cada pregunta que le haces a una IA
+cuesta energía… y la búsqueda de más
+
+66
+00:02:44,900 --> 00:02:46,440
+acaba de salir del planeta.
+
+67
+00:02:46,440 --> 00:02:49,560
+Hay una palabra en este video
+que nunca dije en voz alta.
+
+68
+00:02:49,560 --> 00:02:50,320
+¿La viste?
+
+69
+00:02:50,320 --> 00:02:51,230
+Escríbela en los comentarios.
+
+70
+00:02:51,230 --> 00:02:54,280
+Sígueme para más IA, explicada así.

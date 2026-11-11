@@ -54,6 +54,8 @@ Network: the shell can reach PyPI, npm and GitHub (raw files and release downloa
    - Run `python3 tools/make_track.py music.json music.wav` (styles: lofi, pulse, dream).
    - Run `python3 tools/make_sfx.py sfx.json sfx.wav` (whoosh, boom, pop, ding, scan, ring, rumble, tick(s), shimmer, glitch, zap, swell).
    - Time SFX events to the visual hits.
+   - From #16, a measured sound pass on top: the `sound-effects` skill's 109 real CC0 sounds (whooshes, pops, clicks, impacts, risers, glitches, ticks, ambience) in `.claude/skills/sound-effects/sfx/`, cued to the cuts and hits.
+   - Voice effects, only where the story asks: `python3 tools/voice_fx.py voice_clean.wav voice_fx.wav phone@12.3-15.8 robot@40.1-42`. Run `--list` for the presets: phone, radio, megaphone, robot, memory, space, deep, small. Duration is unchanged and words stay within 17 ms (half a frame), so `words.json` stays valid. Mix `voice_fx.wav` in place of `voice_clean.wav`.
 7. **Mix.** Run `python3 tools/mix.py voice_clean.wav music.wav sfx.wav mix.wav LENGTH`. It ducks the music under the voice and outputs −14 LUFS with a −1.5 dBTP peak.
 8. **Composition.** Copy `template/` to `shorts/NN-slug/` and rewrite the scenes in `index.html`.
    - Structure: one `.clip.scene` per scene, each with an inner `.cam` for push-ins, whips and shakes. One global UI clip holds the progress bar, tag, @oneaitrick, karaoke captions, grain, vignette and the flash/black overlays. One `<audio src="assets/mix.wav">`.
@@ -129,9 +131,16 @@ template; its `BUILD.md` has the steps.
 - Story transitions (#9's `door`, `keyhole`, `scratch`, `light` in its template) sit under the captions and labels, so the
   words stay readable while the frame changes.
 
-## Skill packs on the account (from 23 Oct 2026)
+## Skill packs (in the repo from 11 Nov 2026)
 
-Two plugins hold third-party video skills. They are technique libraries: this README, CLAUDE.md and the project
+On 11 Nov the two account plugins below were gone from the creator's account. The skills worth keeping now live in this
+repo under `.claude/skills/`, so every Claude Code session with the repo open loads them. `.claude/skills/README.md`
+lists each skill with its source commit and licence, where it clashes with our rules, and what was left out.
+`brand.md` and `MOTION.md` at the repo root give them our look. The history below is how they were first chosen.
+
+### History (from 23 Oct 2026)
+
+Two plugins held third-party video skills. They are technique libraries: this README, CLAUDE.md and the project
 instructions decide the workflow, and a skill is loaded for one technique when it helps a short.
 
 - **hyperframes** (HeyGen's official plugin, 0.8.186, Apache-2.0): `hyperframes`, `hyperframes-cli`,

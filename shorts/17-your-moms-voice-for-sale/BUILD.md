@@ -56,6 +56,22 @@ python3 make_audio.py        # score, SFX, CC0 pass, mix -> assets/mix.wav
 npx hyperframes render -f 30 -q high -w 2 -o renders/short17-raw.mp4    # Bash run_in_background, watched
 ```
 
+## Quality pass
+
+- Draft 1 went to an independent critic (`work/critic1.md`): "not shippable", 12 findings. Fixed in draft 2:
+  - the board is the default view, on screen within the first 5 s; the camera pushes in only for the two calls, the real
+    pages and the chart, always to one framing (`DY` 240), with the status bar and pins hidden while pushed in;
+  - frame one is the mirror frame: the phone at board scale ringing MOM, the claim on a solid card over its lower half;
+  - chapter 1 is lit on frame one; chapter 4 waits for "BANK" instead of giving the twist away;
+  - pins: no index or source line, 72 px numbers and 30 px labels, lime only while new, 60 % at rest; they slide out of
+    the phone's edge along their own row (never across another pin); labels keep the voice's hedges ("say", "$10+");
+  - the MANGO payoff holds 2 s (to "I never said"); the recap lights the left column (the attack) then the right
+    (the locks); the board fades to 10 % and blurs under the end card;
+  - hits flash inside the phone only (no full-frame grey); "isn't Mom" strikes the Mom card and the #1 badge moves to the
+    bank's avatar; the catch points at pins 1, 3, 4 before stamping them; the key stops at the keyhole; 0:30 on THIRTY;
+    the chart carries its source.
+- motionmaxxing `lint.mjs` G5: brand chrome only (see Notes).
+
 ## Notes
 
 - `hyperframes check`: the size and sub-composition warnings stay (one file, as on every short). Layout notes about

@@ -1,0 +1,15 @@
+[excited] These AIs said most of the job couldn't be done. [short pause] Then they DID it.
+[conversational] Picture a famous building on paper. Now rebuild it brick by brick, while a strict inspector checks EVERY brick.
+[curious] The building is a famous math proof. Fermat scribbled the rule in a book's margin in 1637. Proving it took three hundred and fifty-eight YEARS.
+[serious] But paper can hide mistakes. In a computer language called Lean, the inspector is a machine, and nothing gets past it.
+[impressed] In September, Claude agents did it for the first time. Thirteen MILLION lines, a researcher guiding them, eleven days.
+[excited] This week, Anthropic tried again with Claude Fable 5.2. A THOUSAND copies, no researcher. One boss [short pause] and nine hundred and ninety-nine helpers.
+[surprised] The twist? The helpers looked at sixty sections and said forty-seven couldn't be done in time.
+[conversational] The boss set those aside and put nearly everyone on the other ten. Done in about seventy minutes.
+[playful] Then the boss wrote: "There is no reason to idle." [short pause] And sent the helpers back to the hard ones.
+[excited] Less than thirty hours later, the whole proof passed the inspector.
+[skeptical] The catch? Humans designed this building long ago, and the team had a head start: sixty checkpoints, a one-line map, forty-seven bricks already laid.
+[thoughtful] Anthropic's lesson? Agents give up on hard problems too early. Even this boss got nineteen automatic reminders to keep going.
+[warm] So when an AI says something can't be done, tell it to keep going.
+[playful] There's one word in this video I never said out loud. Spotted it? Comment it.
+[warm] Follow for more AI, explained like this.

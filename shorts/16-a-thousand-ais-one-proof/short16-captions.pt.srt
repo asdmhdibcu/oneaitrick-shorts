@@ -1,0 +1,162 @@
+1
+00:00:00,000 --> 00:00:03,530
+Essas IAs disseram que a maior parte
+do trabalho não dava para fazer.
+
+2
+00:00:03,560 --> 00:00:05,010
+E depois fizeram.
+
+3
+00:00:05,010 --> 00:00:07,330
+Imagine um prédio famoso no papel.
+
+4
+00:00:07,330 --> 00:00:12,130
+Agora reconstrua tijolo por tijolo, enquanto
+um inspetor rigoroso confere cada tijolo.
+
+5
+00:00:12,130 --> 00:00:14,400
+O prédio é uma famosa prova matemática.
+
+6
+00:00:14,400 --> 00:00:18,350
+Fermat rabiscou a regra na
+margem de um livro em 1637.
+
+7
+00:00:18,350 --> 00:00:21,760
+Provar isso levou 358 anos.
+
+8
+00:00:21,760 --> 00:00:23,880
+Mas o papel pode esconder erros.
+
+9
+00:00:23,880 --> 00:00:25,940
+Numa linguagem de computador chamada Lean,
+
+10
+00:00:25,940 --> 00:00:29,300
+o inspetor é uma máquina,
+e nada passa por ele.
+
+11
+00:00:29,300 --> 00:00:32,600
+Em setembro, agentes do Claude
+conseguiram pela primeira vez.
+
+12
+00:00:32,600 --> 00:00:37,110
+13 milhões de linhas, um
+pesquisador guiando, 11 dias.
+
+13
+00:00:37,110 --> 00:00:41,080
+Esta semana, a Anthropic tentou
+de novo com o Claude Fable 5.2.
+
+14
+00:00:41,080 --> 00:00:43,600
+1.000 cópias, sem pesquisador.
+
+15
+00:00:43,600 --> 00:00:47,060
+Um chefe e 999 ajudantes.
+
+16
+00:00:47,060 --> 00:00:47,980
+A reviravolta?
+
+17
+00:00:47,980 --> 00:00:51,350
+Os ajudantes olharam 60 partes e
+disseram que 47 não dava para fazer
+
+18
+00:00:51,350 --> 00:00:52,530
+a tempo.
+
+19
+00:00:52,530 --> 00:00:56,100
+O chefe deixou essas de lado e
+colocou quase todos nas outras 10.
+
+20
+00:00:56,100 --> 00:00:57,970
+Prontas em uns 70 minutos.
+
+21
+00:00:57,970 --> 00:01:00,940
+Aí o chefe escreveu: "Não há
+motivo para ficar parado".
+
+22
+00:01:00,940 --> 00:01:03,100
+E mandou os ajudantes de
+volta para as difíceis.
+
+23
+00:01:03,100 --> 00:01:07,030
+Menos de 30 horas depois, a prova
+inteira passou pelo inspetor.
+
+24
+00:01:07,030 --> 00:01:07,970
+O porém?
+
+25
+00:01:07,970 --> 00:01:10,080
+Humanos projetaram esse
+prédio há muito tempo,
+
+26
+00:01:10,080 --> 00:01:12,780
+e a equipe saiu na frente:
+60 pontos de controle,
+
+27
+00:01:12,780 --> 00:01:16,150
+um mapa de uma linha, 47
+tijolos já assentados.
+
+28
+00:01:16,150 --> 00:01:17,470
+A lição da Anthropic?
+
+29
+00:01:17,470 --> 00:01:20,150
+Agentes desistem cedo demais
+de problemas difíceis.
+
+30
+00:01:20,150 --> 00:01:23,800
+Até esse chefe recebeu 19 lembretes
+automáticos para continuar.
+
+31
+00:01:23,800 --> 00:01:26,360
+Então, quando uma IA disser
+que algo não dá para fazer,
+
+32
+00:01:26,360 --> 00:01:27,750
+diga para ela continuar.
+
+33
+00:01:27,750 --> 00:01:30,790
+Tem uma palavra neste vídeo
+que eu nunca falei em voz alta.
+
+34
+00:01:30,790 --> 00:01:31,620
+Viu qual é?
+
+35
+00:01:31,620 --> 00:01:32,460
+Comente.
+
+36
+00:01:32,460 --> 00:01:35,520
+Siga para mais IA, explicada assim.

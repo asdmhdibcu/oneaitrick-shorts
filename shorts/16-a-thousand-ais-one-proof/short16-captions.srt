@@ -1,0 +1,159 @@
+1
+00:00:00,000 --> 00:00:03,530
+These AIs said most of
+the job couldn't be done.
+
+2
+00:00:03,560 --> 00:00:05,010
+Then they did it.
+
+3
+00:00:05,010 --> 00:00:07,330
+Picture a famous building on paper.
+
+4
+00:00:07,330 --> 00:00:12,130
+Now rebuild it brick by brick, while
+a strict inspector checks every brick.
+
+5
+00:00:12,130 --> 00:00:14,400
+The building is a famous math proof.
+
+6
+00:00:14,400 --> 00:00:18,350
+Fermat scribbled the rule
+in a book's margin in 1637.
+
+7
+00:00:18,350 --> 00:00:21,760
+Proving it took 358 years.
+
+8
+00:00:21,760 --> 00:00:23,880
+But paper can hide mistakes.
+
+9
+00:00:23,880 --> 00:00:25,940
+In a computer language called Lean,
+
+10
+00:00:25,940 --> 00:00:29,300
+the inspector is a machine,
+and nothing gets past it.
+
+11
+00:00:29,300 --> 00:00:32,600
+In September, Claude agents
+did it for the first time.
+
+12
+00:00:32,600 --> 00:00:37,110
+13 million lines, a researcher
+guiding them, 11 days.
+
+13
+00:00:37,110 --> 00:00:41,080
+This week, Anthropic tried
+again with Claude Fable 5.2.
+
+14
+00:00:41,080 --> 00:00:43,600
+1,000 copies, no researcher.
+
+15
+00:00:43,600 --> 00:00:47,060
+One boss and 999 helpers.
+
+16
+00:00:47,060 --> 00:00:47,980
+The twist?
+
+17
+00:00:47,980 --> 00:00:51,350
+The helpers looked at 60
+sections and said 47 couldn't
+
+18
+00:00:51,350 --> 00:00:52,530
+be done in time.
+
+19
+00:00:52,530 --> 00:00:56,100
+The boss set those aside and put
+nearly everyone on the other 10.
+
+20
+00:00:56,100 --> 00:00:57,970
+Done in about 70 minutes.
+
+21
+00:00:57,970 --> 00:01:00,940
+Then the boss wrote: "There
+is no reason to idle."
+
+22
+00:01:00,940 --> 00:01:03,100
+And sent the helpers
+back to the hard ones.
+
+23
+00:01:03,100 --> 00:01:07,030
+Less than 30 hours later, the
+whole proof passed the inspector.
+
+24
+00:01:07,030 --> 00:01:07,970
+The catch?
+
+25
+00:01:07,970 --> 00:01:10,080
+Humans designed this building long ago,
+
+26
+00:01:10,080 --> 00:01:12,780
+and the team had a head
+start: 60 checkpoints,
+
+27
+00:01:12,780 --> 00:01:16,150
+a one-line map, 47 bricks already laid.
+
+28
+00:01:16,150 --> 00:01:17,470
+Anthropic's lesson?
+
+29
+00:01:17,470 --> 00:01:20,150
+Agents give up on hard problems too early.
+
+30
+00:01:20,150 --> 00:01:23,800
+Even this boss got 19 automatic
+reminders to keep going.
+
+31
+00:01:23,800 --> 00:01:26,360
+So when an AI says
+something can't be done,
+
+32
+00:01:26,360 --> 00:01:27,750
+tell it to keep going.
+
+33
+00:01:27,750 --> 00:01:30,790
+There's one word in this
+video I never said out loud.
+
+34
+00:01:30,790 --> 00:01:31,620
+Spotted it?
+
+35
+00:01:31,620 --> 00:01:32,460
+Comment it.
+
+36
+00:01:32,460 --> 00:01:35,520
+Follow for more AI, explained like this.

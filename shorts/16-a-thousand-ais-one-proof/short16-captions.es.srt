@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:03,530
+Estas IA dijeron que la mayor parte
+del trabajo no se podía hacer.
+
+2
+00:00:03,560 --> 00:00:05,010
+Y luego lo hicieron.
+
+3
+00:00:05,010 --> 00:00:07,330
+Imagina un edificio famoso en papel.
+
+4
+00:00:07,330 --> 00:00:12,130
+Ahora reconstrúyelo ladrillo a ladrillo, mientras
+un inspector estricto revisa cada ladrillo.
+
+5
+00:00:12,130 --> 00:00:14,400
+El edificio es una famosa
+demostración matemática.
+
+6
+00:00:14,400 --> 00:00:18,350
+Fermat escribió la regla en
+el margen de un libro en 1637.
+
+7
+00:00:18,350 --> 00:00:21,760
+Demostrarla tomó 358 años.
+
+8
+00:00:21,760 --> 00:00:23,880
+Pero el papel puede esconder errores.
+
+9
+00:00:23,880 --> 00:00:25,940
+En un lenguaje de
+computadora llamado Lean,
+
+10
+00:00:25,940 --> 00:00:29,300
+el inspector es una máquina,
+y nada se le escapa.
+
+11
+00:00:29,300 --> 00:00:32,600
+En septiembre, agentes de Claude
+lo lograron por primera vez.
+
+12
+00:00:32,600 --> 00:00:37,110
+13 millones de líneas, un
+investigador guiándolos, 11 días.
+
+13
+00:00:37,110 --> 00:00:41,080
+Esta semana, Anthropic lo intentó
+de nuevo con Claude Fable 5.2.
+
+14
+00:00:41,080 --> 00:00:43,600
+1.000 copias, sin investigador.
+
+15
+00:00:43,600 --> 00:00:47,060
+Un jefe y 999 ayudantes.
+
+16
+00:00:47,060 --> 00:00:47,980
+¿El giro?
+
+17
+00:00:47,980 --> 00:00:51,350
+Los ayudantes revisaron 60 partes
+y dijeron que 47 no se podían
+
+18
+00:00:51,350 --> 00:00:52,530
+hacer a tiempo.
+
+19
+00:00:52,530 --> 00:00:56,100
+El jefe las dejó a un lado y puso
+a casi todos en las otras 10.
+
+20
+00:00:56,100 --> 00:00:57,970
+Listas en unos 70 minutos.
+
+21
+00:00:57,970 --> 00:01:00,940
+Entonces el jefe escribió: "No
+hay razón para quedarse quieto".
+
+22
+00:01:00,940 --> 00:01:03,100
+Y mandó a los ayudantes
+de vuelta a las difíciles.
+
+23
+00:01:03,100 --> 00:01:07,030
+Menos de 30 horas después, toda la
+demostración pasó la inspección.
+
+24
+00:01:07,030 --> 00:01:07,970
+¿La trampa?
+
+25
+00:01:07,970 --> 00:01:10,080
+Los humanos diseñaron
+este edificio hace mucho,
+
+26
+00:01:10,080 --> 00:01:12,780
+y el equipo tenía ventaja:
+60 puntos de control,
+
+27
+00:01:12,780 --> 00:01:16,150
+un mapa de una línea,
+47 ladrillos ya puestos.
+
+28
+00:01:16,150 --> 00:01:17,470
+¿La lección de Anthropic?
+
+29
+00:01:17,470 --> 00:01:20,150
+Los agentes se rinden demasiado
+pronto con los problemas difíciles.
+
+30
+00:01:20,150 --> 00:01:23,800
+Incluso este jefe recibió 19
+recordatorios automáticos para seguir.
+
+31
+00:01:23,800 --> 00:01:26,360
+Así que cuando una IA diga
+que algo no se puede hacer,
+
+32
+00:01:26,360 --> 00:01:27,750
+dile que siga.
+
+33
+00:01:27,750 --> 00:01:30,790
+Hay una palabra en este video
+que nunca dije en voz alta.
+
+34
+00:01:30,790 --> 00:01:31,620
+¿La viste?
+
+35
+00:01:31,620 --> 00:01:32,460
+Escríbela en los comentarios.
+
+36
+00:01:32,460 --> 00:01:35,520
+Sígueme para más IA, explicada así.

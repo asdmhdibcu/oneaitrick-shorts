@@ -1,0 +1,165 @@
+1
+00:00:00,000 --> 00:00:03,530
+AI ini bilang sebagian besar
+pekerjaannya tidak bisa dikerjakan.
+
+2
+00:00:03,560 --> 00:00:05,010
+Lalu mereka berhasil.
+
+3
+00:00:05,010 --> 00:00:07,330
+Bayangkan sebuah bangunan
+terkenal di atas kertas.
+
+4
+00:00:07,330 --> 00:00:12,130
+Sekarang bangun ulang bata demi bata, sementara
+seorang pengawas ketat memeriksa setiap bata.
+
+5
+00:00:12,130 --> 00:00:14,400
+Bangunan itu adalah sebuah
+bukti matematika terkenal.
+
+6
+00:00:14,400 --> 00:00:18,350
+Fermat menulis aturan itu di
+pinggir halaman buku pada 1637.
+
+7
+00:00:18,350 --> 00:00:21,760
+Membuktikannya butuh 358 tahun.
+
+8
+00:00:21,760 --> 00:00:23,880
+Tapi kertas bisa menyembunyikan kesalahan.
+
+9
+00:00:23,880 --> 00:00:25,940
+Dalam bahasa komputer bernama Lean,
+
+10
+00:00:25,940 --> 00:00:29,300
+pengawasnya adalah mesin,
+dan tidak ada yang lolos.
+
+11
+00:00:29,300 --> 00:00:32,600
+Pada September, agen Claude
+berhasil untuk pertama kalinya.
+
+12
+00:00:32,600 --> 00:00:37,110
+13 juta baris, seorang
+peneliti membimbing, 11 hari.
+
+13
+00:00:37,110 --> 00:00:41,080
+Minggu ini, Anthropic mencoba
+lagi dengan Claude Fable 5.2.
+
+14
+00:00:41,080 --> 00:00:43,600
+1.000 salinan, tanpa peneliti.
+
+15
+00:00:43,600 --> 00:00:47,060
+Satu bos dan 999 pembantu.
+
+16
+00:00:47,060 --> 00:00:47,980
+Kejutannya?
+
+17
+00:00:47,980 --> 00:00:51,350
+Para pembantu melihat 60 bagian
+dan bilang 47 tidak bisa selesai
+
+18
+00:00:51,350 --> 00:00:52,530
+tepat waktu.
+
+19
+00:00:52,530 --> 00:00:56,100
+Bos menyisihkannya dan menaruh hampir
+semua orang di 10 bagian lainnya.
+
+20
+00:00:56,100 --> 00:00:57,970
+Selesai dalam sekitar 70 menit.
+
+21
+00:00:57,970 --> 00:01:00,940
+Lalu bos menulis: "Tidak
+ada alasan untuk diam."
+
+22
+00:01:00,940 --> 00:01:03,100
+Dan mengirim para pembantu
+kembali ke bagian yang sulit.
+
+23
+00:01:03,100 --> 00:01:07,030
+Kurang dari 30 jam kemudian,
+seluruh bukti lolos pemeriksaan.
+
+24
+00:01:07,030 --> 00:01:07,970
+Masalahnya?
+
+25
+00:01:07,970 --> 00:01:10,080
+Manusia sudah merancang
+bangunan ini sejak lama,
+
+26
+00:01:10,080 --> 00:01:12,780
+dan timnya punya modal
+awal: 60 titik periksa,
+
+27
+00:01:12,780 --> 00:01:16,150
+peta satu baris, 47 bata
+yang sudah terpasang.
+
+28
+00:01:16,150 --> 00:01:17,470
+Pelajaran dari Anthropic?
+
+29
+00:01:17,470 --> 00:01:20,150
+Agen menyerah terlalu cepat
+pada masalah yang sulit.
+
+30
+00:01:20,150 --> 00:01:23,800
+Bahkan bos ini dapat 19 pengingat
+otomatis untuk terus jalan.
+
+31
+00:01:23,800 --> 00:01:26,360
+Jadi saat AI bilang sesuatu
+tidak bisa dikerjakan,
+
+32
+00:01:26,360 --> 00:01:27,750
+suruh dia terus jalan.
+
+33
+00:01:27,750 --> 00:01:30,790
+Ada satu kata di video ini
+yang tidak pernah kuucapkan.
+
+34
+00:01:30,790 --> 00:01:31,620
+Sudah lihat?
+
+35
+00:01:31,620 --> 00:01:32,460
+Tulis di komentar.
+
+36
+00:01:32,460 --> 00:01:35,520
+Ikuti untuk AI lainnya,
+dijelaskan seperti ini.

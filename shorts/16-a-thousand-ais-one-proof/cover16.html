@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #0b0c10; font-family: "InterV", sans-serif; color: var(--ink); }
+      /* the blueprint grid and the field of 1,000 thinking orbs from the video (my drawing), the verdict struck through */
+      .grid { position: absolute; inset: 0;
+        background-image: linear-gradient(rgba(124,196,255,0.08) 2px, transparent 2px), linear-gradient(90deg, rgba(124,196,255,0.08) 2px, transparent 2px),
+          linear-gradient(rgba(124,196,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(124,196,255,0.035) 1px, transparent 1px);
+        background-size: 120px 120px, 120px 120px, 30px 30px, 30px 30px; }
+      .shade { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 55% at 50% 38%, rgba(4,5,10,0) 40%, rgba(4,5,10,0.85) 100%),
+        linear-gradient(180deg, rgba(4,5,10,0) 50%, rgba(4,5,10,0.9) 62%, rgba(4,5,10,0.98) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; }
+      .stamp { position: absolute; left: 150px; top: 730px; font-weight: 900; font-size: 88px; padding: 6px 30px; border: 10px solid #ff4d4d; color: #ff4d4d;
+        border-radius: 18px; transform: rotate(-6deg); background: rgba(11,12,16,0.9); white-space: nowrap; }
+      .strike { position: absolute; left: 150px; top: 790px; width: 790px; height: 14px; border-radius: 7px; background: #c8ff4d; transform: rotate(-6deg);
+        box-shadow: 0 0 26px rgba(200,255,77,0.9); }
+      .title { position: absolute; left: 70px; right: 40px; top: 1130px; font-weight: 900; font-size: 128px; letter-spacing: -0.05em; line-height: 0.93; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); text-transform: uppercase; }
+      .title em { font-style: normal; color: #c8ff4d; text-shadow: 0 0 60px rgba(200,255,77,0.45); }
+      .sub { position: absolute; left: 70px; top: 1400px; font-weight: 800; font-size: 46px; color: #e8e9ee; letter-spacing: -0.01em; }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 30px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="grid"></div>
+      <canvas id="f" width="980" height="700" style="position:absolute;left:50px;top:380px"></canvas>
+      <div class="shade"></div>
+      <div class="stamp">CAN'T BE DONE</div>
+      <div class="strike"></div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI TREND · STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">1,000 AI<span style="text-transform:none">s</span>.<br /><em>30 hours.</em></div>
+      <div class="sub">The proof humans needed 358 years for.</div>
+      <div class="pill" style="top: 1530px; color: #c8ff4d">ANTHROPIC · CLAUDE FABLE 5.2</div>
+    </div>
+    <script>
+      const c = document.getElementById("f").getContext("2d"), cols = 40, rows = 25, dx = 980 / cols, dy = 700 / rows, rr = Math.min(dx, dy) * 0.3;
+      for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) { const k = j * cols + i, a = 0.65 + 0.35 * Math.sin(k * 1.7), x = dx * (i + 0.5), y = dy * (j + 0.5);
+        c.fillStyle = `rgba(200,255,77,${a * 0.22})`; c.beginPath(); c.arc(x, y, rr * 2, 0, 6.2832); c.fill();
+        c.fillStyle = `rgba(200,255,77,${a})`; c.beginPath(); c.arc(x, y, rr, 0, 6.2832); c.fill(); }
+    </script>
+  </body>
+</html>

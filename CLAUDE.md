@@ -4,6 +4,42 @@ This repo makes the vertical Shorts for **One AI Trick** (@oneaitrick): AI expla
 
 Read `README.md` before building anything. It has the full pipeline, commands, style rules and known gotchas.
 
+## Where things live
+
+- **Content Hub** (a Claude doc): https://claude.ai/artifact/4jAqayBZERE2sH6SkepU5Q. Its Overview tab holds the posting tracker, brand, "Raising the bar" (scorecard, "Every short from #10", experiments, log) and the visual playbook. Every short has its own tab, `#NN Title`, tab order `bNN`. There is one hub: update it, never start a second.
+- **This repo**: the sources. A short's hub tab and its `shorts/NN-slug/` folder mirror each other.
+- **Finished files** (MP4 and phone copy, cover, SRTs) go to the creator as files, never into git.
+
+## Every short, step by step
+
+Before writing anything for a short (pitch, script, scene sheet), read this file, `README.md`, the hub's Overview tab and the hub tabs and repo folders of the last two shorts. Then write it the way those were written. On #16 a script was drafted without reading the hub, and the creator had to send it back.
+
+Ask the creator before you pick a topic, treat a script as final, spend credits (vidIQ, paid Flow, HeyGen), post or publish anything, or delete files.
+
+1. **Pitch.** Research AI news, papers and launches from the last 2–3 weeks, plus evergreen ideas. Check what is trending only when the creator asks: Google Trends' daily list, then vidIQ rising keywords and Shorts outliers (5 credits a call, so check the balance first). Pitch three ideas, each with a one-line hook, the everyday picture, the primary source and why it matters in any country. Wait for the pick.
+2. **Tab and folder.** Once a topic is picked, add the hub tab, a row in the posting tracker and `shorts/NN-slug/`.
+3. **Script.** The hub tab, in this order:
+   - the title, then the date · creator byline;
+   - a bold status line (what is waiting, and for whom);
+   - `## The story`: Hook, Everyday picture, Evidence, Twist, Catch, Takeaway, Hidden word, First frame;
+   - `## Script vN (N words, about N s)` as a code block;
+   - `## Fact check`: a table (Script says | The source says | Source), then a "Left out on purpose" line.
+
+   Mirror it in `BRIEF.md` (the story, the facts table, the pitches not picked) and `script.txt` (the tagged lines only). Wait for the creator's OK. A rewrite is v2, v3… and the old version stays in git history.
+4. **Voice.** The creator records the approved script in ElevenLabs with their cloned voice and attaches the take. Give Gemini TTS settings only if they ask for Gemini.
+5. **Scene sheet and material.** From the take's word timings, write the hub table (# | Time (s) | Line | What moves | Into it | Source), with a real page, logo, clip or graphic for every line. Then write the material table (Need | File name | What | Link), each row marked NEEDED, OPTIONAL or DONE. Mirror both in `MATERIAL.md`.
+6. **Build** with README's pipeline. Put the notes and rebuild commands in `BUILD.md`.
+7. **Deliver** the MP4 and phone copy, the cover, the English SRT and the es, pt, hi and id SRTs. Put the upload pack in the tab and in `UPLOAD.md`. Update the tracker row and the hub's Log row.
+8. **Push** sources straight to `main`, with no pull requests. Commit message: `Short #NN 'Title': what changed`.
+9. **48 hours after posting**, fill the scorecard row from the creator's analytics screenshots.
+
+Script standards, on top of the Rules below:
+
+- Length: 60–90 s unless the creator asks for longer (#15 ran 2:56). The best-held shorts are 84–87 s, and retention falls apart past 110 s. Never go past 3:00.
+- The first frame shows the claim. The everyday picture arrives by 0:10 and carries through the whole story. Add a twist every 15–20 s. Include the catch: what the headline leaves out. End on something the viewer can do or say.
+- Read every number and quote on the primary page: the paper, the official post or the filing. A search snippet or press summary is not a source. Anything not yet read there goes in the fact-check table marked as a gap, and is settled before the creator records.
+- A company that is named gets its logo on screen. Real news gets real footage or real documents, never generated stand-ins.
+
 ## Layout
 
 - `tools/`: voice alignment, captions, SRT, 3D art fetch/upscale, music, SFX, mix
@@ -14,7 +50,7 @@ Read `README.md` before building anything. It has the full pipeline, commands, s
 
 ## Rules
 
-- Story first, never an information dump. 60–90 s. Something moves on screen in every line, and every cut has a transition.
+- Story first, never an information dump. 60–90 s unless the creator asks for longer (see Script standards). Something moves on screen in every line, and every cut has a transition.
 - The creator records the voice in ElevenLabs (a clone of their own voice, so the AI labels stay on). Video timing follows their WAV, aligned word by word.
 - Before rendering, check `npx hyperframes check` and snapshot contact sheets of every scene **and** ±0.1 s around every cut. Fix anything cramped, overlapping or empty.
 - Render with `-f 30 -q high`. Verify the MP4: 1080×1920, 30 fps, −14 LUFS. Look at frames pulled from the file itself.

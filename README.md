@@ -31,11 +31,10 @@ Network: the shell can reach PyPI, npm and GitHub (raw files and release downloa
 
 ## Pipeline
 
-1. **Script.** Write a 60–90 s story or analogy, with a hook in the first 2 s and one clear idea. Give the Gemini TTS settings:
-   - In Google AI Studio, go to Generate media → Gemini speech generation.
-   - Model: Gemini 3.8 Flash TTS. Single speaker, voice **Achird** (or Sulafat / Charon).
-   - Use `<chuckle>` and `<short pause>` tags, and CAPS for emphasis words.
-   - Download as WAV.
+1. **Script.** Write a 60–90 s story or analogy, with a hook in the first 2 s and one clear idea. CLAUDE.md "Every short, step by step" sets the order, the hub tab layout and the fact-check standard.
+   - The creator records it in **ElevenLabs** with a clone of their own voice and attaches the take.
+   - Write for that voice: an expression tag on almost every line (`[excited]`, `[serious]`, `[short pause]`…) and CAPS for emphasis words.
+   - Before #12 the voice was Gemini TTS: Google AI Studio → Generate media → Gemini speech generation, Gemini 3.8 Flash TTS, single speaker, voice Achird (or Sulafat / Charon), `<chuckle>` and `<short pause>` tags, downloaded as WAV. Use it only if the creator asks.
 2. **Voice in.** Re-encode the upload, which fixes odd WAV headers:
    `ffmpeg -i raw.wav -ar 48000 -ac 1 voice_clean.wav` and `ffmpeg -i raw.wav -ar 16000 -ac 1 voice16k.wav`.
 3. **Align.** Run `python3 tools/align.py voice16k.wav script.txt words.json`.
@@ -188,7 +187,7 @@ tied to their own assembler).
 - An overlay that flickers must finish flickering before its fade-out, then get a hard `set` to 0 after its shot, or it can linger to the end card (#10's dashed line and stamp).
 - A published chart can be redrawn as an animated one: read the bar heights off the figure and calibrate them on values the text states (#10, `work/chart_data.json`). Label it "redrawn".
 - Keep scratch files (snapshots, contact sheets, WAVs) in the short's `work/` folder, which git ignores.
-- AI labels:
-  - YouTube doesn't need one for a generic AI narrator.
+- AI labels (the voice is a clone of the creator's, so they stay on everywhere):
+  - On YouTube, turn on "altered or synthetic content". Only #1–#11's generic Gemini narrator didn't need it.
   - On TikTok, turn on "AI-generated content".
   - On Instagram, turn on "AI info".

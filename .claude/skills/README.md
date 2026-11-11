@@ -29,7 +29,32 @@ with them, ours win.
 | `explainer-high-energy` | same | MIT | Beat-locked kinetic promos |
 | `motion-broll` | same | MIT | Motion-graphic B-roll timed to a transcript |
 
-The full licence texts are in `_licenses/`.
+### Added 11 Nov 2026 for video quality
+
+These were picked from the security-graded index zhuyansen/awesome-claude-video-skills and from the designers people
+follow for motion craft (Emil Kowalski, Jakub Krehel, Jakub Antalík). Each was cloned and read before it went in.
+
+| Skill | From | Licence | Use it for |
+| --- | --- | --- | --- |
+| `motionmaxxing` | Tejashmakwana/motionmaxxing (1.4k stars, graded SAFE) | Apache-2.0 (+ NOTICE: GSAP standard licence, Three.js MIT, Inter OFL) | The anti-slop director: taste rules, studies, a film template, and render gates that fail flat or generic motion before a render |
+| `kinetic-typography` | PHANTOMTONYT/motion-design-skills | MIT | Words as the visuals: slam, stretch, stack, split, timed to the voice. Built on HyperFrames and GSAP |
+| `system-diagram-animation` | same | MIT | How an AI system works, node by node, with data packets travelling along the edges |
+| `data-story-charts` | same | MIT | A chart carries the argument: lines draw, bars grow, a counter ticks |
+| `hand-drawn-cartoon` | same | MIT | Storybook cartoons with boiling ink lines, for analogy stories |
+| `3d-toy-character` | same | MIT | Soft vinyl-toy 3D characters (Three.js), for analogy stories without real people |
+| `animate`, `choreograph`, `review-animations`, `animation-vocabulary`, `apple-design` | emilkowalski/skills | MIT | Motion craft: whether to animate, easing and springs, order and overlap of several elements, and a strict review of motion code |
+| `teardown`, `better-typography`, `better-colors`, `better-ui`, `explain-interface` | jakubkrehel/skills | MIT | Technical illustrations of how things work; type, colour (OKLCH) and surface polish; how a reference effect was built |
+| `transitions-dev` | Jakubantalik/transitions-dev | MIT | 10+ production transitions (card resize, number pop-in, badges, text swap, panel reveal) for interface rebuilds |
+| `thinking-orbs` | MengTo/Skills (skill) + Jakubantalik/thinking-orbs 0.3.1 (library) | MIT | The animated AI orb (working, searching, solving, listening, composing, shaping) |
+| `pixel2motion` | nolangz/pixel2motion (2.6k stars) | MIT | Turn a company logo into a clean SVG and animate it, for every named company |
+| `manimce-best-practices`, `manim-composer` | adithya-s-k/manim_skill (1.3k stars, graded SAFE) | MIT | 3Blue1Brown-style maths and model internals (attention, embeddings, gradients) |
+| `business-motion-film` | echris6/motion-video-kit (1.4k stars, graded SAFE) | MIT | An independent critic loop and a premium quality bar for a finished cut |
+
+The thinking-orbs library source is in `library/thinking-orbs/`. Its engine (`src/engine/`) is a set of pure functions
+of time, `frame(size, t, opts)`, so a HyperFrames timeline can drive it frame-exactly. No React is needed in a
+composition. The orb draws monochrome dots, so tint them with the brand lime.
+
+The full licence texts are in `_licenses/` (the motionmaxxing licence and NOTICE sit in its own folder).
 
 ## Where they clash with our rules
 
@@ -39,6 +64,10 @@ The full licence texts are in `_licenses/`.
 - **CLI version:** the HyperFrames skills track the latest CLI. Our shorts stay on `hyperframes@0.8.162` until one is rebuilt and checked on a newer version.
 - **Labels:** some skills ban corner labels, counters and timecodes. Our source chips and number captions stay.
 - **Formats:** skills that target 16:9, LinkedIn, newsletters or 8-second loops are recipes to borrow from, not formats to deliver. Every short is 1080×1920, 30 fps, 60–90 s.
+- **motionmaxxing paid steps:** it makes voice, SFX and music through ElevenLabs when a key is set, which spends the creator's credits. Ask first. The narration is always the creator's own recorded take, never one it generates. Its Codex image step isn't available here. Use its taste rules, studies and render gates freely.
+- **Web UI skills (Emil Kowalski, Jakub Krehel, transitions-dev, thinking-orbs):** these are written for interactive apps. Take the motion craft and visual polish: easing, springs, choreography, type, colour, transitions. Skip the parts about keyboard, gestures, focus and component APIs, which don't apply to a rendered video.
+- **Analogy characters (`3d-toy-character`, `hand-drawn-cartoon`):** invented characters only, never a real, recognisable person. No face on camera still holds.
+- **Manim:** it needs `pip install --break-system-packages manim` plus system Cairo and Pango. Check that they install in the workspace before planning a short around it.
 
 ## Left out on purpose
 
@@ -47,6 +76,14 @@ The full licence texts are in `_licenses/`.
 - HeyGen's internal craft skills (`.claude/skills` inside their repo): they are tied to HeyGen's own assembler.
 - `object-separation`: it runs SAM 2 on the creator's own computer.
 - `explainer-default`, `apple-launch-film`, `launch-video`, `newsletter-promo` and `loop-cover`: product-launch and newsletter formats.
+- From the 11 Nov search:
+  - remotion-dev/skills: a different renderer.
+  - vibe-motion/skills: no licence file.
+  - vox-director and wallstreet-explainer: 16:9 and Chinese-language pipelines.
+  - digitalsamba/claude-code-video-toolkit: Remotion, plus paid cloud GPUs and APIs.
+  - kylezantos/design-motion-principles: repeats Emil's and Jakub's own skills.
+  - The rest of Emil's and Jakub Krehel's packs: app-building tools.
+  - `manimgl-best-practices`: the other Manim fork.
 - Still out, from README: onetake (non-commercial licence), lemo-opuscar (it pulls new instructions on every run) and claude-youtube (paid DataForSEO).
 
 To update a skill, copy the new version from its GitHub repo over the folder, note the commit in this table, and check its

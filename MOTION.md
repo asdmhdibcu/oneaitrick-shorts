@@ -85,6 +85,22 @@ ready-made blocks: use one before hand-building.
 - @oneaitrick, and a "+ Follow for AI, explained" pill.
 - The hidden word appears on screen somewhere in the short but is never said.
 
+## Signature visuals (from #16)
+
+- **The AI is thinking:** the thinking orb (`library/thinking-orbs/`, skill `thinking-orbs`) in lime, driven by the timeline. Use it whenever a model works on screen: working, searching, solving, listening, composing or shaping. It becomes the channel's recurring "AI" character, with no face.
+- **Logos:** every named company's logo is animated in, not just placed: a clean SVG from `pixel2motion`, drawn on or assembled in ~0.6 s.
+- **How it works:** systems as `system-diagram-animation` (nodes pop, edges draw, packets travel). Maths and model internals as Manim. Physical things as `teardown`-style technical illustrations.
+- **Numbers:** `data-story-charts` and `animated-chart`. Every value is exactly the source's, and the axis and source chip are on screen.
+- **Big lines:** `kinetic-typography` for the hook and the twist, timed to the stressed words.
+- **Analogy worlds:** `hand-drawn-cartoon` or `3d-toy-character` for the everyday picture, with invented characters only.
+
+## Quality pass (every short, before the full render)
+
+1. **Choreography:** for each scene, decide what moves, in what order and with how much overlap, and what stays still (`choreograph`). Nothing moves without a purpose (`animate`).
+2. **Taste:** check the scenes against motionmaxxing's taste rules and run its render gates. Fix anything flat, generic or on a default ease.
+3. **Review:** run `review-animations` on the composition's motion code, then fix what it flags.
+4. **Critic:** an independent pass with `business-motion-film`'s critic loop on the contact sheets, before the creator sees anything.
+
 ## Before you show anything
 
 - Snapshot every scene and ±0.1 s around every cut.

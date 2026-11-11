@@ -31,7 +31,7 @@ music = {"length": DUR, "bpm": 92, "seed": 17, "style": "pulse",
 json.dump(music, open("music.json", "w"), indent=1)
 run(["python3", T + "make_track.py", "music.json", "work/music_raw.wav"])
 # the one silence: the score falls away when the phone rings again ("Now your phone rings") and comes back for the recap
-s0, s1 = wt(197) - 0.2, wt(207) - 0.1
+s0, s1 = wt(197) - 0.2, wt(213) - 0.1
 run(["ffmpeg", "-v", "error", "-y", "-i", "work/music_raw.wav", "-af",
      f"volume='if(lt(t,{s0}),1,if(lt(t,{s0 + 0.3}),1-(t-{s0})/0.3*0.95,if(lt(t,{s1}),0.05,if(lt(t,{s1 + 0.15}),0.05+(t-{s1})/0.15*0.95,1))))':eval=frame",
      "work/music.wav"])
@@ -42,13 +42,12 @@ E = lambda kind, t, **kw: ev.append(dict({"type": kind, "t": round(t, 2)}, **kw)
 for t in (0.15, 1.35, 2.55, 3.75, 4.95):                        # Mom calling
     E("ring", t, rings=2, g=0.9)
 E("whoosh", 3.2, rise=0.2, fall=0.25, g=0.4); E("pop", 3.72, pitch=0.9)          # the claim parks as pin 1
-E("whoosh", 3.92, rise=0.22, fall=0.25, g=0.45)                                  # into the phone
+E("whoosh", wt(15) - 0.2, rise=0.22, fall=0.25, g=0.45)                         # on "rings": into the phone
 E("pop", wt(19) - 0.1, pitch=0.7); E("rumble", wt(19), dur=3.0, g=0.22)          # she answers, crying
 E("boom", wt(24), g=0.5)                                                         # NOW
-E("shimmer", wt(25) - 0.05, g=0.3)                                               # her voice becomes a key
+E("shimmer", wt(25) - 0.05, g=0.3); E("whoosh", wt(25) - 0.05, rise=0.22, fall=0.3, g=0.35)   # her voice becomes a key, back to the board
 E("tick", wt(33), g=1.4); E("pop", wt(33) + 0.02, pitch=0.55)                    # the key turns
 E("swell", wt(37) - 0.5, dur=0.6, g=0.35); E("shimmer", wt(37), g=0.35)          # the door opens
-E("whoosh", wt(37) + 0.3, rise=0.2, fall=0.25, g=0.35)                           # back to the board
 E("pop", wt(38), pitch=1.2); E("scan", wt(41) - 0.2, dur=1.3, g=0.5)             # COPY: the scan
 E("ding", wt(45), base=1320, g=0.6)                                              # the copy
 E("whoosh", wt(49) - 0.1, rise=0.22, fall=0.25, g=0.4); E("pop", wt(49) + 0.25, pitch=1.1)
@@ -64,11 +63,11 @@ E("ticks", wt(89), dur=1.35, n=14, g=0.6); E("boom", wt(92), g=0.5); E("ding", w
 E("whoosh", wt(96) + 0.1, rise=0.2, fall=0.25, g=0.35); E("pop", wt(96) + 0.95, pitch=0.9)              # pin 3
 E("zap", wt(97) + 0.15, g=0.6); E("pop", wt(98), pitch=0.8)                      # the lock breaks, STOLEN
 E("whoosh", wt(103) - 0.05, rise=0.15, fall=0.2, g=0.3); E("ticks", wt(103) + 0.1, dur=0.85, n=10, g=0.55); E("ding", wt(105) + 0.3, g=0.4)
-E("pop", wt(106) + 0.75, pitch=0.9)                                              # pin 4
-E("pop", wt(107), pitch=1.2); E("pop", wt(109), pitch=1.0)                      # BANK chapter, #1?
+E("pop", wt(106) + 0.4, pitch=0.9)                                               # pin 4
+E("pop", wt(109), pitch=1.0)                                                     # #1?
 E("whoosh", wt(115) - 0.05, rise=0.15, fall=0.25, g=0.35); E("boom", wt(116), g=0.35)   # isn't Mom
 E("whoosh", wt(117) - 0.15, rise=0.12, fall=0.15, g=0.5); E("boom", wt(117), g=0.45)    # crash zoom: your BANK
-E("ring", wt(117) + 0.05, rings=2, g=0.8)
+E("ring", wt(117) + 0.05, rings=2, g=0.8); E("pop", wt(119), pitch=1.2); E("pop", wt(119) + 0.05, pitch=0.9)   # BANK chapter, the #1 badge
 E("pop", wt(120), pitch=0.7); E("pop", wt(121), pitch=1.0); E("glitch", wt(120) + 0.2, dur=0.3, g=0.6)   # the fake line answers
 E("whoosh", wt(130) - 0.3, rise=0.2, fall=0.2, g=0.35); E("scan", wt(131), dur=0.6, g=0.35)
 E("pop", wt(132), pitch=0.9); E("whoosh", wt(136), rise=0.2, fall=0.3, g=0.35)   # the code flies into the deadbolt
@@ -83,20 +82,19 @@ E("pop", wt(162), pitch=0.9); E("pop", wt(162) + 0.2, pitch=1.0)
 E("whoosh", wt(164), rise=0.25, fall=0.3, g=0.3); E("boom", wt(167) - 0.1, g=0.35); E("glitch", wt(167) - 0.1, dur=0.25, g=0.5)
 E("whoosh", wt(168) - 0.1, rise=0.22, fall=0.25, g=0.4); E("scan", wt(170), dur=0.7, g=0.35)
 E("pop", wt(173), pitch=1.0); E("shimmer", wt(173) + 0.1, g=0.35)               # the safe-word card
-E("whoosh", wt(176) + 0.3, rise=0.2, fall=0.25, g=0.35); E("pop", wt(176) + 1.1, pitch=0.9)   # pin 6
+E("whoosh", wt(176) + 0.3, rise=0.2, fall=0.25, g=0.35); E("pop", wt(176) + 0.95, pitch=0.9)   # pin 6
 E("whoosh", wt(180) - 0.05, rise=0.25, fall=0.1, g=0.35); E("zap", wt(180) + 0.3, g=0.4)       # the code hits the edge
 E("tick", wt(182), g=1.4)
 E("whoosh", wt(184) - 0.25, rise=0.2, fall=0.25, g=0.4); E("scan", wt(185), dur=0.5, g=0.3)
 E("boom", wt(187), g=0.5)                                                       # REAL BANKS NEVER ASK
 E("pop", wt(189) - 0.3, pitch=0.9); E("pop", wt(189), pitch=0.6)
-E("whoosh", wt(196) + 0.25, rise=0.2, fall=0.25, g=0.35); E("pop", wt(196) + 1.15, pitch=0.9)   # pin 7
+E("whoosh", wt(194) - 0.05, rise=0.2, fall=0.25, g=0.35); E("pop", wt(194) + 0.5, pitch=0.9)    # on "number": pin 7
 for t in (wt(197) + 0.05, wt(199) + 0.35):                                       # the mirror: Mom calls again
     E("ring", t, rings=2, g=1.0)
-E("pop", wt(201) + 0.15, pitch=0.7); E("pop", wt(202), pitch=1.1); E("pop", wt(206), pitch=1.2)
-E("whoosh", wt(207) - 0.1, rise=0.25, fall=0.3, g=0.35)
-for k in range(7):
-    E("pop", wt(208) + 0.1 + k * 0.42, pitch=0.8 + 0.08 * k, g=0.8)            # the recap, pin by pin
-E("pop", wt(218), pitch=1.3)
+E("pop", wt(201) + 0.15, pitch=0.7); E("whoosh", wt(201) + 0.2, rise=0.2, fall=0.25, g=0.3); E("pop", wt(202), pitch=1.1); E("pop", wt(206), pitch=1.2)
+E("whoosh", wt(213) - 0.05, rise=0.25, fall=0.3, g=0.35)                       # the recap: back to the board
+E("shimmer", wt(215), g=0.35); E("shimmer", wt(218), g=0.4)                   # the attack lights up, then the locks
+E("pop", wt(220), pitch=1.3)
 E("shimmer", wt(222) - 0.05, g=0.4); E("boom", wt(222) - 0.05, g=0.3)           # end card
 ev.sort(key=lambda e: e["t"])
 json.dump({"length": DUR, "events": ev}, open("sfx.json", "w"), indent=0)
@@ -132,9 +130,11 @@ CC0 = [  # (file in the library, time, gain, longest seconds)
     ("transition/fs-702773-swipe-wav.ogg", wt(184) - 0.2, 0.4, 0.8),
     ("impact/kenney-impact-impactpunch-heavy-001.ogg", wt(187), 0.5, 1.0),             # REAL BANKS NEVER ASK
     ("ui-blip/kenney-digital-threetone1.ogg", wt(192), 0.35, 0.8),                     # calling your bank
-    ("ambience/fs-329533-room-tone-in-an-apartment-livi.ogg", wt(197) - 0.2, 0.4, 3.5),   # the same room, the mirror
+    ("ambience/fs-329533-room-tone-in-an-apartment-livi.ogg", wt(197) - 0.2, 0.4, 4.8),   # the same room, the mirror
     ("ding/kenney-interface-confirmation-001.ogg", wt(206) + 0.25, 0.45, 1.2),         # MANGO ✓
     ("click/kenney-interface-tick-001.ogg", wt(220), 0.5, 0.4),                        # comment it
+    ("ding/kenney-interface-confirmation-002.ogg", wt(215), 0.35, 1.0),                # recap: the attack
+    ("ding/kenney-interface-confirmation-003.ogg", wt(218), 0.35, 1.0),                # recap: the locks
 ]
 manifest = json.load(open(LIB + "manifest.json"))
 credits = {e["file"]: e.get("attribution") or e.get("credit") for e in manifest["bundled"] + manifest["default_kit"] if "file" in e}

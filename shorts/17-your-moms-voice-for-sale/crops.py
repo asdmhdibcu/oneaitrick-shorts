@@ -21,7 +21,7 @@ S = DPI / 72.0
 # key: (pdf, first line contains, last line contains, highlight phrases, extra pt above/below, x range in pt or None, label)
 CARDS = {
     "p01": ("p01_hiya.pdf", "nearly one in three respondents", "nearly one in three respondents",
-            ["nearly one in three respondents (31%)"], (8, 8), None, "HIYA · STATE OF THE CALL 2026"),
+            ["nearly one in three respondents (31%)"], (8, 8), None, "HIYA SURVEY · 12,000 PEOPLE · 6 COUNTRIES"),
     "p02": ("p02_elevenlabs.pdf", "only 30 seconds", "only 30 seconds",
             ["samples of only 30 seconds and get excellent results"], (8, 8), None, "ELEVENLABS HELP CENTER"),
     "p03": ("p03_cordcutters.pdf", "grew 7.4 times", "grew 7.4 times",

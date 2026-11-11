@@ -186,6 +186,18 @@
    "t": 75.53,
    "gain": 0.5,
    "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ding/kenney-interface-confirmation-002.ogg",
+   "t": 73.75,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ding/kenney-interface-confirmation-003.ogg",
+   "t": 74.76,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
   }
  ]
 }

@@ -64,21 +64,21 @@
       .pin { position: absolute; width: 280px; height: 200px; border-radius: 22px; background: rgba(20,22,29,0.94); border: 2px solid rgba(255,255,255,0.12);
         box-shadow: 0 20px 50px rgba(0,0,0,0.5); opacity: 0; transform-origin: 50% 50%; overflow: visible; }
       .pin .no { position: absolute; left: 18px; top: 14px; font-family: "Mono", monospace; font-weight: 700; font-size: 17px; letter-spacing: 0.1em; color: #a3a8b6; }
-      .pin .bg { position: absolute; left: 18px; top: 40px; font-weight: 900; font-size: 64px; letter-spacing: -0.04em; line-height: 1; color: var(--lime); white-space: nowrap; }
-      .pin .lb { position: absolute; left: 18px; right: 14px; top: 112px; font-weight: 700; font-size: 22px; line-height: 1.15; color: #e8e9ee; }
+      .pin .bg { position: absolute; left: 18px; top: 22px; font-weight: 900; font-size: 72px; letter-spacing: -0.04em; line-height: 1; color: #f5f5f2; white-space: nowrap; }
+      .pin .lb { position: absolute; left: 18px; right: 12px; top: 106px; font-weight: 750; font-size: 30px; line-height: 1.1; color: #e8e9ee; letter-spacing: -0.01em; }
       .pin .sr { position: absolute; left: 18px; bottom: 12px; font-family: "Mono", monospace; font-weight: 700; font-size: 14px; letter-spacing: 0.09em; color: #a3a8b6; white-space: nowrap; }
       .pin .glow { position: absolute; inset: -4px; border-radius: 24px; border: 4px solid var(--lime); box-shadow: 0 0 34px rgba(200,255,77,0.55); opacity: 0; }
       .pin .stp { position: absolute; right: -12px; top: -18px; padding: 6px 12px; border: 4px solid #ffb547; border-radius: 10px; color: #ffb547; background: rgba(20,14,4,0.92);
-        font-family: "Mono", monospace; font-weight: 700; font-size: 17px; letter-spacing: 0.06em; opacity: 0; white-space: nowrap; }
+        font-family: "Mono", monospace; font-weight: 700; font-size: 19px; letter-spacing: 0.05em; opacity: 0; white-space: nowrap; }
       .pin.q { border: 3px dashed rgba(200,255,77,0.7); }
 
       /* the hook card on frame one */
-      #hook { position: absolute; left: 70px; top: 372px; width: 940px; height: 830px; border-radius: 34px; background: rgba(12,14,20,0.94);
+      #hook { position: absolute; left: 70px; top: 780px; width: 940px; height: 420px; border-radius: 34px; background: #14161d;
         border: 2px solid rgba(255,255,255,0.14); box-shadow: 0 50px 120px rgba(0,0,0,0.7); transform-origin: 0 0; }
       #hook .k { position: absolute; left: 50px; top: 46px; font-family: "Mono", monospace; font-weight: 700; font-size: 26px; letter-spacing: 0.14em; color: #8b90a0; }
-      #hook .n { position: absolute; left: 44px; top: 96px; font-weight: 900; font-size: 230px; letter-spacing: -0.06em; line-height: 0.9; color: var(--lime); white-space: nowrap; }
-      #hook .s { position: absolute; left: 50px; top: 322px; font-weight: 850; font-size: 60px; letter-spacing: -0.02em; line-height: 1.05; color: #fff; }
-      #hook .pagecard { left: 50px; top: 470px; width: 840px; }
+      #hook .n { position: absolute; left: 34px; top: 92px; font-weight: 900; font-size: 150px; letter-spacing: -0.06em; line-height: 0.9; color: var(--lime); white-space: nowrap; }
+      #hook .s { position: absolute; left: 520px; top: 100px; width: 390px; font-weight: 850; font-size: 46px; letter-spacing: -0.02em; line-height: 1.05; color: #fff; }
+      #hook .pagecard { left: 40px; top: 250px; width: 860px; }
       #hook .src { position: absolute; left: 50px; bottom: 34px; font-family: "Mono", monospace; font-weight: 700; font-size: 22px; letter-spacing: 0.1em; color: #9a9ca6; }
 
       /* UI over everything */
@@ -130,13 +130,14 @@
       <div id="stage" class="clip" data-start="0" data-duration="%DUR%" style="z-index: 10; overflow: hidden">
         <div id="world"><div id="drift">
           <div class="gridbg"></div><div class="boardglow"></div>
-          <div id="pins"></div>
           <div id="phone"><div class="frame"></div><div id="screen">
             <div id="sbar"><div class="tm">9:41</div><div class="ic"><span class="sig"><i style="height:14px"></i><i style="height:20px"></i><i style="height:26px"></i><i style="height:32px"></i></span><span class="bat"><b></b></span></div></div>
             <div id="notch"></div>
             <div id="scrs"></div>
             <div class="glare"></div>
+            <div id="sflash" style="position:absolute;inset:0;background:#fff;opacity:0;z-index:61"></div>
           </div></div>
+          <div id="pins"></div>
           <div id="board"></div>
         </div></div>
       </div>
@@ -150,7 +151,6 @@
         <div class="progress" id="prog" style="background:var(--lime)"></div>
         <div class="tag2" id="tag"><span class="dot"></span>AI TREND · STORY</div>
         <div class="brand" id="bm">@ONEAITRICK</div>
-        <div id="caps"></div>
         <div id="end">
           <div class="dim"></div>
           <div class="mark" id="mark"><span class="one">1</span><span class="cur"></span></div>
@@ -158,6 +158,7 @@
           <div class="etitle" id="ehandle" style="top:890px;font-family:Mono, monospace;font-weight:500;font-size:40px;letter-spacing:0.04em;color:var(--muted)">@oneaitrick</div>
           <div class="cta" id="fol" style="left:205px;top:990px">+ Follow for AI, explained</div>
         </div>
+        <div id="caps"></div>
         <div class="flash" id="flash"></div>
         <div class="black" id="black"></div>
         <div class="fontwarm"><span style="font-family:InterV;font-weight:900">Aa</span><span style="font-family:Mono;font-weight:700">Aa</span><span style="font-family:Mono;font-weight:500">Aa</span></div>
@@ -224,29 +225,32 @@
         if (k > 0) { const p = CHE[k - 1];
           at(p.querySelector(".f"), { opacity: 0, duration: 0.3 }, t); at(p, { color: "#c8ff4d", borderColor: "rgba(200,255,77,0.6)", duration: 0.3 }, t);
           tl.set(p.querySelector(".ck"), { display: "inline" }, t); } };
-      CHE.forEach((c) => tl.set(c.querySelector(".f"), { scaleX: 0 }, 0));
+      CHE.forEach((c, i) => tl.set(c.querySelector(".f"), { scaleX: i === 0 ? 1 : 0 }, 0));
+      tl.set(CHE[0], { color: "#0b0c10", borderColor: "#c8ff4d" }, 0);
 
       // ---------- pins ----------
       const PINS = [
-        { slot: [40, 352], big: "1 IN 3", lab: "got a fake-voice call", src: "HIYA SURVEY" },
-        { slot: [40, 570], big: "30 SEC", lab: "of audio can be enough", src: "ELEVENLABS" },
-        { slot: [40, 788], big: "7.4×", lab: "more cloning trade in 2 years", src: "NORDVPN · AS REPORTED" },
-        { slot: [40, 1006], big: "$10", lab: "for a stolen cloning account", src: "NORDVPN · AS REPORTED" },
-        { slot: [760, 352], big: "CODE", lab: "= your second lock", src: "FTC" },
-        { slot: [760, 570], big: "LOCK 1", lab: "a family safe word", src: "FBI" },
-        { slot: [760, 788], big: "LOCK 2", lab: "the code stays · call back", src: "FTC" },
+        { slot: [40, 352], big: "1 IN 3", lab: "say a fake voice called them" },
+        { slot: [40, 570], big: "30 SEC", lab: "of audio can be enough" },
+        { slot: [40, 788], big: "7.4×", lab: "more cloning trade" },
+        { slot: [40, 1006], big: "$10+", lab: "a stolen cloning account" },
+        { slot: [760, 352], big: "CODE", lab: "= your second lock" },
+        { slot: [760, 570], big: "LOCK 1", lab: "a family safe word" },
+        { slot: [760, 788], big: "LOCK 2", lab: "code stays, call back" },
       ];
       const PE = PINS.map((p, i) => el("div", "pin", `left:${p.slot[0]}px;top:${p.slot[1]}px`,
-        `<div class="glow"></div><div class="no">0${i + 1}</div><div class="bg">${p.big}</div><div class="lb">${p.lab}</div><div class="sr">${p.src}</div><div class="stp">SELLS PROTECTION</div>`, $("#pins")));
+        `<div class="glow"></div><div class="bg">${p.big}</div><div class="lb">${p.lab}</div><div class="stp">SELLS PROTECTION</div>`, $("#pins")));
       PE.forEach((p) => tl.set(p.querySelector(".stp"), { rotation: -9 }, 0));
-      // a pin lands: big in the middle of the board, then down into its slot; it stays bright until the next one lands
-      const land = (k, t, fromHook) => { const p = PE[k], [x, y] = PINS[k].slot;
-        if (!fromHook) { const dx = 540 - (x + 140), dy = 760 - (y + 100);
-          fin(p, { opacity: 0, x: dx, y: dy, scale: 1.9 }, { opacity: 1, duration: 0.18, ease: "power1.out" }, t);
-          at(p, { x: 0, y: 0, scale: 1, duration: 0.5, ease: "power3.inOut" }, t + 0.2); }
-        else { tl.set(p, { opacity: 1, x: 0, y: 0, scale: 1 }, t); }
-        fin(p.querySelector(".glow"), { opacity: 0 }, { opacity: 1, duration: 0.2 }, t + (fromHook ? 0 : 0.6));
-        at(p.querySelector(".glow"), { opacity: 0, duration: 0.5 }, t + 2.4); };
+      // a pin slides out of the phone's edge along its own row (never across another slot), lime while it is new,
+      // then rests at 60 % with a white number
+      const PIN_REST = 0.6;
+      const land = (k, t, fromHook) => { const p = PE[k], [x] = PINS[k].slot, dx = x < 540 ? 300 : -300, bg = p.querySelector(".bg");
+        if (!fromHook) fin(p, { opacity: 0, x: dx, scale: 0.92 }, { opacity: 1, x: 0, scale: 1, duration: 0.5, ease: "power3.out" }, t);
+        else tl.set(p, { opacity: 1, x: 0, scale: 1 }, t);
+        tl.set(bg, { color: "#c8ff4d" }, t);
+        fin(p.querySelector(".glow"), { opacity: 0 }, { opacity: 1, duration: 0.2 }, t + (fromHook ? 0 : 0.35));
+        at(p.querySelector(".glow"), { opacity: 0, duration: 0.5 }, t + 2.4);
+        at(bg, { color: "#f5f5f2", duration: 0.4 }, t + 2.4); at(p, { opacity: PIN_REST, duration: 0.4 }, t + 2.4); };
 
       // ---------- pages (real PDFs, cropped by crops.py) ----------
       // a page card: the crop scaled to width W; hl boxes are in the crop's pixels
@@ -279,6 +283,7 @@
       // ---------- end card ----------
       const TE = w(222) - 0.05;
       fin("#end", { opacity: 0 }, { opacity: 1, duration: 0.5 }, TE);
+      at("#stage", { opacity: 0.1, filter: "blur(8px)", duration: 0.5 }, TE);
       fin("#mark", { scale: 0.3, rotation: -20, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.55, ease: "back.out(2)" }, TE + 0.15);
       fin(["#ename", "#ehandle"], { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.45, ease: E, stagger: 0.12 }, TE + 0.4);
       fin("#fol", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.2)" }, TE + 0.85);

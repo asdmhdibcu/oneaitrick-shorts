@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #0b0c10; font-family: "InterV", sans-serif; color: var(--ink); }
+      .grid { position: absolute; inset: 0;
+        background-image: linear-gradient(rgba(124,196,255,0.08) 2px, transparent 2px), linear-gradient(90deg, rgba(124,196,255,0.08) 2px, transparent 2px),
+          linear-gradient(rgba(124,196,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(124,196,255,0.035) 1px, transparent 1px);
+        background-size: 120px 120px, 120px 120px, 30px 30px, 30px 30px; }
+      .shade { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 40% at 50% 36%, rgba(124,196,255,0.12), rgba(4,5,10,0) 70%),
+        linear-gradient(180deg, rgba(4,5,10,0) 52%, rgba(4,5,10,0.92) 62%, rgba(4,5,10,0.98) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; }
+      /* the stage of the video: the phone, Mom calling */
+      .phone { position: absolute; left: 370px; top: 370px; width: 340px; height: 700px; border-radius: 56px; background: linear-gradient(145deg, #2a2f3b, #12141a 40%, #22262f);
+        box-shadow: 0 60px 120px rgba(0,0,0,0.7), 0 0 0 2px rgba(255,255,255,0.1); }
+      .scr { position: absolute; left: 10px; top: 10px; right: 10px; bottom: 10px; border-radius: 46px; overflow: hidden;
+        background: radial-gradient(ellipse 90% 60% at 50% 25%, #2d3854 0%, #10131c 62%, #07080c 100%); }
+      .av { position: absolute; left: 112px; top: 120px; width: 96px; height: 96px; border-radius: 50%; background: #59627a; color: #fff; font-weight: 700; font-size: 52px;
+        display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 14px rgba(255,255,255,0.12), 0 0 0 30px rgba(255,255,255,0.06); }
+      .nm { position: absolute; left: 0; right: 0; top: 250px; text-align: center; font-weight: 700; font-size: 54px; color: #fff; }
+      .sb { position: absolute; left: 0; right: 0; top: 320px; text-align: center; font-size: 20px; color: #a5abba; }
+      .b { position: absolute; top: 560px; width: 76px; height: 76px; border-radius: 50%; }
+      .tagsale { position: absolute; left: 600px; top: 640px; padding: 22px 34px; border-radius: 22px; background: #ffb547; color: #1b1206; font-weight: 900; font-size: 64px;
+        letter-spacing: -0.02em; transform: rotate(-9deg); box-shadow: 0 30px 60px rgba(0,0,0,0.6); white-space: nowrap; }
+      .tagsale::before { content: ""; position: absolute; left: 34px; top: 50%; width: 18px; height: 18px; margin-top: -9px; border-radius: 50%; background: #0b0c10; }
+      .tagsale span { margin-left: 34px; }
+      .pin { position: absolute; width: 250px; height: 170px; border-radius: 20px; background: rgba(20,22,29,0.94); border: 2px solid rgba(255,255,255,0.12); }
+      .pin b { position: absolute; left: 18px; top: 28px; font-weight: 900; font-size: 58px; letter-spacing: -0.04em; color: var(--lime); }
+      .pin i { position: absolute; left: 18px; top: 98px; font-style: normal; font-weight: 700; font-size: 22px; color: #e8e9ee; line-height: 1.15; right: 12px; }
+      .title { position: absolute; left: 70px; right: 40px; top: 1085px; font-weight: 900; font-size: 108px; letter-spacing: -0.05em; line-height: 0.93; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); text-transform: uppercase; }
+      .title em { font-style: normal; color: #ffb547; }
+      .sub { position: absolute; left: 70px; top: 1418px; font-weight: 800; font-size: 46px; color: #e8e9ee; letter-spacing: -0.01em; }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 30px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="grid"></div>
+      <div class="shade"></div>
+      <div class="pin" style="left:70px;top:420px"><b>1 IN 3</b><i>got a fake-voice call</i></div>
+      <div class="pin" style="left:70px;top:620px"><b>30 SEC</b><i>of audio can be enough</i></div>
+      <div class="pin" style="left:760px;top:420px"><b>7.4×</b><i>more cloning trade in 2 years</i></div>
+      <div class="phone"><div class="scr"><div class="av">M</div><div class="nm">Mom</div><div class="sb">mobile</div>
+        <div class="b" style="left:50px;background:#ff3b30"></div><div class="b" style="left:194px;background:#34c759"></div></div></div>
+      <div class="tagsale"><span>FOR SALE</span></div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI TREND · STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">Your mom's voice,<br /><em>for sale.</em></div>
+      <div class="sub">The fake call, and the 2 locks that stop it.</div>
+      <div class="pill" style="top: 1520px; color: #c8ff4d">AI VOICE CLONING · SCAMS</div>
+    </div>
+  </body>
+</html>

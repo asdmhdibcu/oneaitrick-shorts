@@ -2,13 +2,18 @@
 
 Hub tab: "#17 Your mom's voice, for sale" (order b17).
 
-**Status on 11 Nov 2026:** the creator picked pitch B of 3. `script.txt` is v1 (229 words, about 83–88 s) and is
-**waiting for the creator's OK**. Three NordVPN numbers are still gaps (see Facts) and must be settled or swapped
-before recording. Nothing is built yet.
+**Status on 11 Nov 2026:** the creator picked pitch B of 3 and recorded v1 the same night (78.95 s, word for word;
+`words.json` aligned 229 of 229 words). The scene sheet and material list are in `MATERIAL.md`; the build is under way.
 
-**Overlap to decide:** #12 "This voice isn't me" (built, not yet posted) tells the same family call, the same
-"this voice is a clone" line and the same safe phrase. #17's new ground is the market for voice-cloning tools and the
-fake bank line. If both go out, #17 goes first or #12's Short is dropped; the creator decides.
+**Decisions (the creator said "do what's best"; the voice won't be re-recorded):**
+
+- **NordVPN's figures** (lines 8–11): NordVPN never put the study online; it went out as a press release on 17 Sep 2026.
+  The same figures appear in at least four outlets' reports of that release (Cord Cutters News, Tampa Free Press,
+  Nexstar via Yahoo, Crowdfund Insider). The lines stay as recorded, and the screen labels them "NordVPN research, as
+  reported", showing the Cord Cutters News article as the document. The catch line already says the numbers come from
+  companies that sell protection.
+- **#12 overlap:** #12 "This voice isn't me" (built, not posted) tells the same family call and safe phrase. #17 posts
+  first; #12's Short is on hold in the tracker until the creator decides.
 
 ## A new format: the story spine
 
@@ -60,25 +65,20 @@ Hook → evidence → twist → takeaway.
 | 1 | "nearly one in three respondents (31%) said they had received a deepfake voice call in the past 12 months"; another 15% don't know; survey of 12,000+ consumers in the US, Canada, UK, Spain, France and Germany | Hiya, "AI is making voice fraud worse", 26 Mar 2026: https://blog.hiya.com/ai-is-making-voice-fraud-worse-both-in-volume-and-in-targeting | Read |
 | 5 | "We've seen users use samples of only 30 seconds and get excellent results" (Instant Voice Cloning) | ElevenLabs help: https://elevenlabs.io/docs/help-center/product/voice-customization/voice-cloning/how-many-voice-samples-should-i-upload-for-instant-voice-cloning | Read |
 | 6 | The narration is an ElevenLabs clone of the creator's own voice | CLAUDE.md (our own workflow) | Ours |
-| 8 | Commercial activity around AI voice cloning on dark web forums and Telegram channels grew 7.4 times, Jan–Jul 2024 vs Jan–Jul 2026 | NordVPN study (17 Sep 2026), seen only in press coverage: https://cordcuttersnews.com/ai-voice-cloning-surges-7-4-fold-as-scammers-target-loved-ones-banks-and-even-police-study-finds/ | **Gap** |
-| 9 | Cracked accounts and stolen access to legitimate voice-generation services advertised for $10–150 | NordVPN study, press coverage only (as above) | **Gap** |
-| 10–11 | Bank fraud and impersonation of automated bank phone systems were the most discussed voice-cloning uses in Jan–Jul 2026; some kits imitate a bank's phone menu and ask for one-time codes (sellers' claims, not verified) | NordVPN study, press coverage only (as above) | **Gap** |
+| 8 | Commercial activity around AI voice cloning on dark web forums and Telegram channels grew 7.4 times, Jan–Jul 2024 vs Jan–Jul 2026 | NordVPN study (17 Sep 2026), as reported by Cord Cutters News: https://cordcuttersnews.com/ai-voice-cloning-surges-7-4-fold-as-scammers-target-loved-ones-banks-and-even-police-study-finds/ (same figures: Tampa Free Press, 17 Sep: https://www.tampafp.com/fake-voices-for-sale-how-dark-web-scammers-turn-ai-into-cheap-phone-traps/) | As reported |
+| 9 | Cracked accounts and stolen access to legitimate voice-generation services advertised for $10–150 | NordVPN study, as reported (as above) | As reported |
+| 10–11 | Bank fraud and impersonation of automated bank phone systems were the most discussed voice-cloning uses in Jan–Jul 2026; some kits imitate a bank's phone menu and ask for one-time codes (sellers' claims, not verified) | NordVPN study, as reported (as above) | As reported |
 | 12 | "Your account password and a verification code work together, like the lock on your doorknob and a deadbolt lock." | FTC, "What's a verification code and why would someone ask me for it?", 7 Mar 2024: https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it | Read |
 | 13 | NordVPN and Hiya both sell protection; NordLayer's own caveat on this kind of data: "The data shows discussion volume, not necessarily active services." | NordLayer, "Deepfake-as-a-service", 23 Jun 2026: https://nordlayer.com/blog/deepfake-as-a-service-cybercrime-2026/ | Read |
 | 15 | "Create a secret word or phrase with your family to verify their identity." | FBI IC3 PSA I-120324-PSA, 3 Dec 2024: https://www.ic3.gov/PSA/2024/PSA241203 | Read |
 | 16 | "No caller … will ever ask for the verification code."; "Use the number you find on your statement — never the number the caller gave you" | FTC, "Got a call about fraud activity on your bank account?", 2024: https://consumer.ftc.gov/consumer-alerts/2024/06/got-call-about-fraud-activity-your-bank-account-it-could-be-scammer | Read |
+| 16 (screen) | "Anyone who asks you for your account verification code is a scammer."; "Use a number you trust, like the one on your statement or in your app." | FTC verification-code page (line 12's source) | Read |
 | 2, 17 | "All he needs is a short audio clip of your family member's voice — which he could get from content posted online — and a voice-cloning program."; "Don't trust the voice. Call the person who supposedly contacted you" | FTC, "Scammers use AI to enhance their family emergency schemes", 20 Mar 2023: https://consumer.ftc.gov/node/80688 | Read |
 
-**The gap:** NordVPN's study isn't on any NordVPN page I could open (blog, press area, research lab); the coverage
-links only to affiliate URLs. To settle it, the creator gets the release or PDF from NordVPN's press team, or lines
-8–11 swap to these primary-sourced lines:
-
-- Line 8 → "Criminal chat about deepfake fraud in the first five months of 2026 already passed all of 2025."
-  (NordLayer: "exceeded the total for all of 2025 by 39%")
-- Line 9 → dropped.
-- Lines 10–11 → "The twist? It works on banks too. The FBI says criminals have used copied voices to get into bank
-  accounts." (FBI PSA I-120324-PSA: "Criminals obtain access to bank accounts using AI-generated audio clips of
-  individuals and impersonating them.")
+**NordVPN's figures:** the study isn't on any NordVPN page I could open (blog, press area, research lab); it went out
+as a press release, and the coverage links only to affiliate URLs. The figures match across the outlets above, so they
+stay, labelled "as reported" on screen. Had the voice not been recorded, lines 8–11 would have switched to NordLayer's
+own page and the FBI alert.
 
 ## Left out on purpose
 

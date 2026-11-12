@@ -126,8 +126,9 @@ ready-made blocks: use one before hand-building.
 - A lime "1_" mark and "One AI Trick" with "AI" in lime.
 - @oneaitrick, and a "+ Follow for AI, explained" pill.
 - The hidden word appears on screen somewhere in the short but is never said.
-- Loop (from #18): the end card sits over the mirrored first frame, not on its own black card, and the video ends
-  within 0.5 s of the last word, so a replay flows straight into the hook.
+- Loop (from #18): the end card comes in over the mirrored first frame on "Follow for more…" (not on its own black
+  card), then clears for the last line, which rolls back into the hook over the first frame's picture. Cut within
+  0.5 s of the last word, so a replay carries straight on into the hook.
 
 ## Signature visuals (from #16)
 

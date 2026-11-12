@@ -10,11 +10,12 @@ Never said: the voice says "the word". Don't reveal it anywhere.
 
 ## YouTube Shorts (English, default)
 
-**Title:** AI voice cloning scams: your mom's voice is for sale (and 2 locks that stop it)
+**Title:** AI voice cloning scams: how to tell if it's really Mom calling (2 locks that stop it)
 
 **Description:**
 
-Nearly 1 in 3 people in a 12,000-person survey say a fake voice called them in the past year.
+How do you know it's really Mom calling, and not an AI copy of her voice? Nearly 1 in 3 people in a
+12,000-person survey say a fake voice called them in the past year.
 
 Your phone rings. It says "Mom". She's crying and needs money now. A voice works like a key: when you hear it, you
 trust it. And copying it is easy: the voice app I use for this channel says 30 seconds of audio can be enough (yes,
@@ -46,7 +47,7 @@ migoreng1 via Freesound (all CC0). Music: original. Voice: AI clone of the creat
 
 #AIscams #VoiceCloning #Shorts
 
-**Tags:** AI voice cloning, voice cloning scam, AI scam, deepfake voice, deepfake call, family emergency scam, bank scam
+**Tags:** AI voice cloning, voice cloning scam, how to tell if a voice is AI, AI voice clone call, AI scam, deepfake voice, deepfake call, family emergency scam, bank scam
 call, verification code scam, safe word, family safe word, scam call, AI explained, AI news, AI shorts
 
 **Pinned comment:** Does your family already have a safe word, or are you setting one up after this? 👇 (Also: there's
@@ -55,8 +56,8 @@ one word on screen I never said out loud.)
 ## Translations (YouTube: "Add language" for title and description; upload the matching SRT as subtitles)
 
 **Spanish (es)**
-- Title: Estafas con clonación de voz por IA: la voz de tu mamá está a la venta (y 2 cerraduras que lo frenan)
-- Description: Casi 1 de cada 3 personas, en una encuesta a 12.000, dice que una voz falsa la llamó el último año.
+- Title: Estafas con clonación de voz por IA: cómo saber si de verdad te llama mamá (2 cerraduras)
+- Description: ¿Cómo sabes que de verdad te llama mamá y no una copia de su voz hecha con IA? Casi 1 de cada 3 personas, en una encuesta a 12.000, dice que una voz falsa la llamó el último año.
   Suena tu teléfono: "Mamá", llorando, pide dinero ya. Una voz funciona como una llave, y copiarla es fácil: la app de
   voz que uso en este canal dice que 30 segundos de audio pueden bastar (sí, esta narración es una copia de mi voz con
   IA). Según el estudio de NordVPN, el comercio de clonación de voz en foros criminales y grupos de Telegram creció 7,4
@@ -68,8 +69,8 @@ one word on screen I never said out loud.)
 - Subtitles: `short17-captions.es.srt`
 
 **Portuguese (pt)**
-- Title: Golpes com clonagem de voz por IA: a voz da sua mãe está à venda (e 2 fechaduras que impedem)
-- Description: Quase 1 em cada 3 pessoas, numa pesquisa com 12.000, diz que uma voz falsa ligou para elas no último
+- Title: Golpes com clonagem de voz por IA: como saber se é mesmo sua mãe ligando (2 fechaduras)
+- Description: Como saber se é mesmo a sua mãe ligando, e não uma cópia da voz dela feita com IA? Quase 1 em cada 3 pessoas, numa pesquisa com 12.000, diz que uma voz falsa ligou para elas no último
   ano. O celular toca: "Mãe", chorando, pedindo dinheiro já. Uma voz funciona como uma chave, e copiá-la é fácil: o app
   de voz que uso neste canal diz que 30 segundos de áudio podem bastar (sim, esta narração é uma cópia da minha voz feita
   com IA). Segundo o estudo da NordVPN, o comércio de clonagem de voz em fóruns criminosos e grupos de Telegram cresceu
@@ -81,8 +82,8 @@ one word on screen I never said out loud.)
 - Subtitles: `short17-captions.pt.srt`
 
 **Hindi (hi)**
-- Title: AI वॉइस क्लोनिंग स्कैम: आपकी माँ की आवाज़ बिक रही है (और 2 ताले जो इसे रोकते हैं)
-- Description: 12,000 लोगों के एक सर्वे में लगभग 3 में से 1 ने कहा कि पिछले साल उन्हें एक नकली आवाज़ ने कॉल किया। फ़ोन बजता
+- Title: AI वॉइस क्लोनिंग स्कैम: कैसे पता करें कि सच में माँ का फ़ोन है (और 2 ताले जो इसे रोकते हैं)
+- Description: कैसे पता करें कि फ़ोन पर सच में माँ हैं, उनकी आवाज़ की AI नकल नहीं? 12,000 लोगों के एक सर्वे में लगभग 3 में से 1 ने कहा कि पिछले साल उन्हें एक नकली आवाज़ ने कॉल किया। फ़ोन बजता
   है: "माँ", रोती हुई, अभी पैसे माँगती है। आवाज़ एक चाबी की तरह काम करती है, और उसकी नकल आसान है: इस चैनल के लिए मैं जो
   वॉइस ऐप इस्तेमाल करता हूँ, वह कहता है कि 30 सेकंड की आवाज़ काफ़ी हो सकती है (हाँ, यह नैरेशन मेरी ही आवाज़ की AI नकल है)।
   NordVPN की स्टडी के मुताबिक़, अपराधियों के फ़ोरम और Telegram ग्रुप में आवाज़ की नकल का कारोबार 2 साल में 7.4 गुना बढ़ा,
@@ -93,8 +94,8 @@ one word on screen I never said out loud.)
 - Subtitles: `short17-captions.hi.srt`
 
 **Indonesian (id)**
-- Title: Penipuan kloning suara AI: suara ibumu dijual (dan 2 kunci yang menghentikannya)
-- Description: Hampir 1 dari 3 orang dalam survei terhadap 12.000 orang bilang pernah ditelepon suara palsu tahun lalu.
+- Title: Penipuan kloning suara AI: cara tahu apakah yang menelepon benar-benar ibu (2 kunci pengaman)
+- Description: Bagaimana kamu tahu yang menelepon benar-benar ibu, bukan salinan suaranya buatan AI? Hampir 1 dari 3 orang dalam survei terhadap 12.000 orang bilang pernah ditelepon suara palsu tahun lalu.
   Ponselmu berdering: "Ibu", menangis, minta uang sekarang. Suara bekerja seperti kunci, dan menyalinnya mudah: aplikasi
   suara yang saya pakai di kanal ini bilang 30 detik audio bisa cukup (ya, narasi ini salinan AI dari suara saya sendiri).
   Menurut studi NordVPN, perdagangan kloning suara di forum kriminal dan grup Telegram tumbuh 7,4 kali dalam dua tahun,
@@ -107,13 +108,13 @@ one word on screen I never said out loud.)
 
 ## TikTok
 
-Your phone says "Mom". She's crying. It isn't her. 📞 1 in 3 people in a big survey say a fake voice called them, and
+AI voice cloning scam: your phone says "Mom". She's crying. It isn't her. 📞 1 in 3 people in a big survey say a fake voice called them, and
 cloning tools are now sold like key-cutting machines. The 2 locks that stop it (no app needed). Sources: Hiya, NordVPN
 (as reported), FTC, FBI. #AIscams #VoiceCloning #learnontiktok
 
 ## Instagram Reels
 
-Your mom's voice, for sale. 📞
+Your mom's voice, for sale: how AI voice cloning scams work 📞
 Nearly 1 in 3 people in a big survey say a fake voice called them. The surprise: what scammers talk about most is your
 bank's phone line. Two locks that stop both: a family safe word, and a code that never leaves your phone.
 There's one word in this video I never said out loud. Spotted it? Comment it 👇

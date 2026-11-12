@@ -49,6 +49,27 @@ Grades per act: cold teal for the problem, warm for the answer, film or tape for
   - whips about 0.3 s, matching direction across the cut.
 - One silence per short, before the biggest reveal.
 
+## The storyboard (story spine, from #17)
+
+Every short is built as one storyboard the viewer can follow from the first frame to the last, so nobody forgets what
+was said or shown at the start. Engagement comes from following the story, not from fast cuts: a visual that flashes by
+in half a second isn't seen. #17 (`shorts/17-your-moms-voice-for-sale/`, `BUILD.md`) is the reference build.
+- **One stage the viewer relates to**, on screen from start to end: their phone, their inbox, their kitchen table,
+  whatever the story happens on. The camera either shows the whole board or pushes into the stage, and the board is
+  the default view (on screen within the first 5 s and for about half the runtime). Push in only for real pages, charts
+  and moments that need reading, always to the same framing.
+- **A chapter tracker** at the top (y ~232): 4–6 short chapter names. The live chapter fills lime and finished ones
+  get ✓. A chapter lights when the voice reaches it, never earlier (don't give a twist away).
+- **Pins:** each key fact lands as a small card beside the stage and stays there (big number 72 px, label 30 px, at
+  most two lines). A new pin slides out of the stage's edge along its own row, never across another pin; it is lime
+  while new, then rests at 60 % with a white number. Pins hide while the camera is pushed in. Group them with meaning
+  (in #17: left column = the attack, right column = your locks). This is the one exception to "two pieces of text".
+- **Recap:** in the last ~8 s the pins light up again, by group, slow enough to read (no 0.4 s flicker).
+- **Mirror ending:** the last frame mirrors the first (same stage, same position), now resolved.
+- **Holds:** every visual stays on screen at least 2 s, text about 3 words a second, one new thing at a time, nothing
+  under 1 s. The payoff beat holds longest.
+- **Hits stay inside the stage:** flash the stage's screen, punch the whole board slightly; no full-frame grey flashes.
+
 ## Transitions (every cut has one)
 
 Pick by meaning, not at random:

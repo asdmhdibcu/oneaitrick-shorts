@@ -1,0 +1,817 @@
+[
+{
+"text": "A",
+"start": 0.0,
+"end": 0.09
+},
+{
+"text": "coin",
+"start": 0.09,
+"end": 0.47
+},
+{
+"text": "flip",
+"start": 0.47,
+"end": 0.76
+},
+{
+"text": "steered",
+"start": 0.76,
+"end": 1.14
+},
+{
+"text": "FIFTY",
+"start": 1.14,
+"end": 1.74
+},
+{
+"text": "experts.",
+"start": 1.74,
+"end": 2.43
+},
+{
+"text": "Not",
+"start": 2.68,
+"end": 2.93
+},
+{
+"text": "ONE",
+"start": 2.93,
+"end": 3.27
+},
+{
+"text": "of",
+"start": 3.27,
+"end": 3.4
+},
+{
+"text": "them",
+"start": 3.4,
+"end": 3.6
+},
+{
+"text": "knew.",
+"start": 3.6,
+"end": 3.95
+},
+{
+"text": "Each",
+"start": 4.26,
+"end": 4.5
+},
+{
+"text": "had",
+"start": 4.5,
+"end": 4.67
+},
+{
+"text": "an",
+"start": 4.67,
+"end": 4.81
+},
+{
+"text": "AI",
+"start": 4.81,
+"end": 5.1
+},
+{
+"text": "helper,",
+"start": 5.1,
+"end": 5.66
+},
+{
+"text": "like",
+"start": 5.8,
+"end": 5.97
+},
+{
+"text": "yours.",
+"start": 5.97,
+"end": 6.46
+},
+{
+"text": "And",
+"start": 6.75,
+"end": 6.94
+},
+{
+"text": "a",
+"start": 6.94,
+"end": 7.01
+},
+{
+"text": "coin",
+"start": 7.01,
+"end": 7.38
+},
+{
+"text": "secretly",
+"start": 7.38,
+"end": 7.97
+},
+{
+"text": "picked",
+"start": 7.97,
+"end": 8.22
+},
+{
+"text": "its",
+"start": 8.22,
+"end": 8.39
+},
+{
+"text": "favorite",
+"start": 8.39,
+"end": 8.83
+},
+{
+"text": "answers.",
+"start": 8.83,
+"end": 9.4
+},
+{
+"text": "Picture",
+"start": 9.72,
+"end": 10.06
+},
+{
+"text": "a",
+"start": 10.06,
+"end": 10.09
+},
+{
+"text": "scale.",
+"start": 10.09,
+"end": 10.62
+},
+{
+"text": "Both",
+"start": 10.93,
+"end": 11.17
+},
+{
+"text": "options",
+"start": 11.17,
+"end": 11.55
+},
+{
+"text": "are",
+"start": 11.55,
+"end": 11.6
+},
+{
+"text": "fair...",
+"start": 11.6,
+"end": 12.2
+},
+{
+"text": "and",
+"start": 12.3,
+"end": 12.6
+},
+{
+"text": "the",
+"start": 12.6,
+"end": 12.77
+},
+{
+"text": "AI",
+"start": 12.77,
+"end": 13.07
+},
+{
+"text": "drops",
+"start": 13.07,
+"end": 13.37
+},
+{
+"text": "a",
+"start": 13.37,
+"end": 13.44
+},
+{
+"text": "coin",
+"start": 13.44,
+"end": 13.78
+},
+{
+"text": "on",
+"start": 13.78,
+"end": 13.91
+},
+{
+"text": "ONE",
+"start": 13.91,
+"end": 14.18
+},
+{
+"text": "side.",
+"start": 14.18,
+"end": 14.62
+},
+{
+"text": "The",
+"start": 14.87,
+"end": 15.03
+},
+{
+"text": "experts",
+"start": 15.03,
+"end": 15.54
+},
+{
+"text": "went",
+"start": 15.54,
+"end": 15.74
+},
+{
+"text": "with",
+"start": 15.74,
+"end": 15.88
+},
+{
+"text": "the",
+"start": 15.88,
+"end": 15.97
+},
+{
+"text": "coin's",
+"start": 15.97,
+"end": 16.33
+},
+{
+"text": "side",
+"start": 16.33,
+"end": 16.6
+},
+{
+"text": "EIGHTY-SIX",
+"start": 16.6,
+"end": 17.41
+},
+{
+"text": "percent",
+"start": 17.41,
+"end": 17.76
+},
+{
+"text": "of",
+"start": 17.76,
+"end": 17.85
+},
+{
+"text": "the",
+"start": 17.85,
+"end": 17.94
+},
+{
+"text": "time.",
+"start": 17.94,
+"end": 18.43
+},
+{
+"text": "By",
+"start": 18.65,
+"end": 18.79
+},
+{
+"text": "chance?",
+"start": 18.79,
+"end": 19.37
+},
+{
+"text": "About",
+"start": 19.6,
+"end": 19.9
+},
+{
+"text": "half.",
+"start": 19.9,
+"end": 20.35
+},
+{
+"text": "Some",
+"start": 20.61,
+"end": 21.03
+},
+{
+"text": "had",
+"start": 21.03,
+"end": 21.21
+},
+{
+"text": "ALREADY",
+"start": 21.21,
+"end": 21.74
+},
+{
+"text": "decided.",
+"start": 21.74,
+"end": 22.46
+},
+{
+"text": "When",
+"start": 22.76,
+"end": 22.88
+},
+{
+"text": "the",
+"start": 22.88,
+"end": 23.04
+},
+{
+"text": "AI",
+"start": 23.04,
+"end": 23.29
+},
+{
+"text": "disagreed...",
+"start": 23.29,
+"end": 23.96
+},
+{
+"text": "they",
+"start": 24.21,
+"end": 24.33
+},
+{
+"text": "switched,",
+"start": 24.33,
+"end": 24.97
+},
+{
+"text": "more",
+"start": 25.14,
+"end": 25.34
+},
+{
+"text": "than",
+"start": 25.34,
+"end": 25.5
+},
+{
+"text": "half",
+"start": 25.5,
+"end": 25.86
+},
+{
+"text": "the",
+"start": 25.86,
+"end": 25.96
+},
+{
+"text": "time.",
+"start": 25.96,
+"end": 26.43
+},
+{
+"text": "Here's",
+"start": 26.69,
+"end": 26.96
+},
+{
+"text": "the",
+"start": 26.96,
+"end": 27.03
+},
+{
+"text": "weird",
+"start": 27.03,
+"end": 27.39
+},
+{
+"text": "part.",
+"start": 27.39,
+"end": 27.72
+},
+{
+"text": "Most",
+"start": 27.97,
+"end": 28.36
+},
+{
+"text": "repeated",
+"start": 28.36,
+"end": 28.89
+},
+{
+"text": "the",
+"start": 28.89,
+"end": 29.05
+},
+{
+"text": "AI's",
+"start": 29.05,
+"end": 29.41
+},
+{
+"text": "arguments...",
+"start": 29.41,
+"end": 30.07
+},
+{
+"text": "but",
+"start": 30.07,
+"end": 30.38
+},
+{
+"text": "only",
+"start": 30.38,
+"end": 30.66
+},
+{
+"text": "about",
+"start": 30.66,
+"end": 30.87
+},
+{
+"text": "one",
+"start": 30.87,
+"end": 31.16
+},
+{
+"text": "in",
+"start": 31.16,
+"end": 31.3
+},
+{
+"text": "seven",
+"start": 31.3,
+"end": 31.78
+},
+{
+"text": "gave",
+"start": 31.78,
+"end": 31.97
+},
+{
+"text": "it",
+"start": 31.97,
+"end": 32.08
+},
+{
+"text": "credit.",
+"start": 32.08,
+"end": 32.53
+},
+{
+"text": "The",
+"start": 32.76,
+"end": 32.84
+},
+{
+"text": "catch?",
+"start": 32.84,
+"end": 33.41
+},
+{
+"text": "Anthropic",
+"start": 33.66,
+"end": 34.22
+},
+{
+"text": "tested",
+"start": 34.22,
+"end": 34.6
+},
+{
+"text": "its",
+"start": 34.6,
+"end": 34.79
+},
+{
+"text": "OWN",
+"start": 34.89,
+"end": 35.18
+},
+{
+"text": "AI,",
+"start": 35.18,
+"end": 35.68
+},
+{
+"text": "and",
+"start": 35.68,
+"end": 35.9
+},
+{
+"text": "made",
+"start": 35.9,
+"end": 36.1
+},
+{
+"text": "the",
+"start": 36.1,
+"end": 36.18
+},
+{
+"text": "coin",
+"start": 36.18,
+"end": 36.49
+},
+{
+"text": "extra",
+"start": 36.49,
+"end": 36.96
+},
+{
+"text": "HEAVY",
+"start": 36.96,
+"end": 37.37
+},
+{
+"text": "on",
+"start": 37.37,
+"end": 37.5
+},
+{
+"text": "purpose.",
+"start": 37.5,
+"end": 38.11
+},
+{
+"text": "Everyday",
+"start": 38.37,
+"end": 38.85
+},
+{
+"text": "AI",
+"start": 38.85,
+"end": 39.2
+},
+{
+"text": "may",
+"start": 39.2,
+"end": 39.4
+},
+{
+"text": "push",
+"start": 39.4,
+"end": 39.7
+},
+{
+"text": "less.",
+"start": 39.7,
+"end": 40.15
+},
+{
+"text": "So",
+"start": 40.37,
+"end": 40.62
+},
+{
+"text": "ask",
+"start": 40.62,
+"end": 40.88
+},
+{
+"text": "your",
+"start": 40.88,
+"end": 41.04
+},
+{
+"text": "AI",
+"start": 41.04,
+"end": 41.35
+},
+{
+"text": "one",
+"start": 41.35,
+"end": 41.6
+},
+{
+"text": "more",
+"start": 41.6,
+"end": 41.8
+},
+{
+"text": "thing.",
+"start": 41.8,
+"end": 42.19
+},
+{
+"text": "\"What's",
+"start": 42.5,
+"end": 42.7
+},
+{
+"text": "the",
+"start": 42.7,
+"end": 42.79
+},
+{
+"text": "best",
+"start": 42.79,
+"end": 43.11
+},
+{
+"text": "case",
+"start": 43.11,
+"end": 43.38
+},
+{
+"text": "for",
+"start": 43.38,
+"end": 43.51
+},
+{
+"text": "the",
+"start": 43.51,
+"end": 43.72
+},
+{
+"text": "OTHER",
+"start": 43.72,
+"end": 43.98
+},
+{
+"text": "side?\"",
+"start": 43.98,
+"end": 44.46
+},
+{
+"text": "Now",
+"start": 44.71,
+"end": 44.99
+},
+{
+"text": "there's",
+"start": 44.99,
+"end": 45.19
+},
+{
+"text": "a",
+"start": 45.19,
+"end": 45.24
+},
+{
+"text": "coin",
+"start": 45.24,
+"end": 45.55
+},
+{
+"text": "on",
+"start": 45.55,
+"end": 45.7
+},
+{
+"text": "both",
+"start": 45.7,
+"end": 45.93
+},
+{
+"text": "sides.",
+"start": 45.93,
+"end": 46.45
+},
+{
+"text": "The",
+"start": 46.61,
+"end": 46.73
+},
+{
+"text": "choice",
+"start": 46.73,
+"end": 47.04
+},
+{
+"text": "is",
+"start": 47.04,
+"end": 47.18
+},
+{
+"text": "YOURS.",
+"start": 47.18,
+"end": 47.68
+},
+{
+"text": "There's",
+"start": 47.94,
+"end": 48.16
+},
+{
+"text": "one",
+"start": 48.16,
+"end": 48.41
+},
+{
+"text": "word",
+"start": 48.41,
+"end": 48.67
+},
+{
+"text": "in",
+"start": 48.67,
+"end": 48.78
+},
+{
+"text": "this",
+"start": 48.78,
+"end": 48.95
+},
+{
+"text": "video",
+"start": 48.95,
+"end": 49.34
+},
+{
+"text": "I",
+"start": 49.34,
+"end": 49.43
+},
+{
+"text": "never",
+"start": 49.43,
+"end": 49.84
+},
+{
+"text": "said",
+"start": 49.84,
+"end": 50.07
+},
+{
+"text": "out",
+"start": 50.07,
+"end": 50.23
+},
+{
+"text": "loud.",
+"start": 50.23,
+"end": 50.61
+},
+{
+"text": "Spotted",
+"start": 50.84,
+"end": 51.23
+},
+{
+"text": "it?",
+"start": 51.23,
+"end": 51.46
+},
+{
+"text": "Comment",
+"start": 51.61,
+"end": 52.02
+},
+{
+"text": "it.",
+"start": 52.02,
+"end": 52.21
+},
+{
+"text": "Follow",
+"start": 52.39,
+"end": 52.7
+},
+{
+"text": "for",
+"start": 52.7,
+"end": 52.85
+},
+{
+"text": "more",
+"start": 52.85,
+"end": 53.08
+},
+{
+"text": "AI,",
+"start": 53.08,
+"end": 53.61
+},
+{
+"text": "explained",
+"start": 53.61,
+"end": 54.12
+},
+{
+"text": "like",
+"start": 54.12,
+"end": 54.3
+},
+{
+"text": "this.",
+"start": 54.3,
+"end": 54.7
+},
+{
+"text": "Think",
+"start": 54.96,
+"end": 55.16
+},
+{
+"text": "YOU'D",
+"start": 55.16,
+"end": 55.42
+},
+{
+"text": "notice?",
+"start": 55.42,
+"end": 55.92
+},
+{
+"text": "Because...",
+"start": 56.09,
+"end": 56.85
+}
+]

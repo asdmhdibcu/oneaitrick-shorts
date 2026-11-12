@@ -2,7 +2,11 @@
 
 Hub tab: "#18 The coin inside your AI" (order b18).
 
-**Status on 12 Nov 2026:** the creator picked pitch A of 3. `script.txt` is v2 (163 words, about 58 s at #17's pace)
+**Status on 12 Nov 2026 (evening):** the creator recorded v2 the same evening (56.96 s, word for word;
+`words.json` aligned 163 of 163 words). The scene sheet and material list are in `MATERIAL.md`; waiting for the
+Anthropic page (p01) before the build.
+
+**Earlier:** the creator picked pitch A of 3. `script.txt` is v2 (163 words, about 58 s at #17's pace)
 and is **waiting for the creator's OK**. v2 (the creator's notes, 12 Nov): "like yours" on line 2 puts the viewer
 in the 4–12 s window, and the title's 50 rolls up like an odometer (settled by 0.8 s). v1 is in git history. They will then record it in ElevenLabs with their cloned voice. Nothing is
 built yet.

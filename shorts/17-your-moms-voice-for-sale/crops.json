@@ -1,0 +1,116 @@
+{
+ "p01": {
+  "img": "assets/pages/p01.png",
+  "w": 1810,
+  "h": 205,
+  "hl": [
+   [
+    411,
+    32,
+    1274,
+    53
+   ],
+   [
+    86,
+    91,
+    563,
+    53
+   ]
+  ],
+  "label": "HIYA SURVEY \u00b7 12,000 PEOPLE \u00b7 6 COUNTRIES"
+ },
+ "p02": {
+  "img": "assets/pages/p02.png",
+  "w": 2860,
+  "h": 227,
+  "hl": [
+   [
+    1619,
+    18,
+    1064,
+    77
+   ],
+   [
+    86,
+    132,
+    495,
+    77
+   ]
+  ],
+  "label": "ELEVENLABS HELP CENTER"
+ },
+ "p03": {
+  "img": "assets/pages/p03.png",
+  "w": 3150,
+  "h": 414,
+  "hl": [
+   [
+    1670,
+    176,
+    1338,
+    95
+   ],
+   [
+    86,
+    303,
+    1062,
+    95
+   ]
+  ],
+  "label": "CORD CUTTERS NEWS \u00b7 NORDVPN STUDY"
+ },
+ "p04a": {
+  "img": "assets/pages/p04a.png",
+  "w": 2864,
+  "h": 229,
+  "hl": [
+   [
+    1568,
+    54,
+    1210,
+    61
+   ]
+  ],
+  "label": "FTC CONSUMER ALERT \u00b7 MAR 2024"
+ },
+ "p04b": {
+  "img": "assets/pages/p04b.png",
+  "w": 2872,
+  "h": 265,
+  "hl": [
+   [
+    2263,
+    54,
+    523,
+    61
+   ],
+   [
+    86,
+    150,
+    1140,
+    61
+   ]
+  ],
+  "label": "FTC CONSUMER ALERT \u00b7 MAR 2024"
+ },
+ "p05": {
+  "img": "assets/pages/p05.png",
+  "w": 2572,
+  "h": 278,
+  "hl": [
+   [
+    86,
+    42,
+    2400,
+    93
+   ],
+   [
+    86,
+    143,
+    310,
+    93
+   ]
+  ],
+  "label": "FBI ALERT I-120324-PSA \u00b7 DEC 2024"
+ }
+}

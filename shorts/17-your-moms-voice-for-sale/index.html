@@ -54,7 +54,7 @@
         font-size: 34px; letter-spacing: 0.08em; text-align: center; }
       .pagecard .need b { font-size: 26px; color: #6b6e78; letter-spacing: 0.04em; font-weight: 500; max-width: 760px; }
       .pagecard .sl { position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 26px; font-family: "Mono", monospace; font-weight: 700; font-size: 26px;
-        letter-spacing: 0.1em; color: #4a4d57; background: rgba(240,238,232,0.97); border-top: 2px solid #e2dfd6; text-transform: uppercase; }
+        letter-spacing: 0.1em; color: #4a4d57; background: #efede7; border-top: 2px solid #e2dfd6; text-transform: uppercase; }
       .logot { position: absolute; display: flex; align-items: center; justify-content: center; gap: 22px; border-radius: 30px; background: #fff;
         box-shadow: 0 24px 60px rgba(0,0,0,0.5); font-weight: 800; color: #111; }
       .logot svg, .logot img { height: 64%; width: auto; }
@@ -163,13 +163,14 @@
         <div class="black" id="black"></div>
         <div class="fontwarm"><span style="font-family:InterV;font-weight:900">Aa</span><span style="font-family:Mono;font-weight:700">Aa</span><span style="font-family:Mono;font-weight:500">Aa</span></div>
       </div>
+      <div style="display:none"><video id="v01" src="assets/clips/v01_key.mp4" muted playsinline data-start="25.15" data-duration="3.15" data-media-start="0" style="position:absolute;left:0;top:0;width:1000px;height:2140px;object-fit:cover"></video></div>
       <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="81.5" data-volume="1"></audio>
     </div>
 
     <script>
       const DUR = 81.5;
       const WS = [0.0, 0.39, 0.76, 0.99, 1.4, 1.83, 2.07, 2.11, 2.51, 2.83, 3.23, 3.96, 4.33, 4.76, 4.89, 5.19, 5.8, 5.92, 6.42, 7.34, 7.63, 8.47, 8.65, 8.9, 9.57, 10.52, 10.64, 10.98, 11.29, 11.45, 11.51, 12.36, 12.47, 12.77, 13.24, 13.37, 13.43, 13.74, 14.56, 15.08, 15.16, 15.96, 16.03, 16.25, 16.39, 16.45, 16.63, 16.87, 17.03, 17.52, 17.66, 17.83, 17.91, 18.15, 18.27, 18.47, 18.81, 19.07, 19.49, 19.93, 20.08, 20.2, 20.84, 21.16, 21.45, 22.47, 23.23, 23.47, 23.83, 24.0, 24.07, 24.44, 24.54, 25.35, 25.51, 25.95, 26.03, 26.64, 27.06, 27.12, 27.28, 28.03, 28.07, 28.62, 28.97, 29.3, 29.72, 30.09, 30.81, 31.42, 31.75, 32.01, 32.24, 32.78, 33.24, 33.37, 33.6, 34.34, 34.8, 35.23, 35.34, 35.7, 36.07, 36.61, 36.77, 37.11, 37.4, 38.19, 38.27, 39.09, 39.23, 39.42, 39.83, 40.07, 40.29, 41.07, 41.36, 42.07, 42.23, 42.36, 43.19, 43.24, 43.64, 43.92, 44.16, 44.63, 44.75, 45.12, 45.26, 45.37, 46.14, 46.34, 46.72, 46.9, 47.0, 47.44, 48.12, 48.3, 48.43, 48.91, 49.05, 49.2, 49.74, 49.82, 50.54, 50.73, 51.06, 51.23, 51.4, 51.85, 52.01, 52.27, 53.26, 53.35, 53.63, 54.09, 54.2, 54.91, 55.13, 55.52, 56.14, 56.35, 56.62, 56.87, 57.29, 57.59, 57.92, 58.11, 58.79, 59.41, 59.47, 59.93, 60.3, 60.75, 61.16, 61.48, 61.56, 62.29, 62.91, 63.06, 63.48, 63.87, 64.13, 64.24, 64.9, 64.95, 65.22, 65.52, 65.76, 66.44, 66.68, 66.89, 67.09, 67.35, 67.38, 67.64, 67.81, 68.48, 68.65, 68.8, 69.06, 69.77, 70.54, 70.68, 70.9, 71.01, 71.09, 71.76, 72.03, 72.32, 72.55, 72.65, 72.81, 73.24, 73.34, 73.75, 73.99, 74.15, 74.76, 75.14, 75.53, 75.94, 76.33, 76.65, 76.8, 77.07, 77.76, 78.23, 78.44], WE = [0.39, 0.76, 0.99, 1.4, 1.83, 2.07, 2.11, 2.51, 2.83, 3.23, 3.55, 4.33, 4.49, 4.89, 5.19, 5.67, 5.92, 6.35, 6.85, 7.63, 8.18, 8.65, 8.9, 9.35, 10.19, 10.64, 10.98, 11.29, 11.45, 11.51, 12.11, 12.47, 12.77, 12.98, 13.37, 13.43, 13.74, 14.27, 15.08, 15.16, 15.64, 16.03, 16.25, 16.39, 16.45, 16.63, 16.87, 17.03, 17.26, 17.66, 17.83, 17.91, 18.15, 18.27, 18.47, 18.81, 19.07, 19.49, 19.93, 20.08, 20.2, 20.67, 21.16, 21.45, 21.76, 22.91, 23.47, 23.83, 24.0, 24.07, 24.44, 24.54, 25.1, 25.51, 25.92, 26.03, 26.64, 27.06, 27.12, 27.28, 27.79, 28.07, 28.62, 28.97, 29.3, 29.72, 30.09, 30.55, 31.42, 31.75, 32.01, 32.24, 32.78, 33.24, 33.37, 33.6, 34.16, 34.8, 35.23, 35.34, 35.7, 36.07, 36.45, 36.77, 37.11, 37.4, 37.94, 38.27, 38.87, 39.23, 39.42, 39.83, 40.07, 40.29, 40.87, 41.36, 41.85, 42.23, 42.36, 42.96, 43.24, 43.64, 43.92, 44.16, 44.63, 44.75, 45.12, 45.26, 45.37, 45.89, 46.34, 46.72, 46.9, 47.0, 47.44, 47.87, 48.3, 48.43, 48.74, 49.05, 49.2, 49.52, 49.82, 50.35, 50.73, 51.06, 51.23, 51.4, 51.85, 52.01, 52.27, 53.04, 53.35, 53.63, 54.09, 54.2, 54.91, 55.13, 55.52, 55.93, 56.35, 56.62, 56.87, 57.29, 57.59, 57.92, 58.11, 58.5, 59.16, 59.47, 59.93, 60.3, 60.63, 61.16, 61.48, 61.56, 62.06, 62.66, 63.06, 63.48, 63.87, 64.13, 64.24, 64.65, 64.95, 65.22, 65.52, 65.76, 66.21, 66.68, 66.89, 67.09, 67.35, 67.38, 67.64, 67.81, 68.14, 68.65, 68.8, 69.06, 69.5, 70.19, 70.68, 70.9, 71.01, 71.09, 71.51, 72.03, 72.32, 72.55, 72.65, 72.81, 73.24, 73.34, 73.75, 73.99, 74.15, 74.54, 75.14, 75.33, 75.94, 76.13, 76.65, 76.8, 77.07, 77.64, 78.23, 78.44, 78.95];
-      const PAGES = {"p01": {"have": false, "name": "Hiya, 'AI is making voice fraud worse'"}, "p02": {"have": false, "name": "ElevenLabs help, voice samples for Instant Voice Cloning"}, "p03": {"have": false, "name": "Cord Cutters News on NordVPN's study"}, "p04a": {"have": false, "name": "FTC, 'What's a verification code\u2026' (doorknob and deadbolt)"}, "p04b": {"have": false, "name": "FTC, 'What's a verification code\u2026' (anyone who asks)"}, "p05": {"have": false, "name": "FBI alert I-120324-PSA"}}, LOGOS = {"elevenlabs": {"have": true, "svg": "<svg style=\"color:#000\" fill=\"#000000\" role=\"img\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4.6035 0v24h4.9317V0zm9.8613 0v24h4.9317V0z\"/></svg>", "word": "ElevenLabs", "fs": 64}, "nordvpn": {"have": true, "svg": "<svg style=\"color:#4687FF\" fill=\"#4687FF\" role=\"img\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2.2838 21.5414A11.9866 11.9866 0 010 14.4832C0 7.8418 5.3727 2.4586 12 2.4586c6.6279 0 12 5.3832 12 12.0246a11.9853 11.9853 0 01-2.2838 7.0582l-5.7636-9.3783-.5565.9419.5645 2.6186L12 8.9338l-2.45 4.1447.5707 2.6451-2.0764-3.5555-5.7605 9.3733z\"/></svg>", "word": "NordVPN", "fs": 64}, "hiya": {"have": false}};
+      const PAGES = {"p01": {"img": "assets/pages/p01.png", "w": 1810, "h": 205, "hl": [[411, 32, 1274, 53], [86, 91, 563, 53]], "label": "HIYA SURVEY \u00b7 12,000 PEOPLE \u00b7 6 COUNTRIES", "have": true, "name": "Hiya, 'AI is making voice fraud worse'"}, "p02": {"img": "assets/pages/p02.png", "w": 2860, "h": 227, "hl": [[1619, 18, 1064, 77], [86, 132, 495, 77]], "label": "ELEVENLABS HELP CENTER", "have": true, "name": "ElevenLabs help, voice samples for Instant Voice Cloning"}, "p03": {"img": "assets/pages/p03.png", "w": 3150, "h": 414, "hl": [[1670, 176, 1338, 95], [86, 303, 1062, 95]], "label": "CORD CUTTERS NEWS \u00b7 NORDVPN STUDY", "have": true, "name": "Cord Cutters News on NordVPN's study"}, "p04a": {"img": "assets/pages/p04a.png", "w": 2864, "h": 229, "hl": [[1568, 54, 1210, 61]], "label": "FTC CONSUMER ALERT \u00b7 MAR 2024", "have": true, "name": "FTC, 'What's a verification code\u2026' (doorknob and deadbolt)"}, "p04b": {"img": "assets/pages/p04b.png", "w": 2872, "h": 265, "hl": [[2263, 54, 523, 61], [86, 150, 1140, 61]], "label": "FTC CONSUMER ALERT \u00b7 MAR 2024", "have": true, "name": "FTC, 'What's a verification code\u2026' (anyone who asks)"}, "p05": {"img": "assets/pages/p05.png", "w": 2572, "h": 278, "hl": [[86, 42, 2400, 93], [86, 143, 310, 93]], "label": "FBI ALERT I-120324-PSA \u00b7 DEC 2024", "have": true, "name": "FBI alert I-120324-PSA"}}, LOGOS = {"elevenlabs": {"have": true, "svg": "<svg style=\"color:#000\" fill=\"#000000\" role=\"img\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4.6035 0v24h4.9317V0zm9.8613 0v24h4.9317V0z\"/></svg>", "word": "ElevenLabs", "fs": 64}, "nordvpn": {"have": true, "svg": "<svg style=\"color:#4687FF\" fill=\"#4687FF\" role=\"img\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2.2838 21.5414A11.9866 11.9866 0 010 14.4832C0 7.8418 5.3727 2.4586 12 2.4586c6.6279 0 12 5.3832 12 12.0246a11.9853 11.9853 0 01-2.2838 7.0582l-5.7636-9.3783-.5565.9419.5645 2.6186L12 8.9338l-2.45 4.1447.5707 2.6451-2.0764-3.5555-5.7605 9.3733z\"/></svg>", "word": "NordVPN", "fs": 64}, "hiya": {"have": true, "img": "assets/logos/hiya.png"}};
       const w = (k) => WS[k], we = (k) => WE[k];
       const $ = (s) => document.querySelector(s);
       const tl = gsap.timeline({ paused: true });
@@ -256,16 +257,28 @@
       // a page card: the crop scaled to width W; hl boxes are in the crop's pixels
       const page = (key, parent, css, W, H) => { const P = PAGES[key] || {};
         if (!P.have) { const c = el("div", "pagecard", css + `;width:${W}px;height:${H}px`, "", parent);
-          el("div", "need", "", `PAGE NEEDED · ${key}<b>${P.name || ""}</b>`, c); return { c, hls: [], have: false }; }
+          el("div", "need", "", `PAGE NEEDED · ${key}<b>${P.name || ""}</b>`, c); return { c, hls: [], have: false, go: () => {} }; }
         // the card is as tall as the crop (plus its label), at most H; a taller crop is framed on its first highlight
-        const s = W / P.w, lab = P.label ? 52 : 0, ih = P.h * s, ch = Math.min(H, ih + lab);
-        const hy = (P.hl && P.hl.length) ? P.hl[0][1] * s : 0, top = Math.max(0, Math.min(ih - (ch - lab), hy - (ch - lab) * 0.4));
+        // read like a teleprompter: zoom so the longest highlighted line fills the card, show only the highlighted
+        // lines, and pan from one highlight to the next as each one is marked (edges fade where the page goes on)
+        const s0 = W / P.w, HL = P.hl || [[0, 0, P.w, P.h]];
+        const s = Math.max(s0, Math.min(s0 * 2.6, (W * 0.86) / Math.max(...HL.map((h) => h[2]))));
+        const iw = P.w * s, lh = Math.max(...HL.map((h) => h[3]));
+        const yT = Math.max(0, Math.min(...HL.map((h) => h[1])) - lh * 0.55), yB = Math.min(P.h, Math.max(...HL.map((h) => h[1] + h[3])) + lh * 0.55);
+        const lab = P.label ? 52 : 0, ch = Math.min(H, (yB - yT) * s + lab);
+        const X = HL.map(([x, , ww]) => Math.max(0, Math.min(iw - W, (x + ww / 2) * s - W / 2)));
         const c = el("div", "pagecard", css + `;width:${W}px;height:${ch}px`, "", parent);
-        el("img", "", `width:${W}px;height:${ih}px;top:${-top}px`, undefined, c).src = P.img;
-        const hls = (P.hl || []).map(([x, y, ww, hh]) => el("div", "hl", `left:${x * s - 4}px;top:${y * s - top - 2}px;width:${ww * s + 8}px;height:${hh * s + 4}px`, "", c));
-        hls.forEach((h) => tl.set(h, { scaleX: 0 }, 0));
+        const inner = el("div", "", `position:absolute;left:0;top:0;width:${iw}px;height:${P.h * s}px`, "", c);
+        el("img", "", `width:${iw}px;height:${P.h * s}px;top:${-yT * s}px;left:0`, undefined, inner).src = P.img;
+        const hls = HL.map(([x, y, ww, hh]) => el("div", "hl", `left:${x * s - 4}px;top:${(y - yT) * s - 2}px;width:${ww * s + 8}px;height:${hh * s + 4}px`, "", inner));
+        tl.set(inner, { x: -X[0] }, 0);
+        if (iw > W + 2) { el("div", "", "position:absolute;left:0;top:0;bottom:0;width:60px;background:linear-gradient(90deg,#f8f6f1,rgba(248,246,241,0))", "", c);
+          el("div", "", "position:absolute;right:0;top:0;bottom:0;width:60px;background:linear-gradient(270deg,#f8f6f1,rgba(248,246,241,0))", "", c); }
+        const go = (t0, d) => hls.forEach((h, i) => { const ti = t0 + i * (d || 0.45) * 1.25;
+          if (i > 0 && X[i] !== X[i - 1]) at(inner, { x: -X[i], duration: 0.4, ease: IO }, ti - 0.35);
+          fin(h, { scaleX: 0 }, { scaleX: 1, duration: d || 0.45, ease: IO }, ti); });
         if (P.label) el("div", "sl", "", P.label, c);
-        return { c, hls, have: true }; };
+        return { c, hls, have: true, go }; };
       const sweep = (hls, t, d) => hls.forEach((h, i) => fin(h, { scaleX: 0 }, { scaleX: 1, duration: d || 0.45, ease: IO }, t + i * (d || 0.45) * 0.9));
       const logoTile = (code, parent, css) => { const L = LOGOS[code] || {};
         if (!L.have) return el("div", "logot need", css, `LOGO NEEDED · ${code}`, parent);
@@ -361,13 +374,15 @@ const hyT = logoTile("hiya", hook, "left:40px;top:26px;width:150px;height:56px;b
 const hp = page("p01", hook, "top:250px", 860, 140);
 tl.set(hook, { opacity: 1, x: 0, y: 0, scale: 1, transformOrigin: "0px 0px" }, 0);
 fin(hook.querySelector(".n"), { scale: 1.1, transformOrigin: "0% 50%" }, { scale: 1, duration: 0.5, ease: E }, 0);
-sweep(hp.hls, 0.5, 0.6);
+hp.go(0.5, 0.6);
 // the card shrinks into pin 1 and the board is left: the phone ringing, the first fact parked beside it
 at(hook, { x: 40 - 70, y: 352 - 780, scale: 280 / 940, duration: 0.55, ease: "power3.inOut" }, 3.2);
 out(hook, 3.72, 0.12); land(0, 3.72, true);
 
 // on "rings": push into the call
 pushIn(w(15) - 0.2, 0.5);
+// the call buttons belong to the board view: pushed in they would sit half off the frame's bottom edge
+out([C1.dec, C1.acc], w(15) - 0.2, 0.3);
 fin(C1.nm, { color: "#ffffff" }, { color: "#c8ff4d", duration: 0.2, yoyo: true, repeat: 1 }, w(18));
 // she's crying: answered, the timer runs, her voice trembles
 const T_ANS = w(19);
@@ -431,8 +446,8 @@ const elT = logoTile("elevenlabs", SE, "left:250px;top:290px;width:500px;height:
 logoIn(elT, w(49) + 0.2);
 const pe = page("p02", SE, "top:480px", 920, 520);
 fadeIn(pe.c, w(50), { y: 40 });
-sweep(pe.hls, w(57) - 0.1, 0.6);
-const n30 = add(SE, "abs h", "left:560px;top:900px;padding:6px 34px;border-radius:30px;background:#0b0c10;border:6px solid #c8ff4d;font-weight:900;font-size:160px;letter-spacing:-0.04em;line-height:1;color:#c8ff4d;box-shadow:0 20px 60px rgba(0,0,0,0.6)", "0:30");
+pe.go(w(57) - 0.1, 0.6);
+const n30 = add(SE, "abs h", "left:270px;top:700px;padding:6px 34px;border-radius:30px;background:#0b0c10;border:6px solid #c8ff4d;font-weight:900;font-size:160px;letter-spacing:-0.04em;line-height:1;color:#c8ff4d;box-shadow:0 20px 60px rgba(0,0,0,0.6)", "0:30");
 tl.set(n30, { rotation: -4 }, 0);
 popIn(n30, w(57), 0.5);
 // one voice note ... and its copy: this voice
@@ -455,13 +470,9 @@ land(1, w(72) + 0.45);
 chapter(2, w(73));
 const SM = scr("sale", "#0d0f14");
 swapS("el", "sale", w(73), "up");
-add(SM, "abs mono", "left:60px;top:150px;width:880px;padding:26px 30px;border-radius:26px;background:#161922;font-size:36px;color:#a3a8b6", "● CHAT GROUP · ILLUSTRATION");
-const ROWS = [["#c8ff4d", "VOICE CLONE · ANY VOICE"], ["#7cc4ff", "BANK CALL BOT"], ["#ffb547", "VOICE APP ACCOUNTS"], ["#ff7ac6", "SCAM KIT + VOICE"], ["#c8ff4d", "VOICE CLONE · 24 H"], ["#7cc4ff", "CODE GRABBER BOT"]];
-ROWS.forEach(([c, txt], i) => { const r = add(SM, "abs h", `left:60px;top:${300 + i * 250}px;width:880px;height:210px;border-radius:30px;background:#151820;border:2px solid rgba(255,255,255,0.06)`,
-  `<div style="position:absolute;left:30px;top:45px;width:120px;height:120px;border-radius:24px;background:${c};opacity:0.85"></div>
-   <div class="mono" style="position:absolute;left:180px;top:46px;font-size:40px;color:#e8e9ee;filter:blur(1.2px)">${txt}</div>
-   <div style="position:absolute;left:180px;top:118px;width:${380 + 200 * rnd(i)}px;height:26px;border-radius:13px;background:#2b2f3a;filter:blur(2px)"></div>`);
-  fadeIn(r, w(73) + 0.15 + i * 0.12, { x: 60 }); });
+// real footage: a key-cutting machine (Pexels), then the FOR SALE tag drops onto it
+const v01 = $("#v01"); SM.appendChild(v01);
+add(SM, "abs", "left:0px;top:0px;width:1000px;height:2140px;background:linear-gradient(180deg,rgba(7,8,12,0.55) 0%,rgba(7,8,12,0.1) 35%,rgba(7,8,12,0.1) 70%,rgba(7,8,12,0.6) 100%)", "");
 const tag = add(SM, "abs h", "left:190px;top:560px;width:620px;height:250px;border-radius:30px;background:#ffb547;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:120px;color:#1b1206;letter-spacing:-0.02em;box-shadow:0 40px 80px rgba(0,0,0,0.6)", "FOR SALE");
 const str = add(SM, "abs h", "left:497px;top:120px;width:6px;height:440px;background:#e8e9ee", "");
 tl.set(tag, { transformOrigin: "310px -440px" }, 0); tl.set(str, { transformOrigin: "3px 0px" }, 0);
@@ -477,7 +488,7 @@ logoIn(nvT, w(81) + 0.15);
 const ccChip = add(SC, "chip2", "left:40px;top:460px;font-size:30px", "NORDVPN RESEARCH · AS REPORTED");
 fadeIn(ccChip, w(82) + 0.2, { x: -30 });
 const pc = page("p03", SC, "top:540px", 920, 560);
-fadeIn(pc.c, w(83), { y: 40 }); sweep(pc.hls, w(84), 0.55);
+fadeIn(pc.c, w(83), { y: 40 }); pc.go(w(84), 0.55);
 // the chart wipes over the article: bars to scale (80 px = 1×), the value and the source on screen
 const ch = add(SC, "abs h", "left:0px;top:230px;width:1000px;height:930px;background:#0e1016", "");
 add(ch, "abs mono", "left:110px;top:64px;font-size:34px;color:#c9ccd6", "VOICE-CLONING TRADE");
@@ -544,6 +555,7 @@ pushIn(w(117) - 0.02, 0.22, "power4.out"); punch(w(117), 1.06); sflash(w(117), 0
 chapter(3, w(119));
 const C2 = callScreen("bank", "YOUR BANK", "calling…", ICON.bank.replace("<svg ", '<svg style="width:150px;height:150px" '));
 tl.set(C2.av, { background: "#2a6df4" }, 0);
+tl.set([C2.dec, C2.acc], { opacity: 0 }, 0);   // only ever seen pushed in
 swapS("top", "bank", w(117), "cut");
 [w(117), w(119) + 0.2].forEach((t) => ring(C2, t)); buzz(w(117) + 0.05);
 const one2 = badge(C2.s, "left:560px;top:240px;width:170px;height:170px;font-size:72px"); one2.textContent = "#1";
@@ -572,19 +584,19 @@ swapS("bank", "ftc", w(130) - 0.2, "page");
 const ftcC = add(SF, "chip2", "left:40px;top:280px;font-size:30px", "FTC · AMERICA'S CONSUMER AGENCY");
 fadeIn(ftcC, w(130), { x: -30 });
 const pf = page("p04a", SF, "top:360px", 920, 400);
-fadeIn(pf.c, w(130) + 0.05, { y: 40 }); sweep(pf.hls, w(131), 0.55);
-const bolt = add(SF, "abs h", "left:560px;top:790px;width:360px;height:360px",
+fadeIn(pf.c, w(130) + 0.05, { y: 40 }); pf.go(w(131), 0.55);
+const bolt = add(SF, "abs h", "left:560px;top:600px;width:360px;height:360px",
   `<svg viewBox="0 0 360 360" style="width:100%;height:100%;overflow:visible"><circle class="pl" cx="180" cy="180" r="150" fill="#1b1f2a" stroke="#c8ff4d" stroke-width="14"/>
    <rect class="bo" x="250" y="155" width="150" height="50" rx="10" fill="#c8ff4d"/><g class="tt"><rect x="160" y="80" width="40" height="200" rx="20" fill="#e8e9ee"/></g></svg>`);
 fadeIn(bolt, w(132), { scale: 0.7 });
-const codeC = add(SF, "pill h", "left:70px;top:920px;background:#c8ff4d;color:#0b0c10;font-size:56px", "482 913");
+const codeC = add(SF, "pill h", "left:70px;top:730px;background:#c8ff4d;color:#0b0c10;font-size:56px", "482 913");
 fadeIn(codeC, w(133), { x: -40 });
 at(codeC, { x: 520, y: 20, scale: 0.3, opacity: 0, duration: 0.5, ease: "power2.in" }, w(136));
 const tt = bolt.querySelector(".tt"); tl.set(tt, { transformOrigin: "180px 180px" }, 0);
 at(tt, { rotation: 90, duration: 0.3, ease: "back.out(2)" }, w(136) + 0.5);
 at(bolt.querySelector(".bo"), { attr: { x: 180, fill: "#ff4d4d" }, duration: 0.3, ease: "power2.in" }, w(136) + 0.55);
 at(bolt.querySelector(".pl"), { attr: { stroke: "#ff4d4d" }, duration: 0.2 }, w(136) + 0.55);
-const unl = add(SF, "pill h", "left:120px;top:1050px;background:#ff3b30;color:#fff;font-size:50px", "UNLOCKED");
+const unl = add(SF, "pill h", "left:120px;top:880px;background:#ff3b30;color:#fff;font-size:50px", "UNLOCKED");
 popIn(unl, w(140)); sflash(w(140), 0.25, 0.25, "#ff3b30");
 
 pullOut(w(141) + 0.1, 0.5);
@@ -634,8 +646,8 @@ swapS("locks", "fbi", w(168) + 0.02, "page");
 const fbiC = add(SB, "chip2", "left:40px;top:280px;font-size:30px", "FBI ALERT · DEC 2024");
 fadeIn(fbiC, w(168) + 0.15, { x: -30 });
 const pb = page("p05", SB, "top:360px", 920, 460);
-fadeIn(pb.c, w(169), { y: 40 }); sweep(pb.hls, w(170), 0.6);
-const say = add(SB, "abs h", "left:70px;top:880px;width:860px;height:260px;border-radius:40px;background:#161922;border:4px solid #c8ff4d",
+fadeIn(pb.c, w(169), { y: 40 }); pb.go(w(170), 0.6);
+const say = add(SB, "abs h", "left:70px;top:600px;width:860px;height:260px;border-radius:40px;background:#161922;border:4px solid #c8ff4d",
   `<div class="mono" style="position:absolute;left:44px;top:36px;font-size:34px;color:#c9ccd6">SAY IT IN PERSON · e.g.</div><div style="position:absolute;left:40px;top:90px;font-weight:900;font-size:130px;letter-spacing:-0.03em;color:#c8ff4d">MANGO</div>`);
 fadeIn(say, w(173), { y: 40 });
 pullOut(w(176) + 0.3, 0.45);
@@ -661,15 +673,15 @@ swapS("stay", "ask", w(184) - 0.2, "page");
 const ftc2 = add(SK2, "chip2", "left:40px;top:280px;font-size:30px", "FTC · AMERICA'S CONSUMER AGENCY");
 fadeIn(ftc2, w(184), { x: -30 });
 const pa = page("p04b", SK2, "top:360px", 920, 290);
-fadeIn(pa.c, w(184) + 0.05, { y: 40 }); sweep(pa.hls, w(185), 0.5);
-const nev = add(SK2, "stampx h", "left:110px;top:690px;font-size:56px;padding:6px 22px;border-width:10px", "REAL BANKS NEVER ASK");
+fadeIn(pa.c, w(184) + 0.05, { y: 40 }); pa.go(w(185), 0.5);
+const nev = add(SK2, "stampx h", "left:110px;top:610px;font-size:56px;padding:6px 22px;border-width:10px", "REAL BANKS NEVER ASK");
 tl.set(nev, { rotation: -5, transformOrigin: "50% 50%" }, 0);
 fin(nev, { opacity: 0, scale: 1.7 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.out" }, w(187)); punch(w(187) + 0.18, 1.03);
-const hang = add(SK2, "btnc h", "left:390px;top:880px;width:220px;height:220px;background:#ff3b30", ICON.phone);
+const hang = add(SK2, "btnc h", "left:390px;top:760px;width:220px;height:220px;background:#ff3b30", ICON.phone);
 hang.querySelector("svg").style.transform = "rotate(135deg)";
 popIn(hang, w(189) - 0.3, 0.5);
 fin(hang, { scale: 1 }, { scale: 0.84, duration: 0.1, yoyo: true, repeat: 1 }, w(189));
-const dial = add(SK2, "abs h", "left:70px;top:870px;width:860px;height:260px;border-radius:40px;background:#13271a;border:4px solid #34c759",
+const dial = add(SK2, "abs h", "left:70px;top:740px;width:860px;height:260px;border-radius:40px;background:#13271a;border:4px solid #34c759",
   `<div style="position:absolute;left:44px;top:50px;width:160px;height:160px;border-radius:50%;background:#34c759;display:flex;align-items:center;justify-content:center">${ICON.phone.replace("<svg ", '<svg style="width:80px;height:80px" ')}</div>
    <div style="position:absolute;left:240px;top:50px;font-weight:800;font-size:66px;color:#fff">Calling your bank</div><div class="mono" style="position:absolute;left:244px;top:150px;font-size:32px;color:#9ee6b0">THE NUMBER ON YOUR CARD</div>`);
 out(hang, w(192) - 0.1, 0.15); fadeIn(dial, w(192), { y: 40 });

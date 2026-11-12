@@ -5,7 +5,7 @@ the voice is an ElevenLabs clone of the creator's own voice (the short says so).
 videos, 0 of 5 images). YouTube: "altered or synthetic content" on. TikTok: "AI-generated content" on. Instagram: "AI
 info" on.
 
-Hidden word: **MANGO**, the example safe word on the FBI card (about 60.8–62.2 s) and Mom's reply at the end (71.1–71.7 s).
+Hidden word: **MANGO**, the example safe word on the FBI card (about 60.8–62.2 s) and Mom's reply at the end (71.1–73.2 s).
 Never said: the voice says "the word". Don't reveal it anywhere.
 
 ## YouTube Shorts (English, default)
@@ -41,7 +41,7 @@ https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-wou
 FTC, "Scammers use AI to enhance their family emergency schemes" (20 Mar 2023): https://consumer.ftc.gov/node/80688
 FBI, "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud" (I-120324-PSA, 3 Dec 2024):
 https://www.ic3.gov/PSA/2024/PSA241203
-Logos: Simple Icons (CC0) and Hiya. Sound effects: Kenney, and qubodup, kasa90, LegitCheese, LilMati, leonelmail and
+Footage: Pexels. Logos: Simple Icons (CC0) and Hiya. Sound effects: Kenney, and qubodup, kasa90, LegitCheese, LilMati, leonelmail and
 migoreng1 via Freesound (all CC0). Music: original. Voice: AI clone of the creator's own voice (ElevenLabs).
 
 #AIscams #VoiceCloning #Shorts
@@ -121,6 +121,6 @@ Sources: Hiya, NordVPN (as reported), FTC, FBI. #AIscams #VoiceCloning #explaine
 
 **Alt text:** A phone in the middle of a dark grid board, with "Mom" calling. Fact cards pile up beside it as the story
 goes: 1 in 3 got a fake-voice call, 30 seconds of audio can be enough, 7.4 times more cloning trade, stolen accounts from
-$10. A voice waveform turns into a key that opens a door, a fake bank line asks for a code, and real pages from Hiya,
+$10. A voice waveform turns into a key that opens a door, real footage shows a key being cut under a FOR SALE tag, a fake bank line asks for a code, and real pages from Hiya,
 ElevenLabs, Cord Cutters News, the FTC and the FBI appear on the phone. It ends on two padlocks and the same call from
 Mom, answered with a family safe word.

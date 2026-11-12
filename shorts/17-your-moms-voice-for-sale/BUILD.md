@@ -26,9 +26,10 @@
 - **Pages:** saved by the creator from Safari Reader as PDFs (`work/pdf/`, git-ignored); `crops.py` cuts each card
   between two lines and finds the highlight boxes.
 - **Logos:** ElevenLabs and NordVPN from Simple Icons (CC0), drawn on (outline, then fill); Hiya from the creator.
-- **Drawn:** the call screens, the key (canvas, from the waveform), the door, the scanner, the voice notes, the chat
-  group (an illustration, labelled so, no real names), the chart (7.4×), the login card and price tag, the bank call,
+- **Drawn:** the call screens, the key (canvas, from the waveform), the door, the scanner, the voice notes, the chart (7.4×), the login card and price tag, the bank call,
   the deadbolt, the padlocks, the comments sheet.
+- **Footage:** your Pexels clip of a key being cut (video 8322146, no faces), on the phone in shot 7 under the FOR SALE
+  tag (`assets/clips/v01_key.mp4`, git-ignored).
 - **Generated media:** none (0 of 10 videos, 0 of 5 images).
 
 ## Sound
@@ -54,7 +55,16 @@ python3 crops.py             # page cards -> assets/pages + crops.json
 python3 make_index.py        # index_template.tpl + fx17.js -> index.html (and the CAPS number fix in captions.js)
 python3 make_audio.py        # score, SFX, CC0 pass, mix -> assets/mix.wav
 npx hyperframes render -f 30 -q high -w 2 -o renders/short17-raw.mp4    # Bash run_in_background, watched
+ffmpeg -i renders/short17-raw.mp4 -i assets/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -ar 48000 \
+  -shortest -movflags +faststart renders/short17-your-moms-voice-for-sale.mp4
+ffmpeg -i renders/short17-your-moms-voice-for-sale.mp4 -c:v libx264 -preset slow -crf 18 -maxrate 12M -bufsize 24M -profile:v high \
+  -level:v 4.1 -pix_fmt yuv420p -g 60 -c:a copy -movflags +faststart renders/short17-your-moms-voice-for-sale-phone.mp4
 ```
+
+Cover: `cover17.html` (the phone ringing Mom, three pins and the FOR SALE tag), screenshot with Playwright to `short17-cover.png`.
+
+Rendered 12 Nov: 81.46 s, 1080×1920, 30 fps, −14.0 LUFS, peak −1.3 dBFS (master 306 MB, phone copy 115 MB). The
+render took about 35 min on 2 CPUs (capture ~15 min, encode ~20 min at `-q high`).
 
 ## Quality pass
 
@@ -70,6 +80,9 @@ npx hyperframes render -f 30 -q high -w 2 -o renders/short17-raw.mp4    # Bash r
   - hits flash inside the phone only (no full-frame grey); "isn't Mom" strikes the Mom card and the #1 badge moves to the
     bank's avatar; the catch points at pins 1, 3, 4 before stamping them; the key stops at the keyhole; 0:30 on THIRTY;
     the chart carries its source.
+- Final check before the render: the call buttons fade as the camera pushes in (pushed in, they sat half off the frame's
+  bottom edge); the cover lost the comma that touched "SALE" and its first pin keeps the hedge ("say a fake voice called
+  them"). Frames pulled from the MP4 every 2.5 s and ±0.1 s around seven cuts.
 - motionmaxxing `lint.mjs` G5: brand chrome only (see Notes).
 
 ## Notes

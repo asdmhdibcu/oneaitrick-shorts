@@ -20,18 +20,19 @@ S = DPI / 72.0
 
 # key: (pdf, first line contains, last line contains, highlight phrases, extra pt above/below, x range in pt or None, label)
 CARDS = {
-    "p01": ("p01_hiya.pdf", "nearly one in three respondents", "nearly one in three respondents",
-            ["nearly one in three respondents (31%)"], (8, 8), None, "HIYA SURVEY · 12,000 PEOPLE · 6 COUNTRIES"),
-    "p02": ("p02_elevenlabs.pdf", "only 30 seconds", "only 30 seconds",
-            ["samples of only 30 seconds and get excellent results"], (8, 8), None, "ELEVENLABS HELP CENTER"),
-    "p03": ("p03_cordcutters.pdf", "grew 7.4 times", "grew 7.4 times",
-            ["grew 7.4 times"], (8, 8), None, "CORD CUTTERS NEWS · 25 OCT 2026"),
-    "p04a": ("p04_ftc_code.pdf", "doorknob", "doorknob",
-             ["like the lock on your doorknob and a deadbolt lock."], (8, 8), None, "FTC · CONSUMER ALERT · 7 MAR 2024"),
-    "p04b": ("p04_ftc_code.pdf", "Anyone who asks you for your account", "Anyone who asks you for your account",
-             ["Anyone who asks you for your account verification code is a scammer."], (8, 8), None, "FTC · CONSUMER ALERT · 7 MAR 2024"),
-    "p05": ("p05_fbi_psa.pdf", "Create a secret word or phrase", "Create a secret word or phrase",
-            ["Create a secret word or phrase with your family to verify their identity."], (8, 8), None, "FBI · ALERT I-120324-PSA · 3 DEC 2024"),
+    "p01": ("p01_hiya.pdf", "In a recent survey, nearly one in three", "voice of someone the victim recognizes",
+            ["nearly one in three respondents (31%) said they had received a deepfake", "voice call in the past 12 months."], (8, 8), None,
+            "HIYA SURVEY · 12,000 PEOPLE · 6 COUNTRIES"),
+    "p02": ("p02_elevenlabs.pdf", "number of samples or length", "excellent results, while",
+            ["samples of only 30 seconds and get", "excellent results,"], (8, 8), None, "ELEVENLABS HELP CENTER"),
+    "p03": ("p03_cordcutters.pdf", "A study from NordVPN found that commercial", "2024 and January-July 2026",
+            ["grew 7.4 times between January-July", "2024 and January-July 2026."], (8, 8), None, "CORD CUTTERS NEWS · NORDVPN STUDY"),
+    "p04a": ("p04_ftc_code.pdf", "Your account password and a verification code", "If you unlock the doorknob",
+             ["like the lock on your doorknob and a deadbolt lock."], (8, 8), None, "FTC CONSUMER ALERT · MAR 2024"),
+    "p04b": ("p04_ftc_code.pdf", "Never give your verification code to someone", "for your account verification code is a scammer",
+             ["Anyone who asks you", "for your account verification code is a scammer."], (8, 8), None, "FTC CONSUMER ALERT · MAR 2024"),
+    "p05": ("p05_fbi_psa.pdf", "Create a secret word or phrase", "identity.",
+            ["Create a secret word or phrase with your family to verify their", "identity."], (8, 8), None, "FBI ALERT I-120324-PSA · DEC 2024"),
 }
 
 

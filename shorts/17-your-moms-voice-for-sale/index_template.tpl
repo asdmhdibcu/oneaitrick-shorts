@@ -54,7 +54,7 @@
         font-size: 34px; letter-spacing: 0.08em; text-align: center; }
       .pagecard .need b { font-size: 26px; color: #6b6e78; letter-spacing: 0.04em; font-weight: 500; max-width: 760px; }
       .pagecard .sl { position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 26px; font-family: "Mono", monospace; font-weight: 700; font-size: 26px;
-        letter-spacing: 0.1em; color: #4a4d57; background: rgba(240,238,232,0.97); border-top: 2px solid #e2dfd6; text-transform: uppercase; }
+        letter-spacing: 0.1em; color: #4a4d57; background: #efede7; border-top: 2px solid #e2dfd6; text-transform: uppercase; }
       .logot { position: absolute; display: flex; align-items: center; justify-content: center; gap: 22px; border-radius: 30px; background: #fff;
         box-shadow: 0 24px 60px rgba(0,0,0,0.5); font-weight: 800; color: #111; }
       .logot svg, .logot img { height: 64%; width: auto; }
@@ -163,6 +163,7 @@
         <div class="black" id="black"></div>
         <div class="fontwarm"><span style="font-family:InterV;font-weight:900">Aa</span><span style="font-family:Mono;font-weight:700">Aa</span><span style="font-family:Mono;font-weight:500">Aa</span></div>
       </div>
+      <div style="display:none"><video id="v01" src="assets/clips/v01_key.mp4" muted playsinline data-start="%V01S%" data-duration="3.15" data-media-start="0" style="position:absolute;left:0;top:0;width:1000px;height:2140px;object-fit:cover"></video></div>
       <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="%DUR%" data-volume="1"></audio>
     </div>
 
@@ -256,16 +257,28 @@
       // a page card: the crop scaled to width W; hl boxes are in the crop's pixels
       const page = (key, parent, css, W, H) => { const P = PAGES[key] || {};
         if (!P.have) { const c = el("div", "pagecard", css + `;width:${W}px;height:${H}px`, "", parent);
-          el("div", "need", "", `PAGE NEEDED · ${key}<b>${P.name || ""}</b>`, c); return { c, hls: [], have: false }; }
+          el("div", "need", "", `PAGE NEEDED · ${key}<b>${P.name || ""}</b>`, c); return { c, hls: [], have: false, go: () => {} }; }
         // the card is as tall as the crop (plus its label), at most H; a taller crop is framed on its first highlight
-        const s = W / P.w, lab = P.label ? 52 : 0, ih = P.h * s, ch = Math.min(H, ih + lab);
-        const hy = (P.hl && P.hl.length) ? P.hl[0][1] * s : 0, top = Math.max(0, Math.min(ih - (ch - lab), hy - (ch - lab) * 0.4));
+        // read like a teleprompter: zoom so the longest highlighted line fills the card, show only the highlighted
+        // lines, and pan from one highlight to the next as each one is marked (edges fade where the page goes on)
+        const s0 = W / P.w, HL = P.hl || [[0, 0, P.w, P.h]];
+        const s = Math.max(s0, Math.min(s0 * 2.6, (W * 0.86) / Math.max(...HL.map((h) => h[2]))));
+        const iw = P.w * s, lh = Math.max(...HL.map((h) => h[3]));
+        const yT = Math.max(0, Math.min(...HL.map((h) => h[1])) - lh * 0.55), yB = Math.min(P.h, Math.max(...HL.map((h) => h[1] + h[3])) + lh * 0.55);
+        const lab = P.label ? 52 : 0, ch = Math.min(H, (yB - yT) * s + lab);
+        const X = HL.map(([x, , ww]) => Math.max(0, Math.min(iw - W, (x + ww / 2) * s - W / 2)));
         const c = el("div", "pagecard", css + `;width:${W}px;height:${ch}px`, "", parent);
-        el("img", "", `width:${W}px;height:${ih}px;top:${-top}px`, undefined, c).src = P.img;
-        const hls = (P.hl || []).map(([x, y, ww, hh]) => el("div", "hl", `left:${x * s - 4}px;top:${y * s - top - 2}px;width:${ww * s + 8}px;height:${hh * s + 4}px`, "", c));
-        hls.forEach((h) => tl.set(h, { scaleX: 0 }, 0));
+        const inner = el("div", "", `position:absolute;left:0;top:0;width:${iw}px;height:${P.h * s}px`, "", c);
+        el("img", "", `width:${iw}px;height:${P.h * s}px;top:${-yT * s}px;left:0`, undefined, inner).src = P.img;
+        const hls = HL.map(([x, y, ww, hh]) => el("div", "hl", `left:${x * s - 4}px;top:${(y - yT) * s - 2}px;width:${ww * s + 8}px;height:${hh * s + 4}px`, "", inner));
+        tl.set(inner, { x: -X[0] }, 0);
+        if (iw > W + 2) { el("div", "", "position:absolute;left:0;top:0;bottom:0;width:60px;background:linear-gradient(90deg,#f8f6f1,rgba(248,246,241,0))", "", c);
+          el("div", "", "position:absolute;right:0;top:0;bottom:0;width:60px;background:linear-gradient(270deg,#f8f6f1,rgba(248,246,241,0))", "", c); }
+        const go = (t0, d) => hls.forEach((h, i) => { const ti = t0 + i * (d || 0.45) * 1.25;
+          if (i > 0 && X[i] !== X[i - 1]) at(inner, { x: -X[i], duration: 0.4, ease: IO }, ti - 0.35);
+          fin(h, { scaleX: 0 }, { scaleX: 1, duration: d || 0.45, ease: IO }, ti); });
         if (P.label) el("div", "sl", "", P.label, c);
-        return { c, hls, have: true }; };
+        return { c, hls, have: true, go }; };
       const sweep = (hls, t, d) => hls.forEach((h, i) => fin(h, { scaleX: 0 }, { scaleX: 1, duration: d || 0.45, ease: IO }, t + i * (d || 0.45) * 0.9));
       const logoTile = (code, parent, css) => { const L = LOGOS[code] || {};
         if (!L.have) return el("div", "logot need", css, `LOGO NEEDED · ${code}`, parent);

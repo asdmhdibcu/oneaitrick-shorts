@@ -25,6 +25,9 @@ tables are in the Content Hub's "Visual playbook".
 | Pink | #FF7AC6 | Examples, AI PAPER |
 | Red | #FF6B6B | Danger, wrong, loss |
 
+Threat vs normal (from #18): lime and blue for AI doing its job; red and amber for threats, breaches, scams and the catch.
+Use them on stage elements, pin outlines and keyword boxes too, so the mood reads before the words.
+
 Lime never goes on light paper: put lime text on a dark label instead. Footage is graded to deep blacks with lime accents.
 Grades per act: cold teal for the problem, warm for the answer, film or tape for the past.
 
@@ -33,14 +36,21 @@ Grades per act: cold teal for the problem, warm for the answer, film or tape for
 - Headlines: Inter 900, uppercase, tight tracking.
 - Labels and chips: JetBrains Mono, small, uppercase.
 - Karaoke captions: Inter 900, about 84 px, uppercase, 14 px dark stroke, word margin 0.2em. The active word turns lime and scales to 1.04 (emphasis words 1.08 and stay lime).
-- At most two pieces of text on screen at once: the caption plus one number, label or page.
+- At most two pieces of text on screen at once: the caption plus one number, label or page. No more than 3–4 words in
+  any one of them; storyboard pins are the one exception (a number plus at most 4 words).
+- Keyword pop (from #18, build it into the caption tool): high-impact words (CLONED, BROKE OUT, FAILED) bounce
+  100 → 115 → 100 % over about 0.3 s with a coloured box behind them (lime, or red/amber for threats), with a soft pop.
 
 ## Timing and motion
 
 - Something moves in every line. Every shot has constant drift (a slow push, pull or pan); nothing sits still.
 - Change something every 2–4 s: the angle, the scale, a graphic or a colour.
 - Frame one already shows the claim: the subject plus a 3–6 word title, readable at phone size.
+- Seconds 4–12 are where viewers leave (the $1M math short fell from 104 % to 74 %, the brain-research short from 119 %
+  to 90 %, both while giving background). Put the conflict and why it matters there, never definitions or backstory,
+  and mark the turn into the conflict with a 0.2 s crash zoom or a short shake on the stressed word.
 - The everyday picture arrives by 0:10. Add a twist or reset every 15–20 s.
+- Big numbers in the hook roll in like an odometer and settle in under 0.8 s, then hold.
 - Use eased motion (power2 or power3 out for entrances, in-out for camera moves). No linear moves except tickers and counters.
 - Pace:
   - pop-ins 0.25–0.4 s;
@@ -61,13 +71,15 @@ in half a second isn't seen. #17 (`shorts/17-your-moms-voice-for-sale/`, `BUILD.
 - **A chapter tracker** at the top (y ~232): 4–6 short chapter names. The live chapter fills lime and finished ones
   get ✓. A chapter lights when the voice reaches it, never earlier (don't give a twist away).
 - **Pins:** each key fact lands as a small card beside the stage and stays there (big number 72 px, label 30 px, at
-  most two lines). A new pin slides out of the stage's edge along its own row, never across another pin; it is lime
+  most 4 words on two lines). A new pin slides out of the stage's edge along its own row, never across another pin; it is lime
   while new, then rests at 60 % with a white number. Pins hide while the camera is pushed in. Group them with meaning
   (in #17: left column = the attack, right column = your locks). This is the one exception to "two pieces of text".
 - **Recap:** in the last ~8 s the pins light up again, by group, slow enough to read (no 0.4 s flicker).
 - **Mirror ending:** the last frame mirrors the first (same stage, same position), now resolved.
 - **Holds:** every visual stays on screen at least 2 s, text about 3 words a second, one new thing at a time, nothing
   under 1 s. The payoff beat holds longest.
+- **Split focus for abstract parts** (from #18): when the story turns abstract (a network, a proof, a server farm), split
+  the visual area 60/40: the stage on top, the animated breakdown below. Never a full-screen abstract graphic.
 - **Hits stay inside the stage:** flash the stage's screen, punch the whole board slightly; no full-frame grey flashes.
 
 ## Transitions (every cut has one)
@@ -92,11 +104,20 @@ ready-made blocks: use one before hand-building.
 - The voice leads. The score is ducked under it, and the mix ends at −14 LUFS with a −1.5 dBTP peak.
 - Every visual hit gets a sound: a whoosh on whips, a pop on pop-ins, a tick on counters, an impact on stamps, a riser into reveals, a glitch on glitches.
 - Our score and SFX tools stay. The sound-effects skill's CC0 recordings go on top.
+- From #18:
+  - a deep sub-bass hit or braam under the first 0.5 s, for earbud listeners;
+  - tactile UI sounds: a muffled key click (`click`, `typing`) when data or code appears, a fast glitch or static
+    scratch (`glitch`) on a breach or error, a soft pop or whoosh on keyword pops;
+  - levels: SFX about 12–14 dB under the voice; the score ducked 18–20 dB while the voice speaks, flaring up in
+    one-second pauses after a question and snapping back down (set this in `tools/mix.py` when building #18).
 - Voice effects only where the story asks (a phone call, a robot speaking, a memory). Apply them to that line only, and keep the words clear.
 
 ## Proof on screen
 
-- Real pages are set large and briefly, with the key words highlighted.
+- From #18 a real page is proof, not reading. Crop one sentence (never a full page or a full PDF), set it on a dark
+  frosted-glass card with a slow 10 % push, keep it 2–3 s and highlight 2–4 words. The result itself is carried by
+  motion graphics (comparison bars, a counter), not by the page. Viewers left during static preprint screenshots in
+  the brain-research short.
 - A sentence that matters becomes a quote card, with the real strip under it as proof.
 - Source chips: `REAL · <source>`, or `AI ILLUSTRATION` on generated shots.
 
@@ -105,6 +126,8 @@ ready-made blocks: use one before hand-building.
 - A lime "1_" mark and "One AI Trick" with "AI" in lime.
 - @oneaitrick, and a "+ Follow for AI, explained" pill.
 - The hidden word appears on screen somewhere in the short but is never said.
+- Loop (from #18): the end card sits over the mirrored first frame, not on its own black card, and the video ends
+  within 0.5 s of the last word, so a replay flows straight into the hook.
 
 ## Signature visuals (from #16)
 

@@ -35,10 +35,11 @@ Ask the creator before you pick a topic, treat a script as final, spend credits 
 
 Script standards, on top of the Rules below:
 
-- Length: 60–90 s unless the creator asks for longer (#15 ran 2:56). The best-held shorts are 84–87 s, and retention falls apart past 110 s. Never go past 3:00.
-- The first frame shows the claim. The everyday picture arrives by 0:10 and carries through the whole story. Add a twist every 15–20 s. Include the catch: what the headline leaves out. End on something the viewer can do or say.
+- Length: 60–90 s unless the creator asks for longer (#15 ran 2:56). The best-held shorts are 84–87 s, and retention falls apart past 110 s. Never go past 3:00. #18 tests a 45–60 s package (hub Experiments): the 2-minute shorts keep only 10–25 % of viewers for their last 15 s.
+- The first frame shows the claim. Seconds 4–12 carry the conflict and why it matters, never definitions or backstory (that is where the $1M math and brain-research shorts lost a quarter of their viewers). The everyday picture arrives by 0:10 and carries through the whole story. Add a twist every 15–20 s. Include the catch: what the headline leaves out. End on something the viewer can do or say.
 - Read every number and quote on the primary page: the paper, the official post or the filing. A search snippet or press summary is not a source. Anything not yet read there goes in the fact-check table marked as a gap, and is settled before the creator records.
-- A company that is named gets its logo on screen. Real news gets real footage or real documents, never generated stand-ins.
+- A company that is named gets its logo on screen. Real news gets real footage or real documents, never generated stand-ins. A page is proof, not reading: one sentence on a dark card, 2–3 s, with the result carried by a chart or counter (MOTION.md, "Proof on screen").
+- From #18, the visual, motion and sound techniques from YouTube's retention notes (12 Nov) are in MOTION.md: threat vs normal colours, keyword pops, a 0.2 s zoom into the conflict, odometer numbers, the 60/40 split for abstract parts, a sub-bass hit on the open, tactile UI sounds, deeper music ducking, and an end card over the mirrored first frame so the short loops.
 
 ## Layout
 

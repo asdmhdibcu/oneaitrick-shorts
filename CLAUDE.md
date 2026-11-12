@@ -23,6 +23,7 @@ Ask the creator before you pick a topic, treat a script as final, spend credits 
    - a bold status line (what is waiting, and for whom);
    - `## The story`: Hook, Everyday picture, Evidence, Twist, Catch, Takeaway, Hidden word, First frame;
    - `## Script vN (N words, about N s)` as a code block;
+   - from #18, `## Script with pictures`: a two-column table (Spoken line | On screen and sound), one row per sentence, a new visual cue at least every 4 s, so no line is talk over a still picture;
    - `## Fact check`: a table (Script says | The source says | Source), then a "Left out on purpose" line.
 
    Mirror it in `BRIEF.md` (the story, the facts table, the pitches not picked) and `script.txt` (the tagged lines only). Wait for the creator's OK. A rewrite is v2, v3… and the old version stays in git history.
@@ -62,6 +63,12 @@ Script standards, on top of the Rules below:
 - Credit "3D art: Microsoft Fluent Emoji (MIT licence)" in every YouTube description that uses it.
 - From Short #7: at most 10 generated videos and 5 generated images per short. Everything else is stock (Pexels, Pixabay, Unsplash, Mixkit, Coverr), public-domain or Creative Commons footage, screen recordings, screenshots and our own graphics. The Content Hub's "Visual playbook" lists the techniques.
 - Scripts from #7: an expression tag on almost every line; [whispers] at most once, only when the story needs it.
+- Scripts from #18 are spoken, not written (YouTube's script notes, 12 Nov):
+  - three beats: the paradox hook (0–3 s, one sentence: an anomaly or a high-stakes question); rapid escalation (the obstacle, the data and the tension, no background); the takeaway that rolls back into the hook;
+  - about a 6th-grade reading level: short sentences (about 12 words, one breath), active voice, no essay words ("Furthermore", "In addition", "It is important to"), no buzzwords;
+  - natural turns a narrator would say: "Here's the weird part:", "Wait, how does that work?";
+  - from the source, find the single most surprising finding for an everyday person, and explain the mechanism with a physical, real-world picture (as in #1's hospital);
+  - before sending the script for the creator's OK, read it at speaking speed: split any sentence that runs out of breath, and cut any sentence that only gives background.
 - The skills in `.claude/skills/` (HyperFrames, motion graphics, sound effects) are technique libraries. Read `MOTION.md` before animating anything; this file, README.md and the project instructions decide the workflow. `.claude/skills/README.md` lists where they clash with our rules. Before hand-building a transition, title or chart, look for a block in `hyperframes-registry`. Every short gets a sound pass with the `sound-effects` skill's CC0 library on top of our own SFX, uses `MOTION.md`'s signature visuals, and passes its quality pass (choreography, motionmaxxing taste and render gates, `review-animations`, an independent critic) before the full render.
 - From #9: the first 1–2 seconds lead with the surprising result or a high-stakes question (the brain-research short held 70.8%), never background, a greeting or a slow title card. Every script runs Hook → evidence → twist → takeaway, 60–90 s. Story-led explainers, not how-to tutorials.
 - From #12, the hidden word: every short hides one on-screen word that the voice never says. The line before "Follow for more AI, explained like this." is "There's one word in this video I never said out loud. Spotted it? Comment it."

@@ -1,8 +1,11 @@
 """Mix voice + music + SFX into the final Shorts soundtrack (48 kHz stereo, -14 LUFS, -1.5 dBTP).
 
-Usage: python3 mix.py VOICE.wav MUSIC.wav SFX.wav OUT.wav LENGTH_S [music_gain] [sfx_gain]
+Usage: python3 mix.py VOICE.wav MUSIC.wav SFX.wav OUT.wav LENGTH_S [music_gain] [sfx_gain] [duck]
 Voice: high-pass, gentle compression, presence EQ, normalised to -16 LUFS.
-Music: ducked under the voice with a sidechain compressor.
+Music: ducked under the voice with a sidechain compressor. duck "deep" (from #18, MOTION.md "Sound", tuned with two
+       critic passes): with music_gain 0.65 the score sits about 14 dB (K-weighted) under the voice in words and
+       rises about 6 dB in the pauses, a steady bed that is heard on a phone without pumping (a harder duck, ratio 20,
+       left it 24 dB under and swelling 14 dB at every breath). The default is the older duck shorts #1-#17 used.
 Final: two-pass loudnorm to -14 LUFS integrated, true peak -1.5 dB.
 """
 import json
@@ -13,7 +16,10 @@ import sys
 voice, music, sfx, out, length = sys.argv[1:6]
 mg = float(sys.argv[6]) if len(sys.argv) > 6 else 0.32
 sg = float(sys.argv[7]) if len(sys.argv) > 7 else 0.8
+duck = sys.argv[8] if len(sys.argv) > 8 else "classic"
 L = float(length)
+SC = {"classic": "threshold=0.04:ratio=6:attack=20:release=350",
+      "deep": "threshold=0.03:ratio=2.5:attack=20:release=800"}[duck]
 
 graph = (
     "[0:a]aresample=48000,aformat=channel_layouts=mono,highpass=f=80,"
@@ -22,7 +28,7 @@ graph = (
     "loudnorm=I=-16:TP=-2:LRA=7,aresample=48000,aformat=channel_layouts=stereo,"
     f"apad=whole_dur={L},asplit=2[v][vsc];"
     f"[1:a]aresample=48000,aformat=channel_layouts=stereo,volume={mg}[m];"
-    "[m][vsc]sidechaincompress=threshold=0.04:ratio=6:attack=20:release=350[md];"
+    f"[m][vsc]sidechaincompress={SC}[md];"
     f"[2:a]aresample=48000,aformat=channel_layouts=stereo,volume={sg}[s];"
     f"[v][md][s]amix=inputs=3:normalize=0:duration=longest,atrim=0:{L}"
 )

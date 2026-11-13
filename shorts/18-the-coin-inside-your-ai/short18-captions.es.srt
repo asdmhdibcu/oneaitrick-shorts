@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:02,630
+Una moneda lanzada al aire guió a 50 expertos.
+
+2
+00:00:02,630 --> 00:00:04,210
+Ninguno lo supo.
+
+3
+00:00:04,210 --> 00:00:06,700
+Cada uno tenía un asistente de IA, como el tuyo.
+
+4
+00:00:06,700 --> 00:00:09,670
+Y una moneda eligió en secreto sus respuestas favoritas.
+
+5
+00:00:09,670 --> 00:00:10,880
+Imagina una balanza.
+
+6
+00:00:10,880 --> 00:00:12,250
+Las dos opciones son válidas...
+
+7
+00:00:12,250 --> 00:00:14,820
+y la IA deja caer una moneda en un lado.
+
+8
+00:00:14,820 --> 00:00:18,600
+Los expertos eligieron el lado de la moneda el 86% de las veces.
+
+9
+00:00:18,600 --> 00:00:19,550
+¿Al azar?
+
+10
+00:00:19,550 --> 00:00:20,560
+Cerca de la mitad.
+
+11
+00:00:20,560 --> 00:00:22,710
+Algunos ya habían decidido.
+
+12
+00:00:22,710 --> 00:00:24,160
+Cuando la IA no estaba de acuerdo...
+
+13
+00:00:24,160 --> 00:00:26,640
+cambiaron de opinión más de la mitad de las veces.
+
+14
+00:00:26,640 --> 00:00:27,920
+Aquí viene lo raro.
+
+15
+00:00:27,920 --> 00:00:30,020
+La mayoría repitió los argumentos de la IA...
+
+16
+00:00:30,020 --> 00:00:32,710
+pero solo 1 de cada 7 le dio el crédito.
+
+17
+00:00:32,710 --> 00:00:33,610
+¿La trampa?
+
+18
+00:00:33,610 --> 00:00:38,320
+Anthropic probó su propia IA e hizo la moneda más pesada a propósito.
+
+19
+00:00:38,320 --> 00:00:40,320
+La IA de todos los días puede empujar menos.
+
+20
+00:00:40,320 --> 00:00:42,450
+Así que pregúntale una cosa más a tu IA.
+
+21
+00:00:42,450 --> 00:00:44,660
+"¿Cuál es el mejor argumento para la otra opción?"
+
+22
+00:00:44,660 --> 00:00:46,560
+Ahora hay una moneda en los dos lados.
+
+23
+00:00:46,560 --> 00:00:47,890
+La decisión es tuya.
+
+24
+00:00:47,890 --> 00:00:50,790
+Hay una palabra en este video que nunca dije en voz alta.
+
+25
+00:00:50,790 --> 00:00:51,560
+¿La viste?
+
+26
+00:00:51,560 --> 00:00:52,340
+Escríbela en los comentarios.
+
+27
+00:00:52,340 --> 00:00:54,910
+Sígueme para más IA, explicada así.
+
+28
+00:00:54,910 --> 00:00:56,040
+¿Crees que tú lo notarías?
+
+29
+00:00:56,040 --> 00:00:57,200
+Porque...

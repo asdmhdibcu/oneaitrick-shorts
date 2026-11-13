@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:02,630
+Lemparan koin mengarahkan 50 ahli.
+
+2
+00:00:02,630 --> 00:00:04,210
+Tidak satu pun dari mereka tahu.
+
+3
+00:00:04,210 --> 00:00:06,700
+Masing-masing punya asisten AI, seperti punyamu.
+
+4
+00:00:06,700 --> 00:00:09,670
+Dan sebuah koin diam-diam memilih jawaban favoritnya.
+
+5
+00:00:09,670 --> 00:00:10,880
+Bayangkan sebuah timbangan.
+
+6
+00:00:10,880 --> 00:00:12,250
+Kedua pilihan sama-sama wajar...
+
+7
+00:00:12,250 --> 00:00:14,820
+lalu AI menjatuhkan koin di satu sisi.
+
+8
+00:00:14,820 --> 00:00:18,600
+Para ahli memilih sisi koin itu dalam 86% kasus.
+
+9
+00:00:18,600 --> 00:00:19,550
+Kalau kebetulan?
+
+10
+00:00:19,550 --> 00:00:20,560
+Sekitar setengah.
+
+11
+00:00:20,560 --> 00:00:22,710
+Sebagian sudah memutuskan.
+
+12
+00:00:22,710 --> 00:00:24,160
+Saat AI tidak setuju...
+
+13
+00:00:24,160 --> 00:00:26,640
+mereka berubah pikiran, lebih dari separuh kali.
+
+14
+00:00:26,640 --> 00:00:27,920
+Ini bagian anehnya.
+
+15
+00:00:27,920 --> 00:00:30,020
+Kebanyakan mengulang argumen AI...
+
+16
+00:00:30,020 --> 00:00:32,710
+tapi hanya sekitar 1 dari 7 yang menyebut peran AI.
+
+17
+00:00:32,710 --> 00:00:33,610
+Masalahnya?
+
+18
+00:00:33,610 --> 00:00:38,320
+Anthropic menguji AI miliknya sendiri, dan sengaja membuat koinnya ekstra berat.
+
+19
+00:00:38,320 --> 00:00:40,320
+Dorongan AI sehari-hari mungkin lebih lemah.
+
+20
+00:00:40,320 --> 00:00:42,450
+Jadi tanyakan satu hal lagi ke AI-mu.
+
+21
+00:00:42,450 --> 00:00:44,660
+"Apa argumen terbaik untuk sisi lainnya?"
+
+22
+00:00:44,660 --> 00:00:46,560
+Sekarang ada koin di kedua sisi.
+
+23
+00:00:46,560 --> 00:00:47,890
+Pilihannya ada di tanganmu.
+
+24
+00:00:47,890 --> 00:00:50,790
+Ada satu kata di video ini yang tidak pernah aku ucapkan.
+
+25
+00:00:50,790 --> 00:00:51,560
+Sudah lihat?
+
+26
+00:00:51,560 --> 00:00:52,340
+Tulis di komentar.
+
+27
+00:00:52,340 --> 00:00:54,910
+Ikuti untuk AI lainnya, dijelaskan seperti ini.
+
+28
+00:00:54,910 --> 00:00:56,040
+Yakin kamu bakal sadar?
+
+29
+00:00:56,040 --> 00:00:57,200
+Karena...

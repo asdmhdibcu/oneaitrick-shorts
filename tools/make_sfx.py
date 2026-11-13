@@ -2,7 +2,8 @@
 
 Usage: python3 make_sfx.py EVENTS.json OUT.wav
 EVENTS.json: {"length": s, "events": [{"type": ..., "t": s, ...}, ...]}
-Types: whoosh, boom, pop, ding, scan, ring, rumble, tick, ticks, shimmer, glitch, zap, swell
+Types: whoosh, boom, pop, ding, scan, ring, rumble, tick, ticks, shimmer, glitch, zap, swell,
+       sub (sub-bass hit for the open, from #18), clink (a coin on metal), creak (a balance beam tilting)
 """
 import json
 import sys
@@ -151,8 +152,42 @@ def swell(t, dur=1.4, g=1.0):
     add(0.12 * g * n * env, t, 0.0)
 
 
+def sub(t, g=1.0, dur=1.3):
+    """A deep sub-bass hit with a little 2nd harmonic so earbuds hear it (MOTION.md, #18)."""
+    x = tt(dur)
+    f = 40 + 34 * np.exp(-x / 0.09)
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    body = (np.sin(ph) + 0.35 * np.sin(2 * ph) + 0.12 * np.sin(3 * ph)) * np.exp(-x / (dur * 0.42))
+    att = np.clip(x / 0.006, 0, 1)
+    add(0.6 * g * np.tanh(1.4 * body) * att, t, 0.0)
+
+
+def clink(t, g=1.0, pitch=1.0):
+    """A coin landing on metal: inharmonic partials that ring briefly, plus a tiny strike."""
+    x = tt(0.9)
+    parts = [(2350, 1.0, 0.22), (3620, 0.7, 0.16), (5170, 0.5, 0.11), (6980, 0.32, 0.07), (8720, 0.2, 0.05)]
+    s = sum(a * np.sin(2 * np.pi * f * pitch * x + k) * np.exp(-x / d) for k, (f, a, d) in enumerate(parts))
+    strike = hp(rng.standard_normal(len(x)), 4000) * np.exp(-x / 0.003) * 0.5
+    add(0.07 * g * (s + strike), t, (rng.random() - 0.5) * 0.3)
+    add(0.03 * g * s * np.exp(-x / 0.05), t + 0.07, 0.2)   # one small bounce
+
+
+def creak(t, g=1.0, dur=0.5, pitch=1.0):
+    """A balance beam tilting: stick-slip pulses through two wooden resonances."""
+    x = tt(dur)
+    imp = np.zeros(len(x))
+    tk = 0.0
+    while tk < dur - 0.01:
+        imp[int(tk * SR)] = 0.6 + 0.4 * rng.random()
+        tk += (0.016 + 0.012 * np.sin(np.pi * tk / dur)) / pitch * (0.85 + 0.3 * rng.random())
+    s = bp(imp, 420 * pitch, 760 * pitch, 2) * 1.0 + bp(imp, 1250 * pitch, 1700 * pitch, 2) * 0.5
+    env = np.sin(np.pi * np.clip(x / dur, 0, 1)) ** 0.8
+    add(0.9 * g * s * env, t, -0.15)
+
+
 FUN = {"whoosh": whoosh, "boom": boom, "pop": pop, "ding": ding, "scan": scan, "ring": ring, "rumble": rumble,
-       "tick": tick, "shimmer": shimmer, "glitch": glitch, "zap": zap, "swell": swell}
+       "tick": tick, "shimmer": shimmer, "glitch": glitch, "zap": zap, "swell": swell,
+       "sub": sub, "clink": clink, "creak": creak}
 for ev in cfg["events"]:
     ev = dict(ev)
     kind = ev.pop("type")

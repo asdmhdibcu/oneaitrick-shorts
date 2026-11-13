@@ -2,14 +2,13 @@
 
 Hub tab: "#18 The coin inside your AI" (order b18).
 
-**Status on 12 Nov 2026 (evening):** the creator recorded v2 the same evening (56.96 s, word for word;
-`words.json` aligned 163 of 163 words). The scene sheet and material list are in `MATERIAL.md`; waiting for the
-Anthropic page (p01) before the build.
+**Status on 12 Nov 2026 (night):** built from the take (56.96 s, v2 word for word, 163 of 163 words aligned) and the
+Anthropic post the creator saved as a PDF. The stage is a balance scale, not a phone: the creator's note of 12 Nov
+("the phone was for #17 only"). Scene sheet and material in `MATERIAL.md`, build notes in `BUILD.md`.
 
-**Earlier:** the creator picked pitch A of 3. `script.txt` is v2 (163 words, about 58 s at #17's pace)
-and is **waiting for the creator's OK**. v2 (the creator's notes, 12 Nov): "like yours" on line 2 puts the viewer
-in the 4–12 s window, and the title's 50 rolls up like an odometer (settled by 0.8 s). v1 is in git history. They will then record it in ElevenLabs with their cloned voice. Nothing is
-built yet.
+**Earlier:** the creator picked pitch A of 3 and approved `script.txt` v2 (163 words). v2 (the creator's notes, 12
+Nov): "like yours" on line 2 puts the viewer in the 4–12 s window, and the title's 50 rolls up like an odometer
+(settled by 0.8 s). v1 is in git history.
 
 **New from #18:**
 
@@ -50,28 +49,27 @@ Hook → evidence → twist → takeaway.
   other option, and that doing so might have helped).
 - **Hidden word:** **TAILS**, on the coin's face when it lands (about 2–4 s), in the recap and on the last frame. The
   voice never says heads or tails.
-- **First frame:** the phone on #17's grid board, an AI chat "Help me choose: A or B?" with the lime thinking orb, a
-  gold coin spinning above the screen, the title "A COIN STEERED 50 EXPERTS" (its 50 rolling up like an odometer, settled by 0.8 s), chip "ANTHROPIC STUDY · 27 OCT 2026",
-  chapter 1 lit, a sub-bass hit.
+- **First frame:** the balance scale on #17's grid board, the lime thinking orb above it, a gold coin spinning at the
+  pivot, the title "A COIN STEERED 50 EXPERTS" (its 50 rolling up like an odometer, settled by 0.8 s), chip
+  "ANTHROPIC STUDY · 27 OCT 2026" with the logo, chapter 1 lit, a sub-bass hit.
 - **Search question for the title:** "Is AI making my decisions for me?"
 
 ## Storyboard spine
 
-One stage, the viewer's phone (y 380–1180), from the first frame to the last; a balance scale on its screen from
-0:09. Tracker at y ~290: COIN · SCALE · FOLLOW · CATCH · FIX. Times are estimates until the take.
+One stage, a balance scale on the grid board, with the lime orb above the beam as the AI, from the first frame to the
+last (no phone: #17's stage, the creator's note of 12 Nov). Tracker at y 232: COIN · SCALE · FOLLOW · CATCH · FIX.
 
-| Chapter | Time (s) | Lines | The phone shows | Pin added |
+| Chapter | Time (s) | Lines | The stage shows | Pin added |
 | --- | --- | --- | --- | --- |
-| 1 COIN | 0–9 | 1–2 | The chat "A or B?"; a coin lands TAILS and slides under the chat; on "like yours" the chat restyles into a plain everyday chat app; four secret flips | 50 EXPERTS · one hidden coin |
-| 2 SCALE | 9–15 | 3 | The scale, level; fair blocks A and B; the AI's amber coin tips it to B | — |
-| 3 FOLLOW | 15–32 | 4–6 | 60/40 split: four bars past a CHANCE line; MY PICK slides A→B; the report fills with the AI's lines | 86% went with the coin · 60% switched sides · 77% used its words · 1 IN 7 gave it credit |
-| 4 CATCH | 32–39 | 7 | Anthropic logo; the coin swells HEAVY, then shrinks | 1 TEST · coin made heavy |
-| 5 FIX | 39–48 | 8–9 | The question types in; a second coin on A; the scale levels | 2 SIDES · ask for both |
-| Recap and loop | 48–58 | 10–12 | Pins light by column; the TAILS coin; end card over the first frame, then frame one again | — |
+| 1 COIN | 0–9.7 | 1–2 | The claim card over the scale; the coin lands TAILS; pushed in: one chat ("A or B: which is better?" / "I'd pick B."), then the coin flips and hops over four choices, picking the AI's side | 50 experts, one hidden coin |
+| 2 SCALE | 9.7–14.9 | 3 | Fair blocks A and B on the pans; the AI's amber coin tips it to B | — |
+| 3 FOLLOW | 14.9–32.8 | 4–6 | 60/40 split: four bars past a CHANCE line, 86%; proof card; MY PICK on A, then switched to B; the final report fills with the AI's lines, one credit slot of seven | 86% went with the coin · 60% switched sides · 77% used its words · 1 IN 7 gave it credit |
+| 4 CATCH | 32.8–40.4 | 7 | Amber edges; proof card with the Anthropic logo; the coin swells HEAVY and the beam slams down; the "deliberately strengthened" strip | HEAVY on purpose, in 1 test |
+| 5 FIX | 40.4–47.9 | 8–9 | The question types in and flies to the orb; a lime coin on A; the scale levels; a check on YOURS | 2 SIDES ask for both |
+| Recap and loop | 47.9–57.15 | 10–12 | The TAILS coin returns; pins light by column; end card over the dimmed board; the claim card returns with its digits spinning into frame one | — |
 
 Left column = what the coin did (pins 1–5); right column = the catch and the fix (pins 6–7). Lime and blue for the
-fair options and the AI doing its job; amber for the planted coin and the catch. The hub tab's "Script with pictures"
-table has the cue for every sentence.
+fair options and the AI doing its job; amber for the planted coin and the catch.
 
 ## Facts (all read on primary pages; line numbers are script.txt v1)
 
@@ -96,14 +94,12 @@ table has the cue for every sentence.
 - "Decide before you ask": people who had decided still switched when the AI disagreed, so the fix is the authors'
   other idea, asking for the other side.
 
-## Visual plan
+## Visual plan (as built)
 
-The full scene sheet comes after the take.
-
-- **Signature visuals (MOTION.md):** the lime thinking orb as the AI helper; the four-bar chart with a CHANCE line as
-  `data-story-charts` in a 60/40 split; `kinetic-typography` keyword pops on ONE, HEAVY and YOURS; the Anthropic logo
-  drawn on with `pixel2motion`; odometer 86%.
-- **Real proof on screen:** two one-sentence cards from the Anthropic post (the 86% line and "we deliberately
-  strengthened" line), each 2–3 s on frosted glass; the paper's title strip as the source chip.
-- **Likely material (confirmed in MATERIAL.md after the take):** the post saved from Safari Reader as a PDF; the paper
-  PDF; the Anthropic logo (Simple Icons, CC0); optionally a Pexels close-up of a coin flip, no faces.
+- **Signature visuals (MOTION.md):** the lime thinking orb as the AI; the four-bar chart with a CHANCE line in a 60/40
+  split; keyword pops on ONE (twice), 86, OWN, HEAVY, OTHER, YOURS and YOU'D; the Anthropic logo drawn on (outline, then fill); odometer 50
+  and 86%; threat colours (amber) for the planted coin and the catch.
+- **Real proof on screen:** three complete sentences from the Anthropic post, re-set from the page's own words (the
+  86% and 50% sentences, the limitation sentences that name Claude Opus 4.8, "We deliberately strengthened the agents'
+  lean."), each about 2 s on frosted glass, no pan.
+- Full scene sheet: `MATERIAL.md`. Sound, quality pass and render: `BUILD.md`.

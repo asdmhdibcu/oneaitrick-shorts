@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      html, body { width: 1080px; height: 1920px; margin: 0; }
+      .stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #0b0c10; font-family: "InterV", sans-serif; color: var(--ink); }
+      .grid { position: absolute; inset: 0;
+        background-image: linear-gradient(rgba(124,196,255,0.08) 2px, transparent 2px), linear-gradient(90deg, rgba(124,196,255,0.08) 2px, transparent 2px),
+          linear-gradient(rgba(124,196,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(124,196,255,0.035) 1px, transparent 1px);
+        background-size: 120px 120px, 120px 120px, 30px 30px, 30px 30px; }
+      .shade { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 40% at 50% 34%, rgba(200,255,77,0.10), rgba(4,5,10,0) 70%),
+        linear-gradient(180deg, rgba(4,5,10,0) 54%, rgba(4,5,10,0.92) 63%, rgba(4,5,10,0.98) 100%); }
+      .bar { position: absolute; left: 0; top: 0; height: 10px; width: 1080px; background: var(--lime); }
+      /* Instagram grid crops to the centre 1080x1440: keep everything inside y 240-1680 */
+      .tag { position: absolute; left: 70px; top: 262px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 28px 14px 22px;
+        border: 2px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(8,9,14,0.72); font-family: "Mono", monospace; font-weight: 700;
+        font-size: 30px; letter-spacing: 0.08em; color: var(--ink); }
+      .tag .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 16px var(--pink); }
+      .brand { position: absolute; right: 70px; top: 276px; font-family: "Mono", monospace; font-weight: 700; font-size: 28px; letter-spacing: 0.06em; color: #d8d9df; }
+      svg.scale { position: absolute; left: 0; top: 0; }
+      .pin { position: absolute; width: 230px; height: 160px; border-radius: 20px; background: rgba(20,22,29,0.94); border: 2px solid rgba(255,255,255,0.12); }
+      .pin b { position: absolute; left: 18px; top: 22px; font-weight: 900; font-size: 58px; letter-spacing: -0.04em; color: var(--lime); white-space: nowrap; }
+      .pin i { position: absolute; left: 18px; top: 92px; font-style: normal; font-weight: 700; font-size: 23px; color: #e8e9ee; line-height: 1.15; right: 12px; }
+      .title { position: absolute; left: 70px; right: 40px; top: 1085px; font-weight: 900; font-size: 112px; letter-spacing: -0.05em; line-height: 0.93; color: var(--ink);
+        text-shadow: 0 6px 40px rgba(0,0,0,0.7); text-transform: uppercase; }
+      .title em { font-style: normal; color: #ffb547; }
+      .sub { position: absolute; left: 70px; top: 1322px; font-weight: 800; font-size: 46px; color: #e8e9ee; letter-spacing: -0.01em; }
+      .pill { position: absolute; left: 70px; white-space: nowrap; font-family: "Mono", monospace; font-weight: 700; font-size: 30px;
+        letter-spacing: 0.1em; padding: 16px 28px; border-radius: 16px; background: rgba(8,9,14,0.86); border: 3px solid currentColor; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="grid"></div>
+      <div class="shade"></div>
+      <!-- the stage of the video: the balance scale, the AI (lime orb) above it, its amber coin tipping the scale to B -->
+      <svg class="scale" width="1080" height="1100" viewBox="0 0 1080 1100">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#c8ff4d" stop-opacity="0.35" /><stop offset="1" stop-color="#c8ff4d" stop-opacity="0" /></radialGradient>
+          <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef0f4" /><stop offset="1" stop-color="#9aa0ad" /></linearGradient>
+          <radialGradient id="gold" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffe3a1" /><stop offset="0.55" stop-color="#ffb547" /><stop offset="1" stop-color="#c9781c" /></radialGradient>
+        </defs>
+        <circle cx="540" cy="455" r="150" fill="url(#glow)" />
+        <g id="orb"></g>
+        <!-- post and base -->
+        <rect x="531" y="560" width="18" height="430" rx="6" fill="url(#metal)" />
+        <path d="M430 1010 L650 1010 L610 985 L470 985 Z" fill="#c5c9d2" />
+        <!-- beam, tipped 12 degrees to B -->
+        <g transform="rotate(12 540 560)">
+          <rect x="300" y="553" width="480" height="14" rx="7" fill="url(#metal)" />
+          <circle cx="300" cy="560" r="12" fill="#e8eaee" /><circle cx="780" cy="560" r="12" fill="#e8eaee" />
+        </g>
+        <circle cx="540" cy="560" r="17" fill="#c8ff4d" /><circle cx="540" cy="560" r="7" fill="#0b0c10" />
+        <!-- left pan (A), high -->
+        <g stroke="#c5c9d2" stroke-width="3" fill="none"><path d="M305 510 L235 660 M305 510 L375 660" /></g>
+        <path d="M225 660 Q305 712 385 660 Z" fill="#c5c9d2" />
+        <rect x="270" y="590" width="70" height="66" rx="12" fill="#c8ff4d" /><text x="305" y="637" text-anchor="middle" font-family="InterV" font-weight="900" font-size="40" fill="#0b0c10">A</text>
+        <!-- right pan (B), low, with the AI's coin -->
+        <g stroke="#c5c9d2" stroke-width="3" fill="none"><path d="M775 610 L705 760 M775 610 L845 760" /></g>
+        <path d="M695 760 Q775 812 855 760 Z" fill="#c5c9d2" />
+        <rect x="760" y="690" width="70" height="66" rx="12" fill="#7cc4ff" /><text x="795" y="737" text-anchor="middle" font-family="InterV" font-weight="900" font-size="40" fill="#0b0c10">B</text>
+        <circle cx="725" cy="712" r="46" fill="url(#gold)" stroke="#ffd27a" stroke-width="4" />
+        <circle cx="725" cy="712" r="34" fill="none" stroke="#c9781c" stroke-width="3" stroke-dasharray="4 6" />
+        <!-- the drop line from the AI to the coin -->
+        <path d="M585 500 Q690 560 712 655" stroke="#ffb547" stroke-width="4" stroke-dasharray="10 10" fill="none" />
+      </svg>
+      <div class="pin" style="left:60px;top:370px"><b>86%</b><i>went with the coin</i></div>
+      <div class="pin" style="left:790px;top:370px"><b>60%</b><i>switched sides</i></div>
+      <div class="pin" style="left:60px;top:830px"><b>1 IN 7</b><i>gave it credit</i></div>
+      <div class="bar"></div>
+      <div class="tag"><span class="dot"></span>AI PAPER · STORY</div>
+      <div class="brand">@ONEAITRICK</div>
+      <div class="title">A coin steered<br /><em>50 experts.</em></div>
+      <div class="sub">Not one of them noticed. Would you?</div>
+      <div class="pill" style="top: 1424px; color: #c8ff4d">AI HELPERS · YOUR CHOICES</div>
+    </div>
+    <script>
+      // the orb: lime dots on a sphere (seeded, so the cover is the same every time)
+      let s = 18; const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+      const g = document.getElementById("orb"); let h = "";
+      for (let k = 0; k < 260; k++) { const u = rnd() * 2 - 1, a = rnd() * Math.PI * 2, r = Math.sqrt(1 - u * u);
+        const x = 540 + 72 * r * Math.cos(a), y = 455 + 72 * u, z = r * Math.sin(a);
+        if (z < -0.2) continue; h += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(2 + 2 * z).toFixed(2)}" fill="#c8ff4d" opacity="${(0.45 + 0.55 * z).toFixed(2)}"/>`; }
+      g.innerHTML = h;
+    </script>
+  </body>
+</html>

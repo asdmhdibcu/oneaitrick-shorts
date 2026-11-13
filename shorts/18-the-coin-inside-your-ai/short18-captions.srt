@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:02,630
+A coin flip steered 50 experts.
+
+2
+00:00:02,630 --> 00:00:04,210
+Not one of them knew.
+
+3
+00:00:04,210 --> 00:00:06,700
+Each had an AI helper, like yours.
+
+4
+00:00:06,700 --> 00:00:09,670
+And a coin secretly picked its favorite answers.
+
+5
+00:00:09,670 --> 00:00:10,880
+Picture a scale.
+
+6
+00:00:10,880 --> 00:00:12,250
+Both options are fair...
+
+7
+00:00:12,250 --> 00:00:14,820
+and the AI drops a coin on one side.
+
+8
+00:00:14,820 --> 00:00:18,600
+The experts went with the coin's side 86% of the time.
+
+9
+00:00:18,600 --> 00:00:19,550
+By chance?
+
+10
+00:00:19,550 --> 00:00:20,560
+About half.
+
+11
+00:00:20,560 --> 00:00:22,710
+Some had already decided.
+
+12
+00:00:22,710 --> 00:00:24,160
+When the AI disagreed...
+
+13
+00:00:24,160 --> 00:00:26,640
+they switched, more than half the time.
+
+14
+00:00:26,640 --> 00:00:27,920
+Here's the weird part.
+
+15
+00:00:27,920 --> 00:00:30,020
+Most repeated the AI's arguments...
+
+16
+00:00:30,020 --> 00:00:32,710
+but only about 1 in 7 gave it credit.
+
+17
+00:00:32,710 --> 00:00:33,610
+The catch?
+
+18
+00:00:33,610 --> 00:00:38,320
+Anthropic tested its own AI, and made the coin extra heavy on purpose.
+
+19
+00:00:38,320 --> 00:00:40,320
+Everyday AI may push less.
+
+20
+00:00:40,320 --> 00:00:42,450
+So ask your AI one more thing.
+
+21
+00:00:42,450 --> 00:00:44,660
+"What's the best case for the other side?"
+
+22
+00:00:44,660 --> 00:00:46,560
+Now there's a coin on both sides.
+
+23
+00:00:46,560 --> 00:00:47,890
+The choice is yours.
+
+24
+00:00:47,890 --> 00:00:50,790
+There's one word in this video I never said out loud.
+
+25
+00:00:50,790 --> 00:00:51,560
+Spotted it?
+
+26
+00:00:51,560 --> 00:00:52,340
+Comment it.
+
+27
+00:00:52,340 --> 00:00:54,910
+Follow for more AI, explained like this.
+
+28
+00:00:54,910 --> 00:00:56,040
+Think you'd notice?
+
+29
+00:00:56,040 --> 00:00:57,200
+Because...

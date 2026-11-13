@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:02,630
+Uma moeda jogada para o alto guiou 50 especialistas.
+
+2
+00:00:02,630 --> 00:00:04,210
+Nenhum deles sabia.
+
+3
+00:00:04,210 --> 00:00:06,700
+Cada um tinha um assistente de IA, como o seu.
+
+4
+00:00:06,700 --> 00:00:09,670
+E uma moeda escolheu em segredo as respostas favoritas dele.
+
+5
+00:00:09,670 --> 00:00:10,880
+Imagine uma balança.
+
+6
+00:00:10,880 --> 00:00:12,250
+As duas opções são boas...
+
+7
+00:00:12,250 --> 00:00:14,820
+e a IA solta uma moeda em um dos lados.
+
+8
+00:00:14,820 --> 00:00:18,600
+Os especialistas ficaram com o lado da moeda em 86% das vezes.
+
+9
+00:00:18,600 --> 00:00:19,550
+Por acaso?
+
+10
+00:00:19,550 --> 00:00:20,560
+Cerca da metade.
+
+11
+00:00:20,560 --> 00:00:22,710
+Alguns já tinham decidido.
+
+12
+00:00:22,710 --> 00:00:24,160
+Quando a IA discordou...
+
+13
+00:00:24,160 --> 00:00:26,640
+eles mudaram de ideia em mais da metade das vezes.
+
+14
+00:00:26,640 --> 00:00:27,920
+Agora vem a parte estranha.
+
+15
+00:00:27,920 --> 00:00:30,020
+A maioria repetiu os argumentos da IA...
+
+16
+00:00:30,020 --> 00:00:32,710
+mas só cerca de 1 em cada 7 deu o crédito a ela.
+
+17
+00:00:32,710 --> 00:00:33,610
+O porém?
+
+18
+00:00:33,610 --> 00:00:38,320
+A Anthropic testou a própria IA e deixou a moeda mais pesada de propósito.
+
+19
+00:00:38,320 --> 00:00:40,320
+A IA do dia a dia pode empurrar menos.
+
+20
+00:00:40,320 --> 00:00:42,450
+Então faça mais uma pergunta à sua IA.
+
+21
+00:00:42,450 --> 00:00:44,660
+"Qual é o melhor argumento para o outro lado?"
+
+22
+00:00:44,660 --> 00:00:46,560
+Agora há uma moeda nos dois lados.
+
+23
+00:00:46,560 --> 00:00:47,890
+A escolha é sua.
+
+24
+00:00:47,890 --> 00:00:50,790
+Tem uma palavra neste vídeo que eu nunca disse em voz alta.
+
+25
+00:00:50,790 --> 00:00:51,560
+Viu qual é?
+
+26
+00:00:51,560 --> 00:00:52,340
+Comente.
+
+27
+00:00:52,340 --> 00:00:54,910
+Siga para mais IA, explicada assim.
+
+28
+00:00:54,910 --> 00:00:56,040
+Acha que você perceberia?
+
+29
+00:00:56,040 --> 00:00:57,200
+Porque...

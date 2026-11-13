@@ -1,0 +1,173 @@
+{
+ "length": 56.95,
+ "sounds": [
+  {
+   "file": "impact/kenney-sci-lowfrequency-explosion-000.ogg",
+   "t": 0.0,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "click/kenney-interface-click-001.ogg",
+   "t": 4.46,
+   "gain": 1.0,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ui-blip/kenney-digital-twotone1.ogg",
+   "t": 4.74,
+   "gain": 0.4,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ui-blip/kenney-digital-pepsound1.ogg",
+   "t": 5.1,
+   "gain": 0.4,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "impact/kenney-impact-impactsoft-heavy-000.ogg",
+   "t": 7.38,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "transition/fs-786514-swoosh-v2.ogg",
+   "t": 9.57,
+   "gain": 0.3,
+   "credit": "migoreng1 via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "pop/kenney-interface-drop-001.ogg",
+   "t": 10.93,
+   "gain": 0.55,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "pop/kenney-interface-drop-002.ogg",
+   "t": 11.17,
+   "gain": 0.55,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "impact/kenney-impact-impactpunch-heavy-000.ogg",
+   "t": 13.07,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "transition/fs-702773-swipe-wav.ogg",
+   "t": 15.02,
+   "gain": 0.35,
+   "credit": "LilMati via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "impact/fs-222517-dramatic-hit.ogg",
+   "t": 16.6,
+   "gain": 0.35,
+   "credit": "qubodup via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "transition/fs-702773-swipe-wav.ogg",
+   "t": 18.45,
+   "gain": 0.4,
+   "credit": "LilMati via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "click/kenney-interface-select-002.ogg",
+   "t": 21.21,
+   "gain": 0.4,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "impact/kenney-impact-impactsoft-heavy-001.ogg",
+   "t": 23.29,
+   "gain": 0.4,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "click/kenney-interface-toggle-002.ogg",
+   "t": 24.43,
+   "gain": 0.5,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "riser/fs-174363-rewind.ogg",
+   "t": 26.64,
+   "gain": 0.5,
+   "credit": "kasa90 via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "transition/kenney-interface-maximize-005.ogg",
+   "t": 26.79,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ding/kenney-interface-glass-001.ogg",
+   "t": 30.87,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "impact/kenney-impact-impactsoft-heavy-000.ogg",
+   "t": 32.76,
+   "gain": 0.5,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "transition/fs-702773-swipe-wav.ogg",
+   "t": 33.61,
+   "gain": 0.4,
+   "credit": "LilMati via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "impact/kenney-sci-lowfrequency-explosion-001.ogg",
+   "t": 36.96,
+   "gain": 0.2,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "transition/kenney-interface-scroll-001.ogg",
+   "t": 37.37,
+   "gain": 0.4,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "typing/fs-447909-keyboard-typing.ogg",
+   "t": 42.45,
+   "gain": 0.8,
+   "credit": "Breviceps via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "click/kenney-interface-click-001.ogg",
+   "t": 44.18,
+   "gain": 0.6,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ding/kenney-interface-confirmation-001.ogg",
+   "t": 47.18,
+   "gain": 0.4,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ding/kenney-interface-confirmation-002.ogg",
+   "t": 49.43,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ding/kenney-interface-confirmation-003.ogg",
+   "t": 50.84,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "click/kenney-interface-tick-001.ogg",
+   "t": 51.61,
+   "gain": 0.5,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  }
+ ]
+}

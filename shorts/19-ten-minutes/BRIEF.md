@@ -2,9 +2,11 @@
 
 Hub tab: "#19 Ten minutes" (order b19).
 
-**Status on 15 Nov 2026:** script v1 (`script.txt`, 164 words, about 58 s) is with the creator for an OK. The creator
-picked pitch A of 3 on 15 Nov, to be drawn in Lemo-Opuscar's Mid-century Cartoon style. Next: the creator records the
-approved script in ElevenLabs and attaches the take; then the scene sheet and material (`MATERIAL.md`).
+**Status on 15 Nov 2026 (evening):** the creator recorded script v1 as written (59.36 s; 164 of 164 words aligned in
+`words.json`). Scene sheet and material in `MATERIAL.md`. Waiting on the creator for the paper's PDF (arXiv
+2604.04721v6), the only file the build needs from outside: the workspace can't reach arxiv.org.
+
+**Earlier:** the creator picked pitch A of 3 on 15 Nov, to be drawn in Lemo-Opuscar's Mid-century Cartoon style.
 
 **New from #19:**
 

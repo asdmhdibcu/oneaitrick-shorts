@@ -61,6 +61,10 @@ Grades per act: cold teal for the problem, warm for the answer, film or tape for
 
 ## The storyboard (story spine, from #17)
 
+> **Dropped on 16 Nov 2026:** the chapter tracker, the pinned-fact boxes and the pin recap below. The creator found
+> on-screen boxes that keep track of the narration killed views (CLAUDE.md, "From 16 Nov 2026"). Keep only: one new
+> thing at a time, every visual held 2 s or more, and a last frame that mirrors the first.
+
 Every short is built as one storyboard the viewer can follow from the first frame to the last, so nobody forgets what
 was said or shown at the start. Engagement comes from following the story, not from fast cuts: a visual that flashes by
 in half a second isn't seen. #17 (`shorts/17-your-moms-voice-for-sale/`, `BUILD.md`) is the reference build.

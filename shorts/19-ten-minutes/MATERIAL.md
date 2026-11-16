@@ -48,6 +48,6 @@ The workspace can't reach arxiv.org (tested 15 Nov), so the paper comes from you
 
 | Need | File name | What | Link |
 | --- | --- | --- | --- |
-| NEEDED | p01_paper_v6.pdf | The paper, version 6, saved as a PDF. One sentence from its Conclusion becomes the proof card (row 15) | https://arxiv.org/pdf/2604.04721v6 |
+| DONE | p01_paper_v6.pdf | The paper, version 6 (received 16 Nov). One sentence from its Conclusion (p. 11) is the proof card (row 15) | https://arxiv.org/pdf/2604.04721v6 |
 | DONE | voice | Your take, 59.36 s, word for word (164 of 164 words aligned) | — |
 | OPTIONAL | — | Nothing else. Everything on screen is drawn in code: the pencil, bike, wheels, timer, chat bubble, glove hands, bars, dot grids, SKIP button, pins and end card. Fonts are the style's own (Oleo Script, Alfa Slab One, Jost: SIL Open Font Licence) | — |

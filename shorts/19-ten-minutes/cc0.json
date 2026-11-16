@@ -1,0 +1,107 @@
+{
+ "length": 59.31,
+ "sounds": [
+  {
+   "file": "impact/kenney-sci-lowfrequency-explosion-000.ogg",
+   "t": 0.0,
+   "gain": 0.33,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ambience/fs-329533-room-tone-in-an-apartment-livi.ogg",
+   "t": 0.0,
+   "gain": 0.5,
+   "credit": "leonelmail via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "impact/kenney-impact-impactsoft-heavy-000.ogg",
+   "t": 3.41,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "transition/fs-702773-swipe-wav.ogg",
+   "t": 4.52,
+   "gain": 0.35,
+   "credit": "LilMati via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "ui-blip/kenney-digital-pepsound1.ogg",
+   "t": 5.65,
+   "gain": 0.35,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "transition/fs-786514-swoosh-v2.ogg",
+   "t": 10.02,
+   "gain": 0.3,
+   "credit": "migoreng1 via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "impact/kenney-impact-impactpunch-heavy-000.ogg",
+   "t": 14.83,
+   "gain": 0.4,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "click/kenney-interface-click-001.ogg",
+   "t": 20.06,
+   "gain": 0.9,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "transition/fs-702773-swipe-wav.ogg",
+   "t": 19.49,
+   "gain": 0.3,
+   "credit": "LilMati via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "transition/fs-702773-swipe-wav.ogg",
+   "t": 22.12,
+   "gain": 0.3,
+   "credit": "LilMati via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "riser/fs-174363-rewind.ogg",
+   "t": 27.96,
+   "gain": 0.45,
+   "credit": "kasa90 via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "impact/kenney-impact-impactsoft-heavy-001.ogg",
+   "t": 39.39,
+   "gain": 0.5,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "transition/fs-702773-swipe-wav.ogg",
+   "t": 40.08,
+   "gain": 0.4,
+   "credit": "LilMati via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "transition/fs-850347-swipe-various.ogg",
+   "t": 41.79,
+   "gain": 0.3,
+   "credit": "Gravy42 via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "typing/fs-447909-keyboard-typing.ogg",
+   "t": 44.39,
+   "gain": 0.7,
+   "credit": "Breviceps via Freesound (CC0; credit optional)"
+  },
+  {
+   "file": "click/kenney-interface-click-001.ogg",
+   "t": 46.6,
+   "gain": 0.6,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  },
+  {
+   "file": "ding/kenney-interface-confirmation-001.ogg",
+   "t": 53.81,
+   "gain": 0.3,
+   "credit": "Kenney (kenney.nl), CC0; credit optional"
+  }
+ ]
+}

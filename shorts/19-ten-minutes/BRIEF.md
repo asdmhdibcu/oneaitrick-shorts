@@ -2,9 +2,9 @@
 
 Hub tab: "#19 Ten minutes" (order b19).
 
-**Status on 15 Nov 2026 (evening):** the creator recorded script v1 as written (59.36 s; 164 of 164 words aligned in
-`words.json`). Scene sheet and material in `MATERIAL.md`. Waiting on the creator for the paper's PDF (arXiv
-2604.04721v6), the only file the build needs from outside: the workspace can't reach arxiv.org.
+**Status on 16 Nov 2026:** rendered and delivered (59.3 s): MP4, phone copy, cover and SRTs (en, es, pt, hi, id) to the
+creator; build notes in `BUILD.md`, upload copy in `UPLOAD.md`. Waiting on the creator to post at about 14:00 UTC, then
+the scorecard 48 hours after posting. Two independent critic passes; every blocker fixed.
 
 **Earlier:** the creator picked pitch A of 3 on 15 Nov, to be drawn in Lemo-Opuscar's Mid-century Cartoon style.
 
@@ -105,4 +105,4 @@ Every line was read on the paper itself (arXiv 2604.04721, v6 of 13 Oct 2026); n
 | Ask for a hint first | The authors call for AI that also builds long-term skill; whether a hint-giving (Socratic) AI keeps the benefits is still open. The advice is ours, sized to a clue | Paper v6, abstract and conclusion |
 | On screen: CMU · Berkeley · Oxford · MIT · UCLA | The five authors' institutions (Grace Liu, Brian Christian, Tsvetomira Dumbalska, Michiel Bakker, Rachit Dubey) | Paper v6, title page |
 
-Left out on purpose: "peer-reviewed at COLM 2026" (Berkeley News and Live Science say so, but arXiv names no venue, so the chip says STUDY); the repeat's skip result (not significant overall); the people in the AI group who chose not to use it (89% solved, but they chose); effect sizes and pay; Brian Christian's quotes, since the proof card is the paper itself; the press's "ChatGPT", since the study used GPT-5 in its own sidebar and the voice says only "your AI chatbot".
+Peer review, settled on 16 Nov: the PDF's header reads "Published as a conference paper at COLM 2026", so the claim card and the description say COLM 2026 (the voice doesn't). Left out on purpose: the repeat's skip result (not significant overall); the people in the AI group who chose not to use it (89% solved, but they chose); effect sizes and pay; Brian Christian's quotes, since the proof card is the paper itself; the press's "ChatGPT", since the study used GPT-5 in its own sidebar and the voice says only "your AI chatbot".

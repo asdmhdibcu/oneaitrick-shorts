@@ -49,6 +49,7 @@ Script standards, on top of the Rules below:
 - `library/3d/`: upscaled 1024 px 3D art. Reuse it before fetching or upscaling anything new
 - `brand/`: logo, profile image, cover template
 - `shorts/NN-slug/`: one folder per short (e.g. `shorts/02-…/`) holding script, `words.json`, `captions.js`, `index.html`, `sfx.json`, `music.json`, SRT and cover
+- `videos/NN-slug/`: one folder per full (long-form) video, same files plus `PICTURES.md` (the script with pictures). Episode numbers are shared with the shorts (#20 is the first full video)
 
 ## Rules
 

@@ -2,7 +2,7 @@
 
 16 Nov 2026 · Script v1 waiting for the creator's OK. Mirrors the hub tab "#20 450 applications".
 
-## Open questions for the creator
+## Open questions for the creator (script v1 approved 17 Nov; look: documentary, not cartoonish)
 
 1. **Length and shape:** I've written about 8 minutes, horizontal 16:9 for YouTube. Say if you want different.
 2. **Your own moment (optional):** if you have a real job-hunt moment of your own, 2–3 lines can go right after "Irene isn't the only one." I didn't invent one. Lines like "the answer surprised me" are reactions you can keep or cut.
@@ -27,7 +27,7 @@ Each part uses the engine that fits what it shows. Our brand colors, grain, capt
 
 | Part | About | What you see | Repo / skill |
 |---|---|---|---|
-| Cold open: Irene's 450 applications | 0:00–0:45 | Spreadsheet Film: a job tracker filling row by row, the counter rolling to 450 | Lemo-Opuscar (MIT) |
+| Cold open: Irene's 450 applications | 0:00–0:45 | Irene's own voice from NPR, then a clean, dark job-tracker spreadsheet counting to 450 (modern, not retro) | Lemo-Opuscar (MIT) |
 | Title | 0:45–0:55 | A 3D title with one low light, the camera drifting through it | title-sequence-3d skill (Three.js) |
 | The people | 0:55–2:05 | Broadcast News Package: name straps, quote cards, application bars, outlet logos | Lemo-Opuscar |
 | What happens after you click Apply | 2:05–3:20 | A screen-recording look (cursor push-ins, no mascot), then the hiring loop drawn as a flow diagram | Lemo-Opuscar Screencast + system-diagram-animation skill |
@@ -36,13 +36,13 @@ Each part uses the engine that fits what it shows. Our brand colors, grain, capt
 | The Stanford study | 3:50–5:40 | 3Blue1Brown-style charts: lines draw over time, the kept-pace line, the gap fills to 19% | Manim Community (manimce skill) |
 | Korea | 5:40–6:40 | A 3D map flight from the US to Korea, then job blocks stacked to scale | Lemo-Opuscar Map Explainer + Data Physicalization |
 | The catch | 6:40–7:45 | Evidence desk on one timeline: the hiring dip six months before ChatGPT, the 12% study, the 'pattern, not proof' page | Lemo-Opuscar Visual Investigation |
-| What you can do | 7:45–8:40 | Hand-drawn cartoon of real work: a beginner learning next to someone experienced | Lemo-Opuscar Mid-century Cartoon (our #19 engine) |
+| What you can do | 7:45–8:40 | Real footage of people learning by doing at work; clean type for the three options | Mixkit / Coverr footage + Opuscar Swiss Motion |
 | End | 8:40–8:55 | Swiss-grid end type, then back to the spreadsheet so it loops | Lemo-Opuscar Swiss Motion |
 | Throughout |  | 10 generated clips (marked as illustrations), real pages as one-sentence proof cards, every named company's logo, HyperFrames registry transitions, our score + CC0 sound pass, motionmaxxing gates and an independent critic | Several |
 
 ## Generated clips (10, for Flow)
 
-None shows a named person; each gets a small "Illustration" tag on screen. Shared style line for every prompt:
+Now 7 clips: G1, G7 and G8 are swapped for real free stock (FOOTAGE.md). None shows a named person; each gets a small "Illustration" tag on screen. Shared style line for every prompt:
 
 > Documentary realism, 16:9, 8 seconds, natural light, shallow depth of field, muted warm colors, slow handheld camera, no on-screen text, no logos, no readable screens, no faces in close-up.
 

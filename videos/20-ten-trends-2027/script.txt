@@ -1,0 +1,93 @@
+[curious] The richest man on Earth wants to put computers in SPACE.
+[serious] And this year, he became the first trillionaire in history.
+[thoughtful] That's where The Economist starts its guess at next year. Every November, its editor, Tom Standage, picks ten trends to watch.
+[conversational] I went through all ten for 2027. Some of them are scary. One is about a rice farmer in India. One is about a twenty-six-year-old with a YouTube channel.
+[warm] So let's go through them. Not as headlines. As what they could mean for you.
+[curious] So, the trillionaire. In June, Elon Musk put SpaceX on the stock market. It was the biggest share sale in history.
+[serious] And he said what the money is for. AI data centers. In orbit.
+[conversational] Wait. Why would anyone put computers in space?
+[thoughtful] Musk's answer is power. AI needs more electricity than he thinks the ground can supply. Up there, solar panels get sunshine almost all day.
+[serious] To get them up there, SpaceX needs its giant rocket, Starship. In September, Starship reached orbit for the first time and dropped off twenty-six satellites.
+[surprised] Next year, SpaceX wants to launch it EVERY week.
+[conversational] And it's not just America. Chinese rocket companies are now landing their boosters too, so they can fly them again.
+[thoughtful] Cheaper launches mean more satellites. Faster internet in places that have none. Maybe even data centers in orbit.
+[serious] Here's the catch. Data centers in space are still unproven. Investors are paying for a promise.
+[serious] Which brings us to the money behind AI. Honestly? This is the one that worries me most.
+[curious] The Economist expects the backlash against AI to grow in 2027. Part of it is about how the AI boom is paid for.
+[serious] Tech giants are borrowing huge amounts to build data centers. And a lot of that debt never shows up in their own accounts.
+[conversational] Here's how it works. A company like Meta helps set up a separate company. That company borrows the money and builds the data center. Meta pays to use it.
+[serious] So twenty-seven BILLION dollars of borrowing stays off Meta's books.
+[serious] The Bank for International Settlements, the bank that central banks use, has a name for this. Shadow borrowing.
+[thoughtful] If AI earns what everyone hopes, nobody notices. If it doesn't, the losses land on the lenders. Private funds. Banks. Insurance companies.
+[serious] The second worry is hacking. AI agents now do parts of cyber-attacks on their own.
+[serious] Google's security team says attackers use AI to scan for weak spots, steal passwords, and fix their own mistakes.
+[surprised] They can run all day and night, at a fraction of what a human hacker costs.
+[serious] Last year, Anthropic reported a spying campaign. That's the company that makes the Claude AI. In that attack, AI did most of the hacking itself. Eighty to ninety percent of the work. Humans only stepped in at a few key moments.
+[thoughtful] But here's what surprised me. You hear two fears most. AI taking jobs. And data centers draining water and power. The Economist says neither has much evidence behind it yet.
+[conversational] So the backlash is real. The question is whether it's aimed at the real risks.
+[curious] Now, money you might actually feel. Interest rates.
+[serious] Rich countries are borrowing more than ever. And the people who lend to them want more in return.
+[conversational] Here's how that works. When a government needs money, it sells bonds. A bond is a promise to pay you back, with interest. When lenders get nervous, they ask for more interest.
+[serious] In August, America's thirty-year borrowing rate hit its highest level since 2007.
+[surprised] Japan's ten-year rate passed three percent for the first time in about thirty years. Britain's thirty-year rate touched six percent. Last seen in 1998.
+[thoughtful] Why should you care? Because these rates set the price of almost every other loan. Mortgages. Car loans. Student loans.
+[serious] And here's the AI link again. Companies borrowing for AI helped push company bond sales to a record this year. Almost five TRILLION dollars.
+[serious] The Economist thinks something will eventually break. It doesn't say what. Honestly, that's the scary part.
+[serious] Here's a year that military planners have been staring at for a long time. 2027.
+[serious] In 2023, the head of the CIA said something that stuck. China's leader, Xi Jinping, had told his military to be READY to take Taiwan by 2027.
+[thoughtful] 2027 is also the hundredth birthday of China's army. Dates like that matter in politics.
+[short pause] Ready. The CIA chief was clear that it doesn't mean Xi has decided to do it.
+[curious] So why does this matter if you've never been near Taiwan?
+[serious] Because about ninety percent of the world's most advanced chips are made there. By one company. TSMC.
+[thoughtful] The chips in your phone. The chips that run AI. Almost all of them start on one island.
+[serious] Taiwan picks a new president in early 2028. The Economist sees the months before that vote as a risky stretch.
+[serious] Some trends start far away and end up in your food prices.
+[serious] On February twenty-eighth, the United States and Israel went to war with Iran. Iran answered by almost closing the Strait of Hormuz, the narrow sea lane along its coast.
+[curious] Most people know oil goes through there. Here's what I didn't know. About a third of the world's traded fertilizer does too.
+[surprised] In one week, the price of urea jumped by about a third at a big US port. Urea is the most common fertilizer in the world.
+[sad] Baldev Singh grows rice in Punjab, India. He's fifty-five. In March, he told the Associated Press: "Right now, we are waiting and hoping."
+[serious] In Ethiopia, more than ninety percent of the nitrogen fertilizer comes from the Gulf. The UN's World Food Program warned of smaller harvests, and even failed crops, the next season.
+[thoughtful] By September, fertilizer prices had come down from their peak. But ships from the Gulf were still mostly stuck.
+[serious] The Economist expects the aftershocks to keep moving through energy and food in 2027.
+[serious] And then, there's the heat.
+[serious] 2026 is already one of the four hottest years ever recorded. From January to September, the planet was almost one and a half degrees Celsius warmer than before factories and cars.
+[serious] Right now, the Pacific Ocean is in an El Niño. The water near the equator is much warmer than usual. It doesn't add new heat. It lets heat stored in the ocean out into the air.
+[surprised] The head of the UN's weather agency, Celeste Saulo, called this one "off the charts."
+[serious] El Niño usually pushes global temperatures up most in the year AFTER it starts. That's 2027.
+[thoughtful] So 2027 could be the hottest year ever measured. Again.
+[conversational] What does that mean for you? More heatwaves, floods or droughts, depending on where you live.
+[curious] There's one twist The Economist points out. Wars and energy shocks are making solar and wind look safer. Nobody can blockade the sun.
+[serious] In Europe, all eyes are on France.
+[serious] France elects a new president in April 2027. And The Economist thinks Marine Le Pen, leader of the National Rally, has a strong chance.
+[curious] That's surprising. Last year, a court found her guilty of misusing European Union money. It banned her from running.
+[serious] In July, an appeals court kept the conviction but shortened the ban. So she CAN run. But it also gave her a year wearing an electronic ankle tag.
+[thoughtful] She says she'll run anyway. And she's taking the case to France's highest court, which says it will rule before the vote.
+[serious] Why should anyone outside France care? France and Germany are the two countries the European Union leans on most. And France's debts already make lenders nervous.
+[conversational] Her supporters see a change that's long overdue. Her critics see a risk to Europe. In 2027, French voters decide.
+[serious] In America, the midterm elections are over. The race to follow Donald Trump is starting.
+[curious] But The Economist doesn't expect him to fade away. Its editor calls him a "destructive Angry Bird."
+[serious] Expect more executive orders. More court fights. More renaming of places. Big building projects. More military action abroad.
+[thoughtful] Does that look like a president fighting for his agenda? Or like chaos? It depends a lot on who you ask. Either way, the world has started planning for America after Trump.
+[curious] Now, something more personal. Weight-loss drugs.
+[serious] In America, about one in five households now has someone taking a drug like Ozempic or Wegovy.
+[surprised] And it's changing what they buy. Less spent on groceries. About ten percent more on clothes, because their sizes changed.
+[conversational] Here's the part that matters for the rest of the world. In March, the main patent on semaglutide, the medicine inside Ozempic, ran out in India, China and Brazil. In Canada, it ran out even earlier.
+[surprised] In India, drug makers launched cheaper copies within a day. The original maker, Novo Nordisk, cut its own price there by almost half.
+[conversational] In America and Europe, the patent still holds for years. So the same medicine now has two very different prices, depending on where you live.
+[thoughtful] Millions of people who could never afford it might now get it. And The Economist expects drug makers to turn to the next big idea. Medicines for living longer.
+[playful] And finally, the movies.
+[curious] 2027 is fifty years since the first Star Wars. Disney is celebrating with a new film, Star Wars: Starfighter, out on May twenty-eighth.
+[conversational] More Avengers and James Bond are on the way too.
+[surprised] But here's the twist. This year, a twenty-six-year-old YouTuber named Curry Barker made a horror film. It took him twenty days and seven hundred and fifty thousand dollars.
+[surprised] It made more than FOUR hundred million dollars around the world.
+[conversational] The other big one was Backrooms, by Kane Parsons. He was twenty when it came out, and the film grew out of his short YouTube videos.
+[thoughtful] That summer, a new Star Wars film was beaten at the box office by those two films from YouTubers.
+[curious] So here's the question for 2027. Do people still want the old stories? Or the new storytellers who grew up on YouTube?
+[thoughtful] So that's the year ahead.
+[warm] If I had to pick the trend that touches the most people, it's not the rockets or the elections. It's the quiet stuff. Interest rates. Fertilizer. A cheaper pill in India.
+[conversational] None of this is certain. These are educated guesses, from people who watch the world for a living.
+[thoughtful] And notice how often AI showed up, even in trends that aren't about AI. The rockets. The loans. The hacking. The chips in Taiwan. That's the real trend, I think. AI is no longer one story. It's inside all of them.
+[warm] Which one do you think matters most? Tell me in the comments.
+[playful] There's one word in this video I never said out loud. Spotted it? Comment it.
+[warm] Follow for more AI, explained like this.
+[curious] Because right now, the richest man on Earth still wants to put computers in space...
